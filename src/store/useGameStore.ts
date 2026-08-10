@@ -6,7 +6,6 @@ import { CHARACTERS } from '../data/characters';
 import { calculateSimilarity } from '../lib/scoring';
 import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, matchCharacters } from '../lib/autocomplete';
-import { buildShareText } from '../lib/share';
 import { hasSeenIntro, isDayWon, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 
 type MessageTone = 'info' | 'warn' | 'win';
@@ -33,7 +32,6 @@ interface GameState {
 
   stats: Stats;
   now: number;
-  shareCopied: boolean;
 
   modals: ModalState;
   initialized: boolean;
@@ -48,7 +46,6 @@ interface GameState {
   exitArchive(): void;
   openModal(name: keyof ModalState): void;
   closeModals(): void;
-  share(): void;
   tick(): void;
 }
 
@@ -72,7 +69,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   stats: EMPTY_STATS,
   now: Date.now(),
-  shareCopied: false,
 
   modals: { rules: false, stats: false, archive: false },
   initialized: false,
@@ -99,7 +95,6 @@ export const useGameStore = create<GameState>((set, get) => ({
       input: '',
       suggestionIndex: 0,
       message: { text: '', tone: 'info' },
-      shareCopied: false,
       modals: { ...get().modals, archive: false },
     });
   },
@@ -161,7 +156,6 @@ export const useGameStore = create<GameState>((set, get) => ({
       input: '',
       suggestionIndex: 0,
       flashId: target.id,
-      shareCopied: false,
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }
         : { text: `${target.nom} — ${score} %`, tone: 'info' },
@@ -217,19 +211,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   closeModals() {
     set({ modals: { rules: false, stats: false, archive: false } });
-  },
-
-  share() {
-    const state = get();
-    const dayIdx = todayIndex() - state.archiveOffset;
-    const text = buildShareText(dayIdx + 1, state.guesses);
-    try {
-      void navigator.clipboard.writeText(text);
-    } catch {
-      // clipboard indisponible : on ignore silencieusement, le texte reste visible ailleurs si besoin.
-    }
-    set({ shareCopied: true });
-    setTimeout(() => useGameStore.setState({ shareCopied: false }), 2200);
   },
 
   tick() {

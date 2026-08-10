@@ -1,22 +1,44 @@
-import { currentTarget, useGameStore } from '../../store/useGameStore';
+import { useRef, useState } from 'react';
+import { toPng } from 'html-to-image';
+import { currentTarget, todayIndex, useGameStore } from '../../store/useGameStore';
 import { formatCountdown, formatElapsed, msUntilNextMidnight } from '../../lib/format';
 import { StatTile } from './StatTile';
 import { Confetti } from './Confetti';
+import { ShareCard } from './ShareCard';
 
 export function VictorySection() {
   const won = useGameStore((s) => s.won);
   const guesses = useGameStore((s) => s.guesses);
   const elapsed = useGameStore((s) => s.elapsed);
   const streak = useGameStore((s) => s.stats.currentStreak);
-  const share = useGameStore((s) => s.share);
-  const shareCopied = useGameStore((s) => s.shareCopied);
+  const archiveOffset = useGameStore((s) => s.archiveOffset);
   const openModal = useGameStore((s) => s.openModal);
   const now = useGameStore((s) => s.now);
+  const shareCardRef = useRef<HTMLDivElement>(null);
+  const [sharing, setSharing] = useState(false);
+  const [shared, setShared] = useState(false);
 
   if (!won) return null;
 
   const target = currentTarget();
   const countdown = formatCountdown(msUntilNextMidnight(new Date(now)));
+  const dayNumber = todayIndex() - archiveOffset + 1;
+
+  async function handleShare() {
+    if (!shareCardRef.current || sharing) return;
+    setSharing(true);
+    try {
+      const dataUrl = await toPng(shareCardRef.current, { pixelRatio: 2, fontEmbedCSS: '' });
+      const link = document.createElement('a');
+      link.download = `animantix-jour-${dayNumber}.png`;
+      link.href = dataUrl;
+      link.click();
+      setShared(true);
+      setTimeout(() => setShared(false), 2200);
+    } finally {
+      setSharing(false);
+    }
+  }
 
   return (
     <section className="relative mt-5 overflow-hidden rounded-card border border-border bg-surface p-6 motion-safe:animate-amx-pop">
@@ -38,10 +60,11 @@ export function VictorySection() {
           <div className="flex flex-wrap items-center gap-3">
             <button
               type="button"
-              onClick={share}
-              className="min-h-touch rounded-control bg-brand px-8 py-4 font-display text-[15px] font-bold text-white active:scale-[.98]"
+              onClick={handleShare}
+              disabled={sharing}
+              className="min-h-touch rounded-control bg-brand px-8 py-4 font-display text-[15px] font-bold text-white active:scale-[.98] disabled:opacity-70"
             >
-              {shareCopied ? 'Copié !' : 'Partager mon résultat'}
+              {shared ? 'Téléchargée !' : sharing ? 'Génération…' : 'Partager mon résultat'}
             </button>
             <button
               type="button"
@@ -57,6 +80,9 @@ export function VictorySection() {
         </div>
       </div>
       <Confetti />
+      <div style={{ position: 'fixed', top: 0, left: -9999, pointerEvents: 'none' }} aria-hidden="true">
+        <ShareCard dayNumber={dayNumber} guesses={guesses} elapsed={formatElapsed(elapsed)} streak={streak} ref={shareCardRef} />
+      </div>
     </section>
   );
 }

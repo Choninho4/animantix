@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Urbanist:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Animantix — Le personnage d'anime mystère du jour</title>
+    <meta
+      name="description"
+      content="Un personnage d'anime mystère différent chaque jour. Devine-le en proposant des noms : chaque essai reçoit un score de similarité."
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('animantix-theme');
+          var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.classList.toggle('dark', dark);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

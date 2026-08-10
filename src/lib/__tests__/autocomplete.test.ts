@@ -60,9 +60,19 @@ describe('matchCharacters', () => {
     expect(results.length).toBeGreaterThan(0);
   });
 
-  it('limite les résultats à 8', () => {
-    const bigDb = Array.from({ length: 20 }, (_, i) => makeCharacter(`x${i}`, `Xavier ${i}`, 'Anime'));
-    expect(matchCharacters('xavier', bigDb)).toHaveLength(8);
+  it('limite les résultats à 25 (une licence peut dépasser 20 personnages)', () => {
+    const bigDb = Array.from({ length: 30 }, (_, i) => makeCharacter(`x${i}`, `Xavier ${i}`, 'Anime'));
+    expect(matchCharacters('xavier', bigDb)).toHaveLength(25);
+  });
+
+  it('trie les correspondances "contient" par ordre alphabétique', () => {
+    const shuffledDb = [
+      makeCharacter('c', 'Charlie', 'Anime'),
+      makeCharacter('a', 'Alpha', 'Anime'),
+      makeCharacter('b', 'Bravo', 'Anime'),
+    ];
+    const results = matchCharacters('anime', shuffledDb);
+    expect(results.map((c) => c.nom)).toEqual(['Alpha', 'Bravo', 'Charlie']);
   });
 });
 

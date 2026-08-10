@@ -1,6 +1,9 @@
 import type { Character } from '../types/character';
 
-const MAX_SUGGESTIONS = 8;
+// Doit rester >= à la plus grande licence de la base (One Piece/Naruto peuvent
+// dépasser 20 personnages) pour qu'une recherche par nom d'anime affiche tout
+// le casting plutôt que de couper arbitrairement selon l'ordre d'insertion.
+const MAX_SUGGESTIONS = 25;
 
 export function normalizeForSearch(value: string): string {
   return value
@@ -25,6 +28,11 @@ export function matchCharacters(query: string, characters: Character[]): Charact
       contains.push(c);
     }
   }
+
+  // Tri alphabétique du bucket "contient" : rend une recherche par nom d'anime
+  // (ex. "one piece") navigable et prévisible plutôt que dépendante de l'ordre
+  // d'insertion des fichiers de données.
+  contains.sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
 
   return starts.concat(contains).slice(0, MAX_SUGGESTIONS);
 }

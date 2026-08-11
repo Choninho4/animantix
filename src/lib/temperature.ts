@@ -21,6 +21,15 @@ export const TEMPERATURE_BANDS: TemperatureBand[] = [
   { min: 0, label: 'Glacial', icon: 'snowflake', color: '#B8B8C4', bg: 'rgb(var(--color-border))', fg: 'rgb(var(--color-muted))', fgDark: 'rgb(var(--color-muted))' },
 ];
 
+export const TEMPERATURE_RANGE_LABELS: Record<number, string> = {
+  100: '100 %',
+  80: '80–99',
+  50: '50–79',
+  25: '25–49',
+  1: '1–24',
+  0: '0',
+};
+
 export function temperatureForScore(score: number): TemperatureBand {
   const band = TEMPERATURE_BANDS.find((t) => score >= t.min);
   return band ?? TEMPERATURE_BANDS[TEMPERATURE_BANDS.length - 1];

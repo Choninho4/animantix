@@ -2,6 +2,7 @@ import { todayIndex, useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
 import { IconButton } from './IconButton';
 import { StreakBadge } from './StreakBadge';
+import { Wordmark } from './Wordmark';
 
 export function Header() {
   const archiveOffset = useGameStore((s) => s.archiveOffset);
@@ -14,9 +15,8 @@ export function Header() {
     <header className="sticky top-0 z-[60] border-b border-border bg-surface">
       <div className="mx-auto flex max-w-[860px] items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4">
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-          <div className="truncate font-display text-[21px] font-bold uppercase leading-[1.05] tracking-normal">
-            <span className="text-text">Anim</span>
-            <span className="text-brand-mid">antix</span>
+          <div className="truncate">
+            <Wordmark />
           </div>
           <div className="hidden truncate text-[11px] leading-tight text-muted min-[420px]:block">
             Personnage du jour #{dayNumber}

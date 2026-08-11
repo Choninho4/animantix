@@ -1,6 +1,6 @@
 import { useGameStore } from '../../store/useGameStore';
 import { POIDS, INDICE_TOUS_LES } from '../../lib/constants';
-import { TEMPERATURE_BANDS } from '../../lib/temperature';
+import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../../lib/temperature';
 import { useTheme } from '../../hooks/useTheme';
 import { ModalHeader, ModalShell } from './ModalShell';
 import { TemperatureBandIcon } from '../icons/Icon';
@@ -19,8 +19,6 @@ const WEIGHT_ROWS: Array<{ label: string; points: number }> = [
 
 const HINT_ORDER_TEXT =
   "la race, le genre, la première lettre du nom, la couleur de cheveux, puis l'anime d'origine";
-
-const RANGE_LABELS: Record<number, string> = { 100: '100 %', 80: '80–99', 50: '50–79', 25: '25–49', 1: '1–24', 0: '0' };
 
 // Rythme d'espacement réutilisable : SECTION_GAP sépare deux sections
 // distinctes (ex. avant un titre h3), TIGHT_GAP garde un titre collé au
@@ -62,7 +60,7 @@ export function RulesModal() {
       <ul className="flex flex-col gap-1.5 text-[14px]">
         {TEMPERATURE_BANDS.map((band) => (
           <li key={band.min} className="flex items-center gap-2.5">
-            <span className="w-14 font-bold text-muted">{RANGE_LABELS[band.min]}</span>
+            <span className="w-14 font-bold text-muted">{TEMPERATURE_RANGE_LABELS[band.min]}</span>
             <span
               className="flex items-center gap-1.5 rounded-pill px-2.5 py-0.5 text-[11px] font-bold"
               style={{ background: band.bg, color: theme === 'dark' ? band.fgDark : band.fg }}

@@ -30,8 +30,20 @@ export function VictorySection() {
     if (!shareCardRef.current || sharing) return;
     setSharing(true);
     try {
+      const node = shareCardRef.current;
       const fontEmbedCSS = await getShareCardFontEmbedCSS();
-      const dataUrl = await toPng(shareCardRef.current, { pixelRatio: 2, fontEmbedCSS });
+      // Garantit que les polices déclarées côté document (Clash Display,
+      // Urbanist) sont réellement chargées avant de capturer quoi que ce
+      // soit — sans ça, un tout premier clic après un chargement à froid
+      // peut produire une image vide (juste les fonds colorés).
+      await document.fonts.ready;
+      // "Chauffe" jetable : le tout premier rendu de cette carte via
+      // html-to-image (SVG foreignObject + polices fraîchement enregistrées)
+      // peut sortir incomplet même une fois document.fonts.ready résolu —
+      // une capture à très basse résolution avant la vraie élimine cette
+      // course de timing résiduelle (bug connu de la lib sur un 1er rendu).
+      await toPng(node, { pixelRatio: 0.1, fontEmbedCSS });
+      const dataUrl = await toPng(node, { pixelRatio: 2, fontEmbedCSS });
       const link = document.createElement('a');
       link.download = `animantix-jour-${dayNumber}.png`;
       link.href = dataUrl;
@@ -65,8 +77,11 @@ export function VictorySection() {
               type="button"
               onClick={handleShare}
               disabled={sharing}
-              className="min-h-touch rounded-control bg-brand px-8 py-4 font-display text-[15px] font-bold text-white active:scale-[.98] disabled:opacity-70"
+              className="flex min-h-touch items-center gap-2 rounded-control bg-brand px-8 py-4 font-display text-[15px] font-bold text-white active:scale-[.98] disabled:opacity-70"
             >
+              {sharing && (
+                <span className="h-4 w-4 flex-none animate-spin rounded-full border-2 border-white/40 border-t-white" />
+              )}
               {shared ? 'Téléchargée !' : sharing ? 'Génération…' : 'Partager mon résultat'}
             </button>
             <button

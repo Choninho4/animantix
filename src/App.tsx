@@ -13,6 +13,7 @@ import { StatsModal } from './components/modals/StatsModal';
 import { ArchiveCalendarModal } from './components/modals/ArchiveCalendarModal';
 import { useCountdown } from './hooks/useCountdown';
 import { useGameStore } from './store/useGameStore';
+import { preloadShareCardFonts } from './lib/fontEmbed';
 
 export default function App() {
   const init = useGameStore((s) => s.init);
@@ -22,6 +23,11 @@ export default function App() {
 
   useEffect(() => {
     init();
+    // Précharge tôt les polices utilisées par l'image de résultat partageable
+    // (voir lib/fontEmbed.ts) pour qu'elles soient déjà prêtes le jour où le
+    // joueur gagne et clique sur "Partager", plutôt que de les fetcher pour
+    // la première fois à ce moment-là.
+    preloadShareCardFonts();
   }, [init]);
 
   useCountdown();

@@ -92,7 +92,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(function Sha
         padding: PADDING,
         background: DARK.bg,
         color: DARK.text,
-        fontFamily: "'Outfit', sans-serif",
+        fontFamily: "'Urbanist', sans-serif",
       }}
     >
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>

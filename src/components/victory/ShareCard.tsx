@@ -9,7 +9,24 @@ interface ShareCardProps {
   streak: number;
 }
 
-const TILES_PER_LINE = 5;
+const CARD_WIDTH = 640;
+const PADDING = 44;
+const COLS = 8;
+const TILE = 52;
+const GAP = 10;
+const MAX_TILES_SHOWN = 60;
+
+// Palette figée en sombre (DA Animantix, thème sombre de src/index.css) : la
+// carte partagée doit toujours avoir le même rendu, quel que soit le thème
+// actif du visiteur qui clique sur "Partager".
+const DARK = {
+  bg: '#13111A',
+  surface: '#1D1A28',
+  text: '#F0EFF5',
+  brandMid: '#B88AE8',
+  muted: '#A7A4B5',
+  border: '#2F2B3D',
+};
 
 // html-to-image (utilisé pour capturer cette carte en PNG) plante sur les
 // <svg> inline : les nœuds SVG exposent `className` comme SVGAnimatedString,
@@ -21,7 +38,8 @@ const ICON_MARKUP: Record<TemperatureIcon, (color: string) => string> = {
     `<circle cx="12" cy="12" r="4.6" stroke="${color}" stroke-width="1.6" fill="none"/>` +
     `<circle cx="12" cy="12" r="1" fill="${color}"/>`,
   flame: (color) =>
-    `<path d="M12 2.8c.4 2.2-.6 3.5-2 4.9C8.4 9.3 7 11 7 13.6a5 5 0 0 0 10 0c0-1.9-.9-3.1-1.8-4.1-.2 1.5-.9 2.4-1.9 2.8.7-2.1-.1-3.8-1.6-5.2-.9 1.4-1.6 2.1-2.3 1.5-.6-.5-.5-1.5.6-2.7.9-1 1.5-1.9 1.6-2.5Z" stroke="${color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    `<path d="M17.66 18.66a8 8 0 0 1-11.32 0C3 15.31 3 10.98 6.34 7.34 7 9 7.66 10 9.66 11c0-2 .5-5 3-7 2 2 4.1 2.78 5.66 4.34a8 8 0 0 1-.66 10.32Z" stroke="${color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>` +
+    `<path d="M9.88 16.12A3 3 0 1 0 12.02 11L11 14H9c0 .77.29 1.54.88 2.12Z" stroke="${color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
   snowflake: (color) =>
     `<path d="M12 3v18M3 12h18" stroke="${color}" stroke-width="1.6" stroke-linecap="round"/>` +
     `<path d="m8 7 4-4 4 4M8 17l4 4 4-4M7 8 3 12l4 4M17 8l4 4-4 4" stroke="${color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>`,
@@ -47,106 +65,91 @@ function IconGlyph({ icon, color, size }: { icon: TemperatureIcon; color: string
   );
 }
 
+function StatBlock({ value, label }: { value: string; label: string }) {
+  return (
+    <div>
+      <div style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 700, fontSize: 26, color: DARK.text }}>
+        {value}
+      </div>
+      <div style={{ fontSize: 12, color: DARK.muted }}>{label}</div>
+    </div>
+  );
+}
+
 export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(function ShareCard(
   { dayNumber, guesses, elapsed, streak },
   ref,
 ) {
-  const rows: GuessEntry[][] = [];
-  for (let i = 0; i < guesses.length; i += TILES_PER_LINE) {
-    rows.push(guesses.slice(i, i + TILES_PER_LINE));
-  }
+  const shown = guesses.slice(-MAX_TILES_SHOWN);
+  const gridWidth = COLS * TILE + (COLS - 1) * GAP;
 
   return (
     <div
       ref={ref}
       style={{
-        width: 600,
-        height: 600,
+        width: CARD_WIDTH,
         boxSizing: 'border-box',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: 48,
-        background: '#F5F5F7',
-        color: '#1A1A2E',
+        padding: PADDING,
+        background: DARK.bg,
+        color: DARK.text,
         fontFamily: "'Outfit', sans-serif",
       }}
     >
-      <div>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
         <div
           style={{
             fontFamily: "'Clash Display', sans-serif",
             fontWeight: 700,
-            fontSize: 34,
+            fontSize: 27,
             textTransform: 'uppercase',
             lineHeight: 1,
           }}
         >
-          <span style={{ color: '#1A1A2E' }}>Anim</span>
-          <span style={{ color: '#9966CC' }}>antix</span>
+          <span style={{ color: DARK.text }}>Anim</span>
+          <span style={{ color: DARK.brandMid }}>antix</span>
         </div>
-        <div style={{ marginTop: 8, fontSize: 15, color: '#767680' }}>Personnage du jour #{dayNumber}</div>
+        <div style={{ fontSize: 12, fontWeight: 600, color: DARK.muted }}>animantix.vercel.app</div>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'center' }}>
-        {rows.map((row, i) => (
-          <div key={i} style={{ display: 'flex', gap: 12 }}>
-            {row.map((g) => {
-              const t = temperatureForScore(g.score);
-              return (
-                <div
-                  key={g.n}
-                  style={{
-                    width: 46,
-                    height: 46,
-                    borderRadius: 14,
-                    background: t.bg,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <IconGlyph icon={t.icon} color={t.color} size={22} />
-                </div>
-              );
-            })}
-          </div>
-        ))}
+      <div style={{ marginTop: 22 }}>
+        <div style={{ fontSize: 13, color: DARK.muted }}>Personnage du jour</div>
+        <div style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 700, fontSize: 56, lineHeight: 1.05, color: DARK.text }}>
+          #{dayNumber}
+        </div>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex', gap: 28 }}>
-          <div>
-            <div style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 700, fontSize: 24, color: '#D02886' }}>
-              {guesses.length}
-            </div>
-            <div style={{ fontSize: 12, color: '#767680' }}>essais</div>
-          </div>
-          <div>
-            <div style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 700, fontSize: 24, color: '#D02886' }}>
-              {elapsed}
-            </div>
-            <div style={{ fontSize: 12, color: '#767680' }}>temps</div>
-          </div>
-          <div>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 5,
-                fontFamily: "'Clash Display', sans-serif",
-                fontWeight: 700,
-                fontSize: 24,
-                color: '#D02886',
-              }}
-            >
-              <IconGlyph icon="flame" color="#D02886" size={19} />
-              {streak}
-            </div>
-            <div style={{ fontSize: 12, color: '#767680' }}>série</div>
-          </div>
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '28px 0' }}>
+        <div style={{ width: gridWidth, display: 'flex', flexWrap: 'wrap', gap: GAP }}>
+          {shown.map((g) => {
+            const t = temperatureForScore(g.score);
+            const isFound = g.score === 100;
+            return (
+              <div
+                key={g.n}
+                style={{
+                  width: TILE,
+                  height: TILE,
+                  borderRadius: 13,
+                  background: isFound ? DARK.text : t.bg,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 2,
+                }}
+              >
+                <IconGlyph icon={t.icon} color={isFound ? DARK.bg : t.fgDark} size={20} />
+                <span style={{ fontSize: 10, fontWeight: 600, color: isFound ? DARK.bg : DARK.muted }}>{g.n}</span>
+              </div>
+            );
+          })}
         </div>
-        <div style={{ fontSize: 13, fontWeight: 600, color: '#54218E' }}>animantix.vercel.app</div>
+      </div>
+
+      <div style={{ display: 'flex', gap: 36, borderTop: `1px dashed ${DARK.border}`, paddingTop: 20 }}>
+        <StatBlock value={String(guesses.length)} label="essais" />
+        <StatBlock value={elapsed} label="temps" />
+        <StatBlock value={String(streak)} label="série" />
       </div>
     </div>
   );

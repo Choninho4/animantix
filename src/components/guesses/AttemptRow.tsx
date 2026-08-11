@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import type { GuessEntry } from '../../types/guess';
 import { temperatureForScore } from '../../lib/temperature';
 import { useTheme } from '../../hooks/useTheme';
+import { TemperatureBandIcon } from '../icons/Icon';
 
 interface AttemptRowProps {
   guess: GuessEntry;
@@ -47,9 +48,10 @@ export function AttemptRow({ guess, isBest, justAdded }: AttemptRowProps) {
           {guess.score} %
         </span>
         <span
-          className="whitespace-nowrap rounded-pill px-2 py-0.5 text-[11px] font-bold"
+          className="flex items-center gap-1 whitespace-nowrap rounded-pill px-2 py-0.5 text-[11px] font-bold"
           style={{ background: t.bg, color: badgeFg }}
         >
+          <TemperatureBandIcon icon={t.icon} size={11} />
           {t.label}
         </span>
       </span>

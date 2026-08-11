@@ -5,6 +5,7 @@ import { formatCountdown, formatElapsed, msUntilNextMidnight } from '../../lib/f
 import { StatTile } from './StatTile';
 import { Confetti } from './Confetti';
 import { ShareCard } from './ShareCard';
+import { FlameIcon } from '../icons/Icon';
 
 export function VictorySection() {
   const won = useGameStore((s) => s.won);
@@ -55,7 +56,7 @@ export function VictorySection() {
           <div className="mb-8 flex flex-wrap gap-2.5">
             <StatTile value={String(guesses.length)} label="essais" />
             <StatTile value={formatElapsed(elapsed)} label="temps de jeu" />
-            <StatTile value={`🔥 ${streak}`} label="série en cours" />
+            <StatTile value={String(streak)} label="série en cours" icon={<FlameIcon size={17} />} />
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <button

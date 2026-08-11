@@ -3,6 +3,7 @@ import { POIDS, INDICE_TOUS_LES } from '../../lib/constants';
 import { TEMPERATURE_BANDS } from '../../lib/temperature';
 import { useTheme } from '../../hooks/useTheme';
 import { ModalHeader, ModalShell } from './ModalShell';
+import { TemperatureBandIcon } from '../icons/Icon';
 
 const WEIGHT_ROWS: Array<{ label: string; points: number }> = [
   { label: 'Même anime', points: POIDS.anime },
@@ -63,9 +64,10 @@ export function RulesModal() {
           <li key={band.min} className="flex items-center gap-2.5">
             <span className="w-14 font-bold text-muted">{RANGE_LABELS[band.min]}</span>
             <span
-              className="rounded-pill px-2.5 py-0.5 text-[11px] font-bold"
+              className="flex items-center gap-1.5 rounded-pill px-2.5 py-0.5 text-[11px] font-bold"
               style={{ background: band.bg, color: theme === 'dark' ? band.fgDark : band.fg }}
             >
+              <TemperatureBandIcon icon={band.icon} size={12} />
               {band.label}
             </span>
           </li>

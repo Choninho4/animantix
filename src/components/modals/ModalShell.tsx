@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react';
+import { CloseIcon } from '../icons/Icon';
 
 interface ModalShellProps {
   label: string;
@@ -50,9 +51,9 @@ export function ModalHeader({ title, onClose }: { title: string; onClose: () => 
         type="button"
         onClick={onClose}
         aria-label="Fermer"
-        className="h-touch w-touch flex-none rounded-control border-none bg-bg text-[18px] text-brand-dark"
+        className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-none bg-bg text-brand-dark"
       >
-        ✕
+        <CloseIcon size={18} />
       </button>
     </div>
   );

@@ -1,5 +1,6 @@
 import { isArchiveDayWon, useGameStore } from '../../store/useGameStore';
 import { ModalShell } from './ModalShell';
+import { CheckIcon, CloseIcon } from '../icons/Icon';
 
 const DAYS_BACK = 28;
 
@@ -23,9 +24,9 @@ export function ArchiveCalendarModal() {
           type="button"
           onClick={closeModals}
           aria-label="Fermer"
-          className="h-touch w-touch flex-none rounded-control border-none bg-bg text-[18px] text-brand-dark"
+          className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-none bg-bg text-brand-dark"
         >
-          ✕
+          <CloseIcon size={18} />
         </button>
       </div>
       <p className="mb-4 text-[13px] leading-[1.5] text-muted">
@@ -49,7 +50,7 @@ export function ArchiveCalendarModal() {
               className={`flex aspect-square min-h-touch flex-col items-center justify-center gap-px rounded-control border font-bold text-[13px] ${stateClass}`}
             >
               <span>{date.getDate()}</span>
-              <span className="text-[9px] font-semibold opacity-75">{done ? '✓' : ''}</span>
+              <span className="h-2.5 opacity-75">{done && <CheckIcon size={10} />}</span>
             </button>
           );
         })}

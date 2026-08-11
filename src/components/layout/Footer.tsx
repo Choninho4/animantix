@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wordmark } from '../layout/Wordmark';
+import { Wordmark } from './Wordmark';
 
 const FOOTER_LINKS = [
   { to: '/', label: 'Jouer' },
@@ -8,7 +8,7 @@ const FOOTER_LINKS = [
   { to: '/mentions-legales', label: 'Mentions légales' },
 ];
 
-export function SiteFooter() {
+export function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto flex max-w-[960px] flex-wrap items-center gap-5 px-4 py-6">

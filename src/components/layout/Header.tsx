@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { todayIndex, useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
 import { IconButton } from './IconButton';
@@ -60,6 +61,16 @@ export function Header() {
               <path d="M12 17.4h.01" />
             </svg>
           </IconButton>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `flex min-h-touch flex-none items-center rounded-control px-3 text-[13px] font-bold ${
+                isActive ? 'bg-bg text-brand' : 'text-muted hover:bg-bg hover:text-brand'
+              }`
+            }
+          >
+            Contact
+          </NavLink>
         </div>
       </div>
     </header>

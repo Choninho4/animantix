@@ -13,6 +13,7 @@ import { PART_11_CLASSICS_RETRO } from './part-11-classics-retro';
 import { PART_12_2020S_RELEASES } from './part-12-2020s-releases';
 import { PART_13_FANTASY_ADVENTURE } from './part-13-fantasy-adventure';
 import { PART_14_BALANCE_FILLERS } from './part-14-balance-fillers';
+import { PART_15_BIG_THREE_EXPANSION } from './part-15-big-three-expansion';
 
 export const CHARACTERS: Character[] = [
   ...PART_01_SEED_SHONEN_CLASSICS,
@@ -29,4 +30,5 @@ export const CHARACTERS: Character[] = [
   ...PART_12_2020S_RELEASES,
   ...PART_13_FANTASY_ADVENTURE,
   ...PART_14_BALANCE_FILLERS,
+  ...PART_15_BIG_THREE_EXPANSION,
 ];

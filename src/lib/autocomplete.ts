@@ -1,9 +1,9 @@
 import type { Character } from '../types/character';
 
-// Doit rester >= à la plus grande licence de la base (One Piece/Naruto peuvent
-// dépasser 20 personnages) pour qu'une recherche par nom d'anime affiche tout
-// le casting plutôt que de couper arbitrairement selon l'ordre d'insertion.
-const MAX_SUGGESTIONS = 25;
+// Doit rester >= à la plus grande licence de la base (One Piece va jusqu'à 40
+// personnages) pour qu'une recherche par nom d'anime affiche tout le casting
+// plutôt que de couper arbitrairement selon l'ordre d'insertion.
+const MAX_SUGGESTIONS = 40;
 
 export function normalizeForSearch(value: string): string {
   return value

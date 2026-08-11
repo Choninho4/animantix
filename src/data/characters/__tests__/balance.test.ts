@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { CHARACTERS } from '../index';
 
-const HIGH_CAP_ANIME = new Set(['One Piece', 'Naruto']);
+const HIGH_CAP_ANIME = new Set(['One Piece', 'Naruto', 'Dragon Ball']);
 const STANDARD_CAP = 10;
 
 describe('base de données de personnages', () => {

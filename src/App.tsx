@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { Header } from './components/layout/Header';
+import { UpcomingTeaser } from './components/layout/UpcomingTeaser';
 import { ArchiveBanner } from './components/archive/ArchiveBanner';
 import { SearchBar } from './components/search/SearchBar';
 import { HintsPanel } from './components/hints/HintsPanel';
@@ -36,6 +37,7 @@ export default function App() {
           <HintsPanel />
           {guesses.length === 0 && !won && <EmptyState />}
           <AttemptsTable />
+          <UpcomingTeaser />
         </main>
         {modals.rules && <RulesModal />}
         {modals.stats && <StatsModal />}

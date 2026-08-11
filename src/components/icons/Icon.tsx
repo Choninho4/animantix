@@ -1,8 +1,10 @@
+import type { CSSProperties } from 'react';
 import type { TemperatureIcon } from '../../lib/temperature';
 
 interface IconProps {
   size?: number;
   className?: string;
+  style?: CSSProperties;
 }
 
 const base = {
@@ -13,10 +15,11 @@ const base = {
   strokeLinejoin: 'round' as const,
 };
 
-export function FlameIcon({ size = 16, className }: IconProps) {
+export function FlameIcon({ size = 16, className, style }: IconProps) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>
-      <path d="M12 2.8c.4 2.2-.6 3.5-2 4.9C8.4 9.3 7 11 7 13.6a5 5 0 0 0 10 0c0-1.9-.9-3.1-1.8-4.1-.2 1.5-.9 2.4-1.9 2.8.7-2.1-.1-3.8-1.6-5.2-.9 1.4-1.6 2.1-2.3 1.5-.6-.5-.5-1.5.6-2.7.9-1 1.5-1.9 1.6-2.5Z" />
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} style={style} {...base}>
+      <path d="M17.66 18.66a8 8 0 0 1-11.32 0C3 15.31 3 10.98 6.34 7.34 7 9 7.66 10 9.66 11c0-2 .5-5 3-7 2 2 4.1 2.78 5.66 4.34a8 8 0 0 1-.66 10.32Z" />
+      <path d="M9.88 16.12A3 3 0 1 0 12.02 11L11 14H9c0 .77.29 1.54.88 2.12Z" />
     </svg>
   );
 }

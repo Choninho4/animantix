@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { toPng } from 'html-to-image';
 import { currentTarget, todayIndex, useGameStore } from '../../store/useGameStore';
 import { formatCountdown, formatElapsed, msUntilNextMidnight } from '../../lib/format';
+import { getShareCardFontEmbedCSS } from '../../lib/fontEmbed';
 import { StatTile } from './StatTile';
 import { Confetti } from './Confetti';
 import { ShareCard } from './ShareCard';
@@ -29,7 +30,8 @@ export function VictorySection() {
     if (!shareCardRef.current || sharing) return;
     setSharing(true);
     try {
-      const dataUrl = await toPng(shareCardRef.current, { pixelRatio: 2, fontEmbedCSS: '' });
+      const fontEmbedCSS = await getShareCardFontEmbedCSS();
+      const dataUrl = await toPng(shareCardRef.current, { pixelRatio: 2, fontEmbedCSS });
       const link = document.createElement('a');
       link.download = `animantix-jour-${dayNumber}.png`;
       link.href = dataUrl;

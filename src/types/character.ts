@@ -11,7 +11,7 @@ export type Genre = 'Homme' | 'Femme' | 'Autre';
 
 export type TrancheAge = 'Enfant' | 'Ado' | 'Jeune adulte' | 'Adulte' | 'Senior';
 
-export type TypeEtre =
+export type Race =
   | 'Humain'
   | 'Hybride'
   | 'Démon-Yokai'
@@ -36,7 +36,7 @@ export interface Character {
   campMoral: CampMoral;
   genre: Genre;
   trancheAge: TrancheAge;
-  typeEtre: TypeEtre;
+  race: Race;
   categoriePouvoir: CategoriePouvoir;
   couleurCheveux: string;
   imageUrl: string | null;

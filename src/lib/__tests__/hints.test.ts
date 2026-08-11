@@ -11,7 +11,7 @@ const target: Character = {
   campMoral: 'Héros',
   genre: 'Homme',
   trancheAge: 'Ado',
-  typeEtre: 'Humain',
+  race: 'Humain',
   categoriePouvoir: 'Pouvoir magique-surnaturel',
   couleurCheveux: 'Blond',
   imageUrl: null,
@@ -20,7 +20,7 @@ const target: Character = {
 
 describe('buildHintDefinitions', () => {
   it(
-    "renvoie 5 indices dans le bon ordre : type d'être, genre, première lettre, couleur de cheveux, anime",
+    'renvoie 5 indices dans le bon ordre : race, genre, première lettre, couleur de cheveux, anime',
     () => {
       const hints = buildHintDefinitions(target);
       expect(hints).toHaveLength(5);

@@ -12,7 +12,7 @@ function makeCharacter(overrides: Partial<Character>): Character {
     campMoral: 'Héros',
     genre: 'Homme',
     trancheAge: 'Ado',
-    typeEtre: 'Humain',
+    race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
     imageUrl: null,
@@ -31,7 +31,7 @@ describe('calculateSimilarity', () => {
       campMoral: 'Vilain',
       genre: 'Femme',
       trancheAge: 'Senior',
-      typeEtre: 'Alien',
+      race: 'Alien',
       categoriePouvoir: 'Aucun pouvoir particulier',
       anneeSortieAnime: 1980,
       couleurCheveux: 'Blond',
@@ -48,7 +48,7 @@ describe('calculateSimilarity', () => {
       campMoral: 'Vilain',
       genre: 'Femme',
       trancheAge: 'Senior',
-      typeEtre: 'Alien',
+      race: 'Alien',
       categoriePouvoir: 'Aucun pouvoir particulier',
       anneeSortieAnime: 1980,
       couleurCheveux: 'Rose',
@@ -67,7 +67,7 @@ describe('calculateSimilarity', () => {
       campMoral: 'Vilain',
       genre: 'Femme',
       trancheAge: 'Senior',
-      typeEtre: 'Alien',
+      race: 'Alien',
       categoriePouvoir: 'Aucun pouvoir particulier',
       anneeSortieAnime: 1980,
       couleurCheveux: 'Rose',
@@ -113,10 +113,10 @@ describe('calculateSimilarity', () => {
     expect(calculateSimilarity(far, target).breakdown.decennie).toBe(0);
   });
 
-  it('typeEtre, categoriePouvoir, genre et couleurCheveux identiques rapportent leurs points respectifs', () => {
+  it('race, categoriePouvoir, genre et couleurCheveux identiques rapportent leurs points respectifs', () => {
     const target = makeCharacter({
       id: 'target',
-      typeEtre: 'Démon-Yokai',
+      race: 'Démon-Yokai',
       categoriePouvoir: 'Technologie-arme',
       genre: 'Femme',
       couleurCheveux: 'Violet',
@@ -127,13 +127,13 @@ describe('calculateSimilarity', () => {
       roleNarratif: 'Antagoniste secondaire',
       campMoral: 'Vilain',
       trancheAge: 'Senior',
-      typeEtre: 'Démon-Yokai',
+      race: 'Démon-Yokai',
       categoriePouvoir: 'Technologie-arme',
       genre: 'Femme',
       couleurCheveux: 'Violet',
     });
     const result = calculateSimilarity(guess, target);
-    expect(result.breakdown.typeEtre).toBe(10);
+    expect(result.breakdown.race).toBe(10);
     expect(result.breakdown.pouvoir).toBe(10);
     expect(result.breakdown.genre).toBe(5);
     expect(result.breakdown.cheveux).toBe(5);
@@ -149,7 +149,7 @@ describe('calculateSimilarity', () => {
       campMoral: 'Héros',
       genre: 'Homme',
       trancheAge: 'Ado',
-      typeEtre: 'Humain',
+      race: 'Humain',
       categoriePouvoir: 'Pouvoir magique-surnaturel',
       couleurCheveux: 'Blond',
     });
@@ -162,7 +162,7 @@ describe('calculateSimilarity', () => {
       campMoral: 'Anti-héros',
       genre: 'Homme',
       trancheAge: 'Ado',
-      typeEtre: 'Humain',
+      race: 'Humain',
       categoriePouvoir: 'Pouvoir magique-surnaturel',
       couleurCheveux: 'Noir',
     });

@@ -12,7 +12,7 @@ function makeCharacter(id: string, nom: string, animeSource: string): Character 
     campMoral: 'Héros',
     genre: 'Homme',
     trancheAge: 'Ado',
-    typeEtre: 'Humain',
+    race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
     imageUrl: null,

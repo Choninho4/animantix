@@ -8,7 +8,7 @@ export interface HintDefinition {
 
 export function buildHintDefinitions(target: Character): HintDefinition[] {
   return [
-    { label: "Type d'être :", value: target.typeEtre },
+    { label: 'Race :', value: target.race },
     { label: 'Genre :', value: target.genre },
     { label: 'Première lettre :', value: target.nom[0].toUpperCase() },
     { label: 'Couleur de cheveux :', value: target.couleurCheveux },

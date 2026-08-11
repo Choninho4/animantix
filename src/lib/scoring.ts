@@ -33,7 +33,7 @@ export interface ScoreBreakdown {
   camp: number;
   genre: number;
   age: number;
-  typeEtre: number;
+  race: number;
   pouvoir: number;
   decennie: number;
   cheveux: number;
@@ -54,7 +54,7 @@ export function calculateSimilarity(guess: Character, target: Character): ScoreR
         camp: POIDS.camp,
         genre: POIDS.genre,
         age: POIDS.age,
-        typeEtre: POIDS.typeEtre,
+        race: POIDS.race,
         pouvoir: POIDS.pouvoir,
         decennie: POIDS.decennie,
         cheveux: POIDS.cheveux,
@@ -68,7 +68,7 @@ export function calculateSimilarity(guess: Character, target: Character): ScoreR
     camp: 0,
     genre: guess.genre === target.genre ? POIDS.genre : 0,
     age: 0,
-    typeEtre: guess.typeEtre === target.typeEtre ? POIDS.typeEtre : 0,
+    race: guess.race === target.race ? POIDS.race : 0,
     pouvoir: guess.categoriePouvoir === target.categoriePouvoir ? POIDS.pouvoir : 0,
     decennie: 0,
     cheveux: guess.couleurCheveux === target.couleurCheveux ? POIDS.cheveux : 0,
@@ -112,7 +112,7 @@ export function calculateSimilarity(guess: Character, target: Character): ScoreR
       breakdown.camp +
       breakdown.genre +
       breakdown.age +
-      breakdown.typeEtre +
+      breakdown.race +
       breakdown.pouvoir +
       breakdown.decennie +
       breakdown.cheveux,

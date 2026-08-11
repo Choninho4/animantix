@@ -7,7 +7,7 @@ export const POIDS = {
   genre: 5,
   age: 10,
   ageAdjacent: 5,
-  typeEtre: 10,
+  race: 10,
   pouvoir: 10,
   decennie: 5,
   decennieAdjacente: 2,

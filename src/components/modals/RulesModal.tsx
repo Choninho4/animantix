@@ -10,7 +10,7 @@ const WEIGHT_ROWS: Array<{ label: string; points: number }> = [
   { label: 'Rôle narratif', points: POIDS.role },
   { label: 'Camp moral', points: POIDS.camp },
   { label: "Tranche d'âge", points: POIDS.age },
-  { label: "Type d'être", points: POIDS.typeEtre },
+  { label: 'Race', points: POIDS.race },
   { label: 'Type de pouvoir', points: POIDS.pouvoir },
   { label: 'Genre', points: POIDS.genre },
   { label: 'Décennie de sortie', points: POIDS.decennie },
@@ -18,7 +18,7 @@ const WEIGHT_ROWS: Array<{ label: string; points: number }> = [
 ];
 
 const HINT_ORDER_TEXT =
-  "le type d'être, le genre, la première lettre du nom, la couleur de cheveux, puis l'anime d'origine";
+  "la race, le genre, la première lettre du nom, la couleur de cheveux, puis l'anime d'origine";
 
 const RANGE_LABELS: Record<number, string> = { 100: '100 %', 80: '80–99', 50: '50–79', 25: '25–49', 1: '1–24', 0: '0' };
 

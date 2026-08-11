@@ -12,7 +12,7 @@ function makeList(n: number): Character[] {
     campMoral: 'Héros',
     genre: 'Homme',
     trancheAge: 'Ado',
-    typeEtre: 'Humain',
+    race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
     imageUrl: null,

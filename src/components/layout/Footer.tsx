@@ -19,7 +19,11 @@ export function Footer() {
         <div className="flex-1" />
         <nav className="flex flex-wrap gap-4">
           {FOOTER_LINKS.map((link) => (
-            <Link key={link.to} to={link.to} className="text-[13px] text-muted hover:text-brand">
+            <Link
+              key={link.to}
+              to={link.to}
+              className="inline-flex min-h-touch min-w-touch items-center justify-center px-1.5 text-[13px] text-muted hover:text-brand sm:inline sm:min-h-0 sm:min-w-0 sm:px-0"
+            >
               {link.label}
             </Link>
           ))}

@@ -59,6 +59,14 @@ export function CloseIcon({ size = 16, className }: IconProps) {
   );
 }
 
+export function MenuIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}
+
 const TEMPERATURE_ICON_COMPONENTS: Record<TemperatureIcon, (props: IconProps) => JSX.Element> = {
   target: TargetIcon,
   flame: FlameIcon,

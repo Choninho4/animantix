@@ -41,7 +41,11 @@ function SectionHeading({ n, children }: { n: number; children: ReactNode }) {
 export default function MentionsLegalesPage() {
   return (
     <main className="mx-auto flex w-full max-w-[960px] flex-wrap items-start gap-10 px-4 py-12">
-      <aside className="sticky top-[76px] w-full flex-none sm:w-[200px]">
+      {/* sticky uniquement à partir de sm : en dessous, le sommaire est empilé
+          en pleine largeur au-dessus de l'article — le rendre sticky à cette
+          largeur le fait "coller" en haut d'écran pendant le scroll et
+          chevaucher le texte de l'article qui défile dessous. */}
+      <aside className="w-full flex-none sm:sticky sm:top-[76px] sm:w-[200px]">
         <div className="mb-3 text-[12px] font-bold uppercase tracking-[.10em] text-muted">Sommaire</div>
         <nav className="flex flex-col gap-0.5">
           {SOMMAIRE.map((s, i) => (

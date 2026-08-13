@@ -2,10 +2,10 @@ import type { Character } from '../../types/character';
 
 export const PART_10_HORROR_DARK_FANTASY: Character[] = [
   {
-    id: 'satsuki-yumizuka-higurashi', nom: 'Satsuki Yumizuka (Higurashi)', animeSource: 'Higurashi no Naku Koro ni', anneeSortieAnime: 2006,
+    id: 'mion-sonozaki', nom: 'Mion Sonozaki', animeSource: 'Higurashi no Naku Koro ni', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
-    imageUrl: null, descriptionCourte: 'Villageoise entraînée dans une boucle de meurtres et de folie sans fin.',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Vert',
+    imageUrl: null, descriptionCourte: 'Présidente du club de jeux et sœur jumelle de Shion, meneuse tomboy au fort tempérament.',
   },
   {
     id: 'rena-ryugu', nom: 'Rena Ryugu', animeSource: 'Higurashi no Naku Koro ni', anneeSortieAnime: 2006,
@@ -39,7 +39,7 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
   },
   {
     id: 'kyubey', nom: 'Kyubey', animeSource: 'Puella Magi Madoka Magica', anneeSortieAnime: 2011,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Vilain', genre: 'Autre', trancheAge: 'Enfant',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Vilain', genre: 'Autre', trancheAge: 'Senior',
     race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mascotte extraterrestre qui recrute des magical girls pour une énergie cosmique cruelle.',
   },
@@ -58,12 +58,12 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
   {
     id: 'zack-isaac-foster', nom: 'Zack (Isaac Foster)', animeSource: 'Angels of Death', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Tueur en blouse d\'hôpital qui promet à une enfant la mort qu\'elle réclame.',
   },
   {
     id: 'yuno-gasai', nom: 'Yuno Gasai', animeSource: 'Future Diary', anneeSortieAnime: 2011,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Camarade de classe amoureuse jusqu\'à l\'obsession, prête à tuer pour son élu.',
   },
@@ -86,7 +86,7 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
     imageUrl: null, descriptionCourte: 'Nouvel élève transféré dans une classe frappée par une malédiction mortelle chaque année.',
   },
   {
-    id: 'yuki-suou', nom: 'Yuki Suou', animeSource: 'Deadman Wonderland', anneeSortieAnime: 2011,
+    id: 'ganta-igarashi', nom: 'Ganta Igarashi', animeSource: 'Deadman Wonderland', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Lycéen incarcéré dans une prison-spectacle après un massacre dont il est innocent.',
@@ -104,7 +104,7 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
     imageUrl: null, descriptionCourte: 'Fantôme d\'enfant qui piège des lycéens dans une école parallèle hantée.',
   },
   {
-    id: 'kirie-goshima', nom: 'Kirie Goshima', animeSource: 'Uzumaki', anneeSortieAnime: 2000,
+    id: 'kirie-goshima', nom: 'Kirie Goshima', animeSource: 'Uzumaki', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéenne témoin de la spirale qui consume peu à peu toute sa ville natale.',
@@ -135,8 +135,8 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
   },
   {
     id: 'shion-sonozaki', nom: 'Shion Sonozaki', animeSource: 'Higurashi no Naku Koro ni', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Sœur jumelle au sourire trompeur, capable de basculer dans une violence effrayante.',
   },
   {
@@ -153,8 +153,8 @@ export const PART_10_HORROR_DARK_FANTASY: Character[] = [
   },
   {
     id: 'zeref-dragneel', nom: 'Zeref Dragneel', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Senior',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Mage noir immortel, maudit à tuer tout ce qu\'il touche depuis des siècles.',
   },
 ];

@@ -32,25 +32,25 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
     imageUrl: null, descriptionCourte: 'Vice-capitaine tatoué au zanpakuto en forme de serpent.',
   },
   {
-    id: 'gon-freecss', nom: 'Gon Freecss', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'gon-freecss', nom: 'Gon Freecss', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Gamin de l\'île de la Baleine parti retrouver un père absent.',
   },
   {
-    id: 'killua-zoldyck', nom: 'Killua Zoldyck', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'killua-zoldyck', nom: 'Killua Zoldyck', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Enfant',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Héritier d\'une famille d\'assassins, foudroyant et loyal.',
   },
   {
-    id: 'kurapika', nom: 'Kurapika', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'kurapika', nom: 'Kurapika', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Dernier Kuruta, ses yeux rougissent quand la vengeance l\'appelle.',
   },
   {
-    id: 'hisoka-morow', nom: 'Hisoka Morow', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'hisoka-morow', nom: 'Hisoka Morow', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Magicien imprévisible qui ne cherche que des fruits mûrs à cueillir.',
@@ -75,7 +75,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   },
   {
     id: 'alphonse-elric', nom: 'Alphonse Elric', animeSource: 'Fullmetal Alchemist', anneeSortieAnime: 2009,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Âme scellée dans une armure, plus humain que bien des humains.',
   },
@@ -106,7 +106,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   {
     id: 'power', nom: 'Power', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Démone du sang menteuse, égoïste et follement attachante.',
   },
   {
@@ -118,7 +118,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   {
     id: 'anya-forger', nom: 'Anya Forger', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Petite fille adoptée qui entend les pensées et adore l\'espionnage.',
   },
   {
@@ -165,7 +165,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   },
   {
     id: 'gendo-ikari', nom: 'Gendo Ikari', animeSource: 'Neon Genesis Evangelion', anneeSortieAnime: 1995,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Père absent et directeur de la Nerv, il ne dit jamais pourquoi.',
   },
@@ -213,7 +213,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   },
   {
     id: 'suzaku-kururugi', nom: 'Suzaku Kururugi', animeSource: 'Code Geass', anneeSortieAnime: 2006,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Ami d\'enfance devenu chevalier de l\'empire qu\'il devrait haïr.',
   },
@@ -244,11 +244,11 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   {
     id: 'yusuke-urameshi', nom: 'Yusuke Urameshi', animeSource: 'Yu Yu Hakusho', anneeSortieAnime: 1992,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Voyou mort en sauvant un enfant, réembauché comme détective spirituel.',
   },
   {
-    id: 'motoko-kusanagi', nom: 'Motoko Kusanagi', animeSource: 'Ghost in the Shell', anneeSortieAnime: 2002,
+    id: 'motoko-kusanagi', nom: 'Motoko Kusanagi', animeSource: 'Ghost in the Shell', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Major cyborg qui cherche la frontière entre l\'âme et la machine.',
@@ -280,7 +280,7 @@ export const PART_02_SEED_MODERN_CULT: Character[] = [
   {
     id: 'subaru-natsuki', nom: 'Subaru Natsuki', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Otaku transporté dans un autre monde, condamné à revivre sa mort.',
   },
   {

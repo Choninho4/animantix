@@ -27,7 +27,7 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
   },
   {
     id: 'king', nom: 'King', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Homme le plus fort du monde par pure réputation, terrifié dans l\'ombre.',
   },
@@ -38,7 +38,7 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
     imageUrl: null, descriptionCourte: 'Étudiant venu plonger, embarqué dans un chaos de beuveries et d\'amitié.',
   },
   {
-    id: 'yosano-yukiya', nom: 'Yosano Yukiya', animeSource: 'Grand Blue', anneeSortieAnime: 2018,
+    id: 'kohei-imamura', nom: 'Kohei Imamura', animeSource: 'Grand Blue', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Plongeur torse-nu increvable, meilleur ami embrouilleur d\'Iori.',
@@ -52,7 +52,7 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
   {
     id: 'nano-shinonome', nom: 'Nano Shinonome', animeSource: 'Nichijou', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Androïde adolescente cachant une manivelle géante dans le dos, honteuse de sa nature.',
   },
   {
@@ -82,7 +82,7 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
   {
     id: 'rintarou-okabe', nom: 'Rintarou Okabe', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Savant fou autoproclamé, hanté par les conséquences de son voyage dans le temps.',
   },
   {
@@ -107,7 +107,7 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
     id: 'kaede-azusagawa', nom: 'Kaede Azusagawa', animeSource: 'Rascal Does Not Dream of Bunny Girl Senpai', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
-    imageUrl: null, descriptionCourte: 'Lycéenne fantôme syndrome dont l\'existence même s\'efface peu à peu des mémoires.',
+    imageUrl: null, descriptionCourte: 'Petite sœur de Sakuta, personnalité née d\'un syndrome de puberté qui a effacé la mémoire de son moi d\'origine.',
   },
   {
     id: 'sakuta-azusagawa', nom: 'Sakuta Azusagawa', animeSource: 'Rascal Does Not Dream of Bunny Girl Senpai', anneeSortieAnime: 2018,
@@ -117,21 +117,21 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
   },
   {
     id: 'hitori-gotoh', nom: 'Hitori Gotoh', animeSource: 'Bocchi the Rock!', anneeSortieAnime: 2022,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Guitariste asociale terrifiée par les autres, transformée par la scène.',
   },
   {
     id: 'nijika-ijichi', nom: 'Nijika Ijichi', animeSource: 'Bocchi the Rock!', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Batteuse solaire et meneuse du groupe, toujours prête à motiver ses amies.',
   },
   {
-    id: 'chika-amatsukaze-yuru-camp', nom: 'Chika Amatsukaze (Yuru Camp)', animeSource: 'Yuru Camp', anneeSortieAnime: 2018,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    id: 'nadeshiko-kagamihara', nom: 'Nadeshiko Kagamihara', animeSource: 'Yuru Camp', anneeSortieAnime: 2018,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
-    imageUrl: null, descriptionCourte: 'Camarade de camping énergique qui entraîne ses amies dans des virées improvisées.',
+    imageUrl: null, descriptionCourte: 'Lycéenne énergique devenue fan de camping après une rencontre marquante, elle communique sa passion à ses amies.',
   },
   {
     id: 'rin-shima', nom: 'Rin Shima', animeSource: 'Yuru Camp', anneeSortieAnime: 2018,
@@ -201,14 +201,14 @@ export const PART_09_COMEDY_SLICE_OF_LIFE: Character[] = [
   },
   {
     id: 'umaru-doma', nom: 'Umaru Doma', animeSource: 'Himouto! Umaru-chan', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Lycéenne parfaite en public, otaku paresseuse en pyjama à la maison.',
   },
   {
     id: 'rikka-takanashi', nom: 'Rikka Takanashi', animeSource: 'Chuunibyou demo Koi ga Shitai!', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéenne persuadée de posséder un œil maudit, empêtrée dans ses propres fantasmes.',
   },
   {

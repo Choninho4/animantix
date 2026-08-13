@@ -4,12 +4,12 @@ export const PART_12_2020S_RELEASES: Character[] = [
   {
     id: 'frieren', nom: 'Frieren', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage elfe immortelle qui redécouvre le temps humain après la mort de ses compagnons.',
   },
   {
     id: 'fern', nom: 'Fern', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Apprentie mage adoptée par Frieren, déterminée à ne jamais la laisser seule à nouveau.',
   },
@@ -81,13 +81,13 @@ export const PART_12_2020S_RELEASES: Character[] = [
   },
   {
     id: 'aqua-hoshino', nom: 'Aqua Hoshino', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Enfant réincarné en acteur, obsédé par la vengeance du meurtre de sa mère idole.',
   },
   {
     id: 'ruby-hoshino', nom: 'Ruby Hoshino', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Sœur jumelle réincarnée, déterminée à devenir l\'idole que sa mère n\'a pas pu rester.',
   },
@@ -111,8 +111,8 @@ export const PART_12_2020S_RELEASES: Character[] = [
   },
   {
     id: 'anos-voldigoad', nom: 'Anos Voldigoad', animeSource: 'The Misfit of Demon King Academy', anneeSortieAnime: 2020,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Roi-démon réincarné deux mille ans plus tard, méprisé par des descendants affaiblis.',
   },
   {
@@ -124,7 +124,7 @@ export const PART_12_2020S_RELEASES: Character[] = [
   {
     id: 'genya-shinazugawa', nom: 'Genya Shinazugawa', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Pourfendeur incapable de respirer correctement, qui dévore la chair des démons vaincus.',
   },
   {
@@ -148,7 +148,7 @@ export const PART_12_2020S_RELEASES: Character[] = [
   {
     id: 'eto-yoshimura', nom: 'Eto Yoshimura', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Écrivaine à la double vie, orchestratrice masquée derrière la plus grande menace goule.',
   },
   {

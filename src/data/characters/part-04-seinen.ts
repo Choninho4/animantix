@@ -16,7 +16,7 @@ export const PART_04_SEINEN: Character[] = [
   {
     id: 'canute', nom: 'Canute', animeSource: 'Vinland Saga', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Prince fragile devenu roi de fer, sacrifiant sa douceur pour régner sans merci.',
   },
   {
@@ -32,8 +32,8 @@ export const PART_04_SEINEN: Character[] = [
     imageUrl: null, descriptionCourte: 'Capitaine de la Bande du Faucon, brisée par la nuit de l\'Éclipse.',
   },
   {
-    id: 'kenji-kurosawa', nom: 'Kenji Kurosawa', animeSource: 'Monster', anneeSortieAnime: 2004,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    id: 'kenzo-tenma', nom: 'Kenzo Tenma', animeSource: 'Monster', anneeSortieAnime: 2004,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Neurochirurgien qui a sauvé un enfant devenu le pire tueur d\'Europe.',
   },
@@ -44,13 +44,7 @@ export const PART_04_SEINEN: Character[] = [
     imageUrl: null, descriptionCourte: 'Monstre au visage d\'ange, incarnation d\'un mal sans motif ni fin.',
   },
   {
-    id: 'musashi-miyamoto', nom: 'Musashi Miyamoto', animeSource: 'Vagabond', anneeSortieAnime: 2019,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
-    imageUrl: null, descriptionCourte: 'Musashi Miyamoto errant, épéiste cherchant la force au prix de toute humanité.',
-  },
-  {
-    id: 'kotaro-kaneda', nom: 'Kotaro Kaneda', animeSource: 'Akira', anneeSortieAnime: 1988,
+    id: 'shotaro-kaneda', nom: 'Shotaro Kaneda', animeSource: 'Akira', anneeSortieAnime: 1988,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Motard rebelle de Neo-Tokyo, meilleur ami d\'un pouvoir en train de le dévorer.',
@@ -58,7 +52,7 @@ export const PART_04_SEINEN: Character[] = [
   {
     id: 'tetsuo-shima', nom: 'Tetsuo Shima', animeSource: 'Akira', anneeSortieAnime: 1988,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Adolescent fragile devenu arme psychique incontrôlable après un accident.',
   },
   {
@@ -104,7 +98,7 @@ export const PART_04_SEINEN: Character[] = [
     imageUrl: null, descriptionCourte: 'Adolescent obsédé par la force pure, cherchant à surpasser son père ogre.',
   },
   {
-    id: 'hajime-kanzaki', nom: 'Hajime Kanzaki', animeSource: 'Elfen Lied', anneeSortieAnime: 2004,
+    id: 'kouta', nom: 'Kouta', animeSource: 'Elfen Lied', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Étudiant paisible dont la maison devient refuge d\'une tueuse aux bras invisibles.',
@@ -170,7 +164,7 @@ export const PART_04_SEINEN: Character[] = [
     imageUrl: null, descriptionCourte: 'Paumé endetté jeté dans des jeux d\'argent mortels, survivant par le calcul.',
   },
   {
-    id: 'yuji-sakai', nom: 'Yuji Sakai', animeSource: 'Kaiji', anneeSortieAnime: 2007,
+    id: 'kazutaka-hyodo', nom: 'Kazutaka Hyodo', animeSource: 'Kaiji', anneeSortieAnime: 2007,
     roleNarratif: 'Antagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Financier manipulateur qui orchestre la chute de ses débiteurs avec délectation.',
@@ -190,29 +184,29 @@ export const PART_04_SEINEN: Character[] = [
   {
     id: 'anna-kyoyama', nom: 'Anna Kyoyama', animeSource: 'Shaman King', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Fiancée impitoyable d\'un futur roi chamane, itako aux méthodes spartiates.',
   },
   {
     id: 'yoh-asakura', nom: 'Yoh Asakura', animeSource: 'Shaman King', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Chamane nonchalant qui ne veut être roi que pour vivre tranquillement.',
   },
   {
-    id: 'netero', nom: 'Netero', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'netero', nom: 'Netero', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Président de l\'Association des Hunters, moine au poing capable de tout briser.',
   },
   {
-    id: 'illumi-zoldyck', nom: 'Illumi Zoldyck', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'illumi-zoldyck', nom: 'Illumi Zoldyck', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Aîné assassin de la famille Zoldyck, aussi méthodique qu\'imprévisible sous ses aiguilles.',
   },
   {
-    id: 'souichirou-yagami', nom: 'Souichirou Yagami', animeSource: 'Ushio to Tora', anneeSortieAnime: 2015,
+    id: 'ushio-aotsuki', nom: 'Ushio Aotsuki', animeSource: 'Ushio to Tora', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéen qui libère un démon tigre scellé et devient malgré lui son partenaire.',

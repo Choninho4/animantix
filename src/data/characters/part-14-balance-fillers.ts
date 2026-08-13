@@ -2,61 +2,61 @@ import type { Character } from '../../types/character';
 
 export const PART_14_BALANCE_FILLERS: Character[] = [
   {
-    id: 'inuyasha', nom: 'Inuyasha', animeSource: 'Inuyasha', anneeSortieAnime: 1996,
+    id: 'inuyasha', nom: 'Inuyasha', animeSource: 'Inuyasha', anneeSortieAnime: 2000,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Hybride mi-démon mi-humain au sabre transformable, cherchant les fragments d\'une perle brisée.',
   },
   {
-    id: 'kagome-higurashi', nom: 'Kagome Higurashi', animeSource: 'Inuyasha', anneeSortieAnime: 1996,
+    id: 'kagome-higurashi', nom: 'Kagome Higurashi', animeSource: 'Inuyasha', anneeSortieAnime: 2000,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Collégienne tombée cinq cents ans dans le passé, archère capable de purifier le mal.',
   },
   {
-    id: 'sesshomaru', nom: 'Sesshomaru', animeSource: 'Inuyasha', anneeSortieAnime: 1996,
+    id: 'sesshomaru', nom: 'Sesshomaru', animeSource: 'Inuyasha', anneeSortieAnime: 2000,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Demi-frère glacial d\'Inuyasha, seigneur démon méprisant les humains jusqu\'à s\'attacher à l\'une d\'elles.',
   },
   {
-    id: 'miroku', nom: 'Miroku', animeSource: 'Inuyasha', anneeSortieAnime: 1996,
+    id: 'miroku', nom: 'Miroku', animeSource: 'Inuyasha', anneeSortieAnime: 2000,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Moine coureur de jupons maudit d\'un vide qui aspire tout ce qu\'il touche.',
   },
   {
-    id: 'sango', nom: 'Sango', animeSource: 'Inuyasha', anneeSortieAnime: 1996,
+    id: 'sango', nom: 'Sango', animeSource: 'Inuyasha', anneeSortieAnime: 2000,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Exterminatrice de démons vengeant son village au boomerang géant.',
   },
   {
-    id: 'jotaro-kujo', nom: 'Jotaro Kujo', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 1993,
+    id: 'jotaro-kujo', nom: 'Jotaro Kujo', animeSource: 'JoJo\'s Bizarre Adventure: Stardust Crusaders', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéen taciturne au Stand surpuissant, aussi doué en combat qu\'en réplique cinglante.',
   },
   {
-    id: 'dio-brando', nom: 'Dio Brando', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 1993,
+    id: 'dio-brando', nom: 'Dio Brando', animeSource: 'JoJo\'s Bizarre Adventure: Stardust Crusaders', anneeSortieAnime: 2014,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Vampire immortel obsédé par la domination du monde et la lignée Joestar.',
   },
   {
-    id: 'joseph-joestar', nom: 'Joseph Joestar', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 1993,
+    id: 'joseph-joestar', nom: 'Joseph Joestar', animeSource: 'JoJo\'s Bizarre Adventure: Battle Tendency', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Combattant rusé et provocateur, aussi doué pour tricher que pour vaincre.',
   },
   {
-    id: 'jolyne-cujoh', nom: 'Jolyne Cujoh', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 1993,
+    id: 'jolyne-cujoh', nom: 'Jolyne Cujoh', animeSource: 'JoJo\'s Bizarre Adventure: Stone Ocean', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Fille rebelle de Jotaro, emprisonnée à tort et armée d\'un Stand en forme de fil.',
   },
   {
-    id: 'giorno-giovanna', nom: 'Giorno Giovanna', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 1993,
+    id: 'giorno-giovanna', nom: 'Giorno Giovanna', animeSource: 'JoJo\'s Bizarre Adventure: Golden Wind', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Fils secret de Dio déterminé à devenir un parrain de la mafia honorable.',
@@ -88,7 +88,7 @@ export const PART_14_BALANCE_FILLERS: Character[] = [
   {
     id: 'tatsumi', nom: 'Tatsumi', animeSource: 'Akame ga Kill!', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Villageois idéaliste rejoignant une équipe d\'assassins pour venger les siens.',
   },
   {
@@ -131,7 +131,7 @@ export const PART_14_BALANCE_FILLERS: Character[] = [
     id: 'genryusai-yamamoto', nom: 'Genryusai Yamamoto', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
-    imageUrl: null, descriptionCourte: 'Capitaine-commandant centenaire du Gotei 13, sabreur redouté depuis un siècle.',
+    imageUrl: null, descriptionCourte: 'Capitaine-commandant du Gotei 13 vieux de plusieurs millénaires, sabreur redouté depuis des siècles.',
   },
   {
     id: 'master-roshi', nom: 'Master Roshi', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
@@ -154,7 +154,7 @@ export const PART_14_BALANCE_FILLERS: Character[] = [
   {
     id: 'chi', nom: 'Chi', animeSource: 'Chobits', anneeSortieAnime: 2002,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Robot-IA', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Persocom trouvée à la casse, apprenant l\'humanité un mot à la fois.',
   },
   {
@@ -172,7 +172,7 @@ export const PART_14_BALANCE_FILLERS: Character[] = [
   {
     id: 'honey-kisaragi', nom: 'Honey Kisaragi', animeSource: 'Cutie Honey', anneeSortieAnime: 1973,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Androïde façonnée par son père, capable de se métamorphoser pour combattre le crime organisé.',
   },
   {
@@ -184,7 +184,7 @@ export const PART_14_BALANCE_FILLERS: Character[] = [
   {
     id: 'ranma-saotome', nom: 'Ranma Saotome', animeSource: 'Ranma ½', anneeSortieAnime: 1989,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Artiste martial maudit qui se transforme en fille au contact de l\'eau froide.',
   },
   {

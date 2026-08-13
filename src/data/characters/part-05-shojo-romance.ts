@@ -33,7 +33,7 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
   },
   {
     id: 'haruhi-fujioka', nom: 'Haruhi Fujioka', animeSource: 'Ouran High School Host Club', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Boursière pragmatique confondue avec un garçon, imperméable au glamour ambiant.',
   },
@@ -118,7 +118,7 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
   {
     id: 'yuki-cross', nom: 'Yuki Cross', animeSource: 'Vampire Knight', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Gardienne d\'une académie où humains et vampires cohabitent sous tension.',
   },
   {
@@ -158,8 +158,8 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
     imageUrl: null, descriptionCourte: 'Chef d\'orchestre perfectionniste terrifié par l\'avion et par le désordre.',
   },
   {
-    id: 'suzuka-nakagawa', nom: 'Suzuka Nakagawa', animeSource: 'Special A', anneeSortieAnime: 2008,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    id: 'hikari-hanazono', nom: 'Hikari Hanazono', animeSource: 'Special A', anneeSortieAnime: 2008,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Deuxième meilleure élève du pays, éternelle rivale d\'un génie insupportable.',
   },
@@ -232,7 +232,7 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
   {
     id: 'howl', nom: 'Howl', animeSource: 'Le Château ambulant', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Magicien vaniteux et lâche qui cache un cœur littéralement offert.',
   },
   {
@@ -248,10 +248,10 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
     imageUrl: null, descriptionCourte: 'Prince maudit parti chercher un remède au cœur d\'une guerre entre nature et industrie.',
   },
   {
-    id: 'emma', nom: 'Emma', animeSource: '7 Seeds', anneeSortieAnime: 2019,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    id: 'natsu-iwashimizu', nom: 'Natsu Iwashimizu', animeSource: '7 Seeds', anneeSortieAnime: 2019,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
-    imageUrl: null, descriptionCourte: 'Survivante d\'une équipe de sauvetage post-apocalyptique, apprenant vite sous pression.',
+    imageUrl: null, descriptionCourte: 'Survivante timide et effacée, devenue essentielle à son équipe grâce à son sens aigu de l\'observation.',
   },
   {
     id: 'yona', nom: 'Yona', animeSource: 'Yona of the Dawn', anneeSortieAnime: 2014,
@@ -276,5 +276,29 @@ export const PART_05_SHOJO_ROMANCE: Character[] = [
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéenne trop grande à son goût, meilleure amie devenue rivale amoureuse.',
+  },
+  {
+    id: 'nana-osaki', nom: 'Nana Osaki', animeSource: 'Nana', anneeSortieAnime: 2006,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    imageUrl: null, descriptionCourte: 'Chanteuse punk au look glacial, farouchement indépendante mais terrifiée d\'être abandonnée.',
+  },
+  {
+    id: 'nana-komatsu', nom: 'Nana Komatsu', animeSource: 'Nana', anneeSortieAnime: 2006,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    imageUrl: null, descriptionCourte: 'Surnommée Hachi, rêveuse sentimentale qui emménage par hasard avec une chanteuse au même prénom.',
+  },
+  {
+    id: 'ash-lynx', nom: 'Ash Lynx', animeSource: 'Banana Fish', anneeSortieAnime: 2018,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    imageUrl: null, descriptionCourte: 'Chef de gang new-yorkais au charisme dangereux, pris dans une conspiration autour de la drogue Banana Fish.',
+  },
+  {
+    id: 'eiji-okumura', nom: 'Eiji Okumura', animeSource: 'Banana Fish', anneeSortieAnime: 2018,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    imageUrl: null, descriptionCourte: 'Photographe japonais sans repères dans la rue, dont la présence apaisante ancre Ash loin de la violence.',
   },
 ];

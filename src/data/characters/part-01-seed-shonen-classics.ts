@@ -69,13 +69,13 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
   },
   {
     id: 'tony-tony-chopper', nom: 'Tony Tony Chopper', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Animal anthropomorphe', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Renne médecin qui n\'a jamais compris qu\'on le trouve mignon.',
   },
   {
     id: 'nico-robin', nom: 'Nico Robin', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Archéologue traquée depuis l\'enfance, seule à lire les Ponéglyphes.',
   },
@@ -104,13 +104,13 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
     imageUrl: null, descriptionCourte: 'Saiyan au cœur pur qui ne vit que pour le prochain combat.',
   },
   {
-    id: 'vegeta', nom: 'Vegeta', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
+    id: 'vegeta', nom: 'Vegeta', animeSource: 'Dragon Ball', anneeSortieAnime: 1989,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Prince déchu des Saiyans, rival éternel rongé par la fierté.',
   },
   {
-    id: 'freezer', nom: 'Freezer', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
+    id: 'freezer', nom: 'Freezer', animeSource: 'Dragon Ball', anneeSortieAnime: 1989,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Tyran galactique poli et cruel, destructeur de la planète Vegeta.',
@@ -128,7 +128,7 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
     imageUrl: null, descriptionCourte: 'Ingénieure surdouée de la Capsule Corp, au caractère explosif.',
   },
   {
-    id: 'son-gohan', nom: 'Son Gohan', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
+    id: 'son-gohan', nom: 'Son Gohan', animeSource: 'Dragon Ball', anneeSortieAnime: 1989,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Érudit malgré lui dont la colère libère une puissance sans limite.',
@@ -183,7 +183,7 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
   },
   {
     id: 'reiner-braun', nom: 'Reiner Braun', animeSource: 'L\'Attaque des Titans', anneeSortieAnime: 2013,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Soldat modèle écartelé entre deux identités irréconciliables.',
   },
@@ -202,7 +202,7 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
   {
     id: 'nezuko-kamado', nom: 'Nezuko Kamado', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir/Orange',
     imageUrl: null, descriptionCourte: 'Démone qui a gardé son humanité et protège les faibles.',
   },
   {
@@ -214,7 +214,7 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
   {
     id: 'inosuke-hashibira', nom: 'Inosuke Hashibira', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Bleu',
     imageUrl: null, descriptionCourte: 'Enfant sauvage à tête de sanglier, élevé par la montagne.',
   },
   {
@@ -250,7 +250,7 @@ export const PART_01_SEED_SHONEN_CLASSICS: Character[] = [
   {
     id: 'shoto-todoroki', nom: 'Shoto Todoroki', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge/Blanc',
     imageUrl: null, descriptionCourte: 'Glace et flamme, héritier écrasé par les ambitions de son père.',
   },
   {

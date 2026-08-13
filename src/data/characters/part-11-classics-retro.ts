@@ -86,7 +86,7 @@ export const PART_11_CLASSICS_RETRO: Character[] = [
     imageUrl: null, descriptionCourte: 'Policier increvable voué corps et âme à l\'arrestation de Lupin, en vain depuis vingt ans.',
   },
   {
-    id: 'judai-captain-harlock', nom: 'Judai (Captain Harlock)', animeSource: 'Capitaine Albator', anneeSortieAnime: 1978,
+    id: 'harlock', nom: 'Harlock', animeSource: 'Capitaine Albator', anneeSortieAnime: 1978,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Pirate de l\'espace solitaire qui refuse un futur dicté par le confort et l\'oubli.',
@@ -128,14 +128,14 @@ export const PART_11_CLASSICS_RETRO: Character[] = [
     imageUrl: null, descriptionCourte: 'Dragueur invétéré dont la victoire à un jeu extraterrestre le fiance à vie.',
   },
   {
-    id: 'kenshiro-toji-hokuto-no-ken-toki', nom: 'Kenshiro Toji (Hokuto no Ken - Toki)', animeSource: 'Fist of the North Star', anneeSortieAnime: 1984,
+    id: 'toki', nom: 'Toki', animeSource: 'Fist of the North Star', anneeSortieAnime: 1984,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Frère aîné malade de Kenshiro, sage gardien d\'un art martial jumeau et pacifique.',
   },
   {
-    id: 'momotaro-tsurugi-captain-tsubasa-rival', nom: 'Momotaro Tsurugi (Captain Tsubasa rival)', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1981,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Enfant',
+    id: 'momotaro-tsurugi', nom: 'Momotaro Tsurugi', animeSource: 'Sakigake!! Otokojuku', anneeSortieAnime: 1988,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Jeune rival redouté du football junior, technique brute et confiance sans limite.',
   },
@@ -164,7 +164,7 @@ export const PART_11_CLASSICS_RETRO: Character[] = [
     imageUrl: null, descriptionCourte: 'Fillette des montagnes suisses dont la joie transforme tous ceux qu\'elle croise.',
   },
   {
-    id: 'georgie-georgie', nom: 'Georgie (Georgie!)', animeSource: 'Georgie', anneeSortieAnime: 1982,
+    id: 'georgie', nom: 'Georgie', animeSource: 'Georgie', anneeSortieAnime: 1983,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Jeune fille au visage marqué, en quête d\'un frère perdu à travers l\'Angleterre victorienne.',

@@ -14,19 +14,19 @@ export const PART_08_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Passeur roi déchu, perfectionniste qui apprend enfin à jouer avec son équipe.',
   },
   {
-    id: 'kotaro-bokuto', nom: 'Kotaro Bokuto', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
+    id: 'kotaro-bokuto', nom: 'Kotaro Bokuto', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'As émotif du volley, capable de passer du sommet à l\'abîme en un point.',
   },
   {
-    id: 'tetsuro-kuroo', nom: 'Tetsuro Kuroo', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
+    id: 'tetsuro-kuroo', nom: 'Tetsuro Kuroo', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Capitaine stratège au sourire de chat, aussi rusé au filet qu\'en dehors.',
   },
   {
-    id: 'kenma-kozume', nom: 'Kenma Kozume', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
+    id: 'kenma-kozume', nom: 'Kenma Kozume', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Passeur introverti qui préfère les jeux vidéo, redoutable analyste sur le terrain.',
@@ -88,7 +88,7 @@ export const PART_08_SPORTS: Character[] = [
   {
     id: 'seijuro-akashi', nom: 'Seijuro Akashi', animeSource: 'Kuroko\'s Basketball', anneeSortieAnime: 2012,
     roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Alien', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Capitaine de la génération miracle, obsédé par une victoire absolue.',
   },
   {
@@ -118,7 +118,7 @@ export const PART_08_SPORTS: Character[] = [
   {
     id: 'meguru-bachira', nom: 'Meguru Bachira', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Doré',
     imageUrl: null, descriptionCourte: 'Attaquant chaotique au style monstrueux, guidé par une créature intérieure.',
   },
   {
@@ -140,19 +140,19 @@ export const PART_08_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Capitaine légendaire au sérieux inébranlable, modèle absolu de discipline.',
   },
   {
-    id: 'kyousuke-hyuuga', nom: 'Kyousuke Hyuuga', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1981,
+    id: 'kyousuke-hyuuga', nom: 'Kyousuke Hyuuga', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1983,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Tireur explosif surnommé le tigre, rival éternel du capitaine Tsubasa.',
   },
   {
-    id: 'tsubasa-ozora', nom: 'Tsubasa Ozora', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1981,
+    id: 'tsubasa-ozora', nom: 'Tsubasa Ozora', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1983,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Enfant prodige du football qui rêve de porter le Japon en Coupe du monde.',
   },
   {
-    id: 'genzo-wakabayashi', nom: 'Genzo Wakabayashi', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1981,
+    id: 'genzo-wakabayashi', nom: 'Genzo Wakabayashi', animeSource: 'Captain Tsubasa', anneeSortieAnime: 1983,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Gardien surdoué persuadé qu\'aucun ballon ne doit jamais franchir sa ligne.',
@@ -164,7 +164,7 @@ export const PART_08_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Lycéen timide devenu boxeur redoutable après avoir été sauvé d\'un passage à tabac.',
   },
   {
-    id: 'eiji-nishina', nom: 'Eiji Nishina', animeSource: 'Diamond no Ace', anneeSortieAnime: 2013,
+    id: 'kazuya-miyuki', nom: 'Kazuya Miyuki', animeSource: 'Diamond no Ace', anneeSortieAnime: 2013,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Receveur tacticien impitoyable, il façonne les lanceurs à sa vision du jeu.',
@@ -182,9 +182,45 @@ export const PART_08_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Deuxième but discret vivant dans l\'ombre d\'un frère aîné devenu pro.',
   },
   {
-    id: 'yamato-takeru', nom: 'Yamato Takeru', animeSource: 'Eyeshield 21', anneeSortieAnime: 2002,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    id: 'yamato-takeru', nom: 'Yamato Takeru', animeSource: 'Eyeshield 21', anneeSortieAnime: 2005,
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
-    imageUrl: null, descriptionCourte: 'Quarterback flamboyant et menteur, meneur charismatique d\'une équipe de bras cassés.',
+    imageUrl: null, descriptionCourte: 'Ancien Eyeshield 21, running back d\'élite des Teikoku Alexanders, rival respectueux de Sena.',
+  },
+  {
+    id: 'mark-evans', nom: 'Mark Evans', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    imageUrl: null, descriptionCourte: 'Gardien capitaine de Raimon, increvable derrière ses buts, porté par la passion du foot de son grand-père.',
+  },
+  {
+    id: 'axel-blaze', nom: 'Axel Blaze', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    imageUrl: null, descriptionCourte: 'Attaquant légendaire aux cheveux de flamme, buteur implacable revenu jouer pour honorer sa sœur.',
+  },
+  {
+    id: 'jude-sharp', nom: 'Jude Sharp', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    imageUrl: null, descriptionCourte: 'Stratège aux lunettes de protection, ancien capitaine rival devenu pilier tacticien de Raimon.',
+  },
+  {
+    id: 'nathan-swift', nom: 'Nathan Swift', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    imageUrl: null, descriptionCourte: 'Défenseur le plus rapide de Raimon, timide en dehors du terrain, imbattable en vitesse pure.',
+  },
+  {
+    id: 'ashito-aoi', nom: 'Ashito Aoi', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    imageUrl: null, descriptionCourte: 'Attaquant à la mémoire de match photographique, recruté à Tokyo pour apprendre à voir tout le terrain.',
+  },
+  {
+    id: 'tatsuya-fukuda', nom: 'Tatsuya Fukuda', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
+    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    imageUrl: null, descriptionCourte: 'Entraîneur calculateur d\'Esperion, ancien pro reconverti en dénicheur de talents impitoyable.',
   },
 ];

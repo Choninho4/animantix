@@ -10,7 +10,7 @@ export const PART_07_MECHA: Character[] = [
   {
     id: 'char-aznable', nom: 'Char Aznable', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
     roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Le Comète Rouge masqué, pilote légendaire animé par une vengeance familiale.',
   },
   {
@@ -45,20 +45,20 @@ export const PART_07_MECHA: Character[] = [
   },
   {
     id: 'kaworu-nagisa', nom: 'Kaworu Nagisa', animeSource: 'Neon Genesis Evangelion', anneeSortieAnime: 1995,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Dix-septième ange à visage humain, seul à offrir à Shinji une amitié sincère.',
   },
   {
     id: 'hiro-hyuga', nom: 'Hiro Hyuga', animeSource: 'Darling in the Franxx', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Rose',
+    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Pilote déchu qui ne retrouve sa place qu\'aux côtés d\'une fille cornée.',
   },
   {
     id: 'zero-two', nom: 'Zero Two', animeSource: 'Darling in the Franxx', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
+    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Hybride mi-humaine mi-klaxosaure, cherchant un partenaire qui survivra à ses côtés.',
   },
   {
@@ -106,7 +106,7 @@ export const PART_07_MECHA: Character[] = [
   {
     id: 'van-fanel', nom: 'Van Fanel', animeSource: 'The Vision of Escaflowne', anneeSortieAnime: 1996,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Jeune roi guerrier lié à un mecha-dragon légendaire de son royaume englouti.',
   },
   {
@@ -135,7 +135,7 @@ export const PART_07_MECHA: Character[] = [
   },
   {
     id: 'flit-asuno', nom: 'Flit Asuno', animeSource: 'Mobile Suit Gundam AGE', anneeSortieAnime: 2011,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Enfant devenu ingénieur militaire après avoir vu sa mère mourir sous ses yeux.',
   },

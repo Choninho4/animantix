@@ -4,7 +4,7 @@ export const PART_06_ISEKAI: Character[] = [
   {
     id: 'emilia', nom: 'Emilia', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Candidate demi-elfe au trône royal, hantée par un passé qu\'elle refuse de fuir.',
   },
   {
@@ -15,19 +15,19 @@ export const PART_06_ISEKAI: Character[] = [
   },
   {
     id: 'beatrice', nom: 'Beatrice', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Senior',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Esprit archiviste capricieux enfermé volontairement dans une bibliothèque interdite.',
   },
   {
     id: 'rimuru-tempest', nom: 'Rimuru Tempest', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
     race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Salaryman réincarné en slime, devenu roi pacifiste d\'une nation de monstres.',
   },
   {
     id: 'milim-nava', nom: 'Milim Nava', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
     race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Démon Roi à l\'apparence enfantine, capable de raser un royaume par caprice.',
   },
@@ -64,18 +64,18 @@ export const PART_06_ISEKAI: Character[] = [
   {
     id: 'ainz-ooal-gown', nom: 'Ainz Ooal Gown', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Squelette suprême, ancien joueur transporté avec sa guilde dans un monde bien réel.',
   },
   {
     id: 'albedo', nom: 'Albedo', animeSource: 'Overlord', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Gardienne succube amoureuse de son créateur, dévouée jusqu\'à la cruauté.',
   },
   {
     id: 'shalltear-bloodfallen', nom: 'Shalltear Bloodfallen', animeSource: 'Overlord', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Senior',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Vampire suprême du sous-sol de Nazarick, redoutable et enfantine.',
   },
@@ -140,7 +140,7 @@ export const PART_06_ISEKAI: Character[] = [
     imageUrl: null, descriptionCourte: 'Âme de cadre impitoyable réincarnée en petite fille mage sur un champ de bataille.',
   },
   {
-    id: 'yuuki-konno', nom: 'Yuuki Konno', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
+    id: 'yuuki-konno', nom: 'Yuuki Konno', animeSource: 'Sword Art Online', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Épéiste absolue mourante d\'une maladie, cherchant à vivre pleinement en jeu.',

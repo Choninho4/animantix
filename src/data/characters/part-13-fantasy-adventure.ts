@@ -22,13 +22,13 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'gray-fullbuster', nom: 'Gray Fullbuster', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Mage de glace au strip-tease inconscient, rival de feu de Natsu depuis l\'enfance.',
   },
   {
     id: 'wendy-marvell', nom: 'Wendy Marvell', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Jeune dragon slayer du ciel, guérisseuse timide de la guilde Fairy Tail.',
   },
   {
@@ -40,12 +40,12 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'reg', nom: 'Reg', animeSource: 'Made in Abyss', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
+    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Robot à mémoire perdue trouvé au fond de l\'abîme, protecteur loyal de Riko.',
   },
   {
     id: 'nanachi', nom: 'Nanachi', animeSource: 'Made in Abyss', anneeSortieAnime: 2017,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Enfant',
     race: 'Animal anthropomorphe', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Ancienne humaine transformée en créature abyssale, hantée par son passé perdu.',
   },
@@ -70,7 +70,7 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'meliodas', nom: 'Meliodas', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chef démoniaque des Sept Péchés Capitaux, aussi puissant que farceur invétéré.',
   },
   {
@@ -82,7 +82,7 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'ban', nom: 'Ban', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Immortel voleur au bras de la convoitise, hors-la-loi loyal à sa famille de cœur.',
   },
   {
@@ -94,7 +94,7 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'hitomi-kanzaki', nom: 'Hitomi Kanzaki', animeSource: 'The Vision of Escaflowne', anneeSortieAnime: 1996,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Voyante lycéenne transportée dans un monde de dragons et de guerres mecha.',
   },
   {
@@ -136,7 +136,7 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'priestess-goblin-slayer', nom: 'Priestess (Goblin Slayer)', animeSource: 'Goblin Slayer', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Jeune prêtresse novice, seule survivante d\'un groupe massacré par des gobelins.',
   },
   {
@@ -154,13 +154,13 @@ export const PART_13_FANTASY_ADVENTURE: Character[] = [
   {
     id: 'pazu', nom: 'Pazu', animeSource: 'Le Château dans le ciel', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Jeune mineur qui recueille une fille tombée du ciel, porteuse d\'une pierre volante.',
   },
   {
     id: 'sheeta', nom: 'Sheeta', animeSource: 'Le Château dans le ciel', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Héritière d\'une cité flottante légendaire, poursuivie pour le secret de son pendentif.',
   },
   {

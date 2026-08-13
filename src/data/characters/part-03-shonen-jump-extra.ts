@@ -22,7 +22,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   {
     id: 'jinbe', nom: 'Jinbe', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
     imageUrl: null, descriptionCourte: 'Chevalier de la mer au sens de l\'honneur inébranlable, timonier des Chapeaux de Paille.',
   },
   {
@@ -33,7 +33,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   },
   {
     id: 'boa-hancock', nom: 'Boa Hancock', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Impératrice pirate à la beauté pétrifiante, seule femme Grand Corsaire.',
   },
@@ -51,7 +51,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   },
   {
     id: 'crocodile', nom: 'Crocodile', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancien Grand Corsaire de sable, aussi sec et tranchant que le désert qu\'il contrôle.',
   },
@@ -92,7 +92,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
     imageUrl: null, descriptionCourte: 'L\'Éclair Jaune de Konoha, quatrième Hokage et père sacrifié de Naruto.',
   },
   {
-    id: 'pain', nom: 'Pain', animeSource: 'Naruto', anneeSortieAnime: 2002,
+    id: 'pain', nom: 'Pain', animeSource: 'Naruto', anneeSortieAnime: 2007,
     roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Chef de l\'Akatsuki qui croit imposer la paix par une douleur partagée.',
@@ -146,19 +146,19 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
     imageUrl: null, descriptionCourte: 'Chevalier autoproclamé persuadé d\'être le héros d\'un jeu vidéo bien réel.',
   },
   {
-    id: 'chrollo-lucilfer', nom: 'Chrollo Lucilfer', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'chrollo-lucilfer', nom: 'Chrollo Lucilfer', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Chef voleur de la Brigade Fantôme, capable de dérober n\'importe quel pouvoir.',
   },
   {
-    id: 'meruem', nom: 'Meruem', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'meruem', nom: 'Meruem', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Roi chimère né pour dominer, dont une partie d\'échecs a changé son âme.',
   },
   {
-    id: 'leorio-paradinight', nom: 'Leorio Paradinight', animeSource: 'Hunter x Hunter', anneeSortieAnime: 2011,
+    id: 'leorio-paradinight', nom: 'Leorio Paradinight', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Futur médecin bourru qui veut soigner ceux que l\'argent laisse mourir.',
@@ -195,7 +195,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   },
   {
     id: 'mahito', nom: 'Mahito', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Ado',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Fléau né de la haine humaine, il façonne les âmes comme de l\'argile.',
   },
@@ -232,13 +232,13 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   {
     id: 'soul-eater-evans', nom: 'Soul Eater Evans', animeSource: 'Soul Eater', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Robot-IA', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Faux démoniaque nonchalant qui rêve de rester cool en toute circonstance.',
   },
   {
     id: 'death-the-kid', nom: 'Death the Kid', animeSource: 'Soul Eater', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
     imageUrl: null, descriptionCourte: 'Fils de la Mort obsédé par la symétrie parfaite de toute chose.',
   },
   {
@@ -262,7 +262,7 @@ export const PART_03_SHONEN_JUMP_EXTRA: Character[] = [
   {
     id: 'aladdin', nom: 'Aladdin', animeSource: 'Magi', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Magi enfantin au djinn logé dans sa flûte, curieux de tout ce qu\'est l\'humanité.',
   },
   {

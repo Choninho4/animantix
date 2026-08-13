@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Character } from '../../types/character';
 import { calculateSimilarity } from '../scoring';
+import { POIDS } from '../constants';
 
 function makeCharacter(overrides: Partial<Character>): Character {
   return {
@@ -182,5 +183,65 @@ describe('calculateSimilarity', () => {
     const target = makeCharacter({ id: 'target' });
     const guess = makeCharacter({ id: 'guess' });
     expect(calculateSimilarity(guess, target).total).toBeLessThanOrEqual(100);
+  });
+
+  it('la somme des poids maximum vaut exactement 100 (invariant du barème)', () => {
+    const sumOfMax = POIDS.anime + POIDS.role + POIDS.camp + POIDS.genre + POIDS.age
+      + POIDS.race + POIDS.pouvoir + POIDS.decennie + POIDS.cheveux;
+    expect(sumOfMax).toBe(100);
+  });
+
+  it('deux personnages différents (ids distincts) mais identiques sur tous les autres critères atteignent aussi 100', () => {
+    const target = makeCharacter({ id: 'target', anneeSortieAnime: 2010 });
+    const guess = makeCharacter({ id: 'guess', anneeSortieAnime: 2010 });
+    const result = calculateSimilarity(guess, target);
+    expect(result.total).toBe(100);
+  });
+
+  it('deux personnages totalement différents sur tous les axes rapportent 0, jamais négatif', () => {
+    const target = makeCharacter({
+      id: 'target',
+      animeSource: 'Anime A',
+      roleNarratif: 'Protagoniste principal', // groupe 0
+      campMoral: 'Héros', // ordre 0
+      genre: 'Homme',
+      trancheAge: 'Enfant', // ordre 0
+      race: 'Humain',
+      categoriePouvoir: 'Combat physique',
+      anneeSortieAnime: 1970, // décennie 197
+      couleurCheveux: 'Noir',
+    });
+    const guess = makeCharacter({
+      id: 'guess',
+      animeSource: 'Anime B',
+      roleNarratif: 'Soutien-mentor', // groupe 2 (différent de 0)
+      campMoral: 'Vilain', // ordre 2, paire "0-2" non adjacente
+      genre: 'Femme',
+      trancheAge: 'Adulte', // ordre 3, diff = 3 (>= 2)
+      race: 'Alien',
+      categoriePouvoir: 'Aucun pouvoir particulier',
+      anneeSortieAnime: 2020, // décennie 202, diff = 5 (>= 2)
+      couleurCheveux: 'Blond',
+    });
+    const result = calculateSimilarity(guess, target);
+    expect(result.total).toBe(0);
+    expect(result.total).toBeGreaterThanOrEqual(0);
+    for (const value of Object.values(result.breakdown)) {
+      expect(value).toBe(0);
+    }
+  });
+
+  it('rôle "Antagoniste principal" vs "Antagoniste secondaire" (même groupe) rapporte les points de rôle proche', () => {
+    const target = makeCharacter({ id: 'target', roleNarratif: 'Antagoniste principal', animeSource: 'X' });
+    const guess = makeCharacter({ id: 'guess', roleNarratif: 'Antagoniste secondaire', animeSource: 'Y' });
+    expect(calculateSimilarity(guess, target).breakdown.role).toBe(POIDS.roleProche);
+  });
+
+  it('camp "Anti-héros" vs "Neutre-ambigu" est adjacent (5 pts), "Anti-héros" vs "Anti-héros" est identique (10 pts)', () => {
+    const target = makeCharacter({ id: 'target', campMoral: 'Anti-héros' });
+    const adjacent = makeCharacter({ id: 'g1', campMoral: 'Neutre-ambigu', animeSource: 'Autre' });
+    const same = makeCharacter({ id: 'g2', campMoral: 'Anti-héros', animeSource: 'Autre' });
+    expect(calculateSimilarity(adjacent, target).breakdown.camp).toBe(POIDS.campAdjacent);
+    expect(calculateSimilarity(same, target).breakdown.camp).toBe(POIDS.camp);
   });
 });

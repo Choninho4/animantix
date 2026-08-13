@@ -40,44 +40,50 @@ export default function AboutPage() {
 
   return (
     <main className="mx-auto w-full max-w-[960px] px-4">
-      <section className="flex flex-wrap items-center gap-10 py-14 sm:py-16">
-        <div className="min-w-0 max-w-[620px] flex-1">
-          <span className="mb-5 inline-block rounded-pill bg-surface px-3 py-1.5 text-[12px] font-bold text-brand-dark">
+      <section className="flex flex-col items-center gap-1 py-9 text-center sm:flex-row sm:flex-wrap sm:items-center sm:gap-10 sm:py-16 sm:text-left">
+        <img
+          src="/assets/mascot-inku.png"
+          alt=""
+          className="order-first mb-3 h-auto w-[112px] flex-none sm:order-last sm:mb-0 sm:w-[220px]"
+        />
+        <div className="min-w-0 max-w-[620px] sm:flex-1">
+          <span className="mb-4 inline-block rounded-pill bg-surface px-3 py-1.5 text-[12px] font-bold text-brand-dark sm:mb-5">
             Le jeu quotidien INKU
           </span>
-          <h1 className="mb-5 font-display text-[36px] font-bold leading-[1.1] text-brand sm:text-[52px]">
+          <h1 className="mb-4 font-display text-[28px] font-bold leading-[1.18] text-brand sm:mb-5 sm:text-[52px] sm:leading-[1.1]">
             Un personnage d'anime mystère à deviner, chaque jour.
           </h1>
-          <p className="mb-7 text-[17px] leading-[1.6] text-muted sm:text-[18px]">
+          <p className="mb-6 text-[16px] leading-[1.6] text-muted sm:mb-7 sm:text-[18px]">
             Un seul personnage par jour, le même pour toute la communauté. Tu proposes d'autres
             personnages, et chaque essai te dit à quel point tu chauffes. Essais illimités, zéro
             inscription.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               to="/"
-              className="flex min-h-touch items-center rounded-control bg-brand px-6 font-display text-[16px] font-bold text-white active:scale-[.98]"
+              className="flex min-h-touch items-center justify-center rounded-control bg-brand px-6 font-display text-[16px] font-bold text-white active:scale-[.98] sm:justify-start"
             >
               Jouer maintenant
             </Link>
             <Link
               to="/contact"
-              className="flex min-h-touch items-center rounded-control border-2 border-brand px-6 font-display text-[16px] font-bold text-brand"
+              className="flex min-h-touch items-center justify-center rounded-control border-2 border-brand px-6 font-display text-[16px] font-bold text-brand sm:justify-start"
             >
               Nous écrire
             </Link>
           </div>
         </div>
-        <img src="/assets/mascot-inku.png" alt="" className="h-auto w-[180px] flex-none sm:w-[220px]" />
       </section>
 
-      <section className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {stats.map((s) => (
+      <section className="mb-12 grid grid-cols-2 gap-3 sm:mb-16 sm:gap-4 sm:grid-cols-3">
+        {stats.map((s, i) => (
           <div
             key={s.key}
-            className="rounded-card border border-border bg-surface p-6 transition-transform duration-200 hover:-translate-y-1"
+            className={`rounded-card border border-border bg-surface p-5 transition-transform duration-200 hover:-translate-y-1 sm:p-6 ${
+              i === stats.length - 1 ? 'col-span-2 sm:col-span-1' : ''
+            }`}
           >
-            <div className="mb-1.5 font-display text-[30px] font-bold leading-[1.1] text-brand sm:text-[34px]">
+            <div className="mb-1.5 font-display text-[28px] font-bold leading-[1.1] text-brand sm:text-[34px]">
               {s.valeur}
             </div>
             <div className="text-[14px] font-semibold text-text">{s.label}</div>

@@ -3,6 +3,7 @@ import { CHARACTERS } from '../data/characters';
 import { POIDS } from '../lib/constants';
 import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../lib/temperature';
 import { TemperatureBandIcon } from '../components/icons/Icon';
+import { useTheme } from '../hooks/useTheme';
 
 // Date de mise en ligne réelle du site (premier commit) : sert de base au
 // compteur "jours de jeu" ci-dessous.
@@ -31,6 +32,7 @@ function daysSinceLaunch(): number {
 }
 
 export default function AboutPage() {
+  const { theme } = useTheme();
   const animeCount = new Set(CHARACTERS.map((c) => c.animeSource)).size;
   const stats = [
     { key: 'p', valeur: CHARACTERS.length, label: 'personnages', detail: 'dans la base, et ça grandit' },
@@ -80,7 +82,7 @@ export default function AboutPage() {
           <div
             key={s.key}
             className={`rounded-card border border-border bg-surface p-5 transition-transform duration-200 hover:-translate-y-1 sm:p-6 ${
-              i === stats.length - 1 ? 'col-span-2 sm:col-span-1' : ''
+              i === stats.length - 1 ? 'col-span-2 text-center sm:col-span-1 sm:text-left' : ''
             }`}
           >
             <div className="mb-1.5 font-display text-[28px] font-bold leading-[1.1] text-brand sm:text-[34px]">
@@ -119,7 +121,7 @@ export default function AboutPage() {
               <span
                 key={band.min}
                 className="flex items-center gap-2 rounded-pill px-3.5 py-1.5 text-[13px] font-bold"
-                style={{ background: band.bg, color: band.fg }}
+                style={{ background: band.bg, color: theme === 'dark' ? band.fgDark : band.fg }}
               >
                 <TemperatureBandIcon icon={band.icon} size={13} />
                 {band.label}

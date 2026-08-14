@@ -76,9 +76,9 @@ export function VictorySection() {
             <StatTile value={String(streak)} label="série en cours" icon={<FlameIcon size={17} />} />
             {communityPercentile && (
               <StatTile
-                value={communityPercentile.isFirst ? '🥇' : `Top ${communityPercentile.percentileTop}%`}
-                label={communityPercentile.isFirst ? 'premier aujourd\'hui' : 'des plus rapides'}
-                icon={!communityPercentile.isFirst && <MedalIcon size={17} />}
+                value={communityPercentile.isFirst ? '1er' : `Top ${communityPercentile.percentileTop}%`}
+                label={communityPercentile.isFirst ? 'aujourd\'hui' : 'des plus rapides'}
+                icon={<MedalIcon size={17} />}
               />
             )}
           </div>

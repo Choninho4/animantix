@@ -9,6 +9,13 @@ import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, matchCharacters } from '../lib/autocomplete';
 import { hasSeenIntro, isDayWon, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
+import { getOrCreateAnonId } from '../lib/anonId';
+import {
+  fetchCommunityPercentile,
+  fetchCommunityStats,
+  submitCommunityResult,
+  type CommunityPercentile,
+} from '../lib/leaderboard';
 
 type MessageTone = 'info' | 'warn' | 'win';
 
@@ -35,6 +42,9 @@ interface GameState {
 
   stats: Stats;
   now: number;
+
+  communityTotal: number | null;
+  communityPercentile: CommunityPercentile | null;
 
   modals: ModalState;
   initialized: boolean;
@@ -87,6 +97,9 @@ export const useGameStore = create<GameState>((set, get) => ({
   stats: EMPTY_STATS,
   now: Date.now(),
 
+  communityTotal: null,
+  communityPercentile: null,
+
   modals: { rules: false, stats: false, archive: false, achievements: false },
   initialized: false,
   achievementQueue: [],
@@ -103,18 +116,35 @@ export const useGameStore = create<GameState>((set, get) => ({
   loadDay(offset) {
     const idx = todayIndex() - offset;
     const day = loadDay(idx);
+    const won = !!day?.won;
+    const elapsed = day?.e ?? 0;
     set({
       archiveOffset: offset,
       guesses: day?.g ?? [],
-      won: !!day?.won,
+      won,
       hintsRevealed: day?.h ?? 0,
       startedAt: day?.t ?? Date.now(),
-      elapsed: day?.e ?? 0,
+      elapsed,
       input: '',
       suggestionIndex: 0,
       message: { text: '', tone: 'info' },
       modals: { ...get().modals, archive: false },
+      communityTotal: null,
+      communityPercentile: null,
     });
+
+    // Le classement communautaire ne couvre que le jour courant, jamais l'archive.
+    if (offset === 0) {
+      if (won) {
+        fetchCommunityPercentile(idx, elapsed).then((result) => {
+          if (result) set({ communityPercentile: result });
+        });
+      } else {
+        fetchCommunityStats(idx).then((result) => {
+          if (result) set({ communityTotal: result.total });
+        });
+      }
+    }
   },
 
   setInput(value) {
@@ -195,6 +225,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       elapsed = Date.now() - state.startedAt;
       saveDay(dayIdx, current, { g: guesses, won: true, e: elapsed });
       set({ elapsed });
+      if (isToday) {
+        submitCommunityResult(getOrCreateAnonId(), dayIdx, elapsed).then((result) => {
+          if (result) set({ communityPercentile: result });
+        });
+      }
     } else {
       saveDay(dayIdx, current, { g: guesses });
     }

@@ -6,7 +6,7 @@ import { getShareCardFontEmbedCSS } from '../../lib/fontEmbed';
 import { StatTile } from './StatTile';
 import { Confetti } from './Confetti';
 import { ShareCard } from './ShareCard';
-import { FlameIcon } from '../icons/Icon';
+import { FlameIcon, MedalIcon } from '../icons/Icon';
 
 export function VictorySection() {
   const won = useGameStore((s) => s.won);
@@ -17,6 +17,7 @@ export function VictorySection() {
   const openModal = useGameStore((s) => s.openModal);
   const recordShare = useGameStore((s) => s.recordShare);
   const now = useGameStore((s) => s.now);
+  const communityPercentile = useGameStore((s) => s.communityPercentile);
   const shareCardRef = useRef<HTMLDivElement>(null);
   const [sharing, setSharing] = useState(false);
   const [shared, setShared] = useState(false);
@@ -73,6 +74,13 @@ export function VictorySection() {
             <StatTile value={String(guesses.length)} label="essais" />
             <StatTile value={formatElapsed(elapsed)} label="temps de jeu" />
             <StatTile value={String(streak)} label="série en cours" icon={<FlameIcon size={17} />} />
+            {communityPercentile && (
+              <StatTile
+                value={communityPercentile.isFirst ? '🥇' : `Top ${communityPercentile.percentileTop}%`}
+                label={communityPercentile.isFirst ? 'premier aujourd\'hui' : 'des plus rapides'}
+                icon={!communityPercentile.isFirst && <MedalIcon size={17} />}
+              />
+            )}
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <button

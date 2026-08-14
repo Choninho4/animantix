@@ -10,3 +10,4 @@ dist-ssr
 # Fichiers de design de référence (maquettes, pas du code applicatif)
 Réponses attentes design jeu/
 Réponses attentes design jeu.zip
+.env*

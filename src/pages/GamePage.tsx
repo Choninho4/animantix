@@ -7,6 +7,7 @@ import { HintsPanel } from '../components/hints/HintsPanel';
 import { EmptyState } from '../components/guesses/EmptyState';
 import { AttemptsTable } from '../components/guesses/AttemptsTable';
 import { VictorySection } from '../components/victory/VictorySection';
+import { CommunityCounter } from '../components/community/CommunityCounter';
 import { useCountdown } from '../hooks/useCountdown';
 import { useGameStore } from '../store/useGameStore';
 import { preloadShareCardFonts } from '../lib/fontEmbed';
@@ -32,6 +33,7 @@ export default function GamePage() {
       <main className="mx-auto max-w-[860px] px-4 pb-16">
         <ArchiveBanner />
         <VictorySection />
+        <CommunityCounter />
         <SearchBar />
         <HintsPanel />
         {guesses.length === 0 && !won && <EmptyState />}

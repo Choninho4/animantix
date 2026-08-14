@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { computePercentile } from '../percentile';
+import { computePercentile } from '../percentile.js';
 
 describe('computePercentile', () => {
   it('marque le tout premier joueur du jour comme isFirst', () => {

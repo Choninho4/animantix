@@ -1,4 +1,4 @@
-import type { ApiRequest } from './types';
+import type { ApiRequest } from './types.js';
 
 export function clientIp(req: ApiRequest): string {
   const fwd = req.headers['x-forwarded-for'];

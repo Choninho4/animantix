@@ -1,10 +1,10 @@
-import type { ApiRequest, ApiResponse } from '../_lib/types';
-import { redis } from '../_lib/redis';
-import { leaderboardRatelimit } from '../_lib/ratelimit';
-import { timesKey } from '../_lib/keys';
-import { isPlausibleDayIndex, LEADERBOARD_TTL_SECONDS } from '../_lib/day';
-import { computePercentile } from '../_lib/percentile';
-import { clientIp } from '../_lib/clientIp';
+import type { ApiRequest, ApiResponse } from '../_lib/types.js';
+import { redis } from '../_lib/redis.js';
+import { leaderboardRatelimit } from '../_lib/ratelimit.js';
+import { timesKey } from '../_lib/keys.js';
+import { isPlausibleDayIndex, LEADERBOARD_TTL_SECONDS } from '../_lib/day.js';
+import { computePercentile } from '../_lib/percentile.js';
+import { clientIp } from '../_lib/clientIp.js';
 
 const MIN_TIME_MS = 1_000;
 const MAX_TIME_MS = 24 * 60 * 60 * 1000;

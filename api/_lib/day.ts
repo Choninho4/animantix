@@ -1,4 +1,4 @@
-import { DATE_REF } from '../../src/lib/constants';
+import { DATE_REF } from '../../src/lib/constants.js';
 
 const MS_PER_DAY = 86_400_000;
 const TOLERANCE_DAYS = 2;

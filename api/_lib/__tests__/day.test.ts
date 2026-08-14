@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { isPlausibleDayIndex } from '../day';
-import { DATE_REF } from '../../../src/lib/constants';
+import { isPlausibleDayIndex } from '../day.js';
+import { DATE_REF } from '../../../src/lib/constants.js';
 
 const serverToday = Math.floor((Date.now() - DATE_REF) / 86_400_000);
 

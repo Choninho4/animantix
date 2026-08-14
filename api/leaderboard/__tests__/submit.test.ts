@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { mockReq, mockRes } from '../../_lib/__tests__/testHelpers';
-import { DATE_REF } from '../../../src/lib/constants';
+import { mockReq, mockRes } from '../../_lib/__tests__/testHelpers.js';
+import { DATE_REF } from '../../../src/lib/constants.js';
 
 const today = Math.floor((Date.now() - DATE_REF) / 86_400_000);
 const PLAYER_ID = 'a1b2c3d4-e5f6-4789-a1b2-c3d4e5f67890';
@@ -12,9 +12,9 @@ vi.mock('../../_lib/ratelimit', () => ({
   leaderboardRatelimit: { limit: vi.fn() },
 }));
 
-import handler from '../submit';
-import { redis } from '../../_lib/redis';
-import { leaderboardRatelimit } from '../../_lib/ratelimit';
+import handler from '../submit.js';
+import { redis } from '../../_lib/redis.js';
+import { leaderboardRatelimit } from '../../_lib/ratelimit.js';
 
 beforeEach(() => {
   vi.clearAllMocks();

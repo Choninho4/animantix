@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { mockReq, mockRes } from '../../_lib/__tests__/testHelpers';
-import { DATE_REF } from '../../../src/lib/constants';
+import { mockReq, mockRes } from '../../_lib/__tests__/testHelpers.js';
+import { DATE_REF } from '../../../src/lib/constants.js';
 
 const today = Math.floor((Date.now() - DATE_REF) / 86_400_000);
 
@@ -8,8 +8,8 @@ vi.mock('../../_lib/redis', () => ({
   redis: { zcard: vi.fn() },
 }));
 
-import handler from '../stats';
-import { redis } from '../../_lib/redis';
+import handler from '../stats.js';
+import { redis } from '../../_lib/redis.js';
 
 beforeEach(() => {
   vi.clearAllMocks();

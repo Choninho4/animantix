@@ -1,5 +1,5 @@
 import { vi } from 'vitest';
-import type { ApiRequest, ApiResponse } from '../types';
+import type { ApiRequest, ApiResponse } from '../types.js';
 
 export function mockReq(overrides: Partial<ApiRequest> = {}): ApiRequest {
   return {

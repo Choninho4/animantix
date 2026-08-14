@@ -1,5 +1,5 @@
 import { Ratelimit } from '@upstash/ratelimit';
-import { redis } from './redis';
+import { redis } from './redis.js';
 
 // Pensé pour bloquer le spam d'un identifiant/IP donné, pas pour plafonner le
 // nombre de joueurs différents lors d'un pic de trafic légitime.

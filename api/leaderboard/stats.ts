@@ -1,7 +1,7 @@
-import type { ApiRequest, ApiResponse } from '../_lib/types';
-import { redis } from '../_lib/redis';
-import { timesKey } from '../_lib/keys';
-import { isPlausibleDayIndex } from '../_lib/day';
+import type { ApiRequest, ApiResponse } from '../_lib/types.js';
+import { redis } from '../_lib/redis.js';
+import { timesKey } from '../_lib/keys.js';
+import { isPlausibleDayIndex } from '../_lib/day.js';
 
 export default async function handler(req: ApiRequest, res: ApiResponse) {
   if (req.method !== 'GET') {

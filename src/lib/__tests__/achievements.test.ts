@@ -7,9 +7,9 @@ function makeContext(overrides: Partial<AchievementContext> = {}): AchievementCo
   return {
     won: false,
     guessCount: 0,
-    hintsRevealed: 0,
     elapsedMs: 0,
-    firstGuessScore: null,
+    firstGuessCorrectCount: null,
+    allGuessesPrecise: false,
     distinctAnimesInGame: 0,
     distinctDecadesInGame: 0,
     stats: { ...EMPTY_STATS },
@@ -108,15 +108,16 @@ describe('vitesse', () => {
 });
 
 describe('sans assistance', () => {
-  it('solo : gagné avec zéro indice révélé', () => {
-    expect(unlocked('solo', makeContext({ won: true, hintsRevealed: 0 }))).toBe(true);
-    expect(unlocked('solo', makeContext({ won: true, hintsRevealed: 1 }))).toBe(false);
+  it('solo : gagné avec tous les essais à au moins 4 critères corrects sur 8', () => {
+    expect(unlocked('solo', makeContext({ won: true, allGuessesPrecise: true }))).toBe(true);
+    expect(unlocked('solo', makeContext({ won: true, allGuessesPrecise: false }))).toBe(false);
+    expect(unlocked('solo', makeContext({ won: false, allGuessesPrecise: true }))).toBe(false);
   });
 
-  it('purism : zéro indice ET 10e victoire de ce type cumulée', () => {
-    const notEnough = makeContext({ won: true, hintsRevealed: 0, stats: makeStats({ winsWithoutHint: 9 }) });
+  it('purism : tous les essais précis ET 10e victoire de ce type cumulée', () => {
+    const notEnough = makeContext({ won: true, allGuessesPrecise: true, stats: makeStats({ winsAllPrecise: 9 }) });
     expect(unlocked('purism', notEnough)).toBe(false);
-    const enough = makeContext({ won: true, hintsRevealed: 0, stats: makeStats({ winsWithoutHint: 10 }) });
+    const enough = makeContext({ won: true, allGuessesPrecise: true, stats: makeStats({ winsAllPrecise: 10 }) });
     expect(unlocked('purism', enough)).toBe(true);
   });
 });
@@ -153,18 +154,19 @@ describe('exploration / diversité', () => {
 });
 
 describe('thermomètre', () => {
-  it('red-hot : entre 80 et 99 inclus au tout premier essai, pas 100 (déjà trouvé)', () => {
-    expect(unlocked('red-hot', makeContext({ firstGuessScore: 80 }))).toBe(true);
-    expect(unlocked('red-hot', makeContext({ firstGuessScore: 99 }))).toBe(true);
-    expect(unlocked('red-hot', makeContext({ firstGuessScore: 79 }))).toBe(false);
-    expect(unlocked('red-hot', makeContext({ firstGuessScore: 100 }))).toBe(false);
-    expect(unlocked('red-hot', makeContext({ firstGuessScore: null }))).toBe(false);
+  it('on-track : entre 6 et 7 critères corrects inclus au tout premier essai, pas 8 (déjà trouvé)', () => {
+    expect(unlocked('on-track', makeContext({ firstGuessCorrectCount: 6 }))).toBe(true);
+    expect(unlocked('on-track', makeContext({ firstGuessCorrectCount: 7 }))).toBe(true);
+    expect(unlocked('on-track', makeContext({ firstGuessCorrectCount: 5 }))).toBe(false);
+    expect(unlocked('on-track', makeContext({ firstGuessCorrectCount: 8 }))).toBe(false);
+    expect(unlocked('on-track', makeContext({ firstGuessCorrectCount: null }))).toBe(false);
   });
 
-  it('way-off : strictement moins de 10 au tout premier essai', () => {
-    expect(unlocked('way-off', makeContext({ firstGuessScore: 9 }))).toBe(true);
-    expect(unlocked('way-off', makeContext({ firstGuessScore: 10 }))).toBe(false);
-    expect(unlocked('way-off', makeContext({ firstGuessScore: null }))).toBe(false);
+  it('polar-opposite : 1 critère correct ou moins au tout premier essai', () => {
+    expect(unlocked('polar-opposite', makeContext({ firstGuessCorrectCount: 1 }))).toBe(true);
+    expect(unlocked('polar-opposite', makeContext({ firstGuessCorrectCount: 0 }))).toBe(true);
+    expect(unlocked('polar-opposite', makeContext({ firstGuessCorrectCount: 2 }))).toBe(false);
+    expect(unlocked('polar-opposite', makeContext({ firstGuessCorrectCount: null }))).toBe(false);
   });
 });
 
@@ -196,9 +198,9 @@ describe('checkAchievements (runner)', () => {
     const ctx = makeContext({
       won: true,
       guessCount: 1,
-      hintsRevealed: 0,
       elapsedMs: 10_000,
-      firstGuessScore: 100,
+      firstGuessCorrectCount: 8,
+      allGuessesPrecise: true,
       stats: makeStats({ gamesWon: 1, currentStreak: 1 }),
     });
     const result = checkAchievements(ctx, []);

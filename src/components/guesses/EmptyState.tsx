@@ -15,8 +15,8 @@ export function EmptyState() {
           Un personnage mystère par jour
         </h3>
         <p className="mb-3.5 max-w-[440px] text-[14px] leading-[1.55] text-muted">
-          Propose n'importe quel personnage d'anime. Le score en % te dit à quel point il
-          ressemble au personnage du jour : même œuvre, rôle, camp moral, âge, pouvoirs… Essais
+          Propose n'importe quel personnage d'anime. Chaque essai compare 8 critères avec le
+          personnage du jour : anime, rôle, camp, race, pouvoir, genre, décennie, cheveux. Essais
           illimités.
         </p>
         <button

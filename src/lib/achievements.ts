@@ -126,16 +126,16 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'solo',
     nom: 'Solo',
-    description: 'Gagner une partie sans révéler aucun indice.',
+    description: 'Gagner une partie où chaque essai a obtenu au moins 4 critères corrects sur 8.',
     categorie: 'sans-assistance',
-    isUnlocked: (ctx) => ctx.won && ctx.hintsRevealed === 0,
+    isUnlocked: (ctx) => ctx.won && ctx.allGuessesPrecise,
   },
   {
     id: 'purism',
     nom: 'Purisme',
-    description: 'Gagner 10 parties sans révéler aucun indice.',
+    description: 'Gagner 10 parties où chaque essai a obtenu au moins 4 critères corrects sur 8.',
     categorie: 'sans-assistance',
-    isUnlocked: (ctx) => ctx.won && ctx.hintsRevealed === 0 && ctx.stats.winsWithoutHint >= 10,
+    isUnlocked: (ctx) => ctx.won && ctx.allGuessesPrecise && ctx.stats.winsAllPrecise >= 10,
   },
 
   // --- Persévérance ---
@@ -179,18 +179,19 @@ export const ACHIEVEMENTS: Achievement[] = [
 
   // --- Thermomètre ---
   {
-    id: 'red-hot',
-    nom: 'Chaud bouillant',
-    description: 'Obtenir un score « Brûlant » (80-99 %) dès le tout premier essai d\'une partie.',
+    id: 'on-track',
+    nom: 'Sur la bonne piste',
+    description: 'Obtenir au moins 6 critères corrects sur 8 dès le tout premier essai d\'une partie.',
     categorie: 'thermometre',
-    isUnlocked: (ctx) => ctx.firstGuessScore !== null && ctx.firstGuessScore >= 80 && ctx.firstGuessScore <= 99,
+    isUnlocked: (ctx) =>
+      ctx.firstGuessCorrectCount !== null && ctx.firstGuessCorrectCount >= 6 && ctx.firstGuessCorrectCount < 8,
   },
   {
-    id: 'way-off',
-    nom: 'Loin du compte',
-    description: 'Obtenir un score inférieur à 10 % dès le tout premier essai d\'une partie.',
+    id: 'polar-opposite',
+    nom: 'Aux antipodes',
+    description: 'Obtenir 1 seul critère correct ou moins dès le tout premier essai d\'une partie.',
     categorie: 'thermometre',
-    isUnlocked: (ctx) => ctx.firstGuessScore !== null && ctx.firstGuessScore < 10,
+    isUnlocked: (ctx) => ctx.firstGuessCorrectCount !== null && ctx.firstGuessCorrectCount <= 1,
   },
 
   // --- Fidélité globale ---
@@ -236,8 +237,8 @@ export const ACHIEVEMENT_ICONS: Record<string, (props: { size?: number; classNam
   encyclopedist: GlobeIcon,
   'time-traveler': ClockIcon,
   globetrotter: GlobeIcon,
-  'red-hot': FlameIcon,
-  'way-off': SnowflakeIcon,
+  'on-track': FlameIcon,
+  'polar-opposite': SnowflakeIcon,
   veteran: MedalIcon,
   'first-share': ShareIcon,
   ambassador: ShareIcon,

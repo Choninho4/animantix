@@ -93,7 +93,7 @@ function PlayerForm() {
           rows={5}
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
-          placeholder="Il manque un perso ? Le score te paraît bizarre ? Raconte."
+          placeholder="Il manque un perso ? Un résultat te paraît bizarre ? Raconte."
           className={`${fieldClass} min-h-0 resize-y py-3`}
         />
       </FormField>

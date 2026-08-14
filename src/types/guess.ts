@@ -1,15 +1,17 @@
+import type { CriterionResult } from '../lib/comparison';
+
 export interface GuessEntry {
   id: string;
   nom: string;
   anime: string;
-  score: number;
+  results: CriterionResult[];
+  correctCount: number;
   n: number;
 }
 
 export interface DayState {
   g: GuessEntry[];
   won: boolean;
-  h: number;
   t: number;
   e: number;
 }

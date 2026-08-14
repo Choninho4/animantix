@@ -13,9 +13,11 @@ export type AchievementCategory =
 export interface AchievementContext {
   won: boolean;
   guessCount: number;
-  hintsRevealed: number;
   elapsedMs: number;
-  firstGuessScore: number | null;
+  /** Nombre de critères corrects (sur 8) au tout premier essai de la partie, ou null si aucun essai. */
+  firstGuessCorrectCount: number | null;
+  /** true si tous les essais de la partie ont eu au moins PRECISE_THRESHOLD critères corrects. */
+  allGuessesPrecise: boolean;
   distinctAnimesInGame: number;
   distinctDecadesInGame: number;
   stats: Stats;

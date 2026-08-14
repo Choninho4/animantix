@@ -133,9 +133,8 @@ export function ClockIcon({ size = 16, className }: IconProps) {
 export function MedalIcon({ size = 16, className }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>
-      <path d="M8 3 5 10l3.5 1.4L11 5 8 3ZM16 3l3 7-3.5 1.4L13 5l3-3Z" />
-      <circle cx="12" cy="15" r="6" />
-      <path d="M12 12.3 12.9 14.1 14.9 14.4 13.5 15.8 13.8 17.8 12 16.8 10.2 17.8 10.5 15.8 9.1 14.4 11.1 14.1 12 12.3Z" />
+      <circle cx="12" cy="8.5" r="6" />
+      <path d="M8.5 13.9 7 22l5-2.7 5 2.7-1.5-8.1" />
     </svg>
   );
 }

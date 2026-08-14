@@ -15,6 +15,7 @@ export function VictorySection() {
   const streak = useGameStore((s) => s.stats.currentStreak);
   const archiveOffset = useGameStore((s) => s.archiveOffset);
   const openModal = useGameStore((s) => s.openModal);
+  const recordShare = useGameStore((s) => s.recordShare);
   const now = useGameStore((s) => s.now);
   const shareCardRef = useRef<HTMLDivElement>(null);
   const [sharing, setSharing] = useState(false);
@@ -49,6 +50,7 @@ export function VictorySection() {
       link.href = dataUrl;
       link.click();
       setShared(true);
+      recordShare();
       setTimeout(() => setShared(false), 2200);
     } finally {
       setSharing(false);

@@ -2,11 +2,13 @@ import { create } from 'zustand';
 import type { Character } from '../types/character';
 import type { DayState, GuessEntry } from '../types/guess';
 import { EMPTY_STATS, guessBucketFor, type Stats } from '../types/stats';
+import type { AchievementContext } from '../types/achievement';
 import { CHARACTERS } from '../data/characters';
 import { calculateSimilarity } from '../lib/scoring';
 import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, matchCharacters } from '../lib/autocomplete';
 import { hasSeenIntro, isDayWon, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
+import { checkAchievements } from '../lib/achievements';
 
 type MessageTone = 'info' | 'warn' | 'win';
 
@@ -14,6 +16,7 @@ interface ModalState {
   rules: boolean;
   stats: boolean;
   archive: boolean;
+  achievements: boolean;
 }
 
 interface GameState {
@@ -35,6 +38,7 @@ interface GameState {
 
   modals: ModalState;
   initialized: boolean;
+  achievementQueue: string[];
 
   init(): void;
   loadDay(offset: number): void;
@@ -47,6 +51,19 @@ interface GameState {
   openModal(name: keyof ModalState): void;
   closeModals(): void;
   tick(): void;
+  recordShare(): void;
+  dismissAchievementToast(): void;
+}
+
+/** Décennies et animes distincts déjà proposés dans la partie en cours (id → lookup CHARACTERS). */
+function explorationCounts(guesses: GuessEntry[]): { distinctAnimes: number; distinctDecades: number } {
+  const animes = new Set(guesses.map((g) => g.anime));
+  const decades = new Set<number>();
+  for (const g of guesses) {
+    const character = CHARACTERS.find((c) => c.id === g.id);
+    if (character) decades.add(Math.floor(character.anneeSortieAnime / 10));
+  }
+  return { distinctAnimes: animes.size, distinctDecades: decades.size };
 }
 
 function todayIndex(): number {
@@ -70,15 +87,16 @@ export const useGameStore = create<GameState>((set, get) => ({
   stats: EMPTY_STATS,
   now: Date.now(),
 
-  modals: { rules: false, stats: false, archive: false },
+  modals: { rules: false, stats: false, archive: false, achievements: false },
   initialized: false,
+  achievementQueue: [],
 
   init() {
     if (get().initialized) return;
     const stats = loadStats();
     const firstVisit = !hasSeenIntro();
     markSeen();
-    set({ stats, initialized: true, modals: { rules: firstVisit, stats: false, archive: false } });
+    set({ stats, initialized: true, modals: { rules: firstVisit, stats: false, archive: false, achievements: false } });
     get().loadDay(0);
   },
 
@@ -169,26 +187,64 @@ export const useGameStore = create<GameState>((set, get) => ({
       e: state.elapsed,
     };
 
+    let elapsed = state.elapsed;
+    const isToday = state.archiveOffset === 0;
+    let s: Stats = state.stats;
+
     if (won) {
-      const elapsed = Date.now() - state.startedAt;
+      elapsed = Date.now() - state.startedAt;
       saveDay(dayIdx, current, { g: guesses, won: true, e: elapsed });
       set({ elapsed });
-      if (state.archiveOffset === 0) {
-        const s: Stats = {
-          ...state.stats,
-          gamesPlayed: state.stats.gamesPlayed + 1,
-          gamesWon: state.stats.gamesWon + 1,
+    } else {
+      saveDay(dayIdx, current, { g: guesses });
+    }
+
+    if (isToday) {
+      // Suivi cumulatif indépendant de la victoire : un anime "proposé" compte
+      // dès l'essai, même si la partie n'est pas encore gagnée.
+      if (!s.animesGuessedEver.includes(target.animeSource)) {
+        s = { ...s, animesGuessedEver: [...s.animesGuessedEver, target.animeSource] };
+      }
+      if (guesses.length === 1 && s.lastPlayedDayIndex !== dayIdx) {
+        s = { ...s, daysPlayed: s.daysPlayed + 1, lastPlayedDayIndex: dayIdx };
+      }
+
+      if (won) {
+        s = {
+          ...s,
+          gamesPlayed: s.gamesPlayed + 1,
+          gamesWon: s.gamesWon + 1,
           currentStreak: state.stats.currentStreak + 1,
           maxStreak: Math.max(state.stats.maxStreak, state.stats.currentStreak + 1),
-          guessDistribution: { ...state.stats.guessDistribution },
+          guessDistribution: { ...s.guessDistribution },
+          winsWithoutHint: s.winsWithoutHint + (state.hintsRevealed === 0 ? 1 : 0),
+          winsUnder2Min: s.winsUnder2Min + (elapsed < 2 * 60_000 ? 1 : 0),
+          winsWithin5Guesses: s.winsWithin5Guesses + (guesses.length <= 5 ? 1 : 0),
         };
         const bucket = guessBucketFor(guesses.length);
         s.guessDistribution[bucket] = (s.guessDistribution[bucket] ?? 0) + 1;
-        saveStats(s);
-        set({ stats: s });
       }
-    } else {
-      saveDay(dayIdx, current, { g: guesses });
+
+      const { distinctAnimes, distinctDecades } = explorationCounts(guesses);
+      const ctx: AchievementContext = {
+        won,
+        guessCount: guesses.length,
+        hintsRevealed: state.hintsRevealed,
+        elapsedMs: won ? elapsed : state.elapsed,
+        firstGuessScore: guesses[0]?.score ?? null,
+        distinctAnimesInGame: distinctAnimes,
+        distinctDecadesInGame: distinctDecades,
+        stats: s,
+      };
+      const newlyUnlocked = checkAchievements(ctx, s.unlockedAchievements);
+      if (newlyUnlocked.length) {
+        s = { ...s, unlockedAchievements: [...s.unlockedAchievements, ...newlyUnlocked] };
+      }
+
+      if (s !== state.stats) {
+        saveStats(s);
+        set((st) => ({ stats: s, achievementQueue: [...st.achievementQueue, ...newlyUnlocked] }));
+      }
     }
   },
 
@@ -205,12 +261,37 @@ export const useGameStore = create<GameState>((set, get) => ({
     get().loadDay(0);
   },
 
+  recordShare() {
+    const state = get();
+    if (state.archiveOffset !== 0) return;
+    const s: Stats = { ...state.stats, shareCount: state.stats.shareCount + 1 };
+    const { distinctAnimes, distinctDecades } = explorationCounts(state.guesses);
+    const ctx: AchievementContext = {
+      won: state.won,
+      guessCount: state.guesses.length,
+      hintsRevealed: state.hintsRevealed,
+      elapsedMs: state.elapsed,
+      firstGuessScore: state.guesses[0]?.score ?? null,
+      distinctAnimesInGame: distinctAnimes,
+      distinctDecadesInGame: distinctDecades,
+      stats: s,
+    };
+    const newlyUnlocked = checkAchievements(ctx, s.unlockedAchievements);
+    const finalStats = newlyUnlocked.length ? { ...s, unlockedAchievements: [...s.unlockedAchievements, ...newlyUnlocked] } : s;
+    saveStats(finalStats);
+    set((st) => ({ stats: finalStats, achievementQueue: [...st.achievementQueue, ...newlyUnlocked] }));
+  },
+
+  dismissAchievementToast() {
+    set((state) => ({ achievementQueue: state.achievementQueue.slice(1) }));
+  },
+
   openModal(name) {
     set((state) => ({ modals: { ...state.modals, [name]: true } }));
   },
 
   closeModals() {
-    set({ modals: { rules: false, stats: false, archive: false } });
+    set({ modals: { rules: false, stats: false, archive: false, achievements: false } });
   },
 
   tick() {

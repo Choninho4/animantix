@@ -6,6 +6,23 @@ export interface Stats {
   currentStreak: number;
   maxStreak: number;
   guessDistribution: Partial<Record<GuessBucket, number>>;
+
+  /** Noms d'animes (animeSource) déjà proposés en essai, tous temps confondus — pour Globe-trotter. */
+  animesGuessedEver: string[];
+  /** Victoires sans avoir révélé le moindre indice, cumulées — pour Purisme. */
+  winsWithoutHint: number;
+  /** Victoires obtenues en moins de 2 minutes, cumulées — pour Rapide et efficace. */
+  winsUnder2Min: number;
+  /** Victoires obtenues en 5 essais ou moins, cumulées — pour Instinct de chasseur. */
+  winsWithin5Guesses: number;
+  /** Nombre de fois où le résultat a été partagé — pour Premier partage / Ambassadeur. */
+  shareCount: number;
+  /** Nombre de jours distincts où au moins un essai a été soumis — pour Vétéran. */
+  daysPlayed: number;
+  /** Dernier jour (index) où daysPlayed a été incrémenté, pour éviter les doublons. */
+  lastPlayedDayIndex: number | null;
+  /** Ids des succès déjà débloqués, définitivement acquis. */
+  unlockedAchievements: string[];
 }
 
 export const EMPTY_STATS: Stats = {
@@ -14,6 +31,14 @@ export const EMPTY_STATS: Stats = {
   currentStreak: 0,
   maxStreak: 0,
   guessDistribution: {},
+  animesGuessedEver: [],
+  winsWithoutHint: 0,
+  winsUnder2Min: 0,
+  winsWithin5Guesses: 0,
+  shareCount: 0,
+  daysPlayed: 0,
+  lastPlayedDayIndex: null,
+  unlockedAchievements: [],
 };
 
 export function guessBucketFor(n: number): GuessBucket {

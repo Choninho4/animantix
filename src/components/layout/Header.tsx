@@ -5,6 +5,7 @@ import { IconButton } from './IconButton';
 import { StreakBadge } from './StreakBadge';
 import { Wordmark } from './Wordmark';
 import { MobileNav } from './MobileNav';
+import { TrophyIcon } from '../icons/Icon';
 
 export function Header() {
   const archiveOffset = useGameStore((s) => s.archiveOffset);
@@ -51,6 +52,9 @@ export function Header() {
                 <rect x="12.5" y="7" width="3" height="10" />
                 <rect x="18" y="13" width="3" height="4" />
               </svg>
+            </IconButton>
+            <IconButton label="Succès" onClick={() => openModal('achievements')}>
+              <TrophyIcon size={20} />
             </IconButton>
             <IconButton label="Archives" onClick={() => openModal('archive')}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">

@@ -100,6 +100,13 @@ export function MobileNav() {
               </button>
               <button
                 type="button"
+                onClick={() => closeAnd(() => openModal('achievements'))}
+                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+              >
+                Succès
+              </button>
+              <button
+                type="button"
                 onClick={() => closeAnd(() => openModal('archive'))}
                 className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
               >

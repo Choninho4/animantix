@@ -5,6 +5,8 @@ import { Footer } from './Footer';
 import { RulesModal } from '../modals/RulesModal';
 import { StatsModal } from '../modals/StatsModal';
 import { ArchiveCalendarModal } from '../modals/ArchiveCalendarModal';
+import { AchievementToastQueue } from '../achievements/AchievementToastQueue';
+import { AchievementsModal } from '../achievements/AchievementsModal';
 
 // Coquille commune à toutes les pages : navbar et footer identiques partout,
 // et les modales (règles/stats/archives) déclenchables depuis le header quelle
@@ -22,6 +24,8 @@ export function AppLayout() {
       {modals.rules && <RulesModal />}
       {modals.stats && <StatsModal />}
       {modals.archive && <ArchiveCalendarModal />}
+      {modals.achievements && <AchievementsModal />}
+      <AchievementToastQueue />
     </div>
   );
 }

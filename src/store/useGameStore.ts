@@ -8,7 +8,7 @@ import { compareGuess, correctCount } from '../lib/comparison';
 import { PRECISE_THRESHOLD } from '../lib/constants';
 import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, matchCharacters } from '../lib/autocomplete';
-import { hasSeenIntro, isDayWon, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
+import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
 import { getOrCreateAnonId } from '../lib/anonId';
 import {
@@ -117,7 +117,11 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   loadDay(offset) {
     const idx = todayIndex() - offset;
-    const day = loadDay(idx);
+    const stored = loadDay(idx);
+    const target = characterForDayIndex(idx, CHARACTERS);
+    // Une base de personnages modifiée depuis la partie décale le mapping jour → personnage :
+    // une partie sauvegardée contre un ancien personnage ne veut plus rien dire, on repart à zéro.
+    const day = stored && stored.targetId === target.id ? stored : null;
     const won = !!day?.won;
     const elapsed = day?.e ?? 0;
     set({
@@ -223,6 +227,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       won: state.won,
       t: state.startedAt,
       e: state.elapsed,
+      targetId: cible.id,
     };
 
     let elapsed = state.elapsed;
@@ -342,7 +347,11 @@ export function currentTarget(): Character {
 }
 
 export function isArchiveDayWon(daysAgo: number): boolean {
-  return isDayWon(todayIndex() - daysAgo);
+  const idx = todayIndex() - daysAgo;
+  const day = loadDay(idx);
+  if (!day?.won) return false;
+  const target = characterForDayIndex(idx, CHARACTERS);
+  return day.targetId === target.id;
 }
 
 export { todayIndex };

@@ -1,15 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { DayState } from '../../types/guess';
 import { EMPTY_STATS } from '../../types/stats';
-import {
-  hasSeenIntro,
-  isDayWon,
-  loadDay,
-  loadStats,
-  markSeen,
-  saveDay,
-  saveStats,
-} from '../storage';
+import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../storage';
 
 describe('storage: stats', () => {
   it('renvoie des stats vides par défaut', () => {
@@ -55,7 +47,7 @@ describe('storage: stats', () => {
 });
 
 describe('storage: jour', () => {
-  const empty: DayState = { g: [], won: false, t: Date.now(), e: 0 };
+  const empty: DayState = { g: [], won: false, t: Date.now(), e: 0, targetId: 'some-character' };
 
   it('renvoie null pour un jour jamais joué', () => {
     expect(loadDay(999)).toBeNull();
@@ -66,12 +58,7 @@ describe('storage: jour', () => {
     const day = loadDay(1);
     expect(day?.won).toBe(true);
     expect(day?.e).toBe(42_000);
-  });
-
-  it('isDayWon reflète l\'état won persisté', () => {
-    expect(isDayWon(2)).toBe(false);
-    saveDay(2, empty, { won: true });
-    expect(isDayWon(2)).toBe(true);
+    expect(day?.targetId).toBe('some-character');
   });
 });
 

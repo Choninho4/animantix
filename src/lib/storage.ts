@@ -51,11 +51,6 @@ export function saveDay(dayIndex: number, current: DayState, patch: Partial<DayS
   safeSet(dayKey(dayIndex), JSON.stringify(merged));
 }
 
-export function isDayWon(dayIndex: number): boolean {
-  const day = loadDay(dayIndex);
-  return !!day?.won;
-}
-
 export function hasSeenIntro(): boolean {
   return safeGet(SEEN_KEY) !== null;
 }

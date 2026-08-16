@@ -230,6 +230,10 @@ export const useGameStore = create<GameState>((set, get) => ({
       input: '',
       suggestionIndex: 0,
       animeFilter: null,
+      // Le champ n'est pas refocalisé après soumission (cf. SearchBar) : sans ça,
+      // isInputFocused resterait vrai et rouvrirait aussitôt la liste des animes
+      // (visible dès que le champ vide a le focus), masquant le résultat de l'essai.
+      isInputFocused: false,
       flashId: target.id,
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }

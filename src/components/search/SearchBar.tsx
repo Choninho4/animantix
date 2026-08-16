@@ -44,9 +44,16 @@ export function SearchBar() {
     setBlurTimeout(id);
   }
 
+  // Pas de refocus du champ après soumission d'un essai : sinon le focus rouvre
+  // aussitôt la liste des animes (visible dès que le champ vide a le focus) et
+  // masque le résultat de l'essai qui vient d'être ajouté au tableau. On force
+  // même un blur() explicite : après une validation au clavier (Entrée), le
+  // focus DOM n'a jamais quitté le champ, donc un clic ultérieur du joueur sur
+  // ce même champ ne déclencherait aucun nouvel évènement focus sans ce blur —
+  // et la liste ne pourrait plus jamais se rouvrir manuellement comme demandé.
   function pick(character: Character) {
     submitGuess(character);
-    inputRef.current?.focus();
+    inputRef.current?.blur();
   }
 
   function handleSubmit() {
@@ -56,7 +63,7 @@ export function SearchBar() {
     }
     if (!input.trim()) return;
     submitGuess();
-    inputRef.current?.focus();
+    inputRef.current?.blur();
   }
 
   function handleAnimeSelect(animeName: string) {

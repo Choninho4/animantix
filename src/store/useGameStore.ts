@@ -6,7 +6,7 @@ import type { AchievementContext } from '../types/achievement';
 import { CHARACTERS } from '../data/characters';
 import { calculateSimilarity } from '../lib/scoring';
 import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
-import { findExactMatch, matchCharacters } from '../lib/autocomplete';
+import { findExactMatch, suggestionsFor } from '../lib/autocomplete';
 import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
 import { getOrCreateAnonId } from '../lib/anonId';
@@ -38,6 +38,7 @@ interface GameState {
   input: string;
   suggestionIndex: number;
   isInputFocused: boolean;
+  animeFilter: string | null;
   message: { text: string; tone: MessageTone };
 
   stats: Stats;
@@ -55,6 +56,7 @@ interface GameState {
   setInput(value: string): void;
   moveSuggestion(direction: 1 | -1): void;
   setFocus(value: boolean): void;
+  selectAnime(animeName: string): void;
   submitGuess(character?: Character): void;
   revealHint(): void;
   exitArchive(): void;
@@ -92,6 +94,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   input: '',
   suggestionIndex: 0,
   isInputFocused: false,
+  animeFilter: null,
   message: { text: '', tone: 'info' },
 
   stats: EMPTY_STATS,
@@ -131,6 +134,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       elapsed,
       input: '',
       suggestionIndex: 0,
+      animeFilter: null,
       message: { text: '', tone: 'info' },
       modals: { ...get().modals, archive: false },
       communityTotal: null,
@@ -152,12 +156,12 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   setInput(value) {
-    set({ input: value, suggestionIndex: 0, isInputFocused: true, message: { text: '', tone: 'info' } });
+    set({ input: value, suggestionIndex: 0, isInputFocused: true, animeFilter: null, message: { text: '', tone: 'info' } });
   },
 
   moveSuggestion(direction) {
     const state = get();
-    const suggestions = matchCharacters(state.input, CHARACTERS);
+    const suggestions = suggestionsFor(state.input, state.animeFilter, CHARACTERS);
     if (!suggestions.length) return;
     const next =
       direction === 1
@@ -170,13 +174,23 @@ export const useGameStore = create<GameState>((set, get) => ({
     set({ isInputFocused: value });
   },
 
+  selectAnime(animeName) {
+    set({
+      input: animeName,
+      animeFilter: animeName,
+      suggestionIndex: 0,
+      isInputFocused: true,
+      message: { text: '', tone: 'info' },
+    });
+  },
+
   submitGuess(character) {
     const state = get();
     if (state.won) return;
 
     let target = character;
     if (!target) {
-      const suggestions = matchCharacters(state.input, CHARACTERS);
+      const suggestions = suggestionsFor(state.input, state.animeFilter, CHARACTERS);
       if (suggestions.length) {
         target = suggestions[state.suggestionIndex] ?? suggestions[0];
       } else {
@@ -214,6 +228,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       won,
       input: '',
       suggestionIndex: 0,
+      animeFilter: null,
       flashId: target.id,
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }

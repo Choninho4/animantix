@@ -1,9 +1,11 @@
-import { useRef, useState, type KeyboardEvent } from 'react';
+import { useRef, useState, type FocusEvent, type KeyboardEvent } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { CHARACTERS } from '../../data/characters';
-import { matchCharacters } from '../../lib/autocomplete';
+import { suggestionsFor } from '../../lib/autocomplete';
 import { useGameStore } from '../../store/useGameStore';
 import type { Character } from '../../types/character';
 import { SuggestionList } from './SuggestionList';
+import { AnimeBrowser } from './AnimeBrowser';
 
 export function SearchBar() {
   const input = useGameStore((s) => s.input);
@@ -13,16 +15,34 @@ export function SearchBar() {
   const isInputFocused = useGameStore((s) => s.isInputFocused);
   const setFocus = useGameStore((s) => s.setFocus);
   const submitGuess = useGameStore((s) => s.submitGuess);
+  const selectAnime = useGameStore((s) => s.selectAnime);
+  const animeFilter = useGameStore((s) => s.animeFilter);
   const won = useGameStore((s) => s.won);
   const guesses = useGameStore((s) => s.guesses);
   const message = useGameStore((s) => s.message);
 
   const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [blurTimeout, setBlurTimeout] = useState<number | null>(null);
 
-  const suggestions = matchCharacters(input, CHARACTERS);
-  const suggestionsOpen = isInputFocused && suggestions.length > 0 && !won;
+  const suggestions = suggestionsFor(input, animeFilter, CHARACTERS);
+  const showAnimeBrowser = isInputFocused && input.length === 0 && !won;
+  const suggestionsOpen = !showAnimeBrowser && isInputFocused && suggestions.length > 0 && !won;
   const triedIds = new Set(guesses.map((g) => g.id));
+
+  function keepFocus() {
+    if (blurTimeout) window.clearTimeout(blurTimeout);
+    setFocus(true);
+  }
+
+  // Le champ principal et le filtre d'animes se partagent le même "groupe focus" :
+  // on ne referme rien si le focus part vers un autre élément du même conteneur
+  // (ex. clic du champ principal vers le filtre), seulement en cas de sortie réelle.
+  function scheduleBlur(e: FocusEvent) {
+    if (containerRef.current?.contains(e.relatedTarget as Node)) return;
+    const id = window.setTimeout(() => setFocus(false), 120);
+    setBlurTimeout(id);
+  }
 
   function pick(character: Character) {
     submitGuess(character);
@@ -36,6 +56,11 @@ export function SearchBar() {
     }
     if (!input.trim()) return;
     submitGuess();
+    inputRef.current?.focus();
+  }
+
+  function handleAnimeSelect(animeName: string) {
+    selectAnime(animeName);
     inputRef.current?.focus();
   }
 
@@ -61,7 +86,7 @@ export function SearchBar() {
 
   return (
     <section className="sticky top-[60px] z-40 bg-bg py-4 pb-2.5">
-      <div className="relative">
+      <div ref={containerRef} className="relative">
         <div className="flex items-stretch gap-2.5">
           <div className="relative min-w-0 flex-1">
             <svg
@@ -83,14 +108,8 @@ export function SearchBar() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              onFocus={() => {
-                if (blurTimeout) window.clearTimeout(blurTimeout);
-                setFocus(true);
-              }}
-              onBlur={() => {
-                const id = window.setTimeout(() => setFocus(false), 120);
-                setBlurTimeout(id);
-              }}
+              onFocus={keepFocus}
+              onBlur={scheduleBlur}
               placeholder="Propose un personnage…"
               autoComplete="off"
               role="combobox"
@@ -115,6 +134,12 @@ export function SearchBar() {
             Valider
           </button>
         </div>
+
+        <AnimatePresence>
+          {showAnimeBrowser && (
+            <AnimeBrowser onSelect={handleAnimeSelect} onFilterFocus={keepFocus} onFilterBlur={scheduleBlur} />
+          )}
+        </AnimatePresence>
 
         {suggestionsOpen && (
           <SuggestionList

@@ -41,3 +41,14 @@ export function findExactMatch(query: string, characters: Character[]): Characte
   const q = normalizeForSearch(query.trim());
   return characters.find((c) => normalizeForSearch(c.nom) === q);
 }
+
+/** Casting complet d'un anime (correspondance stricte sur animeSource, pas un `includes` flou). */
+export function charactersForAnime(animeName: string, characters: Character[]): Character[] {
+  return characters.filter((c) => c.animeSource === animeName).sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
+}
+
+/** Suggestions à afficher : casting exact d'un anime sélectionné via chip, sinon autocomplétion floue habituelle. */
+export function suggestionsFor(query: string, animeFilter: string | null, characters: Character[]): Character[] {
+  if (animeFilter) return charactersForAnime(animeFilter, characters);
+  return matchCharacters(query, characters);
+}

@@ -23,7 +23,7 @@ const STEPS = [
   {
     n: '3',
     titre: 'Recoupe et resserre',
-    texte: 'Le tableau se retrie du plus chaud au plus froid. Un indice se débloque tous les cinq essais si tu bloques.',
+    texte: "Le tableau se retrie du plus chaud au plus froid. Un jeton d'analyse se débloque tous les trois essais : dépense-le sur l'essai de ton choix pour voir le détail du calcul.",
   },
 ];
 

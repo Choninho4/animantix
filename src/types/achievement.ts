@@ -13,7 +13,7 @@ export type AchievementCategory =
 export interface AchievementContext {
   won: boolean;
   guessCount: number;
-  hintsRevealed: number;
+  tokensSpent: number;
   elapsedMs: number;
   firstGuessScore: number | null;
   distinctAnimesInGame: number;

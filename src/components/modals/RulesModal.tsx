@@ -1,5 +1,5 @@
 import { useGameStore } from '../../store/useGameStore';
-import { POIDS, INDICE_TOUS_LES } from '../../lib/constants';
+import { POIDS, TOKENS_TOUS_LES } from '../../lib/constants';
 import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../../lib/temperature';
 import { useTheme } from '../../hooks/useTheme';
 import { ModalHeader, ModalShell } from './ModalShell';
@@ -15,9 +15,6 @@ const WEIGHT_ROWS: Array<{ label: string; points: number }> = [
   { label: 'Genre', points: POIDS.genre },
   { label: 'Couleur de cheveux', points: POIDS.cheveux },
 ];
-
-const HINT_ORDER_TEXT =
-  "la race, le genre, la première lettre du nom, la couleur de cheveux, puis l'anime d'origine";
 
 // Rythme d'espacement réutilisable : SECTION_GAP sépare deux sections
 // distinctes (ex. avant un titre h3), TIGHT_GAP garde un titre collé au
@@ -71,10 +68,12 @@ export function RulesModal() {
           </li>
         ))}
       </ul>
-      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>Les indices</h3>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>Les jetons d'analyse</h3>
       <p className="text-[14px] leading-[1.55] text-text">
-        Un indice se débloque tous les {INDICE_TOUS_LES} essais, dans cet ordre : {HINT_ORDER_TEXT}.
-        Ils restent masqués tant que tu ne cliques pas sur « Révéler un indice ».
+        Tu gagnes un jeton d'analyse tous les {TOKENS_TOUS_LES} essais, et ils s'accumulent sans limite.
+        Clique sur un essai de ton choix dans le tableau pour dépenser un jeton et révéler son détail
+        critère par critère. Une fois révélé, le détail reste consultable gratuitement pour le reste de la
+        partie — pas besoin de redépenser un jeton pour le revoir.
       </p>
       <button
         type="button"

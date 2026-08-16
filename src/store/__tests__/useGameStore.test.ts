@@ -28,7 +28,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
 
     saveDay(
       idx,
-      { g: [], won: false, h: 0, t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
+      { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
       {
         g: [winningGuessEntry('un-id-qui-nexiste-plus', 'Personnage Fantôme', 'Anime Disparu')],
         won: true,
@@ -49,7 +49,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
     const real = characterForDayIndex(idx, CHARACTERS);
     const guess = winningGuessEntry(real.id, real.nom, real.animeSource);
 
-    saveDay(idx, { g: [], won: false, h: 0, t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
+    saveDay(idx, { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
 
     useGameStore.getState().loadDay(0);
     const state = useGameStore.getState();
@@ -57,5 +57,52 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
     expect(state.won).toBe(true);
     expect(state.guesses).toEqual([guess]);
     expect(state.elapsed).toBe(9_999);
+  });
+});
+
+describe("jetons d'analyse", () => {
+  it('accorde un jeton tous les 3 essais et ne permet de dépenser que ce qui est disponible', () => {
+    const idx = todayIndex();
+    const target = characterForDayIndex(idx, CHARACTERS);
+    const others = CHARACTERS.filter((c) => c.id !== target.id).slice(0, 3);
+
+    useGameStore.getState().loadDay(0);
+    expect(useGameStore.getState().requestAnalysis(others[0].id)).toBe(false);
+
+    useGameStore.getState().submitGuess(others[0]);
+    useGameStore.getState().submitGuess(others[1]);
+    expect(useGameStore.getState().requestAnalysis(others[0].id)).toBe(false);
+    expect(useGameStore.getState().analyzedIds).toEqual([]);
+
+    useGameStore.getState().submitGuess(others[2]);
+    expect(useGameStore.getState().requestAnalysis(others[0].id)).toBe(true);
+    expect(useGameStore.getState().analyzedIds).toEqual([others[0].id]);
+
+    // Un essai déjà analysé ne consomme pas de nouveau jeton.
+    expect(useGameStore.getState().requestAnalysis(others[0].id)).toBe(true);
+    expect(useGameStore.getState().analyzedIds).toEqual([others[0].id]);
+
+    // Plus aucun jeton disponible pour un autre essai.
+    expect(useGameStore.getState().requestAnalysis(others[1].id)).toBe(false);
+    expect(useGameStore.getState().analyzedIds).toEqual([others[0].id]);
+  });
+
+  it("les essais analysés sont indépendants par jour (aujourd'hui vs archive)", () => {
+    const idx = todayIndex();
+    const today = characterForDayIndex(idx, CHARACTERS);
+    const archiveTarget = characterForDayIndex(idx - 1, CHARACTERS);
+    const pool = CHARACTERS.filter((c) => c.id !== today.id && c.id !== archiveTarget.id).slice(0, 3);
+
+    useGameStore.getState().loadDay(0);
+    pool.forEach((c) => useGameStore.getState().submitGuess(c));
+    useGameStore.getState().requestAnalysis(pool[0].id);
+    expect(useGameStore.getState().analyzedIds).toEqual([pool[0].id]);
+
+    useGameStore.getState().loadDay(1);
+    expect(useGameStore.getState().analyzedIds).toEqual([]);
+    expect(useGameStore.getState().requestAnalysis(pool[0].id)).toBe(false);
+
+    useGameStore.getState().loadDay(0);
+    expect(useGameStore.getState().analyzedIds).toEqual([pool[0].id]);
   });
 });

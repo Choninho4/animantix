@@ -43,6 +43,15 @@ export function SnowflakeIcon({ size = 16, className }: IconProps) {
   );
 }
 
+export function SearchIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>
+      <circle cx="11" cy="11" r="7.5" />
+      <path d="m21 21-4.35-4.35" />
+    </svg>
+  );
+}
+
 export function CheckIcon({ size = 16, className }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>

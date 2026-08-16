@@ -7,7 +7,7 @@ function makeContext(overrides: Partial<AchievementContext> = {}): AchievementCo
   return {
     won: false,
     guessCount: 0,
-    hintsRevealed: 0,
+    tokensSpent: 0,
     elapsedMs: 0,
     firstGuessScore: null,
     distinctAnimesInGame: 0,
@@ -108,15 +108,15 @@ describe('vitesse', () => {
 });
 
 describe('sans assistance', () => {
-  it('solo : gagné avec zéro indice révélé', () => {
-    expect(unlocked('solo', makeContext({ won: true, hintsRevealed: 0 }))).toBe(true);
-    expect(unlocked('solo', makeContext({ won: true, hintsRevealed: 1 }))).toBe(false);
+  it('solo : gagné sans avoir dépensé de jeton d\'analyse', () => {
+    expect(unlocked('solo', makeContext({ won: true, tokensSpent: 0 }))).toBe(true);
+    expect(unlocked('solo', makeContext({ won: true, tokensSpent: 1 }))).toBe(false);
   });
 
-  it('purism : zéro indice ET 10e victoire de ce type cumulée', () => {
-    const notEnough = makeContext({ won: true, hintsRevealed: 0, stats: makeStats({ winsWithoutHint: 9 }) });
+  it('purism : zéro jeton dépensé ET 10e victoire de ce type cumulée', () => {
+    const notEnough = makeContext({ won: true, tokensSpent: 0, stats: makeStats({ winsWithoutTokens: 9 }) });
     expect(unlocked('purism', notEnough)).toBe(false);
-    const enough = makeContext({ won: true, hintsRevealed: 0, stats: makeStats({ winsWithoutHint: 10 }) });
+    const enough = makeContext({ won: true, tokensSpent: 0, stats: makeStats({ winsWithoutTokens: 10 }) });
     expect(unlocked('purism', enough)).toBe(true);
   });
 });
@@ -196,7 +196,7 @@ describe('checkAchievements (runner)', () => {
     const ctx = makeContext({
       won: true,
       guessCount: 1,
-      hintsRevealed: 0,
+      tokensSpent: 0,
       elapsedMs: 10_000,
       firstGuessScore: 100,
       stats: makeStats({ gamesWon: 1, currentStreak: 1 }),

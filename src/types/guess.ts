@@ -12,7 +12,8 @@ export interface GuessEntry {
 export interface DayState {
   g: GuessEntry[];
   won: boolean;
-  h: number;
+  /** Ids des essais dont le détail par critère a été révélé (dépense d'un jeton d'analyse), permanent pour la partie. */
+  a: string[];
   t: number;
   e: number;
   /** Id du personnage du jour au moment de la partie — permet de détecter une base de données modifiée depuis. */

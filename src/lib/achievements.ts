@@ -126,16 +126,16 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'solo',
     nom: 'Solo',
-    description: 'Gagner une partie sans révéler aucun indice.',
+    description: "Gagner une partie sans dépenser aucun jeton d'analyse.",
     categorie: 'sans-assistance',
-    isUnlocked: (ctx) => ctx.won && ctx.hintsRevealed === 0,
+    isUnlocked: (ctx) => ctx.won && ctx.tokensSpent === 0,
   },
   {
     id: 'purism',
     nom: 'Purisme',
-    description: 'Gagner 10 parties sans révéler aucun indice.',
+    description: "Gagner 10 parties sans dépenser aucun jeton d'analyse.",
     categorie: 'sans-assistance',
-    isUnlocked: (ctx) => ctx.won && ctx.hintsRevealed === 0 && ctx.stats.winsWithoutHint >= 10,
+    isUnlocked: (ctx) => ctx.won && ctx.tokensSpent === 0 && ctx.stats.winsWithoutTokens >= 10,
   },
 
   // --- Persévérance ---

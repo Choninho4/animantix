@@ -9,6 +9,7 @@ import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, suggestionsFor } from '../lib/autocomplete';
 import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
+import { guessesUntilNextToken, tokensAvailable } from '../lib/analysisTokens';
 import { getOrCreateAnonId } from '../lib/anonId';
 import {
   fetchCommunityPercentile,
@@ -30,7 +31,7 @@ interface GameState {
   archiveOffset: number;
   guesses: GuessEntry[];
   won: boolean;
-  hintsRevealed: number;
+  analyzedIds: string[];
   startedAt: number;
   elapsed: number;
   flashId: string | null;
@@ -58,7 +59,7 @@ interface GameState {
   setFocus(value: boolean): void;
   selectAnime(animeName: string): void;
   submitGuess(character?: Character): void;
-  revealHint(): void;
+  requestAnalysis(id: string): boolean;
   exitArchive(): void;
   openModal(name: keyof ModalState): void;
   closeModals(): void;
@@ -86,7 +87,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   archiveOffset: 0,
   guesses: [],
   won: false,
-  hintsRevealed: 0,
+  analyzedIds: [],
   startedAt: Date.now(),
   elapsed: 0,
   flashId: null,
@@ -129,7 +130,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       archiveOffset: offset,
       guesses: day?.g ?? [],
       won,
-      hintsRevealed: day?.h ?? 0,
+      analyzedIds: day?.a ?? [],
       startedAt: day?.t ?? Date.now(),
       elapsed,
       input: '',
@@ -238,7 +239,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const current: DayState = {
       g: state.guesses,
       won: state.won,
-      h: state.hintsRevealed,
+      a: state.analyzedIds,
       t: state.startedAt,
       e: state.elapsed,
       targetId: cible.id,
@@ -279,7 +280,7 @@ export const useGameStore = create<GameState>((set, get) => ({
           currentStreak: state.stats.currentStreak + 1,
           maxStreak: Math.max(state.stats.maxStreak, state.stats.currentStreak + 1),
           guessDistribution: { ...s.guessDistribution },
-          winsWithoutHint: s.winsWithoutHint + (state.hintsRevealed === 0 ? 1 : 0),
+          winsWithoutTokens: s.winsWithoutTokens + (state.analyzedIds.length === 0 ? 1 : 0),
           winsUnder2Min: s.winsUnder2Min + (elapsed < 2 * 60_000 ? 1 : 0),
           winsWithin5Guesses: s.winsWithin5Guesses + (guesses.length <= 5 ? 1 : 0),
         };
@@ -291,7 +292,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       const ctx: AchievementContext = {
         won,
         guessCount: guesses.length,
-        hintsRevealed: state.hintsRevealed,
+        tokensSpent: state.analyzedIds.length,
         elapsedMs: won ? elapsed : state.elapsed,
         firstGuessScore: guesses[0]?.score ?? null,
         distinctAnimesInGame: distinctAnimes,
@@ -310,21 +311,36 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
-  revealHint() {
+  requestAnalysis(id) {
     const state = get();
-    const h = state.hintsRevealed + 1;
+    if (state.analyzedIds.includes(id)) return true;
+
+    const available = tokensAvailable(state.guesses.length, state.analyzedIds.length);
+    if (available <= 0) {
+      const remaining = guessesUntilNextToken(state.guesses.length);
+      set({
+        message: {
+          text: `Aucun jeton disponible — prochain jeton dans ${remaining} essai${remaining > 1 ? 's' : ''}.`,
+          tone: 'warn',
+        },
+      });
+      return false;
+    }
+
+    const analyzedIds = [...state.analyzedIds, id];
     const dayIdx = todayIndex() - state.archiveOffset;
     const cible = characterForDayIndex(dayIdx, CHARACTERS);
     const current: DayState = {
       g: state.guesses,
       won: state.won,
-      h: state.hintsRevealed,
+      a: state.analyzedIds,
       t: state.startedAt,
       e: state.elapsed,
       targetId: cible.id,
     };
-    saveDay(dayIdx, current, { h });
-    set({ hintsRevealed: h });
+    saveDay(dayIdx, current, { a: analyzedIds });
+    set({ analyzedIds });
+    return true;
   },
 
   exitArchive() {
@@ -339,7 +355,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const ctx: AchievementContext = {
       won: state.won,
       guessCount: state.guesses.length,
-      hintsRevealed: state.hintsRevealed,
+      tokensSpent: state.analyzedIds.length,
       elapsedMs: state.elapsed,
       firstGuessScore: state.guesses[0]?.score ?? null,
       distinctAnimesInGame: distinctAnimes,

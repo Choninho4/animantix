@@ -36,7 +36,7 @@ describe('storage: stats', () => {
     expect(stats.gamesPlayed).toBe(42);
     expect(stats.currentStreak).toBe(6);
     expect(stats.animesGuessedEver).toEqual([]);
-    expect(stats.winsWithoutHint).toBe(0);
+    expect(stats.winsWithoutTokens).toBe(0);
     expect(stats.winsUnder2Min).toBe(0);
     expect(stats.winsWithin5Guesses).toBe(0);
     expect(stats.shareCount).toBe(0);
@@ -47,17 +47,17 @@ describe('storage: stats', () => {
 });
 
 describe('storage: jour', () => {
-  const empty: DayState = { g: [], won: false, h: 0, t: Date.now(), e: 0, targetId: 'some-character' };
+  const empty: DayState = { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: 'some-character' };
 
   it('renvoie null pour un jour jamais joué', () => {
     expect(loadDay(999)).toBeNull();
   });
 
   it('fait un aller-retour correct (save puis load)', () => {
-    saveDay(1, empty, { won: true, h: 2, e: 42_000 });
+    saveDay(1, empty, { won: true, a: ['some-guess-id'], e: 42_000 });
     const day = loadDay(1);
     expect(day?.won).toBe(true);
-    expect(day?.h).toBe(2);
+    expect(day?.a).toEqual(['some-guess-id']);
     expect(day?.e).toBe(42_000);
     expect(day?.targetId).toBe('some-character');
   });

@@ -13,8 +13,7 @@ export const POIDS = {
 } as const;
 
 export const DATE_REF = Date.UTC(2024, 0, 1);
-export const INDICE_TOUS_LES = 5;
-export const MAX_HINTS = 5;
+export const TOKENS_TOUS_LES = 3;
 
 export const STATS_KEY = 'animantix.stats.v1';
 export const DAY_KEY_PREFIX = 'animantix.jour.';

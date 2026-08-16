@@ -11,10 +11,12 @@ interface AttemptRowProps {
   justAdded: boolean;
   selected: boolean;
   analyzed: boolean;
+  /** Pas encore analysé, mais un jeton est disponible : invite le joueur à cliquer. */
+  analyzable: boolean;
   onToggle: () => void;
 }
 
-export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, onToggle }: AttemptRowProps) {
+export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analyzable, onToggle }: AttemptRowProps) {
   const t = temperatureForScore(guess.score);
   const { theme } = useTheme();
   const badgeFg = theme === 'dark' ? t.fgDark : t.fg;
@@ -42,8 +44,14 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, onTog
           <span className="flex items-center gap-1.5">
             <span className="truncate text-[15px] font-bold text-text">{guess.nom}</span>
             {analyzed && <SearchIcon size={12} className="flex-none text-brand-mid" />}
+            {analyzable && (
+              <SearchIcon size={12} className="flex-none text-brand-mid motion-safe:animate-amx-pulse" />
+            )}
           </span>
-          <span className="mb-1 block truncate text-[12px] text-muted">{guess.anime}</span>
+          <span className="mb-1 flex items-center gap-1 truncate text-[12px] text-muted">
+            <span className="truncate">{guess.anime}</span>
+            {analyzable && <span className="flex-none font-bold text-brand-mid">· Cliquer pour analyser</span>}
+          </span>
           <span className="block h-1.5 overflow-hidden rounded-full bg-bg">
             <motion.span
               className="block h-full rounded-full"

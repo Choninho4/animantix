@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '../../store/useGameStore';
+import { tokensAvailable } from '../../lib/analysisTokens';
 import { AttemptRow } from './AttemptRow';
 
 export function AttemptsTable() {
@@ -14,6 +15,7 @@ export function AttemptsTable() {
 
   const best = Math.max(...guesses.map((g) => g.score));
   const sorted = [...guesses].sort((a, b) => b.score - a.score || b.n - a.n);
+  const hasTokens = tokensAvailable(guesses.length, analyzedIds.length) > 0;
 
   function handleClick(id: string) {
     if (analyzedIds.includes(id)) {
@@ -35,6 +37,7 @@ export function AttemptsTable() {
               justAdded={g.id === flashId}
               selected={g.id === selectedId}
               analyzed={analyzedIds.includes(g.id)}
+              analyzable={hasTokens && !analyzedIds.includes(g.id)}
               onToggle={() => handleClick(g.id)}
             />
           ))}

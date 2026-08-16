@@ -14,19 +14,19 @@ export const PART_05_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Passeur roi déchu, perfectionniste qui apprend enfin à jouer avec son équipe.',
   },
   {
-    id: 'kotaro-bokuto', nom: 'Kotaro Bokuto', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
+    id: 'kotaro-bokuto', nom: 'Kotaro Bokuto', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'As émotif du volley, capable de passer du sommet à l\'abîme en un point.',
   },
   {
-    id: 'tetsuro-kuroo', nom: 'Tetsuro Kuroo', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
+    id: 'tetsuro-kuroo', nom: 'Tetsuro Kuroo', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Capitaine stratège au sourire de chat, aussi rusé au filet qu\'en dehors.',
   },
   {
-    id: 'kenma-kozume', nom: 'Kenma Kozume', animeSource: 'Haikyuu!!', anneeSortieAnime: 2015,
+    id: 'kenma-kozume', nom: 'Kenma Kozume', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Passeur introverti qui préfère les jeux vidéo, redoutable analyste sur le terrain.',

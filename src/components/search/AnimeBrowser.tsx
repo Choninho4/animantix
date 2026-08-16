@@ -48,10 +48,12 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
                   e.preventDefault();
                   onSelect(a.name);
                 }}
-                className="flex min-h-touch w-full items-center justify-between gap-1.5 rounded-pill bg-brand-mid/10 px-3 py-2 text-left text-[12px] font-semibold text-brand-mid transition-colors hover:bg-brand-mid/20 active:scale-[.97]"
+                className="flex min-h-touch w-full flex-col items-start gap-0.5 rounded-control bg-brand-mid/10 px-3 py-2 text-left transition-colors hover:bg-brand-mid/20 active:scale-[.97]"
               >
-                <span className="truncate">{a.name}</span>
-                <span className="flex-none text-muted">({a.count})</span>
+                <span className="w-full truncate text-[12px] font-semibold text-brand-mid">{a.name}</span>
+                <span className="text-[11px] font-medium text-muted">
+                  {a.year} · {a.count} personnage{a.count > 1 ? 's' : ''}
+                </span>
               </button>
             </li>
           ))}

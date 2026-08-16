@@ -110,6 +110,18 @@ describe('base de données de personnages', () => {
     }
   });
 
+  it('anneeSortieAnime est identique pour tous les personnages d\'un même anime (date de sortie de la saison 1, pas de l\'arc du personnage)', () => {
+    const years = new Map<string, Set<number>>();
+    for (const c of CHARACTERS) {
+      const set = years.get(c.animeSource) ?? new Set();
+      set.add(c.anneeSortieAnime);
+      years.set(c.animeSource, set);
+    }
+    for (const [anime, set] of years) {
+      expect(set.size, `"${anime}" a plusieurs années : ${[...set].join(' / ')}`).toBe(1);
+    }
+  });
+
   it("n'a aucun doublon (même nom + même anime) sous deux ids différents", () => {
     const seen = new Map<string, string>();
     for (const c of CHARACTERS) {

@@ -170,7 +170,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
     imageUrl: null, descriptionCourte: 'Président de l\'association des chasseurs, vétéran cherchant à protéger la nouvelle génération.',
   },
   {
-    id: 'yuuki-konno', nom: 'Yuuki Konno', animeSource: 'Sword Art Online', anneeSortieAnime: 2014,
+    id: 'yuuki-konno', nom: 'Yuuki Konno', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Épéiste absolue mourante d\'une maladie, cherchant à vivre pleinement en jeu.',
@@ -614,7 +614,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
     imageUrl: null, descriptionCourte: 'Forgeronne talentueuse, amie proche d\'Asuna et de Kirito.',
   },
   {
-    id: 'sinon-sao', nom: 'Sinon', animeSource: 'Sword Art Online', anneeSortieAnime: 2014,
+    id: 'sinon-sao', nom: 'Sinon', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Tireuse d\'élite de Gun Gale Online, hantée par un traumatisme d\'enfance.',
@@ -650,7 +650,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
     imageUrl: null, descriptionCourte: 'Ami d\'enfance d\'Alice dans Underworld, meilleur allié de Kirito.',
   },
   {
-    id: 'death-gun', nom: 'Death Gun', animeSource: 'Sword Art Online', anneeSortieAnime: 2014,
+    id: 'death-gun', nom: 'Death Gun', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Tueur de Gun Gale Online prétendant pouvoir assassiner dans le monde réel.',

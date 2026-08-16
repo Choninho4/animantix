@@ -9,8 +9,8 @@ export interface Stats {
 
   /** Noms d'animes (animeSource) déjà proposés en essai, tous temps confondus — pour Globe-trotter. */
   animesGuessedEver: string[];
-  /** Victoires où chaque essai a eu au moins PRECISE_THRESHOLD critères corrects, cumulées — pour Purisme. */
-  winsAllPrecise: number;
+  /** Victoires sans avoir révélé le moindre indice, cumulées — pour Purisme. */
+  winsWithoutHint: number;
   /** Victoires obtenues en moins de 2 minutes, cumulées — pour Rapide et efficace. */
   winsUnder2Min: number;
   /** Victoires obtenues en 5 essais ou moins, cumulées — pour Instinct de chasseur. */
@@ -32,7 +32,7 @@ export const EMPTY_STATS: Stats = {
   maxStreak: 0,
   guessDistribution: {},
   animesGuessedEver: [],
-  winsAllPrecise: 0,
+  winsWithoutHint: 0,
   winsUnder2Min: 0,
   winsWithin5Guesses: 0,
   shareCount: 0,

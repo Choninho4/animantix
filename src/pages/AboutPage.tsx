@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import { CHARACTERS } from '../data/characters';
-import { CRITERIA_ORDER } from '../lib/comparison';
+import { POIDS } from '../lib/constants';
+import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../lib/temperature';
+import { TemperatureBandIcon } from '../components/icons/Icon';
+import { useTheme } from '../hooks/useTheme';
 
 // Date de mise en ligne réelle du site (premier commit) : sert de base au
 // compteur "jours de jeu" ci-dessous.
@@ -14,13 +17,13 @@ const STEPS = [
   },
   {
     n: '2',
-    titre: 'Lis la grille',
-    texte: 'Chaque essai compare 8 critères avec le personnage du jour : vert si ça correspond, rouge sinon.',
+    titre: 'Lis ta température',
+    texte: 'Chaque essai reçoit un score de 0 à 100 %. Plus la proposition ressemble au personnage du jour, plus tu chauffes.',
   },
   {
     n: '3',
     titre: 'Recoupe et resserre',
-    texte: "Les essais s'affichent du plus récent au plus ancien. Combine les cases vertes pour resserrer l'étau.",
+    texte: 'Le tableau se retrie du plus chaud au plus froid. Un indice se débloque tous les cinq essais si tu bloques.',
   },
 ];
 
@@ -29,6 +32,7 @@ function daysSinceLaunch(): number {
 }
 
 export default function AboutPage() {
+  const { theme } = useTheme();
   const animeCount = new Set(CHARACTERS.map((c) => c.animeSource)).size;
   const stats = [
     { key: 'p', valeur: CHARACTERS.length, label: 'personnages', detail: 'dans la base, et ça grandit' },
@@ -53,8 +57,8 @@ export default function AboutPage() {
           </h1>
           <p className="mb-6 text-[16px] leading-[1.6] text-muted sm:mb-7 sm:text-[18px]">
             Un seul personnage par jour, le même pour toute la communauté. Tu proposes d'autres
-            personnages, et chaque essai compare 8 critères en vert ou rouge avec le personnage
-            du jour. Essais illimités, zéro inscription.
+            personnages, et chaque essai te dit à quel point tu chauffes. Essais illimités, zéro
+            inscription.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
@@ -110,19 +114,26 @@ export default function AboutPage() {
         </div>
         <div className="rounded-card bg-surface p-6">
           <div className="mb-4 text-[12px] font-bold uppercase tracking-[.10em] text-muted">
-            Les 8 critères comparés à chaque essai
+            La température de tes essais
           </div>
           <div className="flex flex-wrap gap-2.5">
-            {CRITERIA_ORDER.map((c) => (
-              <span key={c.key} className="rounded-pill bg-bg px-3.5 py-1.5 text-[13px] font-bold text-brand-dark">
-                {c.label}
+            {TEMPERATURE_BANDS.map((band) => (
+              <span
+                key={band.min}
+                className="flex items-center gap-2 rounded-pill px-3.5 py-1.5 text-[13px] font-bold"
+                style={{ background: band.bg, color: theme === 'dark' ? band.fgDark : band.fg }}
+              >
+                <TemperatureBandIcon icon={band.icon} size={13} />
+                {band.label}
+                <span className="font-semibold opacity-70">{TEMPERATURE_RANGE_LABELS[band.min]}</span>
               </span>
             ))}
           </div>
           <p className="mt-4 max-w-[640px] text-[14px] leading-[1.6] text-muted">
-            Chaque critère devient une case verte (correspond) ou rouge (ne correspond pas). Pour
-            la décennie de sortie, une flèche indique si le personnage du jour est plus récent ou
-            plus ancien. Le détail complet est dans la modale « Comment jouer » du jeu.
+            Huit critères entrent dans le calcul — même anime ({POIDS.anime} pts), rôle narratif,
+            camp moral, race, type de pouvoir, décennie de sortie, genre et couleur de cheveux. Les
+            catégories voisines rapportent des points partiels. Le détail complet est dans la
+            modale « Comment jouer » du jeu.
           </p>
         </div>
       </section>

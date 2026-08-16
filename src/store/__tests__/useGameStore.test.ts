@@ -10,8 +10,8 @@ function winningGuessEntry(id: string, nom: string, anime: string) {
     id,
     nom,
     anime,
-    results: [],
-    correctCount: 8,
+    score: 100,
+    details: [],
     n: 1,
   };
 }
@@ -28,7 +28,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
 
     saveDay(
       idx,
-      { g: [], won: false, t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
+      { g: [], won: false, h: 0, t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
       {
         g: [winningGuessEntry('un-id-qui-nexiste-plus', 'Personnage Fantôme', 'Anime Disparu')],
         won: true,
@@ -49,7 +49,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
     const real = characterForDayIndex(idx, CHARACTERS);
     const guess = winningGuessEntry(real.id, real.nom, real.animeSource);
 
-    saveDay(idx, { g: [], won: false, t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
+    saveDay(idx, { g: [], won: false, h: 0, t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
 
     useGameStore.getState().loadDay(0);
     const state = useGameStore.getState();

@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import type { TemperatureIcon } from '../../lib/temperature';
 
 interface IconProps {
   size?: number;
@@ -147,4 +148,15 @@ export function ShareIcon({ size = 16, className }: IconProps) {
       <path d="M8.3 10.8 15.7 6.7M8.3 13.2l7.4 4.1" />
     </svg>
   );
+}
+
+const TEMPERATURE_ICON_COMPONENTS: Record<TemperatureIcon, (props: IconProps) => JSX.Element> = {
+  target: TargetIcon,
+  flame: FlameIcon,
+  snowflake: SnowflakeIcon,
+};
+
+export function TemperatureBandIcon({ icon, size, className }: IconProps & { icon: TemperatureIcon }) {
+  const Component = TEMPERATURE_ICON_COMPONENTS[icon];
+  return <Component size={size} className={className} />;
 }

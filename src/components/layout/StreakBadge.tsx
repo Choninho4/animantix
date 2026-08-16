@@ -6,7 +6,8 @@ interface StreakBadgeProps {
 }
 
 // Rouge flamme dès que la série est active, sinon la flamme reste neutre
-// (même couleur que le texte du badge).
+// (même couleur que le texte du badge) : cohérent avec la palette "Brûlant"
+// déjà utilisée pour les scores chauds dans lib/temperature.ts.
 const FLAME_ACTIVE = '#C1121F';
 const FLAME_ACTIVE_DARK = '#FF6B6B';
 

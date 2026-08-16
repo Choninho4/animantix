@@ -4,8 +4,7 @@ import type { DayState, GuessEntry } from '../types/guess';
 import { EMPTY_STATS, guessBucketFor, type Stats } from '../types/stats';
 import type { AchievementContext } from '../types/achievement';
 import { CHARACTERS } from '../data/characters';
-import { compareGuess, correctCount } from '../lib/comparison';
-import { PRECISE_THRESHOLD } from '../lib/constants';
+import { calculateSimilarity } from '../lib/scoring';
 import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, matchCharacters } from '../lib/autocomplete';
 import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
@@ -31,6 +30,7 @@ interface GameState {
   archiveOffset: number;
   guesses: GuessEntry[];
   won: boolean;
+  hintsRevealed: number;
   startedAt: number;
   elapsed: number;
   flashId: string | null;
@@ -56,6 +56,7 @@ interface GameState {
   moveSuggestion(direction: 1 | -1): void;
   setFocus(value: boolean): void;
   submitGuess(character?: Character): void;
+  revealHint(): void;
   exitArchive(): void;
   openModal(name: keyof ModalState): void;
   closeModals(): void;
@@ -79,14 +80,11 @@ function todayIndex(): number {
   return dayIndexFor(new Date());
 }
 
-function allGuessesPrecise(guesses: GuessEntry[]): boolean {
-  return guesses.length > 0 && guesses.every((g) => g.correctCount >= PRECISE_THRESHOLD);
-}
-
 export const useGameStore = create<GameState>((set, get) => ({
   archiveOffset: 0,
   guesses: [],
   won: false,
+  hintsRevealed: 0,
   startedAt: Date.now(),
   elapsed: 0,
   flashId: null,
@@ -128,6 +126,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       archiveOffset: offset,
       guesses: day?.g ?? [],
       won,
+      hintsRevealed: day?.h ?? 0,
       startedAt: day?.t ?? Date.now(),
       elapsed,
       input: '',
@@ -198,18 +197,17 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     const dayIdx = todayIndex() - state.archiveOffset;
     const cible = characterForDayIndex(dayIdx, CHARACTERS);
-    const results = compareGuess(target, cible);
-    const cc = correctCount(results);
+    const { total: score, details } = calculateSimilarity(target, cible);
     const entry: GuessEntry = {
       id: target.id,
       nom: target.nom,
       anime: target.animeSource,
-      results,
-      correctCount: cc,
+      score,
+      details,
       n: state.guesses.length + 1,
     };
     const guesses = [...state.guesses, entry];
-    const won = target.id === cible.id;
+    const won = score === 100;
 
     set({
       guesses,
@@ -219,12 +217,13 @@ export const useGameStore = create<GameState>((set, get) => ({
       flashId: target.id,
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }
-        : { text: `${target.nom} — ${cc}/8 critères corrects`, tone: 'info' },
+        : { text: `${target.nom} — ${score} %`, tone: 'info' },
     });
 
     const current: DayState = {
       g: state.guesses,
       won: state.won,
+      h: state.hintsRevealed,
       t: state.startedAt,
       e: state.elapsed,
       targetId: cible.id,
@@ -257,8 +256,6 @@ export const useGameStore = create<GameState>((set, get) => ({
         s = { ...s, daysPlayed: s.daysPlayed + 1, lastPlayedDayIndex: dayIdx };
       }
 
-      const precise = allGuessesPrecise(guesses);
-
       if (won) {
         s = {
           ...s,
@@ -267,7 +264,7 @@ export const useGameStore = create<GameState>((set, get) => ({
           currentStreak: state.stats.currentStreak + 1,
           maxStreak: Math.max(state.stats.maxStreak, state.stats.currentStreak + 1),
           guessDistribution: { ...s.guessDistribution },
-          winsAllPrecise: s.winsAllPrecise + (precise ? 1 : 0),
+          winsWithoutHint: s.winsWithoutHint + (state.hintsRevealed === 0 ? 1 : 0),
           winsUnder2Min: s.winsUnder2Min + (elapsed < 2 * 60_000 ? 1 : 0),
           winsWithin5Guesses: s.winsWithin5Guesses + (guesses.length <= 5 ? 1 : 0),
         };
@@ -279,9 +276,9 @@ export const useGameStore = create<GameState>((set, get) => ({
       const ctx: AchievementContext = {
         won,
         guessCount: guesses.length,
+        hintsRevealed: state.hintsRevealed,
         elapsedMs: won ? elapsed : state.elapsed,
-        firstGuessCorrectCount: guesses[0]?.correctCount ?? null,
-        allGuessesPrecise: precise,
+        firstGuessScore: guesses[0]?.score ?? null,
         distinctAnimesInGame: distinctAnimes,
         distinctDecadesInGame: distinctDecades,
         stats: s,
@@ -298,6 +295,23 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
+  revealHint() {
+    const state = get();
+    const h = state.hintsRevealed + 1;
+    const dayIdx = todayIndex() - state.archiveOffset;
+    const cible = characterForDayIndex(dayIdx, CHARACTERS);
+    const current: DayState = {
+      g: state.guesses,
+      won: state.won,
+      h: state.hintsRevealed,
+      t: state.startedAt,
+      e: state.elapsed,
+      targetId: cible.id,
+    };
+    saveDay(dayIdx, current, { h });
+    set({ hintsRevealed: h });
+  },
+
   exitArchive() {
     get().loadDay(0);
   },
@@ -310,9 +324,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     const ctx: AchievementContext = {
       won: state.won,
       guessCount: state.guesses.length,
+      hintsRevealed: state.hintsRevealed,
       elapsedMs: state.elapsed,
-      firstGuessCorrectCount: state.guesses[0]?.correctCount ?? null,
-      allGuessesPrecise: allGuessesPrecise(state.guesses),
+      firstGuessScore: state.guesses[0]?.score ?? null,
       distinctAnimesInGame: distinctAnimes,
       distinctDecadesInGame: distinctDecades,
       stats: s,

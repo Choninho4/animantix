@@ -22,7 +22,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'ram', nom: 'Ram', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Servante aînée acerbe, protectrice féroce de sa sœur jumelle Rem.',
   },
   {
@@ -70,7 +70,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'albedo', nom: 'Albedo', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Gardienne succube amoureuse de son créateur, dévouée jusqu\'à la cruauté.',
   },
   {
@@ -88,13 +88,13 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'rimuru-tempest', nom: 'Rimuru Tempest', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Salaryman réincarné en slime, devenu roi pacifiste d\'une nation de monstres.',
   },
   {
     id: 'milim-nava', nom: 'Milim Nava', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Démon Roi à l\'apparence enfantine, capable de raser un royaume par caprice.',
   },
   {
@@ -112,7 +112,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'roxy-migurdia', nom: 'Roxy Migurdia', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Mage migurd modeste, mentor bien-aimée devenue objet d\'une adoration sincère.',
   },
   {
@@ -130,7 +130,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'frieren', nom: 'Frieren', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage elfe immortelle qui redécouvre le temps humain après la mort de ses compagnons.',
   },
   {
@@ -208,7 +208,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'diane', nom: 'Diane', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
+    race: 'Race fantastique (Géant)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Géante au marteau redoutable, amoureuse discrète d\'un compagnon bien plus petit.',
   },
   {
@@ -316,13 +316,13 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'mare-bello-fiore', nom: 'Mare Bello Fiore', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Autre', trancheAge: 'Enfant',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Elfe noir timide, gardien du jardin de Nazarick avec sa sœur jumelle.',
   },
   {
     id: 'aura-bella-fiora', nom: 'Aura Bella Fiora', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Elfe noire dresseuse de bêtes, jumelle énergique de Mare.',
   },
   {
@@ -406,7 +406,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'gobta', nom: 'Gobta', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Race fantastique (Gobelin)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Gobelin cavalier maladroit mais attachant, monté sur son loup Ranga.',
   },
   {
@@ -430,7 +430,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'gazel-dwargo', nom: 'Gazel Dwargo', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Race fantastique (Nain)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Roi nain de Dwargon, premier dirigeant humain à nouer une alliance avec Rimuru.',
   },
   {
@@ -478,7 +478,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'ruijerd-superdia', nom: 'Ruijerd Superdia', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Dernier guerrier Superd, compagnon de route mentor de Rudeus et Eris.',
   },
   {
@@ -490,7 +490,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'elinalise-greyrat', nom: 'Elinalise', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Elfe longévive séductrice, cousine de Roxy à la vie amoureuse tumultueuse.',
   },
   {
@@ -532,7 +532,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'serie-frieren', nom: 'Serie', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage elfique légendaire, autrefois rivale de la maîtresse de Frieren.',
   },
   {
@@ -658,7 +658,7 @@ export const PART_04_ISEKAI_FANTASY: Character[] = [
   {
     id: 'king-seven-deadly', nom: 'King', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Race fantastique (Fée)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Péché de la Paresse, roi des fées prenant l\'apparence d\'un enfant.',
   },
   {

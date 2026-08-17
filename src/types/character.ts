@@ -18,7 +18,13 @@ export type Race =
   | 'Alien'
   | 'Robot-IA'
   | 'Esprit-Divinité'
-  | 'Animal anthropomorphe';
+  | 'Animal anthropomorphe'
+  | 'Race fantastique (Elfe)'
+  | 'Race fantastique (Nain)'
+  | 'Race fantastique (Gobelin)'
+  | 'Race fantastique (Géant)'
+  | 'Race fantastique (Fée)'
+  | 'Race fantastique (Homme-poisson)';
 
 export type CategoriePouvoir =
   | 'Combat physique'

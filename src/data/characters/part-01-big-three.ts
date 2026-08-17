@@ -76,7 +76,7 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'jinbe', nom: 'Jinbe', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
+    race: 'Race fantastique (Homme-poisson)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
     imageUrl: null, descriptionCourte: 'Chevalier de la mer au sens de l\'honneur inébranlable, timonier des Chapeaux de Paille.',
   },
   {
@@ -352,7 +352,7 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'kisame-hoshigaki', nom: 'Kisame Hoshigaki', animeSource: 'Naruto', anneeSortieAnime: 2002,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Ninja-requin de l\'Akatsuki au sabre vivant, surnommé le monstre sans queue de Kirigakure.',
   },
   {
@@ -376,7 +376,7 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'kabuto-yakushi', nom: 'Kabuto Yakushi', animeSource: 'Naruto', anneeSortieAnime: 2002,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Espion médecin à lunettes, disciple fidèle d\'Orochimaru devenu un fléau à moitié serpent.',
   },
   {
@@ -454,7 +454,7 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'son-gohan', nom: 'Son Gohan', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Érudit malgré lui dont la colère libère une puissance sans limite.',
   },
   {
@@ -490,7 +490,7 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'majin-buu', nom: 'Majin Buu', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Créature magique rose increvable, capable de se régénérer et de tout transformer en bonbon.',
   },
   {
@@ -730,19 +730,19 @@ export const PART_01_BIG_THREE: Character[] = [
   {
     id: 'vegito', nom: 'Vegito', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Fusion ultime de Goku et Vegeta par les Potaras, puissance quasi illimitée.',
   },
   {
     id: 'gotenks', nom: 'Gotenks', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Fusion par la danse de Goten et Trunks, aussi puissant qu\'immature.',
   },
   {
     id: 'pan', nom: 'Pan', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Fille de Gohan et Videl, aussi intrépide que son grand-père Goku.',
   },
   {

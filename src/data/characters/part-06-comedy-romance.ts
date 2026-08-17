@@ -70,19 +70,19 @@ export const PART_06_COMEDY_ROMANCE: Character[] = [
   {
     id: 'kyo-sohma', nom: 'Kyo Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Maudit par l\'esprit du chat, exclu du zodiaque, il rejette sa propre malédiction.',
   },
   {
     id: 'yuki-sohma', nom: 'Yuki Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Prince du lycée hanté par le rat du zodiaque et l\'ombre de son frère aîné.',
   },
   {
     id: 'shigure-sohma', nom: 'Shigure Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Romancier malicieux du clan Sohma, manipulateur dont les intentions restent floues.',
   },
   {

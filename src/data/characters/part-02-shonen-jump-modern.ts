@@ -46,7 +46,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'himiko-toga', nom: 'Himiko Toga', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Vilaine qui vole les visages de ceux qu\'elle aime, littéralement.',
   },
   {
@@ -118,7 +118,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'tanjiro-kamado', nom: 'Tanjiro Kamado', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Rouge',
     imageUrl: null, descriptionCourte: 'Vendeur de charbon au nez infaillible, pourfendeur par nécessité.',
   },
   {
@@ -166,25 +166,25 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'rukia-kuchiki', nom: 'Rukia Kuchiki', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Shinigami noble qui a donné ses pouvoirs à un humain.',
   },
   {
     id: 'sosuke-aizen', nom: 'Sosuke Aizen', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Capitaine modèle dont tout le plan tenait depuis le premier jour.',
   },
   {
     id: 'kisuke-urahara', nom: 'Kisuke Urahara', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Exilé génial qui tient une échoppe et connaît toutes les réponses.',
   },
   {
     id: 'renji-abarai', nom: 'Renji Abarai', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Vice-capitaine tatoué au zanpakuto en forme de serpent.',
   },
   {
@@ -226,7 +226,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'meruem', nom: 'Meruem', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Roi chimère né pour dominer, dont une partie d\'échecs a changé son âme.',
   },
   {
@@ -310,7 +310,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'elfman-strauss', nom: 'Elfman Strauss', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage à la transformation en démon, protecteur viril et sentimental de sa guilde.',
   },
   {
@@ -844,7 +844,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'licht', nom: 'Licht', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Elfe chef de l\'Œil du Soleil de Midnight, vengeur du massacre de son peuple.',
   },
   {
@@ -862,7 +862,7 @@ export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
   {
     id: 'gajeel-redfox', nom: 'Gajeel Redfox', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Dragon slayer du fer, ancien ennemi de la guilde devenu allié bourru.',
   },
   {

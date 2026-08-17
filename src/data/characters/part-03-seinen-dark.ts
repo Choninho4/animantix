@@ -46,7 +46,7 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'touka-kirishima', nom: 'Touka Kirishima', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Goule serveuse au caractère de feu qui rêve d\'une vie normale.',
   },
   {
@@ -64,7 +64,7 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'ayato-kirishima', nom: 'Ayato Kirishima', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Frère cadet de Touka, goule rebelle qui rejette toute pitié pour survivre.',
   },
   {
@@ -106,7 +106,7 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'griffith', nom: 'Griffith', animeSource: 'Berserk', anneeSortieAnime: 1997,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Rêveur magnifique prêt à tout sacrifier pour son royaume.',
   },
   {
@@ -208,7 +208,7 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'motoko-kusanagi', nom: 'Motoko Kusanagi', animeSource: 'Ghost in the Shell', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
+    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Major cyborg qui cherche la frontière entre l\'âme et la machine.',
   },
   {
@@ -238,13 +238,13 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'ymir-aot', nom: 'Ymir', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Détentrice du titan Femelle-adjacent, protectrice farouche d\'Historia.',
   },
   {
     id: 'annie-leonhart', nom: 'Annie Leonhart', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Titan Femelle infiltrée, combattante solitaire déchirée entre deux camps.',
   },
   {
@@ -256,19 +256,19 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'zeke-yeager', nom: 'Zeke Yeager', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Titan Bête, demi-frère d\'Eren au plan radical pour éteindre les Eldiens.',
   },
   {
     id: 'bertolt-hoover', nom: 'Bertolt Hoover', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Titan Colossal infiltré, rongé par la culpabilité d\'avoir détruit le Mur Maria.',
   },
   {
     id: 'grisha-yeager', nom: 'Grisha Yeager', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Soutien-mentor', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Père d\'Eren, ancien Titan Assaillant porteur d\'un lourd secret familial.',
   },
   {
@@ -280,7 +280,7 @@ export const PART_03_SEINEN_DARK: Character[] = [
   {
     id: 'pieck-finger', nom: 'Pieck Finger', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Titan Charrette pragmatique, la plus posée des guerriers de Marley.',
   },
   {

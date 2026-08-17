@@ -50,16 +50,11 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.05)' },
         },
-        'amx-fall': {
-          '0%': { transform: 'translateY(-10px) rotate(0)', opacity: '1' },
-          '100%': { transform: 'translateY(220px) rotate(420deg)', opacity: '0' },
-        },
       },
       animation: {
         'amx-flash': 'amx-flash 900ms ease-out',
         'amx-pop': 'amx-pop 400ms ease-out',
         'amx-pulse': 'amx-pulse 2.4s ease-in-out infinite',
-        'amx-fall': 'amx-fall 1.6s ease-in forwards',
       },
     },
   },

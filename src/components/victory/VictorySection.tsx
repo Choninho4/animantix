@@ -4,7 +4,7 @@ import { currentTarget, todayIndex, useGameStore } from '../../store/useGameStor
 import { formatCountdown, formatElapsed, msUntilNextMidnight } from '../../lib/format';
 import { getShareCardFontEmbedCSS } from '../../lib/fontEmbed';
 import { StatTile } from './StatTile';
-import { Confetti } from './Confetti';
+import { VictoryBurst } from './VictoryBurst';
 import { ShareCard } from './ShareCard';
 import { FlameIcon, MedalIcon } from '../icons/Icon';
 
@@ -107,7 +107,7 @@ export function VictorySection() {
           </div>
         </div>
       </div>
-      <Confetti />
+      <VictoryBurst />
       <div style={{ position: 'fixed', top: 0, left: -9999, pointerEvents: 'none' }} aria-hidden="true">
         <ShareCard dayNumber={dayNumber} guesses={guesses} elapsed={formatElapsed(elapsed)} streak={streak} ref={shareCardRef} />
       </div>

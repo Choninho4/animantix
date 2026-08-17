@@ -49,7 +49,7 @@ const LABELS: Record<CriterionKey, string> = {
   cheveux: 'Couleur de cheveux',
 };
 
-function decadeOf(year: number): number {
+export function decadeOf(year: number): number {
   return Math.floor(year / 10) * 10;
 }
 

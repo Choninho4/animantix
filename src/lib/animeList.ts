@@ -1,10 +1,13 @@
 import { CHARACTERS } from '../data/characters';
+import { decadeOf } from './scoring';
 
 export interface AnimeSummary {
   name: string;
   count: number;
   /** Année de sortie de l'anime. En cas d'incohérence entre personnages (voir ANIME_YEAR_INCONSISTENCIES), la plus ancienne est retenue par défaut. */
   year: number;
+  /** Décennie dérivée de `year` via decadeOf — même calcul que le critère de scoring, pour rester cohérent. */
+  decade: number;
 }
 
 /**
@@ -33,8 +36,14 @@ function buildAnimeList(): AnimeSummary[] {
     }
   }
   return [...counts.entries()]
-    .map(([name, count]) => ({ name, count, year: minYears.get(name)! }))
+    .map(([name, count]) => {
+      const year = minYears.get(name)!;
+      return { name, count, year, decade: decadeOf(year) };
+    })
     .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
 }
 
 export const ANIME_LIST: AnimeSummary[] = buildAnimeList();
+
+/** Décennies réellement présentes dans la base, triées, pour générer les filtres dynamiquement. */
+export const AVAILABLE_DECADES: number[] = [...new Set(ANIME_LIST.map((a) => a.decade))].sort((a, b) => a - b);

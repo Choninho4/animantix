@@ -3,6 +3,7 @@ import { MotionConfig } from 'framer-motion';
 import { UpcomingTeaser } from '../components/layout/UpcomingTeaser';
 import { ArchiveBanner } from '../components/archive/ArchiveBanner';
 import { SearchBar } from '../components/search/SearchBar';
+import { SpecialHintPanel } from '../components/specialHint/SpecialHintPanel';
 import { TokensPanel } from '../components/tokens/TokensPanel';
 import { EmptyState } from '../components/guesses/EmptyState';
 import { AttemptsTable } from '../components/guesses/AttemptsTable';
@@ -35,6 +36,7 @@ export default function GamePage() {
         <VictorySection />
         <CommunityCounter />
         <SearchBar />
+        <SpecialHintPanel />
         <TokensPanel />
         {guesses.length === 0 && !won && <EmptyState />}
         <AttemptsTable />

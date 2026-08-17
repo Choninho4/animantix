@@ -47,7 +47,7 @@ describe('storage: stats', () => {
 });
 
 describe('storage: jour', () => {
-  const empty: DayState = { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: 'some-character' };
+  const empty: DayState = { g: [], won: false, a: [], sh: false, t: Date.now(), e: 0, targetId: 'some-character' };
 
   it('renvoie null pour un jour jamais joué', () => {
     expect(loadDay(999)).toBeNull();

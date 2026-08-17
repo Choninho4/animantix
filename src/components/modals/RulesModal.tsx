@@ -1,5 +1,5 @@
 import { useGameStore } from '../../store/useGameStore';
-import { POIDS, TOKENS_TOUS_LES } from '../../lib/constants';
+import { POIDS, SPECIAL_HINT_THRESHOLD, TOKENS_TOUS_LES } from '../../lib/constants';
 import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../../lib/temperature';
 import { useTheme } from '../../hooks/useTheme';
 import { ModalHeader, ModalShell } from './ModalShell';
@@ -68,6 +68,12 @@ export function RulesModal() {
           </li>
         ))}
       </ul>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>L'indice spécial</h3>
+      <p className="text-[14px] leading-[1.55] text-text">
+        Après {SPECIAL_HINT_THRESHOLD} essais soumis dans la partie, un indice spécial se débloque : clique
+        dessus pour révéler l'anime d'origine du personnage mystère. C'est un déblocage unique par partie,
+        indépendant des jetons d'analyse, et la révélation reste affichée en permanence une fois faite.
+      </p>
       <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>Les jetons d'analyse</h3>
       <p className="text-[14px] leading-[1.55] text-text">
         Tu gagnes un jeton d'analyse tous les {TOKENS_TOUS_LES} essais, et ils s'accumulent sans limite.

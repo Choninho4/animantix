@@ -28,7 +28,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
 
     saveDay(
       idx,
-      { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
+      { g: [], won: false, a: [], sh: false, t: Date.now(), e: 0, targetId: 'un-id-qui-nexiste-plus' },
       {
         g: [winningGuessEntry('un-id-qui-nexiste-plus', 'Personnage Fantôme', 'Anime Disparu')],
         won: true,
@@ -49,7 +49,7 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
     const real = characterForDayIndex(idx, CHARACTERS);
     const guess = winningGuessEntry(real.id, real.nom, real.animeSource);
 
-    saveDay(idx, { g: [], won: false, a: [], t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
+    saveDay(idx, { g: [], won: false, a: [], sh: false, t: Date.now(), e: 0, targetId: real.id }, { g: [guess], won: true, e: 9_999 });
 
     useGameStore.getState().loadDay(0);
     const state = useGameStore.getState();
@@ -104,5 +104,45 @@ describe("jetons d'analyse", () => {
 
     useGameStore.getState().loadDay(0);
     expect(useGameStore.getState().analyzedIds).toEqual([pool[0].id]);
+  });
+});
+
+describe('indice spécial', () => {
+  it('ne se débloque pas avant 20 essais, se débloque à 20, et la révélation est permanente', () => {
+    const idx = todayIndex();
+    const target = characterForDayIndex(idx, CHARACTERS);
+    const pool = CHARACTERS.filter((c) => c.id !== target.id).slice(0, 20);
+
+    useGameStore.getState().loadDay(0);
+    useGameStore.getState().revealSpecialHint();
+    expect(useGameStore.getState().specialHintRevealed).toBe(false);
+
+    pool.slice(0, 19).forEach((c) => useGameStore.getState().submitGuess(c));
+    expect(useGameStore.getState().guesses.length).toBe(19);
+    useGameStore.getState().revealSpecialHint();
+    expect(useGameStore.getState().specialHintRevealed).toBe(false);
+
+    useGameStore.getState().submitGuess(pool[19]);
+    expect(useGameStore.getState().guesses.length).toBe(20);
+    useGameStore.getState().revealSpecialHint();
+    expect(useGameStore.getState().specialHintRevealed).toBe(true);
+  });
+
+  it("est indépendant par jour (aujourd'hui vs archive)", () => {
+    const idx = todayIndex();
+    const today = characterForDayIndex(idx, CHARACTERS);
+    const archiveTarget = characterForDayIndex(idx - 1, CHARACTERS);
+    const pool = CHARACTERS.filter((c) => c.id !== today.id && c.id !== archiveTarget.id).slice(0, 20);
+
+    useGameStore.getState().loadDay(0);
+    pool.forEach((c) => useGameStore.getState().submitGuess(c));
+    useGameStore.getState().revealSpecialHint();
+    expect(useGameStore.getState().specialHintRevealed).toBe(true);
+
+    useGameStore.getState().loadDay(1);
+    expect(useGameStore.getState().specialHintRevealed).toBe(false);
+
+    useGameStore.getState().loadDay(0);
+    expect(useGameStore.getState().specialHintRevealed).toBe(true);
   });
 });

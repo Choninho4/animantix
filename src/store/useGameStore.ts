@@ -10,6 +10,7 @@ import { findExactMatch, suggestionsFor } from '../lib/autocomplete';
 import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
 import { guessesUntilNextToken, tokensAvailable } from '../lib/analysisTokens';
+import { isSpecialHintUnlocked } from '../lib/specialHint';
 import { getOrCreateAnonId } from '../lib/anonId';
 import {
   fetchCommunityPercentile,
@@ -32,6 +33,7 @@ interface GameState {
   guesses: GuessEntry[];
   won: boolean;
   analyzedIds: string[];
+  specialHintRevealed: boolean;
   startedAt: number;
   elapsed: number;
   flashId: string | null;
@@ -60,6 +62,7 @@ interface GameState {
   selectAnime(animeName: string): void;
   submitGuess(character?: Character): void;
   requestAnalysis(id: string): boolean;
+  revealSpecialHint(): void;
   exitArchive(): void;
   openModal(name: keyof ModalState): void;
   closeModals(): void;
@@ -88,6 +91,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   guesses: [],
   won: false,
   analyzedIds: [],
+  specialHintRevealed: false,
   startedAt: Date.now(),
   elapsed: 0,
   flashId: null,
@@ -131,6 +135,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       guesses: day?.g ?? [],
       won,
       analyzedIds: day?.a ?? [],
+      specialHintRevealed: day?.sh ?? false,
       startedAt: day?.t ?? Date.now(),
       elapsed,
       input: '',
@@ -244,6 +249,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       g: state.guesses,
       won: state.won,
       a: state.analyzedIds,
+      sh: state.specialHintRevealed,
       t: state.startedAt,
       e: state.elapsed,
       targetId: cible.id,
@@ -338,6 +344,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       g: state.guesses,
       won: state.won,
       a: state.analyzedIds,
+      sh: state.specialHintRevealed,
       t: state.startedAt,
       e: state.elapsed,
       targetId: cible.id,
@@ -345,6 +352,25 @@ export const useGameStore = create<GameState>((set, get) => ({
     saveDay(dayIdx, current, { a: analyzedIds });
     set({ analyzedIds });
     return true;
+  },
+
+  revealSpecialHint() {
+    const state = get();
+    if (state.specialHintRevealed || !isSpecialHintUnlocked(state.guesses.length)) return;
+
+    const dayIdx = todayIndex() - state.archiveOffset;
+    const cible = characterForDayIndex(dayIdx, CHARACTERS);
+    const current: DayState = {
+      g: state.guesses,
+      won: state.won,
+      a: state.analyzedIds,
+      sh: state.specialHintRevealed,
+      t: state.startedAt,
+      e: state.elapsed,
+      targetId: cible.id,
+    };
+    saveDay(dayIdx, current, { sh: true });
+    set({ specialHintRevealed: true });
   },
 
   exitArchive() {

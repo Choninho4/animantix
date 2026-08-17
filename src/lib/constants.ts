@@ -14,6 +14,7 @@ export const POIDS = {
 
 export const DATE_REF = Date.UTC(2024, 0, 1);
 export const TOKENS_TOUS_LES = 3;
+export const SPECIAL_HINT_THRESHOLD = 20;
 
 export const STATS_KEY = 'animantix.stats.v1';
 export const DAY_KEY_PREFIX = 'animantix.jour.';

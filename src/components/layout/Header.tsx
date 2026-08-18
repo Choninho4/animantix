@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { todayIndex, useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
 import { IconButton } from './IconButton';
@@ -11,6 +11,7 @@ export function Header() {
   const archiveOffset = useGameStore((s) => s.archiveOffset);
   const streak = useGameStore((s) => s.stats.currentStreak);
   const openModal = useGameStore((s) => s.openModal);
+  const loadDay = useGameStore((s) => s.loadDay);
   const dayNumber = todayIndex() - archiveOffset + 1;
   const { theme, toggleTheme } = useTheme();
 
@@ -19,7 +20,9 @@ export function Header() {
       <div className="mx-auto flex max-w-[860px] items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4">
         <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           <div className="truncate">
-            <Wordmark />
+            <Link to="/" onClick={() => loadDay(0)} aria-label="Retour au personnage du jour" className="inline-block">
+              <Wordmark />
+            </Link>
           </div>
           <div className="hidden truncate text-[11px] leading-tight text-muted min-[420px]:block">
             Personnage du jour #{dayNumber}
@@ -33,6 +36,7 @@ export function Header() {
             <IconButton
               label={theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'}
               onClick={toggleTheme}
+              toggled={theme === 'dark'}
             >
               {theme === 'dark' ? (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">

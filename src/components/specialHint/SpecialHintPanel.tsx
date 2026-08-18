@@ -74,7 +74,7 @@ export function SpecialHintPanel() {
               <TargetIcon size={16} />
               Indice spécial : {progress}/{SPECIAL_HINT_THRESHOLD} essais
             </span>
-            <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-bg">
+            <span className="mt-2 block h-1.5 overflow-hidden rounded-full border border-text bg-bg shadow-[2px_2px_0_rgb(var(--color-text))]">
               <motion.span
                 className="block h-full rounded-full bg-brand-mid"
                 initial={{ width: 0 }}

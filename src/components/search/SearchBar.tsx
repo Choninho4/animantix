@@ -132,10 +132,10 @@ export function SearchBar() {
             type="button"
             onClick={handleSubmit}
             disabled={submitDisabled}
-            className={`min-h-[52px] flex-none rounded-control px-6 font-display text-[16px] font-bold transition-colors active:scale-[.98] ${
+            className={`min-h-[52px] flex-none rounded-control border-2 px-6 font-display text-[16px] font-bold transition-colors ${
               submitDisabled
-                ? 'cursor-not-allowed bg-border text-muted'
-                : 'cursor-pointer bg-brand text-white'
+                ? 'cursor-not-allowed border-transparent bg-border text-muted'
+                : 'cursor-pointer border-text bg-brand text-white shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none'
             }`}
           >
             Valider

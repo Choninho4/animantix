@@ -23,7 +23,10 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
   const borderWidth = isBest ? 1.5 : 0.5;
   // rgb(var(--color-border)) plutôt qu'un hex figé : suit le thème clair/sombre actif.
   const borderColor = isBest ? t.color : 'rgb(var(--color-border))';
-  const glow = isBest ? `0 0 0 3px ${t.bg}` : 'none';
+  // Ombre dure décalée façon neo-brutalism, composée ici (pas en classe Tailwind)
+  // car ce style inline pilote déjà le halo du meilleur essai sur la même propriété.
+  const hardShadow = '3px 3px 0 rgb(var(--color-text))';
+  const boxShadow = isBest ? `0 0 0 3px ${t.bg}, ${hardShadow}` : hardShadow;
 
   return (
     <motion.li
@@ -31,14 +34,14 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
       initial={{ scale: 0.94, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      style={{ borderWidth, borderColor, boxShadow: glow }}
+      style={{ borderWidth, borderColor, boxShadow }}
       className={`overflow-hidden rounded-card border bg-surface ${justAdded ? 'motion-safe:animate-amx-flash' : ''}`}
     >
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={selected}
-        className="flex w-full items-center gap-3 px-3 py-2.5 text-left"
+        className="flex w-full items-center gap-3 px-3 py-2.5 text-left active:translate-x-[2px] active:translate-y-[2px]"
       >
         <span className="min-w-0 flex-1">
           <span className="flex items-center gap-1.5">
@@ -52,7 +55,7 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             <span className="truncate">{guess.anime}</span>
             {analyzable && <span className="flex-none font-bold text-brand-mid">· Cliquer pour analyser</span>}
           </span>
-          <span className="block h-1.5 overflow-hidden rounded-full bg-bg">
+          <span className="block h-1.5 overflow-hidden rounded-full border border-text bg-bg shadow-[2px_2px_0_rgb(var(--color-text))]">
             <motion.span
               className="block h-full rounded-full"
               style={{ background: t.color }}

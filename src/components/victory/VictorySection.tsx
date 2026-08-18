@@ -87,7 +87,7 @@ export function VictorySection() {
               type="button"
               onClick={handleShare}
               disabled={sharing}
-              className="flex min-h-touch items-center gap-2 rounded-control bg-brand px-8 py-4 font-display text-[15px] font-bold text-white active:scale-[.98] disabled:opacity-70"
+              className="flex min-h-touch items-center gap-2 rounded-control border-2 border-text bg-brand px-8 py-4 font-display text-[15px] font-bold text-white shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none disabled:opacity-70 disabled:shadow-none"
             >
               {sharing && (
                 <span className="h-4 w-4 flex-none animate-spin rounded-full border-2 border-white/40 border-t-white" />
@@ -97,7 +97,7 @@ export function VictorySection() {
             <button
               type="button"
               onClick={() => openModal('stats')}
-              className="min-h-touch rounded-control border-2 border-brand px-8 py-4 font-display text-[15px] font-bold text-brand"
+              className="min-h-touch rounded-control border-2 border-brand px-8 py-4 font-display text-[15px] font-bold text-brand shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
             >
               Mes statistiques
             </button>

@@ -34,7 +34,7 @@ export function ModalShell({ label, onClose, children, maxWidth = 520 }: ModalSh
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full rounded-card bg-surface p-6 motion-safe:animate-amx-pop"
+        className="w-full rounded-card border-2 border-text bg-surface p-6 shadow-[6px_6px_0_rgb(var(--color-text))] motion-safe:animate-amx-pop"
         style={{ maxWidth }}
       >
         {children}
@@ -51,7 +51,7 @@ export function ModalHeader({ title, onClose }: { title: string; onClose: () => 
         type="button"
         onClick={onClose}
         aria-label="Fermer"
-        className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-none bg-bg text-brand-dark"
+        className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-2 border-text bg-bg text-brand-dark shadow-[2px_2px_0_rgb(var(--color-text))] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
       >
         <CloseIcon size={18} />
       </button>

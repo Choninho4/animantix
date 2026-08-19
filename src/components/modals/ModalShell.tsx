@@ -30,11 +30,7 @@ export function ModalShell({ label, onClose, children, maxWidth = 520 }: ModalSh
       aria-label={label}
       onClick={onClose}
       className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto px-4 py-6"
-      style={{
-        background: 'rgba(8,8,16,.85)',
-        backgroundImage: 'radial-gradient(rgba(153,102,204,.5) 1.7px, transparent 1.8px)',
-        backgroundSize: '9px 9px',
-      }}
+      style={{ background: 'rgba(8,8,16,.8)' }}
     >
       <div
         onClick={(e) => e.stopPropagation()}

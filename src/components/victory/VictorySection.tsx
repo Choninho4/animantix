@@ -59,7 +59,7 @@ export function VictorySection() {
   }
 
   return (
-    <section className="relative mt-5 overflow-hidden border-[4px] border-ink bg-surface p-6 shadow-[10px_10px_0_#4CAF50] motion-safe:animate-amx-pop">
+    <section className="relative mt-5 overflow-hidden border-[4px] border-ink bg-surface p-6 shadow-[10px_10px_0_#FF5FB3] motion-safe:animate-amx-pop">
       <div className="relative flex flex-wrap items-start gap-5">
         <div className="min-w-[240px] flex-1">
           <div className="mb-1.5 text-[12px] font-bold uppercase tracking-[.10em] text-brand">Trouvé !</div>

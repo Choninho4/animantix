@@ -19,13 +19,7 @@ export function AchievementBadge({ achievement, unlocked, selected, onClick }: A
         unlocked ? 'border-ink bg-brand shadow-[3px_3px_0_#0B0B16]' : 'border-border bg-bg opacity-70'
       } ${selected ? 'translate-x-[2px] translate-y-[2px] shadow-none' : ''}`}
     >
-      <span
-        className={`flex h-10 w-10 flex-none items-center justify-center border-2 ${
-          unlocked ? 'border-ink bg-ink text-white' : 'border-transparent bg-border text-muted'
-        }`}
-      >
-        <Icon size={19} />
-      </span>
+      <Icon size={22} className={unlocked ? 'text-white' : 'text-muted'} />
       <span className={`text-[10.5px] font-semibold leading-tight ${unlocked ? 'text-white' : 'text-muted'}`}>
         {achievement.nom}
       </span>

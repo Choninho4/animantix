@@ -35,9 +35,9 @@ export default function GamePage() {
         <ArchiveBanner />
         <VictorySection />
         <CommunityCounter />
-        <SearchBar />
         <SpecialHintPanel />
         <TokensPanel />
+        <SearchBar />
         {guesses.length === 0 && !won && <EmptyState />}
         <AttemptsTable />
         <UpcomingTeaser />

@@ -42,6 +42,12 @@
   --color-danger: 230 57 70; /* #E63946 */
   --color-success: 76 175 80; /* #4CAF50 */
   --color-shadow-accent: 11 11 22; /* #0B0B16 */
+  /* Couleurs de texte dédiées au détail par critère (AttemptDetail) :
+     assez contrastées sur leurs fonds teintés respectifs (AA, >=4.5:1),
+     distinctes des teintes de bordure/fond qui restent décoratives. */
+  --color-status-exact-text: 30 122 52; /* #1E7A34 */
+  --color-status-partial-text: 107 63 160; /* #6B3FA0 */
+  --color-status-none-text: 85 85 95; /* #55555F */
 }
 
 :root.dark {
@@ -59,6 +65,9 @@
   --color-danger: 230 57 70; /* #E63946 */
   --color-success: 76 175 80; /* #4CAF50 */
   --color-shadow-accent: 84 33 142; /* #54218E */
+  --color-status-exact-text: 111 203 127; /* #6FCB7F */
+  --color-status-partial-text: 201 166 242; /* #C9A6F2 */
+  --color-status-none-text: 199 199 214; /* #C7C7D6 */
 }
 
 body {

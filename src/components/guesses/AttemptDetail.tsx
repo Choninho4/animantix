@@ -7,10 +7,10 @@ interface AttemptDetailProps {
   guess: GuessEntry;
 }
 
-const STATUS_STYLE: Record<CriterionStatus, { bg: string; line: string }> = {
-  exact: { bg: 'rgba(76,175,80,.14)', line: '#4CAF50' },
-  partial: { bg: 'rgba(153,102,204,.16)', line: '#9966CC' },
-  none: { bg: 'transparent', line: 'rgb(var(--color-border))' },
+const STATUS_STYLE: Record<CriterionStatus, { bg: string; line: string; text: string }> = {
+  exact: { bg: 'rgba(76,175,80,.14)', line: '#4CAF50', text: 'rgb(var(--color-status-exact-text))' },
+  partial: { bg: 'rgba(153,102,204,.16)', line: '#9966CC', text: 'rgb(var(--color-status-partial-text))' },
+  none: { bg: 'transparent', line: 'rgb(var(--color-border))', text: 'rgb(var(--color-status-none-text))' },
 };
 
 export function AttemptDetail({ guess }: AttemptDetailProps) {
@@ -36,19 +36,19 @@ export function AttemptDetail({ guess }: AttemptDetailProps) {
               >
                 <div
                   className="font-mono text-[10px] font-bold uppercase leading-tight tracking-wide"
-                  style={{ color: style.line }}
+                  style={{ color: style.text }}
                 >
                   {d.label}
                 </div>
                 <div className="mt-1.5 font-display text-[13px] font-bold leading-tight text-text">
                   {d.valeurAffichee}
                   {d.direction && (
-                    <span className="ml-1" style={{ color: style.line }}>
+                    <span className="ml-1" style={{ color: style.text }}>
                       {d.direction === 'haut' ? '↑' : '↓'}
                     </span>
                   )}
                 </div>
-                <div className="mt-1 text-[12px] font-bold" style={{ color: style.line }}>
+                <div className="mt-1 text-[12px] font-bold" style={{ color: style.text }}>
                   +{d.points} %
                 </div>
               </div>

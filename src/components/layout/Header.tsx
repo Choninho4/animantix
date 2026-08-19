@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { todayIndex, useGameStore } from '../../store/useGameStore';
+import { useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
 import { IconButton } from './IconButton';
 import { StreakBadge } from './StreakBadge';
@@ -8,11 +8,9 @@ import { MobileNav } from './MobileNav';
 import { TrophyIcon } from '../icons/Icon';
 
 export function Header() {
-  const archiveOffset = useGameStore((s) => s.archiveOffset);
   const streak = useGameStore((s) => s.stats.currentStreak);
   const openModal = useGameStore((s) => s.openModal);
   const loadDay = useGameStore((s) => s.loadDay);
-  const dayNumber = todayIndex() - archiveOffset + 1;
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -27,9 +25,6 @@ export function Header() {
           >
             <Wordmark inverted />
           </Link>
-          <div className="hidden truncate font-mono text-[11px] font-semibold uppercase tracking-wide text-muted min-[420px]:block">
-            Personnage du jour #{dayNumber}
-          </div>
         </div>
         <div className="flex flex-none items-center gap-1.5 sm:gap-2.5">
           <StreakBadge streak={streak} />

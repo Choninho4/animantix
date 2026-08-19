@@ -12,13 +12,17 @@ export interface TemperatureBand {
   fgDark: string;
 }
 
+// Aplats pleins façon tampon (border encre + ombre dure appliquées au niveau des
+// composants) plutôt que les teintes translucides précédentes : bg/color partagent
+// désormais la même couleur saturée, fg/fgDark le même texte de contraste (le badge
+// ne change plus avec le thème, comme dans la DA neo-brutalism).
 export const TEMPERATURE_BANDS: TemperatureBand[] = [
-  { min: 100, label: 'Trouvé !', icon: 'target', color: '#D02886', bg: 'rgba(208,40,134,.12)', fg: '#D02886', fgDark: '#FF5CB3' },
-  { min: 80, label: 'Brûlant', icon: 'flame', color: '#C1121F', bg: 'rgba(230,57,70,.12)', fg: '#C1121F', fgDark: '#FF6B6B' },
-  { min: 50, label: 'Chaud', icon: 'flame', color: '#C4700E', bg: 'rgba(224,122,26,.14)', fg: '#A75A0B', fgDark: '#E8A33D' },
-  { min: 25, label: 'Tiède', icon: 'flame', color: '#9966CC', bg: 'rgba(153,102,204,.16)', fg: '#54218E', fgDark: '#C79EF0' },
-  { min: 1, label: 'Froid', icon: 'snowflake', color: '#2563EB', bg: 'rgba(37,99,235,.12)', fg: '#1D4ED8', fgDark: '#60A5FA' },
-  { min: 0, label: 'Glacial', icon: 'snowflake', color: '#B8B8C4', bg: 'rgb(var(--color-border))', fg: 'rgb(var(--color-muted))', fgDark: 'rgb(var(--color-muted))' },
+  { min: 100, label: 'Trouvé !', icon: 'target', color: '#4CAF50', bg: '#4CAF50', fg: '#0B0B16', fgDark: '#0B0B16' },
+  { min: 80, label: 'Brûlant', icon: 'flame', color: '#E63946', bg: '#E63946', fg: '#FFFFFF', fgDark: '#FFFFFF' },
+  { min: 50, label: 'Chaud', icon: 'flame', color: '#D02886', bg: '#D02886', fg: '#FFFFFF', fgDark: '#FFFFFF' },
+  { min: 25, label: 'Tiède', icon: 'flame', color: '#9966CC', bg: '#9966CC', fg: '#12121F', fgDark: '#12121F' },
+  { min: 1, label: 'Froid', icon: 'snowflake', color: '#7C5CD6', bg: '#7C5CD6', fg: '#FFFFFF', fgDark: '#FFFFFF' },
+  { min: 0, label: 'Glacial', icon: 'snowflake', color: '#2563EB', bg: '#2563EB', fg: '#FFFFFF', fgDark: '#FFFFFF' },
 ];
 
 export const TEMPERATURE_RANGE_LABELS: Record<number, string> = {

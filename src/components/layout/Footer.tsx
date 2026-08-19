@@ -10,7 +10,7 @@ const FOOTER_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t-[3px] border-ink bg-surface">
       <div className="mx-auto flex max-w-[960px] flex-wrap items-center gap-5 px-4 py-6">
         <div className="flex items-center gap-2.5 opacity-80">
           <Wordmark size={16} />

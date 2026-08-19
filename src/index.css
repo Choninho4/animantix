@@ -28,10 +28,10 @@
 }
 
 :root {
-  /* Thème clair — DA de référence */
+  /* Thème clair — DA neo-brutalism (handoff Claude Design) */
   --color-bg: 245 245 247; /* #F5F5F7 */
   --color-surface: 255 255 255; /* #FFFFFF */
-  --color-text: 26 26 46; /* #1A1A2E */
+  --color-text: 18 18 31; /* #12121F */
   --color-brand: 208 40 134; /* #D02886 */
   --color-brand-dark: 84 33 142; /* #54218E */
   --color-brand-mid: 153 102 204; /* #9966CC */
@@ -39,22 +39,26 @@
   --color-border: 232 232 240; /* #E8E8F0 */
   --color-flash: 255 232 244; /* #FFE8F4 */
   --color-scrollbar: 232 232 240;
-  --color-danger: 193 18 31; /* #C1121F */
+  --color-danger: 230 57 70; /* #E63946 */
+  --color-success: 76 175 80; /* #4CAF50 */
+  --color-shadow-accent: 11 11 22; /* #0B0B16 */
 }
 
 :root.dark {
   /* Thème sombre — mêmes teintes de marque, luminosité inversée, contrastes AA */
-  --color-bg: 19 17 26; /* #13111A */
-  --color-surface: 29 26 40; /* #1D1A28 */
-  --color-text: 240 239 245; /* #F0EFF5 */
-  --color-brand: 255 92 179; /* #FF5CB3 */
+  --color-bg: 21 21 43; /* #15152B */
+  --color-surface: 35 35 63; /* #23233F */
+  --color-text: 255 255 255; /* #FFFFFF */
+  --color-brand: 255 95 179; /* #FF5FB3 */
   --color-brand-dark: 199 158 240; /* #C79EF0 */
   --color-brand-mid: 184 138 232; /* #B88AE8 */
-  --color-muted: 167 164 181; /* #A7A4B5 */
+  --color-muted: 176 176 192; /* #B0B0C0 */
   --color-border: 47 43 61; /* #2F2B3D */
   --color-flash: 61 27 48; /* #3D1B30 */
   --color-scrollbar: 47 43 61;
-  --color-danger: 255 107 107; /* #FF6B6B */
+  --color-danger: 230 57 70; /* #E63946 */
+  --color-success: 76 175 80; /* #4CAF50 */
+  --color-shadow-accent: 84 33 142; /* #54218E */
 }
 
 body {

@@ -30,11 +30,15 @@ export function ModalShell({ label, onClose, children, maxWidth = 520 }: ModalSh
       aria-label={label}
       onClick={onClose}
       className="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto px-4 py-6"
-      style={{ background: 'rgba(26,26,46,.55)' }}
+      style={{
+        background: 'rgba(8,8,16,.85)',
+        backgroundImage: 'radial-gradient(rgba(153,102,204,.5) 1.7px, transparent 1.8px)',
+        backgroundSize: '9px 9px',
+      }}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full rounded-card border-2 border-text bg-surface p-6 shadow-[6px_6px_0_rgb(var(--color-text))] motion-safe:animate-amx-pop"
+        className="w-full border-[4px] border-ink bg-surface p-6 shadow-[14px_14px_0_#D02886] motion-safe:animate-amx-pop"
         style={{ maxWidth }}
       >
         {children}
@@ -46,12 +50,12 @@ export function ModalShell({ label, onClose, children, maxWidth = 520 }: ModalSh
 export function ModalHeader({ title, onClose }: { title: string; onClose: () => void }) {
   return (
     <div className="mb-4 flex items-start gap-3">
-      <h2 className="flex-1 font-display text-[26px] font-bold text-brand">{title}</h2>
+      <h2 className="flex-1 font-display text-[26px] font-bold uppercase text-brand">{title}</h2>
       <button
         type="button"
         onClick={onClose}
         aria-label="Fermer"
-        className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-2 border-text bg-bg text-brand-dark shadow-[2px_2px_0_rgb(var(--color-text))] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+        className="flex h-touch w-touch flex-none items-center justify-center border-[3px] border-ink bg-danger text-white shadow-[4px_4px_0_#0B0B16] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
       >
         <CloseIcon size={18} />
       </button>

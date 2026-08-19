@@ -28,7 +28,7 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -6 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="absolute left-0 right-0 top-[58px] z-50 rounded-card border border-border bg-surface p-3 shadow-dropdown"
+      className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 border-[3px] border-ink bg-surface p-3 shadow-dropdown"
     >
       <p className="mb-2 px-0.5 text-[12px] font-semibold text-muted">
         Aucune idée ? Choisis un anime pour voir ses personnages.
@@ -40,10 +40,10 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
             e.preventDefault();
             setDecade(null);
           }}
-          className={`flex-none whitespace-nowrap rounded-pill px-3 py-1.5 text-[12px] font-bold transition-colors ${
+          className={`flex-none whitespace-nowrap border-2 px-3 py-1.5 font-display text-[12px] font-bold transition-colors ${
             decade === null
-              ? 'bg-brand text-white'
-              : 'border border-border text-muted hover:border-brand-mid hover:text-brand-mid'
+              ? 'border-ink bg-brand text-white'
+              : 'border-border text-muted hover:border-brand-mid hover:text-brand-mid'
           }`}
         >
           Tous
@@ -56,10 +56,10 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
               e.preventDefault();
               setDecade(d);
             }}
-            className={`flex-none whitespace-nowrap rounded-pill px-3 py-1.5 text-[12px] font-bold transition-colors ${
+            className={`flex-none whitespace-nowrap border-2 px-3 py-1.5 font-display text-[12px] font-bold transition-colors ${
               decade === d
-                ? 'bg-brand text-white'
-                : 'border border-border text-muted hover:border-brand-mid hover:text-brand-mid'
+                ? 'border-ink bg-brand text-white'
+                : 'border-border text-muted hover:border-brand-mid hover:text-brand-mid'
             }`}
           >
             {d}s
@@ -75,7 +75,7 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
         placeholder="Filtrer les animes…"
         autoComplete="off"
         aria-label="Filtrer la liste des animes"
-        className="mb-2.5 h-9 w-full rounded-control border border-border bg-bg px-3 text-[13px] text-text outline-none focus:border-brand"
+        className="mb-2.5 h-9 w-full border-2 border-ink bg-bg px-3 font-display text-[13px] font-bold text-text outline-none focus:border-[#FF5FB3]"
       />
       {visible.length === 0 ? (
         <div className="px-0.5 py-4 text-center text-[13px] text-muted">
@@ -87,7 +87,7 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
                 e.preventDefault();
                 resetFilters();
               }}
-              className="mt-2.5 rounded-control bg-bg px-3.5 py-1.5 text-[12px] font-bold text-brand-dark"
+              className="mt-2.5 border-2 border-ink bg-bg px-3.5 py-1.5 font-display text-[12px] font-bold text-brand-dark"
             >
               Réinitialiser les filtres
             </button>
@@ -103,10 +103,10 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
                   e.preventDefault();
                   onSelect(a.name);
                 }}
-                className="flex min-h-touch w-full flex-col items-start gap-0.5 rounded-control bg-brand-mid/10 px-3 py-2 text-left transition-colors hover:bg-brand-mid/20 active:scale-[.97]"
+                className="flex min-h-touch w-full flex-col items-start gap-0.5 border-2 border-transparent bg-brand-mid/10 px-3 py-2 text-left transition-colors hover:border-ink hover:bg-brand-mid/20 active:translate-x-[2px] active:translate-y-[2px]"
               >
-                <span className="w-full truncate text-[12px] font-semibold text-brand-mid">{a.name}</span>
-                <span className="text-[11px] font-medium text-muted">
+                <span className="w-full truncate font-display text-[13px] font-bold text-brand-mid">{a.name}</span>
+                <span className="font-mono text-[11px] font-medium text-muted">
                   {a.year} · {a.count} personnage{a.count > 1 ? 's' : ''}
                 </span>
               </button>

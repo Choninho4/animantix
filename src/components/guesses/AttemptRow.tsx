@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import type { GuessEntry } from '../../types/guess';
 import { temperatureForScore } from '../../lib/temperature';
-import { useTheme } from '../../hooks/useTheme';
 import { SearchIcon, TemperatureBandIcon } from '../icons/Icon';
 import { AttemptDetail } from './AttemptDetail';
 
@@ -18,24 +17,24 @@ interface AttemptRowProps {
 
 export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analyzable, onToggle }: AttemptRowProps) {
   const t = temperatureForScore(guess.score);
-  const { theme } = useTheme();
-  const badgeFg = theme === 'dark' ? t.fgDark : t.fg;
-  const borderWidth = isBest ? 1.5 : 0.5;
-  // rgb(var(--color-border)) plutôt qu'un hex figé : suit le thème clair/sombre actif.
-  const borderColor = isBest ? t.color : 'rgb(var(--color-border))';
+  const borderWidth = isBest ? 3 : 2;
+  const borderColor = isBest ? t.color : '#0B0B16';
   // Ombre dure décalée façon neo-brutalism, composée ici (pas en classe Tailwind)
   // car ce style inline pilote déjà le halo du meilleur essai sur la même propriété.
-  const hardShadow = '3px 3px 0 rgb(var(--color-text))';
+  const hardShadow = '5px 5px 0 rgb(var(--color-shadow-accent))';
   const boxShadow = isBest ? `0 0 0 3px ${t.bg}, ${hardShadow}` : hardShadow;
+  // Léger effet "collage" façon zine : dérivé de manière stable de l'id du personnage
+  // (pas de l'index dans la liste) pour ne pas retourner les cartes au fil du tri.
+  const tilt = guess.id.charCodeAt(0) % 2 === 0 ? '-0.35deg' : '0.3deg';
 
   return (
     <motion.li
       layout
       initial={{ scale: 0.94, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
+      animate={{ scale: 1, opacity: 1, rotate: tilt }}
       transition={{ duration: 0.3 }}
       style={{ borderWidth, borderColor, boxShadow }}
-      className={`overflow-hidden rounded-card border bg-surface ${justAdded ? 'motion-safe:animate-amx-flash' : ''}`}
+      className={`overflow-hidden border bg-surface ${justAdded ? 'motion-safe:animate-amx-flash' : ''}`}
     >
       <button
         type="button"
@@ -45,7 +44,7 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
       >
         <span className="min-w-0 flex-1">
           <span className="flex items-center gap-1.5">
-            <span className="truncate text-[15px] font-bold text-text">{guess.nom}</span>
+            <span className="truncate font-display text-[15px] font-bold text-text">{guess.nom}</span>
             {analyzed && <SearchIcon size={12} className="flex-none text-brand-mid" />}
             {analyzable && (
               <SearchIcon size={12} className="flex-none text-brand-mid motion-safe:animate-amx-pulse" />
@@ -55,9 +54,9 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             <span className="truncate">{guess.anime}</span>
             {analyzable && <span className="flex-none font-bold text-brand-mid">· Cliquer pour analyser</span>}
           </span>
-          <span className="block h-1.5 overflow-hidden rounded-full border border-text bg-bg shadow-[2px_2px_0_rgb(var(--color-text))]">
+          <span className="block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
             <motion.span
-              className="block h-full rounded-full"
+              className="block h-full"
               style={{ background: t.color }}
               initial={{ width: 0 }}
               animate={{ width: `${guess.score}%` }}
@@ -65,13 +64,13 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             />
           </span>
         </span>
-        <span className="flex flex-none flex-col items-end gap-0.5" style={{ minWidth: 92 }}>
+        <span className="flex flex-none flex-col items-end gap-1" style={{ minWidth: 92 }}>
           <span className="font-display text-[19px] font-bold" style={{ color: t.color }}>
             {guess.score} %
           </span>
           <span
-            className="flex items-center gap-1 whitespace-nowrap rounded-pill px-2 py-0.5 text-[11px] font-bold"
-            style={{ background: t.bg, color: badgeFg }}
+            className="flex items-center gap-1 whitespace-nowrap border-2 border-ink px-2 py-0.5 font-display text-[11px] font-bold shadow-[2px_2px_0_#0B0B16] motion-safe:rotate-2"
+            style={{ background: t.bg, color: t.fg }}
           >
             <TemperatureBandIcon icon={t.icon} size={11} />
             {t.label}

@@ -59,7 +59,7 @@ export function VictorySection() {
   }
 
   return (
-    <section className="relative mt-5 overflow-hidden rounded-card border border-border bg-surface p-6 motion-safe:animate-amx-pop">
+    <section className="relative mt-5 overflow-hidden border-[4px] border-ink bg-surface p-6 shadow-[10px_10px_0_#4CAF50] motion-safe:animate-amx-pop">
       <div className="relative flex flex-wrap items-start gap-5">
         <div className="min-w-[240px] flex-1">
           <div className="mb-1.5 text-[12px] font-bold uppercase tracking-[.10em] text-brand">Trouvé !</div>
@@ -71,14 +71,20 @@ export function VictorySection() {
           </div>
           <p className="mb-4 max-w-[460px] text-[15px] leading-[1.6] text-text">{target.descriptionCourte}</p>
           <div className="mb-8 flex flex-wrap gap-2.5">
-            <StatTile value={String(guesses.length)} label="essais" />
-            <StatTile value={formatElapsed(elapsed)} label="temps de jeu" />
-            <StatTile value={String(streak)} label="série en cours" icon={<FlameIcon size={17} />} />
+            <StatTile value={String(guesses.length)} label="essais" shadowColor="#4CAF50" />
+            <StatTile value={formatElapsed(elapsed)} label="temps de jeu" shadowColor="#D02886" />
+            <StatTile
+              value={String(streak)}
+              label="série en cours"
+              icon={<FlameIcon size={17} />}
+              shadowColor="#FF5FB3"
+            />
             {communityPercentile && (
               <StatTile
                 value={communityPercentile.isFirst ? '1er' : `Top ${communityPercentile.percentileTop}%`}
                 label={communityPercentile.isFirst ? 'aujourd\'hui' : 'des plus rapides'}
                 icon={<MedalIcon size={17} />}
+                shadowColor="#9966CC"
               />
             )}
           </div>
@@ -87,7 +93,7 @@ export function VictorySection() {
               type="button"
               onClick={handleShare}
               disabled={sharing}
-              className="flex min-h-touch items-center gap-2 rounded-control border-2 border-text bg-brand px-8 py-4 font-display text-[15px] font-bold text-white shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none disabled:opacity-70 disabled:shadow-none"
+              className="flex min-h-touch items-center gap-2 border-[3px] border-ink bg-brand px-8 py-4 font-display text-[15px] font-bold text-white shadow-[6px_6px_0_#0B0B16] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none disabled:opacity-70 disabled:shadow-none"
             >
               {sharing && (
                 <span className="h-4 w-4 flex-none animate-spin rounded-full border-2 border-white/40 border-t-white" />
@@ -97,7 +103,7 @@ export function VictorySection() {
             <button
               type="button"
               onClick={() => openModal('stats')}
-              className="min-h-touch rounded-control border-2 border-brand px-8 py-4 font-display text-[15px] font-bold text-brand shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
+              className="min-h-touch border-[3px] border-brand px-8 py-4 font-display text-[15px] font-bold text-brand shadow-[6px_6px_0_#0B0B16] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none"
             >
               Mes statistiques
             </button>

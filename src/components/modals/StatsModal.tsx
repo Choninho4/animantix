@@ -19,12 +19,12 @@ export function StatsModal() {
     <ModalShell label="Statistiques" onClose={closeModals} maxWidth={480}>
       <ModalHeader title="Statistiques" onClose={closeModals} />
       <div className="mb-5.5 grid grid-cols-4 gap-2">
-        <StatBox value={stats.gamesPlayed} label="Parties" />
-        <StatBox value={`${winPct}%`} label="% réussite" />
-        <StatBox value={stats.currentStreak} label="Série" />
-        <StatBox value={stats.maxStreak} label="Record" />
+        <StatBox value={stats.gamesPlayed} label="Parties" shadowColor="#54218E" />
+        <StatBox value={`${winPct}%`} label="% réussite" shadowColor="#D02886" />
+        <StatBox value={stats.currentStreak} label="Série" shadowColor="#9966CC" />
+        <StatBox value={stats.maxStreak} label="Record" shadowColor="#FF5FB3" />
       </div>
-      <h3 className="mb-3 font-display text-[17px] font-bold text-brand-dark">Essais par victoire</h3>
+      <h3 className="mb-3 font-display text-[17px] font-bold uppercase text-brand-dark">Essais par victoire</h3>
       <ul className="flex flex-col gap-2">
         {BUCKETS.map((b) => {
           const count = dist[b] ?? 0;
@@ -33,16 +33,16 @@ export function StatsModal() {
           );
         })}
       </ul>
-      <p className="mt-4.5 text-center text-[12px] text-muted">Prochain personnage dans {countdown}</p>
+      <p className="mt-4.5 text-center font-mono text-[12px] text-muted">Prochain personnage dans {countdown}</p>
     </ModalShell>
   );
 }
 
-function StatBox({ value, label }: { value: string | number; label: string }) {
+function StatBox({ value, label, shadowColor }: { value: string | number; label: string; shadowColor: string }) {
   return (
-    <div className="rounded-card bg-bg px-1.5 py-3 text-center">
+    <div className="border-[3px] border-ink bg-bg px-1.5 py-3 text-center" style={{ boxShadow: `4px 4px 0 ${shadowColor}` }}>
       <div className="font-display text-[24px] font-bold text-brand-dark">{value}</div>
-      <div className="text-[10px] leading-tight text-muted">{label}</div>
+      <div className="font-mono text-[10px] uppercase leading-tight text-muted">{label}</div>
     </div>
   );
 }

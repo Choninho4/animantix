@@ -4,7 +4,7 @@ export function EmptyState() {
   const openModal = useGameStore((s) => s.openModal);
 
   return (
-    <section className="flex flex-wrap items-center gap-6 rounded-card border border-border bg-surface px-6 py-8">
+    <section className="flex flex-wrap items-center gap-6 border-[3px] border-dashed border-border px-6 py-8">
       <img
         src="/assets/mascot-inku.png"
         alt=""
@@ -22,7 +22,7 @@ export function EmptyState() {
         <button
           type="button"
           onClick={() => openModal('rules')}
-          className="min-h-touch rounded-control bg-bg px-5 py-2.5 font-display text-[14px] font-bold text-brand-dark"
+          className="min-h-touch border-2 border-ink bg-bg px-5 py-2.5 font-display text-[14px] font-bold text-brand-dark shadow-[3px_3px_0_#0B0B16] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
         >
           Comment ça marche ?
         </button>

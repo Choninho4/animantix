@@ -15,18 +15,18 @@ export function AchievementBadge({ achievement, unlocked, selected, onClick }: A
       type="button"
       onClick={onClick}
       aria-expanded={selected}
-      className={`flex flex-col items-center gap-1.5 rounded-card border bg-bg p-2.5 text-center transition-colors ${
-        selected ? 'border-brand-mid' : 'border-border hover:border-brand-mid/50'
-      }`}
+      className={`flex flex-col items-center gap-1.5 border-2 p-2.5 text-center transition-colors ${
+        unlocked ? 'border-ink bg-brand shadow-[3px_3px_0_#0B0B16]' : 'border-border bg-bg opacity-70'
+      } ${selected ? 'translate-x-[2px] translate-y-[2px] shadow-none' : ''}`}
     >
       <span
-        className={`flex h-10 w-10 flex-none items-center justify-center rounded-control ${
-          unlocked ? 'bg-brand/10 text-brand' : 'bg-border text-muted'
+        className={`flex h-10 w-10 flex-none items-center justify-center border-2 ${
+          unlocked ? 'border-ink bg-white text-brand' : 'border-transparent bg-border text-muted'
         }`}
       >
         <Icon size={19} />
       </span>
-      <span className={`text-[10.5px] font-semibold leading-tight ${unlocked ? 'text-text' : 'text-muted'}`}>
+      <span className={`text-[10.5px] font-semibold leading-tight ${unlocked ? 'text-white' : 'text-muted'}`}>
         {achievement.nom}
       </span>
     </button>

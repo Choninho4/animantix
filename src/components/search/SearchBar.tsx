@@ -87,14 +87,15 @@ export function SearchBar() {
   }
 
   const submitDisabled = input.trim().length === 0 || won;
-  const fieldBorderClass = isInputFocused ? 'border-brand' : 'border-border';
+  const fieldBorderClass = isInputFocused ? 'border-[#FF5FB3]' : 'border-ink';
   const messageColorClass =
     message.tone === 'warn' ? 'text-danger' : message.tone === 'win' ? 'text-brand' : 'text-muted';
 
   return (
     <section className="sticky top-[60px] z-40 bg-bg py-4 pb-2.5">
       <div ref={containerRef} className="relative">
-        <div className="flex items-stretch gap-2.5">
+        <div className="border-[4px] border-ink bg-surface p-3 shadow-[8px_8px_0_#D02886]">
+          <div className="flex items-stretch gap-2.5">
           <div className="relative min-w-0 flex-1">
             <svg
               className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted"
@@ -125,21 +126,22 @@ export function SearchBar() {
               aria-controls="amx-suggestions"
               aria-label="Nom du personnage à proposer"
               disabled={won}
-              className={`h-[52px] w-full rounded-control border-2 bg-surface pl-10 pr-3.5 text-[16px] text-text outline-none transition-colors ${fieldBorderClass}`}
+              className={`h-[52px] w-full border-[3px] bg-bg pl-10 pr-3.5 font-display text-[16px] font-bold text-text outline-none transition-colors ${fieldBorderClass}`}
             />
           </div>
           <button
             type="button"
             onClick={handleSubmit}
             disabled={submitDisabled}
-            className={`min-h-[52px] flex-none rounded-control border-2 px-6 font-display text-[16px] font-bold transition-colors ${
+            className={`min-h-[52px] flex-none border-[3px] px-6 font-display text-[16px] font-bold transition-colors ${
               submitDisabled
                 ? 'cursor-not-allowed border-transparent bg-border text-muted'
-                : 'cursor-pointer border-text bg-brand text-white shadow-[3px_3px_0_rgb(var(--color-text))] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none'
+                : 'cursor-pointer border-ink bg-brand text-white shadow-[5px_5px_0_#0B0B16] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none'
             }`}
           >
             Valider
           </button>
+          </div>
         </div>
 
         <AnimatePresence>

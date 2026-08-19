@@ -20,11 +20,11 @@ const MAX_TILES_SHOWN = 60;
 // carte partagée doit toujours avoir le même rendu, quel que soit le thème
 // actif du visiteur qui clique sur "Partager".
 const DARK = {
-  bg: '#13111A',
-  surface: '#1D1A28',
-  text: '#F0EFF5',
-  brandMid: '#B88AE8',
-  muted: '#A7A4B5',
+  bg: '#15152B',
+  surface: '#23233F',
+  text: '#FFFFFF',
+  brandMid: '#9966CC',
+  muted: '#B0B0C0',
   border: '#2F2B3D',
 };
 
@@ -129,7 +129,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(function Sha
                 style={{
                   width: TILE,
                   height: TILE,
-                  borderRadius: 13,
+                  border: `2px solid #0B0B16`,
                   background: isFound ? DARK.text : t.bg,
                   display: 'flex',
                   flexDirection: 'column',

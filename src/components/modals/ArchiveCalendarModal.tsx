@@ -19,12 +19,12 @@ export function ArchiveCalendarModal() {
   return (
     <ModalShell label="Archives" onClose={closeModals} maxWidth={480}>
       <div className="mb-1.5 flex items-start gap-3">
-        <h2 className="flex-1 font-display text-[26px] font-bold text-brand">Archives</h2>
+        <h2 className="flex-1 font-display text-[26px] font-bold uppercase text-brand">Archives</h2>
         <button
           type="button"
           onClick={closeModals}
           aria-label="Fermer"
-          className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-none bg-bg text-brand-dark"
+          className="flex h-touch w-touch flex-none items-center justify-center border-[3px] border-ink bg-danger text-white shadow-[4px_4px_0_#0B0B16] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
         >
           <CloseIcon size={18} />
         </button>
@@ -38,16 +38,16 @@ export function ArchiveCalendarModal() {
           const active = archiveOffset === offset;
           const done = isArchiveDayWon(offset);
           const stateClass = active
-            ? 'border-brand bg-brand text-white'
+            ? 'border-ink bg-brand text-white'
             : done
-              ? 'border-brand bg-brand/10 text-brand'
-              : 'border-border bg-surface text-brand-dark';
+              ? 'border-ink bg-success text-white'
+              : 'border-ink bg-surface text-brand-dark';
           return (
             <button
               key={offset}
               type="button"
               onClick={() => loadDay(offset)}
-              className={`flex aspect-square min-h-touch flex-col items-center justify-center gap-px rounded-control border font-bold text-[13px] ${stateClass}`}
+              className={`flex aspect-square min-h-touch flex-col items-center justify-center gap-px border-2 font-display font-bold text-[13px] ${stateClass}`}
             >
               <span>{date.getDate()}</span>
               <span className="h-2.5 opacity-75">{done && <CheckIcon size={10} />}</span>

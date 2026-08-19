@@ -19,22 +19,27 @@ export default {
         muted: themeColor('muted'),
         border: themeColor('border'),
         danger: themeColor('danger'),
+        success: themeColor('success'),
+        // Ombre d'élévation des cartes/panneaux : violette en thème sombre, encre en thème clair.
+        'shadow-accent': themeColor('shadow-accent'),
+        // Encre des bordures épaisses façon neo-brutalism : fixe, ne suit pas le thème.
+        ink: '#0B0B16',
       },
       fontFamily: {
         display: ['"Clash Display"', 'sans-serif'],
-        sans: ['Outfit', 'system-ui', 'sans-serif'],
-        logo: ['Urbanist', 'sans-serif'],
+        sans: ['Urbanist', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       spacing: {
         touch: '44px',
       },
       borderRadius: {
-        card: '12px',
-        control: '8px',
-        pill: '16px',
+        card: '0px',
+        control: '0px',
+        pill: '0px',
       },
       boxShadow: {
-        dropdown: '0 12px 32px rgba(26,26,46,.12)',
+        dropdown: '8px 8px 0 rgb(var(--color-shadow-accent))',
       },
       keyframes: {
         'amx-flash': {

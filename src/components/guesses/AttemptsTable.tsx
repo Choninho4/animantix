@@ -43,7 +43,7 @@ export function AttemptsTable() {
           ))}
         </AnimatePresence>
       </motion.ul>
-      <p className="mt-4 text-center text-[12px] text-muted">
+      <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-wide text-muted">
         {guesses.length} essai{guesses.length > 1 ? 's' : ''} · trié du plus chaud au plus froid
       </p>
     </>

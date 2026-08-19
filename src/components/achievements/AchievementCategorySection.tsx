@@ -23,10 +23,10 @@ export function AchievementCategorySection({
   const selected = achievements.find((a) => a.id === selectedId);
 
   return (
-    <section className="mb-6 border-b border-border pb-6 last:mb-0 last:border-b-0 last:pb-0">
+    <section className="mb-6 border-b-2 border-ink pb-6 last:mb-0 last:border-b-0 last:pb-0">
       <div className="mb-3 flex items-baseline justify-between">
-        <h3 className="font-display text-[15px] font-bold text-brand-dark">{CATEGORY_LABELS[category]}</h3>
-        <span className="text-[12px] text-muted">
+        <h3 className="font-display text-[15px] font-bold uppercase text-brand-dark">{CATEGORY_LABELS[category]}</h3>
+        <span className="font-mono text-[12px] text-muted">
           {unlockedCount}/{achievements.length} débloqués
         </span>
       </div>

@@ -1,7 +1,6 @@
 import { useGameStore } from '../../store/useGameStore';
 import { POIDS, SPECIAL_HINT_THRESHOLD, TOKENS_TOUS_LES } from '../../lib/constants';
 import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../../lib/temperature';
-import { useTheme } from '../../hooks/useTheme';
 import { ModalHeader, ModalShell } from './ModalShell';
 import { TemperatureBandIcon } from '../icons/Icon';
 
@@ -24,7 +23,6 @@ const TIGHT_GAP = 'mb-2';
 
 export function RulesModal() {
   const closeModals = useGameStore((s) => s.closeModals);
-  const { theme } = useTheme();
 
   return (
     <ModalShell label="Règles du jeu" onClose={closeModals}>
@@ -34,7 +32,7 @@ export function RulesModal() {
         Propose d'autres personnages : chaque essai reçoit un score de proximité de 0 à 100 %.
         Plus la proposition ressemble au personnage du jour, plus le score monte. Essais illimités.
       </p>
-      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>Le calcul du score</h3>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold uppercase text-brand-dark`}>Le calcul du score</h3>
       <p className="mb-2.5 text-[14px] leading-[1.55] text-text">
         Le score final est un pourcentage de 0 à 100 %. Il additionne la contribution de chaque
         critère ci-dessous : plus ta proposition correspond au personnage du jour sur un critère,
@@ -42,7 +40,7 @@ export function RulesModal() {
       </p>
       <ul className="flex flex-col gap-1.5 text-[14px] text-text">
         {WEIGHT_ROWS.map((row) => (
-          <li key={row.label} className="flex items-center justify-between gap-3 rounded-control bg-bg px-2.5 py-1.5">
+          <li key={row.label} className="flex items-center justify-between gap-3 border-2 border-ink bg-bg px-2.5 py-1.5">
             <span>{row.label}</span>
             <strong className="text-brand">jusqu'à {row.points} %</strong>
           </li>
@@ -53,14 +51,14 @@ export function RulesModal() {
         (protagoniste principal vs secondaire, camp moral voisin, décennie voisine…). Clique sur un
         essai dans ton tableau de résultats pour voir le détail exact du calcul, critère par critère.
       </p>
-      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>La légende des températures</h3>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold uppercase text-brand-dark`}>La légende des températures</h3>
       <ul className="flex flex-col gap-1.5 text-[14px]">
         {TEMPERATURE_BANDS.map((band) => (
           <li key={band.min} className="flex items-center gap-2.5">
-            <span className="w-14 font-bold text-muted">{TEMPERATURE_RANGE_LABELS[band.min]}</span>
+            <span className="w-14 font-mono font-bold text-muted">{TEMPERATURE_RANGE_LABELS[band.min]}</span>
             <span
-              className="flex items-center gap-1.5 rounded-pill px-2.5 py-0.5 text-[11px] font-bold"
-              style={{ background: band.bg, color: theme === 'dark' ? band.fgDark : band.fg }}
+              className="flex items-center gap-1.5 border-2 border-ink px-2.5 py-0.5 font-display text-[11px] font-bold shadow-[2px_2px_0_#0B0B16]"
+              style={{ background: band.bg, color: band.fg }}
             >
               <TemperatureBandIcon icon={band.icon} size={12} />
               {band.label}
@@ -68,13 +66,13 @@ export function RulesModal() {
           </li>
         ))}
       </ul>
-      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>L'indice spécial</h3>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold uppercase text-brand-dark`}>L'indice spécial</h3>
       <p className="text-[14px] leading-[1.55] text-text">
         Après {SPECIAL_HINT_THRESHOLD} essais soumis dans la partie, un indice spécial se débloque : clique
         dessus pour révéler l'anime d'origine du personnage mystère. C'est un déblocage unique par partie,
         indépendant des jetons d'analyse, et la révélation reste affichée en permanence une fois faite.
       </p>
-      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold text-brand-dark`}>Les jetons d'analyse</h3>
+      <h3 className={`${TIGHT_GAP} ${SECTION_GAP} font-display text-[17px] font-bold uppercase text-brand-dark`}>Les jetons d'analyse</h3>
       <p className="text-[14px] leading-[1.55] text-text">
         Tu gagnes un jeton d'analyse tous les {TOKENS_TOUS_LES} essais, et ils s'accumulent sans limite.
         Clique sur un essai de ton choix dans le tableau pour dépenser un jeton et révéler son détail
@@ -84,7 +82,7 @@ export function RulesModal() {
       <button
         type="button"
         onClick={closeModals}
-        className={`${SECTION_GAP} min-h-[48px] w-full rounded-control bg-brand font-display text-[16px] font-bold text-white`}
+        className={`${SECTION_GAP} min-h-[48px] w-full border-[3px] border-ink bg-brand font-display text-[16px] font-bold text-white shadow-[5px_5px_0_#0B0B16] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none`}
       >
         C'est parti
       </button>

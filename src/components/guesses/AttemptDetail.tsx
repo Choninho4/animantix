@@ -2,20 +2,18 @@ import { motion } from 'framer-motion';
 import type { GuessEntry } from '../../types/guess';
 import type { CriterionStatus } from '../../lib/scoring';
 import { temperatureForScore } from '../../lib/temperature';
-import { useTheme } from '../../hooks/useTheme';
 
 interface AttemptDetailProps {
   guess: GuessEntry;
 }
 
-const STATUS_STYLE: Record<CriterionStatus, { bg: string; fg: string; fgDark: string }> = {
-  exact: { bg: 'rgba(34,197,94,.16)', fg: '#16A34A', fgDark: '#4ADE80' },
-  partial: { bg: 'rgba(234,179,8,.18)', fg: '#A16207', fgDark: '#FACC15' },
-  none: { bg: 'rgba(225,29,72,.12)', fg: '#BE123C', fgDark: '#FB7185' },
+const STATUS_STYLE: Record<CriterionStatus, { bg: string; line: string }> = {
+  exact: { bg: 'rgba(76,175,80,.14)', line: '#4CAF50' },
+  partial: { bg: 'rgba(153,102,204,.16)', line: '#9966CC' },
+  none: { bg: 'transparent', line: 'rgb(var(--color-border))' },
 };
 
 export function AttemptDetail({ guess }: AttemptDetailProps) {
-  const { theme } = useTheme();
   const totalColor = temperatureForScore(guess.score).color;
 
   return (
@@ -26,25 +24,31 @@ export function AttemptDetail({ guess }: AttemptDetailProps) {
       transition={{ duration: 0.25, ease: 'easeOut' }}
       style={{ overflow: 'hidden' }}
     >
-      <div className="border-t border-border px-3 py-3">
+      <div className="border-t-2 border-ink px-3 py-3">
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {guess.details.map((d) => {
             const style = STATUS_STYLE[d.status];
-            const fg = theme === 'dark' ? style.fgDark : style.fg;
             return (
-              <div key={d.key} className="rounded-control p-2.5 text-center" style={{ background: style.bg }}>
-                <div className="text-[10px] font-bold uppercase leading-tight tracking-wide" style={{ color: fg }}>
+              <div
+                key={d.key}
+                className="border-2 p-2.5 text-center"
+                style={{ background: style.bg, borderColor: style.line }}
+              >
+                <div
+                  className="font-mono text-[10px] font-bold uppercase leading-tight tracking-wide"
+                  style={{ color: style.line }}
+                >
                   {d.label}
                 </div>
-                <div className="mt-1.5 text-[13px] font-bold leading-tight text-text">
+                <div className="mt-1.5 font-display text-[13px] font-bold leading-tight text-text">
                   {d.valeurAffichee}
                   {d.direction && (
-                    <span className="ml-1" style={{ color: fg }}>
+                    <span className="ml-1" style={{ color: style.line }}>
                       {d.direction === 'haut' ? '↑' : '↓'}
                     </span>
                   )}
                 </div>
-                <div className="mt-1 text-[12px] font-bold" style={{ color: fg }}>
+                <div className="mt-1 text-[12px] font-bold" style={{ color: style.line }}>
                   +{d.points} %
                 </div>
               </div>

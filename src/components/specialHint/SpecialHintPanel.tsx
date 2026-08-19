@@ -17,14 +17,14 @@ export function SpecialHintPanel() {
   const progress = specialHintProgress(nb);
   const percent = (progress / SPECIAL_HINT_THRESHOLD) * 100;
 
-  const sectionClass = specialHintRevealed
-    ? 'border-brand-mid bg-brand-mid/5'
-    : unlocked
-      ? 'border-brand bg-brand/5'
-      : 'border-border bg-surface';
+  const shadowColor = specialHintRevealed ? '#4CAF50' : unlocked ? '#FF5FB3' : 'rgb(var(--color-shadow-accent))';
+  const sectionClass = specialHintRevealed ? 'bg-brand-mid/5' : unlocked ? 'bg-brand/5' : 'bg-surface';
 
   return (
-    <section className={`mb-4 overflow-hidden rounded-card border px-4 py-3.5 transition-colors ${sectionClass}`}>
+    <section
+      className={`mb-4 overflow-hidden border-[3px] border-ink px-4 py-3.5 transition-colors ${sectionClass}`}
+      style={{ boxShadow: `7px 7px 0 ${shadowColor}` }}
+    >
       <AnimatePresence mode="wait" initial={false}>
         {specialHintRevealed ? (
           <motion.div
@@ -74,9 +74,9 @@ export function SpecialHintPanel() {
               <TargetIcon size={16} />
               Indice spécial : {progress}/{SPECIAL_HINT_THRESHOLD} essais
             </span>
-            <span className="mt-2 block h-1.5 overflow-hidden rounded-full border border-text bg-bg shadow-[2px_2px_0_rgb(var(--color-text))]">
+            <span className="mt-2 block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
               <motion.span
-                className="block h-full rounded-full bg-brand-mid"
+                className="block h-full bg-brand-mid"
                 initial={{ width: 0 }}
                 animate={{ width: `${percent}%` }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}

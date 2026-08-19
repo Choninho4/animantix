@@ -16,23 +16,26 @@ export function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-[60] border-b border-border bg-surface">
-      <div className="mx-auto flex max-w-[860px] items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-4">
-        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-          <div className="truncate">
-            <Link to="/" onClick={() => loadDay(0)} aria-label="Retour au personnage du jour" className="inline-block">
-              <Wordmark />
-            </Link>
-          </div>
-          <div className="hidden truncate text-[11px] leading-tight text-muted min-[420px]:block">
+    <header className="sticky top-0 z-[60] border-b-[3px] border-ink bg-surface">
+      <div className="mx-auto flex max-w-[860px] items-center gap-2 px-3 py-3 sm:gap-3 sm:px-4">
+        <div className="flex min-w-0 flex-1 items-center gap-2.5">
+          <Link
+            to="/"
+            onClick={() => loadDay(0)}
+            aria-label="Retour au personnage du jour"
+            className="inline-flex flex-none items-center border-[3px] border-[#FF5FB3] bg-ink px-3 py-1.5 shadow-[4px_4px_0_#54218E] motion-safe:-rotate-2"
+          >
+            <Wordmark inverted />
+          </Link>
+          <div className="hidden truncate font-mono text-[11px] font-semibold uppercase tracking-wide text-muted min-[420px]:block">
             Personnage du jour #{dayNumber}
           </div>
         </div>
-        <div className="flex flex-none items-center gap-0.5 sm:gap-3">
+        <div className="flex flex-none items-center gap-1.5 sm:gap-2.5">
           <StreakBadge streak={streak} />
           {/* Ligne desktop inchangée, simplement masquée sous le breakpoint
               tablette : le menu burger (MobileNav) prend le relais en dessous. */}
-          <div className="hidden items-center gap-0.5 sm:gap-3 md:flex">
+          <div className="hidden items-center gap-1.5 sm:gap-2.5 md:flex">
             <IconButton
               label={theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'}
               onClick={toggleTheme}
@@ -76,8 +79,10 @@ export function Header() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `flex min-h-touch flex-none items-center rounded-control px-3 text-[13px] font-bold ${
-                  isActive ? 'bg-bg text-brand' : 'text-muted hover:bg-bg hover:text-brand'
+                `flex min-h-touch flex-none items-center border-2 px-3 font-display text-[13px] font-bold ${
+                  isActive
+                    ? 'border-ink bg-brand text-white shadow-[3px_3px_0_rgb(var(--color-shadow-accent))]'
+                    : 'border-transparent text-muted hover:border-ink hover:bg-bg hover:text-brand hover:shadow-[3px_3px_0_rgb(var(--color-shadow-accent))]'
                 }`
               }
             >

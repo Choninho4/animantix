@@ -1,27 +1,18 @@
-import { useTheme } from '../../hooks/useTheme';
 import { FlameIcon } from '../icons/Icon';
 
 interface StreakBadgeProps {
   streak: number;
 }
 
-// Rouge flamme dès que la série est active, sinon la flamme reste neutre
-// (même couleur que le texte du badge) : cohérent avec la palette "Brûlant"
-// déjà utilisée pour les scores chauds dans lib/temperature.ts.
-const FLAME_ACTIVE = '#C1121F';
-const FLAME_ACTIVE_DARK = '#FF6B6B';
-
 export function StreakBadge({ streak }: StreakBadgeProps) {
-  const { theme } = useTheme();
   const active = streak > 0;
-  const flameColor = active ? (theme === 'dark' ? FLAME_ACTIVE_DARK : FLAME_ACTIVE) : undefined;
 
   return (
     <div
       title="Série de victoires"
-      className="flex h-9 items-center gap-1.5 rounded-pill bg-bg px-3 font-bold text-[13px] text-brand-dark"
+      className="flex h-9 flex-none items-center gap-1.5 border-[3px] border-ink bg-[#FF5FB3] px-2.5 font-display text-[15px] font-bold text-ink shadow-[4px_4px_0_#0B0B16] motion-safe:rotate-2"
     >
-      <FlameIcon size={14} style={flameColor ? { color: flameColor } : undefined} />
+      <FlameIcon size={14} className={active ? 'text-danger' : undefined} />
       {streak}
     </div>
   );

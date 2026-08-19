@@ -16,14 +16,14 @@ export function AchievementToast({ achievement }: AchievementToastProps) {
       exit={{ opacity: 0, y: -12, scale: 0.95 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       role="status"
-      className="pointer-events-auto flex items-center gap-3 rounded-card border border-border bg-surface px-4 py-3 shadow-dropdown"
+      className="pointer-events-auto flex items-center gap-3 border-[3px] border-ink bg-surface px-4 py-3 shadow-dropdown"
       style={{ maxWidth: 340 }}
     >
-      <span className="flex h-10 w-10 flex-none items-center justify-center rounded-control bg-brand/10 text-brand">
+      <span className="flex h-10 w-10 flex-none items-center justify-center border-2 border-ink bg-brand text-white">
         <Icon size={20} />
       </span>
       <span className="min-w-0">
-        <span className="block text-[11px] font-bold uppercase tracking-[.08em] text-brand">Succès débloqué</span>
+        <span className="block font-mono text-[11px] font-bold uppercase tracking-[.08em] text-brand">Succès débloqué</span>
         <span className="block truncate font-display text-[15px] font-bold text-text">{achievement.nom}</span>
       </span>
     </motion.div>

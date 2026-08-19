@@ -66,7 +66,7 @@ export default function MentionsLegalesPage() {
         </h1>
         <p className="mb-6 text-[13px] text-muted">Dernière mise à jour : [DATE DE MISE À JOUR]</p>
 
-        <div className="mb-9 rounded-card border border-brand-mid bg-brand-mid/10 px-4.5 py-4">
+        <div className="mb-9 border-[3px] border-ink bg-brand-mid/10 px-4.5 py-4 shadow-[5px_5px_0_#9966CC]">
           <p className="text-[14px] leading-[1.6] text-text">
             <strong>Avis au propriétaire du site :</strong> tous les éléments entre crochets sont des
             champs à compléter. Aucune information légale ne doit rester sous forme de placeholder

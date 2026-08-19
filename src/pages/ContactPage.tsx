@@ -23,7 +23,7 @@ function BriefcaseIcon() {
 }
 
 const fieldClass =
-  'min-h-touch rounded-control border-[1.5px] border-border bg-bg px-3.5 text-[15px] text-text placeholder:text-muted focus:border-brand focus:outline-none';
+  'min-h-touch border-2 border-ink bg-bg px-3.5 text-[15px] text-text placeholder:text-muted focus:border-[#FF5FB3] focus:outline-none';
 
 function FormField({ label, optional, children }: { label: string; optional?: boolean; children: ReactNode }) {
   return (
@@ -59,7 +59,7 @@ function PlayerForm() {
 
   if (envoye) {
     return (
-      <div role="status" className="mt-4 rounded-card border border-brand-mid bg-brand-mid/10 p-5">
+      <div role="status" className="mt-4 border-[3px] border-ink bg-success/10 p-5 shadow-[5px_5px_0_#4CAF50]">
         <div className="mb-1.5 font-display text-[18px] font-bold text-brand-dark">Message envoyé, merci !</div>
         <p className="text-[14px] leading-[1.55] text-text">
           On lit tout, promis. Si tu as laissé ton email, on te répond sous 48 heures.
@@ -103,7 +103,7 @@ function PlayerForm() {
       <button
         type="button"
         onClick={handleSubmit}
-        className="min-h-touch rounded-control bg-brand font-display text-[16px] font-bold text-white active:scale-[.98]"
+        className="min-h-touch border-[3px] border-ink bg-brand font-display text-[16px] font-bold text-white shadow-[4px_4px_0_#0B0B16] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
       >
         Envoyer mon message
       </button>
@@ -141,7 +141,7 @@ function ProForm() {
 
   if (envoye) {
     return (
-      <div role="status" className="mt-4 rounded-card border border-brand-mid bg-surface p-5">
+      <div role="status" className="mt-4 border-[3px] border-ink bg-surface p-5 shadow-[5px_5px_0_#4CAF50]">
         <div className="mb-1.5 font-display text-[18px] font-bold text-brand-dark">Demande transmise</div>
         <p className="text-[14px] leading-[1.55] text-text">
           Merci pour votre message. Nous revenons vers vous sous 48 heures ouvrées avec les formats
@@ -189,7 +189,7 @@ function ProForm() {
       <button
         type="button"
         onClick={handleSubmit}
-        className="min-h-touch rounded-control bg-brand font-display text-[16px] font-bold text-white active:scale-[.98]"
+        className="min-h-touch border-[3px] border-ink bg-brand font-display text-[16px] font-bold text-white shadow-[4px_4px_0_#0B0B16] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
       >
         Envoyer la demande
       </button>
@@ -217,9 +217,9 @@ export default function ContactPage() {
       </div>
 
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2">
-        <section className="rounded-card border border-border bg-surface p-6">
+        <section className="border-[3px] border-ink bg-surface p-6 shadow-[6px_6px_0_rgb(var(--color-shadow-accent))]">
           <div className="mb-1.5 flex items-start gap-3.5">
-            <span className="flex h-11 w-11 flex-none items-center justify-center rounded-control bg-brand/10 text-brand">
+            <span className="flex h-11 w-11 flex-none items-center justify-center border-2 border-ink bg-brand text-white">
               <MessageIcon />
             </span>
             <div>
@@ -234,9 +234,9 @@ export default function ContactPage() {
           <PlayerForm />
         </section>
 
-        <section className="rounded-t-card rounded-b-card border border-t-[3px] border-border border-t-brand-mid bg-bg p-6">
+        <section className="border-[3px] border-ink border-t-[6px] border-t-brand-mid bg-bg p-6 shadow-[6px_6px_0_#9966CC]">
           <div className="mb-1.5 flex items-start gap-3.5">
-            <span className="flex h-11 w-11 flex-none items-center justify-center rounded-control bg-brand-mid/15 text-brand-mid">
+            <span className="flex h-11 w-11 flex-none items-center justify-center border-2 border-ink bg-brand-mid text-white">
               <BriefcaseIcon />
             </span>
             <div>

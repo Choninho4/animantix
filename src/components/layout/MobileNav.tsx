@@ -48,7 +48,7 @@ export function MobileNav() {
         aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
         aria-expanded={open}
         aria-controls={panelId}
-        className="flex h-touch w-touch flex-none items-center justify-center rounded-control border-none bg-transparent text-muted transition-colors hover:bg-bg hover:text-brand"
+        className="flex h-touch w-touch flex-none items-center justify-center border-[3px] border-ink bg-surface text-text shadow-[4px_4px_0_rgb(var(--color-shadow-accent))] transition-colors hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-brand hover:text-white hover:shadow-[6px_6px_0_#FF5FB3] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
       >
         {open ? <CloseIcon size={22} /> : <MenuIcon size={22} />}
       </button>
@@ -63,9 +63,9 @@ export function MobileNav() {
           />
           <div
             id={panelId}
-            className="absolute right-0 top-[calc(100%+8px)] z-[61] w-[min(280px,calc(100vw-24px))] rounded-card border border-border bg-surface p-2 shadow-dropdown motion-safe:animate-amx-pop"
+            className="absolute right-0 top-[calc(100%+8px)] z-[61] w-[min(280px,calc(100vw-24px))] border-[3px] border-ink bg-surface p-2 shadow-dropdown motion-safe:animate-amx-pop"
           >
-            <nav aria-label="Navigation du site" className="flex flex-col gap-0.5">
+            <nav aria-label="Navigation du site" className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.to}
@@ -73,8 +73,10 @@ export function MobileNav() {
                   end={link.to === '/'}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold ${
-                      isActive ? 'bg-bg text-brand' : 'text-text hover:bg-bg hover:text-brand'
+                    `flex min-h-touch items-center border-2 px-3.5 font-display text-[15px] font-bold ${
+                      isActive
+                        ? 'border-ink bg-brand text-white'
+                        : 'border-transparent text-text hover:border-ink hover:bg-bg hover:text-brand'
                     }`
                   }
                 >
@@ -82,40 +84,40 @@ export function MobileNav() {
                 </NavLink>
               ))}
             </nav>
-            <div className="my-1.5 border-t border-border" />
-            <div className="flex flex-col gap-0.5">
+            <div className="my-1.5 border-t-2 border-ink" />
+            <div className="flex flex-col gap-1">
               <button
                 type="button"
                 onClick={() => closeAnd(toggleTheme)}
-                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+                className="flex min-h-touch items-center border-2 border-transparent px-3.5 font-display text-[15px] font-bold text-text hover:border-ink hover:bg-bg hover:text-brand"
               >
                 {theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'}
               </button>
               <button
                 type="button"
                 onClick={() => closeAnd(() => openModal('stats'))}
-                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+                className="flex min-h-touch items-center border-2 border-transparent px-3.5 font-display text-[15px] font-bold text-text hover:border-ink hover:bg-bg hover:text-brand"
               >
                 Statistiques
               </button>
               <button
                 type="button"
                 onClick={() => closeAnd(() => openModal('achievements'))}
-                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+                className="flex min-h-touch items-center border-2 border-transparent px-3.5 font-display text-[15px] font-bold text-text hover:border-ink hover:bg-bg hover:text-brand"
               >
                 Succès
               </button>
               <button
                 type="button"
                 onClick={() => closeAnd(() => openModal('archive'))}
-                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+                className="flex min-h-touch items-center border-2 border-transparent px-3.5 font-display text-[15px] font-bold text-text hover:border-ink hover:bg-bg hover:text-brand"
               >
                 Archives
               </button>
               <button
                 type="button"
                 onClick={() => closeAnd(() => openModal('rules'))}
-                className="flex min-h-touch items-center rounded-control px-3.5 text-[15px] font-bold text-text hover:bg-bg hover:text-brand"
+                className="flex min-h-touch items-center border-2 border-transparent px-3.5 font-display text-[15px] font-bold text-text hover:border-ink hover:bg-bg hover:text-brand"
               >
                 Règles du jeu
               </button>

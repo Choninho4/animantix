@@ -14,7 +14,7 @@ export function SuggestionList({ suggestions, activeIndex, triedIds, onPick, onH
     <ul
       id="amx-suggestions"
       role="listbox"
-      className="absolute left-0 right-0 top-[58px] z-50 max-h-80 overflow-y-auto rounded-card border border-border bg-surface p-1.5 shadow-dropdown"
+      className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 max-h-80 overflow-y-auto border-[3px] border-ink bg-surface p-1.5 shadow-dropdown"
     >
       {suggestions.map((s, i) => (
         <SuggestionItem

@@ -18,13 +18,13 @@ export function StatsModal() {
   return (
     <ModalShell label="Statistiques" onClose={closeModals} maxWidth={480}>
       <ModalHeader title="Statistiques" onClose={closeModals} />
-      <div className="mb-5.5 grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-4 gap-2">
         <StatBox value={stats.gamesPlayed} label="Parties" shadowColor="#54218E" />
         <StatBox value={`${winPct}%`} label="% réussite" shadowColor="#D02886" />
         <StatBox value={stats.currentStreak} label="Série" shadowColor="#9966CC" />
         <StatBox value={stats.maxStreak} label="Record" shadowColor="#FF5FB3" />
       </div>
-      <h3 className="mb-3 font-display text-[17px] font-bold uppercase text-brand-dark">Essais par victoire</h3>
+      <h3 className="mb-3 mt-8 font-display text-[17px] font-bold uppercase text-brand-dark">Essais par victoire</h3>
       <ul className="flex flex-col gap-2">
         {BUCKETS.map((b) => {
           const count = dist[b] ?? 0;
@@ -33,7 +33,7 @@ export function StatsModal() {
           );
         })}
       </ul>
-      <p className="mt-4.5 text-center font-mono text-[12px] text-muted">Prochain personnage dans {countdown}</p>
+      <p className="mt-4 text-center font-mono text-[12px] text-muted">Prochain personnage dans {countdown}</p>
     </ModalShell>
   );
 }

@@ -21,7 +21,7 @@ export function AchievementBadge({ achievement, unlocked, selected, onClick }: A
     >
       <span
         className={`flex h-10 w-10 flex-none items-center justify-center border-2 ${
-          unlocked ? 'border-ink bg-white text-brand' : 'border-transparent bg-border text-muted'
+          unlocked ? 'border-ink bg-ink text-white' : 'border-transparent bg-border text-muted'
         }`}
       >
         <Icon size={19} />

@@ -15,3 +15,8 @@ export function guessesUntilNextToken(guessCount: number): number {
   const remainder = guessCount % TOKENS_TOUS_LES;
   return remainder === 0 ? TOKENS_TOUS_LES : TOKENS_TOUS_LES - remainder;
 }
+
+/** Essais déjà effectués dans le cycle en cours vers le prochain jeton (0 juste après un jeton gagné). */
+export function tokenCycleProgress(guessCount: number): number {
+  return guessCount % TOKENS_TOUS_LES;
+}

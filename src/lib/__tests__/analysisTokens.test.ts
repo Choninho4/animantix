@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { guessesUntilNextToken, tokensAvailable, tokensEarned } from '../analysisTokens';
+import { guessesUntilNextToken, tokenCycleProgress, tokensAvailable, tokensEarned } from '../analysisTokens';
 
 describe('tokensEarned', () => {
   it('gagne 1 jeton tous les 3 essais, sans plafond', () => {
@@ -35,5 +35,17 @@ describe('guessesUntilNextToken', () => {
     expect(guessesUntilNextToken(3)).toBe(3);
     expect(guessesUntilNextToken(4)).toBe(2);
     expect(guessesUntilNextToken(9)).toBe(3);
+  });
+});
+
+describe('tokenCycleProgress', () => {
+  it('reflète les essais déjà faits dans le cycle en cours, remis à 0 à chaque jeton gagné', () => {
+    expect(tokenCycleProgress(0)).toBe(0);
+    expect(tokenCycleProgress(1)).toBe(1);
+    expect(tokenCycleProgress(2)).toBe(2);
+    expect(tokenCycleProgress(3)).toBe(0);
+    expect(tokenCycleProgress(4)).toBe(1);
+    expect(tokenCycleProgress(5)).toBe(2);
+    expect(tokenCycleProgress(9)).toBe(0);
   });
 });

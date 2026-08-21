@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
-import type { Achievement } from '../../types/achievement';
-import { ACHIEVEMENT_ICONS } from '../../lib/achievements';
+import type { ReactNode } from 'react';
 
-interface AchievementToastProps {
-  achievement: Achievement;
+interface ToastProps {
+  icon: ReactNode;
+  eyebrow: string;
+  title: string;
 }
 
-export function AchievementToast({ achievement }: AchievementToastProps) {
-  const Icon = ACHIEVEMENT_ICONS[achievement.id];
+// Toast générique (succès débloqué, jeton d'analyse gagné...) : un seul
+// gabarit visuel partagé, le contenu seul change selon l'appelant.
+export function Toast({ icon, eyebrow, title }: ToastProps) {
   return (
     <motion.div
       layout
@@ -20,11 +22,11 @@ export function AchievementToast({ achievement }: AchievementToastProps) {
       style={{ maxWidth: 340 }}
     >
       <span className="flex h-10 w-10 flex-none items-center justify-center border-2 border-ink bg-brand text-white">
-        <Icon size={20} />
+        {icon}
       </span>
       <span className="min-w-0">
-        <span className="block font-mono text-[11px] font-bold uppercase tracking-[.08em] text-brand">Succès débloqué</span>
-        <span className="block truncate font-display text-[15px] font-bold text-text">{achievement.nom}</span>
+        <span className="block font-mono text-[11px] font-bold uppercase tracking-[.08em] text-brand">{eyebrow}</span>
+        <span className="block truncate font-display text-[15px] font-bold text-text">{title}</span>
       </span>
     </motion.div>
   );

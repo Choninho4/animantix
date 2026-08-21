@@ -4,7 +4,7 @@ import { Header } from './Header';
 import { RulesModal } from '../modals/RulesModal';
 import { StatsModal } from '../modals/StatsModal';
 import { ArchiveCalendarModal } from '../modals/ArchiveCalendarModal';
-import { AchievementToastQueue } from '../achievements/AchievementToastQueue';
+import { ToastQueue } from '../toasts/ToastQueue';
 import { AchievementsModal } from '../achievements/AchievementsModal';
 
 // Coquille commune à toutes les pages : navbar identique partout, et les
@@ -24,7 +24,7 @@ export function AppLayout() {
       {modals.stats && <StatsModal />}
       {modals.archive && <ArchiveCalendarModal />}
       {modals.achievements && <AchievementsModal />}
-      <AchievementToastQueue />
+      <ToastQueue />
     </div>
   );
 }

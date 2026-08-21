@@ -9,8 +9,9 @@ import { characterForDayIndex, dayIndexFor } from '../lib/dailySelector';
 import { findExactMatch, suggestionsFor } from '../lib/autocomplete';
 import { hasSeenIntro, loadDay, loadStats, markSeen, saveDay, saveStats } from '../lib/storage';
 import { checkAchievements } from '../lib/achievements';
-import { guessesUntilNextToken, tokensAvailable } from '../lib/analysisTokens';
+import { guessesUntilNextToken, tokensAvailable, tokensEarned } from '../lib/analysisTokens';
 import { isSpecialHintUnlocked } from '../lib/specialHint';
+import type { ToastQueueEntry } from '../types/toast';
 import { getOrCreateAnonId } from '../lib/anonId';
 import {
   fetchCommunityPercentile,
@@ -52,7 +53,7 @@ interface GameState {
 
   modals: ModalState;
   initialized: boolean;
-  achievementQueue: string[];
+  toastQueue: ToastQueueEntry[];
 
   init(): void;
   loadDay(offset: number): void;
@@ -68,7 +69,7 @@ interface GameState {
   closeModals(): void;
   tick(): void;
   recordShare(): void;
-  dismissAchievementToast(): void;
+  dismissToast(): void;
 }
 
 /** Décennies et animes distincts déjà proposés dans la partie en cours (id → lookup CHARACTERS). */
@@ -110,7 +111,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   modals: { rules: false, stats: false, archive: false, achievements: false },
   initialized: false,
-  achievementQueue: [],
+  toastQueue: [],
 
   init() {
     if (get().initialized) return;
@@ -228,8 +229,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     };
     const guesses = [...state.guesses, entry];
     const won = score === 100;
+    const tokenJustGained = tokensEarned(guesses.length) > tokensEarned(state.guesses.length);
 
-    set({
+    set((s) => ({
       guesses,
       won,
       input: '',
@@ -243,7 +245,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }
         : { text: `${target.nom} — ${score} %`, tone: 'info' },
-    });
+      toastQueue: tokenJustGained ? [...s.toastQueue, { kind: 'token' }] : s.toastQueue,
+    }));
 
     const current: DayState = {
       g: state.guesses,
@@ -316,7 +319,10 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (s !== state.stats) {
         saveStats(s);
-        set((st) => ({ stats: s, achievementQueue: [...st.achievementQueue, ...newlyUnlocked] }));
+        set((st) => ({
+          stats: s,
+          toastQueue: [...st.toastQueue, ...newlyUnlocked.map((id): ToastQueueEntry => ({ kind: 'achievement', achievementId: id }))],
+        }));
       }
     }
   },
@@ -395,11 +401,14 @@ export const useGameStore = create<GameState>((set, get) => ({
     const newlyUnlocked = checkAchievements(ctx, s.unlockedAchievements);
     const finalStats = newlyUnlocked.length ? { ...s, unlockedAchievements: [...s.unlockedAchievements, ...newlyUnlocked] } : s;
     saveStats(finalStats);
-    set((st) => ({ stats: finalStats, achievementQueue: [...st.achievementQueue, ...newlyUnlocked] }));
+    set((st) => ({
+      stats: finalStats,
+      toastQueue: [...st.toastQueue, ...newlyUnlocked.map((id): ToastQueueEntry => ({ kind: 'achievement', achievementId: id }))],
+    }));
   },
 
-  dismissAchievementToast() {
-    set((state) => ({ achievementQueue: state.achievementQueue.slice(1) }));
+  dismissToast() {
+    set((state) => ({ toastQueue: state.toastQueue.slice(1) }));
   },
 
   openModal(name) {

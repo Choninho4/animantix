@@ -55,11 +55,16 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.05)' },
         },
+        'amx-shadow-pulse': {
+          '0%, 100%': { boxShadow: '7px 7px 0 #0B0B16' },
+          '50%': { boxShadow: '11px 11px 0 #0B0B16' },
+        },
       },
       animation: {
         'amx-flash': 'amx-flash 900ms ease-out',
         'amx-pop': 'amx-pop 400ms ease-out',
         'amx-pulse': 'amx-pulse 2.4s ease-in-out infinite',
+        'amx-shadow-pulse': 'amx-shadow-pulse 2.2s ease-in-out infinite',
       },
     },
   },

@@ -15,7 +15,7 @@ export function TokensPanel() {
   const hasTokens = available > 0;
 
   return (
-    <section className="mb-4 flex flex-wrap items-center gap-3 border-[3px] border-ink bg-surface px-4 py-3.5 shadow-[7px_7px_0_rgb(var(--color-shadow-accent))]">
+    <section className="flex flex-wrap items-center gap-3 border-[3px] border-ink bg-surface px-4 py-3.5 shadow-[7px_7px_0_rgb(var(--color-shadow-accent))] sm:min-w-0 sm:flex-1">
       <span className="flex items-center gap-1.5 font-display text-[15px] font-bold text-brand-dark">
         <SearchIcon size={16} className={hasTokens ? 'motion-safe:animate-amx-pulse' : undefined} />
         {available} jeton{available > 1 ? 's' : ''} d'analyse{hasTokens ? ` disponible${available > 1 ? 's' : ''}` : ''}

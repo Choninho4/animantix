@@ -35,8 +35,12 @@ export default function GamePage() {
         <ArchiveBanner />
         <VictorySection />
         <CommunityCounter />
-        <SpecialHintPanel />
-        <TokensPanel />
+        {guesses.length > 0 && !won && (
+          <div className="mb-4 flex flex-col gap-4 sm:flex-row">
+            <SpecialHintPanel />
+            <TokensPanel />
+          </div>
+        )}
         <SearchBar />
         {guesses.length === 0 && !won && <EmptyState />}
         <AttemptsTable />

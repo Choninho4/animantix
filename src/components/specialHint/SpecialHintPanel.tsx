@@ -22,7 +22,7 @@ export function SpecialHintPanel() {
 
   return (
     <section
-      className={`mb-4 overflow-hidden border-[3px] border-ink px-4 py-3.5 transition-colors ${sectionClass}`}
+      className={`overflow-hidden border-[3px] border-ink px-4 py-3.5 transition-colors sm:min-w-0 sm:flex-1 ${sectionClass}`}
       style={{ boxShadow: `7px 7px 0 ${shadowColor}` }}
     >
       <AnimatePresence mode="wait" initial={false}>

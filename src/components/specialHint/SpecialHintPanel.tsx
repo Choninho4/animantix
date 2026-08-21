@@ -74,6 +74,9 @@ export function SpecialHintPanel() {
               <TargetIcon size={16} />
               Indice spécial : {progress}/{SPECIAL_HINT_THRESHOLD} essais
             </span>
+            <span className="mt-1 block font-mono text-[12px] text-muted">
+              Cet indice te révélera l'anime d'origine du personnage mystère.
+            </span>
             <span className="mt-2 block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
               <motion.span
                 className="block h-full bg-brand-mid"

@@ -27,6 +27,9 @@ export function TokensPanel() {
           {hasTokens ? "Clique sur un essai ci-dessous pour l'utiliser" : `Prochain jeton dans ${remaining} essai${remaining > 1 ? 's' : ''}`}
         </span>
       </div>
+      <span className="mt-1 block font-mono text-[12px] text-muted">
+        Un jeton te permet d'analyser en détail un personnage que tu as déjà proposé.
+      </span>
       <span className="mt-2 block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
         <span
           className="block h-full bg-brand-mid transition-[width] duration-[400ms] ease-out"

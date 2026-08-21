@@ -36,7 +36,7 @@ export default function GamePage() {
         <VictorySection />
         <CommunityCounter />
         {guesses.length > 0 && !won && (
-          <div className="mb-4 flex flex-col gap-4 sm:flex-row">
+          <div className="mb-1.5 mt-5 flex flex-col gap-4 sm:flex-row">
             <SpecialHintPanel />
             <TokensPanel />
           </div>

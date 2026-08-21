@@ -330,6 +330,10 @@ export const useGameStore = create<GameState>((set, get) => ({
   requestAnalysis(id) {
     const state = get();
     if (state.analyzedIds.includes(id)) return true;
+    // Partie gagnée : le détail de tous les essais est librement consultable,
+    // sans dépenser ni exiger de jeton (cf. AttemptsTable, qui court-circuite
+    // déjà cet appel dans ce cas — gardé ici en défense en profondeur).
+    if (state.won) return true;
 
     const available = tokensAvailable(state.guesses.length, state.analyzedIds.length);
     if (available <= 0) {

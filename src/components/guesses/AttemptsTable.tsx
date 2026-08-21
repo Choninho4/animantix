@@ -6,6 +6,7 @@ import { AttemptRow } from './AttemptRow';
 
 export function AttemptsTable() {
   const guesses = useGameStore((s) => s.guesses);
+  const won = useGameStore((s) => s.won);
   const flashId = useGameStore((s) => s.flashId);
   const analyzedIds = useGameStore((s) => s.analyzedIds);
   const requestAnalysis = useGameStore((s) => s.requestAnalysis);
@@ -18,7 +19,9 @@ export function AttemptsTable() {
   const hasTokens = tokensAvailable(guesses.length, analyzedIds.length) > 0;
 
   function handleClick(id: string) {
-    if (analyzedIds.includes(id)) {
+    // Partie gagnée : plus besoin de jeton, le détail de tous les essais
+    // (même jamais analysés pendant la partie) devient librement consultable.
+    if (won || analyzedIds.includes(id)) {
       setSelectedId((prev) => (prev === id ? null : id));
       return;
     }
@@ -36,8 +39,8 @@ export function AttemptsTable() {
               isBest={g.score === best}
               justAdded={g.id === flashId}
               selected={g.id === selectedId}
-              analyzed={analyzedIds.includes(g.id)}
-              analyzable={hasTokens && !analyzedIds.includes(g.id)}
+              analyzed={won || analyzedIds.includes(g.id)}
+              analyzable={!won && hasTokens && !analyzedIds.includes(g.id)}
               onToggle={() => handleClick(g.id)}
             />
           ))}

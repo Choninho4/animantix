@@ -11,3 +11,10 @@ dist-ssr
 Réponses attentes design jeu/
 Réponses attentes design jeu.zip
 .env*
+scripts/image-sync/.checkpoint.json
+scripts/image-sync/.cast-cache.json
+scripts/image-sync/.cast-cache-meta.json
+image-sync-*.log
+scripts/image-sync/.search-cache.json
+scripts/image-sync/.progress.json
+scripts/image-sync/.top-cache.json

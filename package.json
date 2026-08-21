@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "images:sync": "tsx scripts/sync-character-images.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint ."
@@ -32,7 +33,9 @@
     "autoprefixer": "^10.4.20",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.49",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.12",
     "typescript": "^5.7.2",
     "vite": "^6.4.3",
     "vitest": "^3.2.7"

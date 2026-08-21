@@ -7,6 +7,7 @@ import { StatTile } from './StatTile';
 import { VictoryBurst } from './VictoryBurst';
 import { ShareCard } from './ShareCard';
 import { FlameIcon, MedalIcon } from '../icons/Icon';
+import { CharacterAvatar } from '../characters/CharacterAvatar';
 
 export function VictorySection() {
   const won = useGameStore((s) => s.won);
@@ -60,7 +61,13 @@ export function VictorySection() {
 
   return (
     <section className="relative mt-5 overflow-hidden border-[4px] border-ink bg-surface p-6 shadow-[10px_10px_0_#FF5FB3] motion-safe:animate-amx-pop">
-      <div className="relative flex flex-wrap items-start gap-5">
+      <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:gap-7">
+        <CharacterAvatar
+          name={target.nom}
+          src={target.imageUrl}
+          size="hero"
+          className="self-center sm:self-start"
+        />
         <div className="min-w-[240px] flex-1">
           <div className="mb-1.5 text-[12px] font-bold uppercase tracking-[.10em] text-brand">Trouvé !</div>
           <h2 className="mb-1 font-display text-[32px] font-bold leading-[1.15] text-brand-dark">

@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_04_ISEKAI_FANTASY: Character[] = [
+export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'rem', nom: 'Rem', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',

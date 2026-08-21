@@ -45,6 +45,9 @@ export interface Character {
   race: Race;
   categoriePouvoir: CategoriePouvoir;
   couleurCheveux: string;
-  imageUrl: string | null;
+  imageUrl: string;
   descriptionCourte: string;
 }
+
+/** Entrée éditoriale conservée dans les fichiers thématiques avant enrichissement runtime. */
+export type CharacterDefinition = Omit<Character, 'imageUrl'> & { imageUrl: null };

@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_01_BIG_THREE: Character[] = [
+export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'monkey-d-luffy', nom: 'Monkey D. Luffy', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',

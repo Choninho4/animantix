@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_02_SHONEN_JUMP_MODERN: Character[] = [
+export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'izuku-midoriya', nom: 'Izuku Midoriya', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',

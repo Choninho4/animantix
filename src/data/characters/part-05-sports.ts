@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_05_SPORTS: Character[] = [
+export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'shoyo-hinata', nom: 'Shoyo Hinata', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
@@ -74,10 +74,10 @@ export const PART_05_SPORTS: Character[] = [
     imageUrl: null, descriptionCourte: 'Attaquant chaotique au style monstrueux, guidé par une créature intérieure.',
   },
   {
-    id: 'ryo-ishigami', nom: 'Ryo Ishigami', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
+    id: 'ryo-ishigami', nom: 'Ikki Niko', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
-    imageUrl: null, descriptionCourte: 'Stratège froid qui a sacrifié tout plaisir personnel pour la victoire pure.',
+    imageUrl: null, descriptionCourte: 'Défenseur discret au regard affûté, capable de lire le jeu et d’anticiper les déplacements adverses.',
   },
   {
     id: 'mark-evans', nom: 'Mark Evans', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,

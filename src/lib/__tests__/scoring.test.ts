@@ -16,7 +16,7 @@ function makeCharacter(overrides: Partial<Character>): Character {
     race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
-    imageUrl: null,
+    imageUrl: '/assets/characters/base.webp',
     descriptionCourte: 'Description de test.',
     ...overrides,
   };

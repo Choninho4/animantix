@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_08_MISC: Character[] = [
+export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'kafka-hibino', nom: 'Kafka Hibino', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',

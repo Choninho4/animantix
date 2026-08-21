@@ -158,12 +158,9 @@ describe('base de données de personnages', () => {
     }
   });
 
-  it('imageUrl est soit null, soit une chaîne non vide', () => {
+  it('imageUrl pointe vers le portrait WebP local dérivé de l’id', () => {
     for (const c of CHARACTERS) {
-      if (c.imageUrl !== null) {
-        expect(typeof c.imageUrl, c.id).toBe('string');
-        expect(c.imageUrl!.trim().length, c.id).toBeGreaterThan(0);
-      }
+      expect(c.imageUrl, c.id).toBe(`/assets/characters/${c.id}.webp`);
     }
   });
 });

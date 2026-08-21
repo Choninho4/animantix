@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_07_CLASSICS_CULT: Character[] = [
+export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'gintoki-sakata', nom: 'Gintoki Sakata', animeSource: 'Gintama', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',

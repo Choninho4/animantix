@@ -15,7 +15,7 @@ function makeList(n: number): Character[] {
     race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
-    imageUrl: null,
+    imageUrl: `/assets/characters/c${i}.webp`,
     descriptionCourte: 'Test.',
   }));
 }

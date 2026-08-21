@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_03_SEINEN_DARK: Character[] = [
+export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'eren-jager', nom: 'Eren Jäger', animeSource: 'L\'Attaque des Titans', anneeSortieAnime: 2013,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',

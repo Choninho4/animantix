@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-08-21T15:37:06.034Z",
+  "total": 790,
+  "resolved": 790,
+  "automatic": 590,
+  "overrides": 200,
+  "castingErrors": [],
+  "searchErrors": [],
+  "cataloguePage": 22,
+  "catalogueLastPage": 3256,
+  "catalogueFailedPages": [
+    5,
+    6,
+    22,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    3,
+    4
+  ],
+  "catalogueErrors": [],
+  "issues": [],
+  "duplicates": [
+    {
+      "sha256": "c6f8779c3f38657a6c456f902178f8d98ebc58f2964b7857302eb1b6cda61867",
+      "ids": [
+        "king-bradley",
+        "wrath-fma"
+      ]
+    },
+    {
+      "sha256": "088bcea3f50c9c6b1c3ff5d4ef6772fbeae6099ca6e108b0955dda4df9732d45",
+      "ids": [
+        "dimple",
+        "ekubo"
+      ]
+    }
+  ],
+  "missing": []
+}

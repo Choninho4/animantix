@@ -15,7 +15,7 @@ function makeCharacter(id: string, nom: string, animeSource: string): Character 
     race: 'Humain',
     categoriePouvoir: 'Combat physique',
     couleurCheveux: 'Noir',
-    imageUrl: null,
+    imageUrl: `/assets/characters/${id}.webp`,
     descriptionCourte: 'Test.',
   };
 }

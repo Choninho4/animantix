@@ -1,6 +1,6 @@
-import type { Character } from '../../types/character';
+import type { CharacterDefinition } from '../../types/character';
 
-export const PART_06_COMEDY_ROMANCE: Character[] = [
+export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'anya-forger', nom: 'Anya Forger', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',

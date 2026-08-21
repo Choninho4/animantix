@@ -3,6 +3,8 @@ import type { GuessEntry } from '../../types/guess';
 import { temperatureForScore } from '../../lib/temperature';
 import { SearchIcon, TemperatureBandIcon } from '../icons/Icon';
 import { AttemptDetail } from './AttemptDetail';
+import { CHARACTER_BY_ID } from '../../data/characters';
+import { CharacterAvatar } from '../characters/CharacterAvatar';
 
 interface AttemptRowProps {
   guess: GuessEntry;
@@ -26,6 +28,7 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
   // Léger effet "collage" façon zine : dérivé de manière stable de l'id du personnage
   // (pas de l'index dans la liste) pour ne pas retourner les cartes au fil du tri.
   const tilt = guess.id.charCodeAt(0) % 2 === 0 ? '-0.35deg' : '0.3deg';
+  const character = CHARACTER_BY_ID.get(guess.id);
 
   return (
     <motion.li
@@ -40,8 +43,9 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
         type="button"
         onClick={onToggle}
         aria-expanded={selected}
-        className="flex w-full items-center gap-3 px-3 py-2.5 text-left active:translate-x-[2px] active:translate-y-[2px]"
+        className="flex w-full items-center gap-2 px-2.5 py-2.5 text-left active:translate-x-[2px] active:translate-y-[2px] sm:gap-3 sm:px-3"
       >
+        {character && <CharacterAvatar name={character.nom} src={character.imageUrl} size="md" />}
         <span className="min-w-0 flex-1">
           <span className="flex items-center gap-1.5">
             <span className="truncate font-display text-[15px] font-bold text-text">{guess.nom}</span>
@@ -64,7 +68,7 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             />
           </span>
         </span>
-        <span className="flex flex-none flex-col items-end gap-1" style={{ minWidth: 92 }}>
+        <span className="flex min-w-[72px] flex-none flex-col items-end gap-1 sm:min-w-[92px]">
           <span className="font-display text-[19px] font-bold" style={{ color: t.color }}>
             {guess.score} %
           </span>

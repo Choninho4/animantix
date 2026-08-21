@@ -1,4 +1,5 @@
 import type { Character } from '../../types/character';
+import { CharacterAvatar } from '../characters/CharacterAvatar';
 
 interface SuggestionItemProps {
   character: Character;
@@ -19,6 +20,7 @@ export function SuggestionItem({ character, active, alreadyTried, onPick, onHove
         active ? 'bg-brand text-white' : 'bg-transparent'
       }`}
     >
+      <CharacterAvatar name={character.nom} src={character.imageUrl} size="sm" />
       <span className="min-w-0 flex-1">
         <span className={`block truncate font-display text-[15px] font-bold ${active ? 'text-white' : 'text-text'}`}>
           {character.nom}

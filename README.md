@@ -22,16 +22,17 @@ Autres commandes utiles :
 ```bash
 npm run build   # build de production dans dist/
 npm run test    # lance la suite de tests Vitest
+npm run images:sync # reprend l'import local des portraits via Jikan
 ```
 
 ## Ajouter de nouveaux personnages
 
-La base de personnages vit dans `src/data/characters/`, répartie en plusieurs fichiers thématiques (`part-01-...ts` à `part-14-...ts`) pour rester maintenable — jamais un seul fichier monolithique.
+La base de personnages vit dans `src/data/characters/`, répartie en plusieurs fichiers thématiques (`part-01-...ts` à `part-08-...ts`) pour rester maintenable — jamais un seul fichier monolithique.
 
 Pour ajouter un personnage :
 
 1. Choisis le fichier `part-XX-*.ts` le plus proche thématiquement (ou crée-en un nouveau si besoin).
-2. Ajoute un objet respectant le type `Character` défini dans `src/types/character.ts` :
+2. Ajoute un objet respectant le type éditorial `CharacterDefinition` défini dans `src/types/character.ts` :
 
 ```typescript
 {
@@ -46,7 +47,7 @@ Pour ajouter un personnage :
   typeEtre: 'Humain',
   categoriePouvoir: 'Combat physique',
   couleurCheveux: 'Noir',
-  imageUrl: null, // volontairement toujours null (voir plus bas)
+  imageUrl: null, // définition brute ; le chemin local est dérivé automatiquement de l'id
   descriptionCourte: 'Une phrase qui décrit le personnage sans donner son nom.',
 }
 ```
@@ -55,9 +56,21 @@ Pour ajouter un personnage :
 4. Le fichier est ensuite ré-exporté automatiquement via `src/data/characters/index.ts` — si tu crées un nouveau fichier `part-XX`, ajoute-le à cet index.
 5. Lance `npm run test` pour vérifier que la base reste cohérente (pas de doublon, plafond par licence, répartition des genres/décennies).
 
-### Pourquoi `imageUrl` est toujours `null`
+## Portraits locaux
 
-Aucune image de personnage n'est utilisée dans l'app (choix assumé, voir la direction artistique) — cela évite tout risque de droits d'auteur sur les illustrations officielles des animes. Le champ reste dans le type pour une éventuelle extension future.
+Les fichiers thématiques conservent `imageUrl: null` comme donnée éditoriale. Lors de l'assemblage de `CHARACTERS`, l'application dérive le chemin stable `/assets/characters/<id>.webp`. Le navigateur ne contacte donc ni Jikan ni MyAnimeList pendant une partie.
+
+Le script `npm run images:sync` :
+
+1. récupère les castings des 54 licences via Jikan et, si son backend répond en 5xx, depuis les pages publiques MyAnimeList correspondantes, avec un limiteur global de 50 requêtes maximum par minute ;
+2. associe uniquement les noms exacts après normalisation, avec `scripts/image-sync/overrides.json` pour les cas vérifiés manuellement ;
+3. convertit les portraits en WebP 256 × 256 dans `public/assets/characters/`, avec un recul léger et un fond périphérique flouté pour éviter les visages trop zoomés ;
+4. sauvegarde sa progression après chaque casting, recherche et image ;
+5. génère `scripts/image-sync/manifest.json` et `scripts/image-sync/report.json`.
+
+Le fallback conserve les mêmes IDs MAL et les mêmes images du CDN MyAnimeList ; il n'utilise aucune base alternative. Le script reste en échec tant que les 790 portraits ne sont pas présents et peut être relancé sans perdre sa progression après une erreur 429/5xx.
+
+> Les URLs fournies par une API ne transfèrent pas les droits sur les illustrations. Ces assets sont préparés pour une copie locale de test non commerciale et ne doivent pas être publiés ou exploités commercialement sans autorisation adaptée.
 
 ## Logique du jeu
 

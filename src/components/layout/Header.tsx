@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
+import { LIGHT_MODE_ENABLED } from '../../lib/constants';
 import { StreakBadge } from './StreakBadge';
 import { Wordmark } from './Wordmark';
 import { HeaderMenu } from './HeaderMenu';
@@ -44,13 +45,15 @@ export function Header() {
             <IconButton label="Archives" onClick={() => openModal('archive')}>
               <CalendarIcon size={20} />
             </IconButton>
-            <IconButton
-              label={theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'}
-              onClick={toggleTheme}
-              toggled={theme === 'dark'}
-            >
-              {theme === 'dark' ? <SunIcon size={20} /> : <MoonIcon size={20} />}
-            </IconButton>
+            {LIGHT_MODE_ENABLED && (
+              <IconButton
+                label={theme === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'}
+                onClick={toggleTheme}
+                toggled={theme === 'dark'}
+              >
+                {theme === 'dark' ? <SunIcon size={20} /> : <MoonIcon size={20} />}
+              </IconButton>
+            )}
           </div>
           <HeaderMenu />
         </div>

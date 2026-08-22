@@ -15,10 +15,19 @@
     />
     <script>
       (function () {
+        // Copie littérale de LIGHT_MODE_ENABLED (src/lib/constants.ts) : ce
+        // script tourne avant le chargement du bundle JS pour éviter un
+        // flash de thème et ne peut donc pas importer la constante partagée.
+        // Garder les deux valeurs synchronisées si l'une change.
+        var LIGHT_MODE_ENABLED = false;
         try {
-          var stored = localStorage.getItem('animantix-theme');
-          var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.classList.toggle('dark', dark);
+          if (!LIGHT_MODE_ENABLED) {
+            document.documentElement.classList.add('dark');
+          } else {
+            var stored = localStorage.getItem('animantix-theme');
+            var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', dark);
+          }
         } catch (e) {}
       })();
     </script>

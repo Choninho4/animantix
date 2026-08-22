@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGameStore } from '../../store/useGameStore';
 import { useTheme } from '../../hooks/useTheme';
+import { LIGHT_MODE_ENABLED } from '../../lib/constants';
 import {
   MenuIcon,
   CloseIcon,
@@ -94,10 +95,12 @@ export function HeaderMenu() {
                 <CalendarIcon size={20} />
                 Archives
               </button>
-              <button type="button" role="menuitem" onClick={toggleTheme} className={TILE_CLASS}>
-                {theme === 'dark' ? <SunIcon size={20} /> : <MoonIcon size={20} />}
-                {theme === 'dark' ? 'Thème clair' : 'Thème sombre'}
-              </button>
+              {LIGHT_MODE_ENABLED && (
+                <button type="button" role="menuitem" onClick={toggleTheme} className={TILE_CLASS}>
+                  {theme === 'dark' ? <SunIcon size={20} /> : <MoonIcon size={20} />}
+                  {theme === 'dark' ? 'Thème clair' : 'Thème sombre'}
+                </button>
+              )}
               <Link to="/a-propos" role="menuitem" onClick={() => setOpen(false)} className={TILE_CLASS}>
                 <GlobeIcon size={20} />
                 À propos

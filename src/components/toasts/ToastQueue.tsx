@@ -37,10 +37,12 @@ export function ToastQueue() {
           )}
         </AnimatePresence>
       </div>
-      {/* Jeton débloqué : mascotte en bas à gauche, position et animation
-          distinctes du toast de succès ci-dessus (cf. MascotToast). Reste
-          montée en permanence — sa propre transition CSS gère l'entrée et
-          la sortie (voir le composant pour le détail). */}
+      {/* Jeton débloqué : mascotte ancrée dans la même zone haut-droite que
+          le toast de succès ci-dessus (contenu et animation d'entrée
+          propres à MascotToast). Reste montée en permanence — sa propre
+          transition CSS gère l'entrée et la sortie (voir le composant pour
+          le détail). Mutuellement exclusifs (dérivés du même `current`),
+          jamais visibles en même temps. */}
       <MascotToast visible={current?.kind === 'token'} />
     </MotionConfig>
   );

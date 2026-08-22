@@ -38,7 +38,7 @@ const CAMP_ORDER: Record<CampMoral, number> = {
 // Correspond exactement à CAMP_ADJ de la DA : Héros-Vilain n'est PAS adjacent.
 const CAMP_ADJACENT_PAIRS = new Set(['0-1', '1-2', '1-3', '0-3']);
 
-const LABELS: Record<CriterionKey, string> = {
+export const LABELS: Record<CriterionKey, string> = {
   anime: 'Même anime',
   role: 'Rôle narratif',
   camp: 'Camp moral',

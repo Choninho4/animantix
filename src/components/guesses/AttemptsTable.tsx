@@ -35,8 +35,11 @@ export function AttemptsTable() {
           rotation de fraction de degré élargit sensiblement la bounding
           box (∝ largeur × sin(angle)), et un espacement trop court laisse
           l'ombre d'une ligne chevaucher la ligne suivante (cf. audit
-          ombres neo-brutalism). */}
-      <motion.ul layout="position" className="flex flex-col gap-4">
+          ombres neo-brutalism). mt-4 : sans marge, la première ligne
+          touchait directement la barre de recherche au-dessus — son ombre
+          (voire le halo du meilleur essai, qui déborde aussi vers le haut)
+          mordait alors dessus. */}
+      <motion.ul layout="position" className="mt-4 flex flex-col gap-4">
         <AnimatePresence initial={false}>
           {sorted.map((g) => (
             <AttemptRow

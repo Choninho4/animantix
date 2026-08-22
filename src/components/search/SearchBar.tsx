@@ -161,7 +161,11 @@ export function SearchBar() {
         )}
       </div>
 
-      <div aria-live="polite" className={`min-h-[22px] pt-2 text-[13px] font-semibold ${messageColorClass}`}>
+      {/* mt-2 (pas pt-2) : un padding interne ne crée pas d'espace entre
+          éléments, or la carte de recherche a une ombre dure de 8px — sans
+          marge réelle avant ce bloc, l'ombre mordait sur les 8 premiers
+          pixels du texte de message (cf. audit ombres neo-brutalism). */}
+      <div aria-live="polite" className={`min-h-[22px] mt-2 text-[13px] font-semibold ${messageColorClass}`}>
         {message.text}
       </div>
     </section>

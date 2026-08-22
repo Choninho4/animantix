@@ -30,7 +30,13 @@ export function AttemptsTable() {
 
   return (
     <>
-      <motion.ul layout="position" className="flex flex-col gap-2">
+      {/* gap-4 (pas gap-2) : chaque ligne a son propre tilt ± sa propre
+          ombre dure — sur des cartes larges (jusqu'à 860px), même une
+          rotation de fraction de degré élargit sensiblement la bounding
+          box (∝ largeur × sin(angle)), et un espacement trop court laisse
+          l'ombre d'une ligne chevaucher la ligne suivante (cf. audit
+          ombres neo-brutalism). */}
+      <motion.ul layout="position" className="flex flex-col gap-4">
         <AnimatePresence initial={false}>
           {sorted.map((g) => (
             <AttemptRow

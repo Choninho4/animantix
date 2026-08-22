@@ -33,7 +33,7 @@ export function SpecialHintPanel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-wrap items-center gap-3"
+            className="flex h-full flex-col justify-center gap-1"
           >
             <span className="flex items-center gap-1.5 font-display text-[15px] font-bold text-brand-dark">
               <TargetIcon size={16} />
@@ -52,7 +52,7 @@ export function SpecialHintPanel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={{ duration: 0.2 }}
-            className="flex w-full cursor-pointer flex-wrap items-center gap-3 text-left"
+            className="flex h-full w-full cursor-pointer flex-col justify-center gap-1 text-left"
           >
             <span className="flex items-center gap-1.5 font-display text-[15px] font-bold text-brand">
               <TargetIcon size={16} className="motion-safe:animate-amx-pulse" />
@@ -69,6 +69,7 @@ export function SpecialHintPanel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={{ duration: 0.2 }}
+            className="flex h-full flex-col justify-center"
           >
             <span className="flex items-center gap-1.5 font-display text-[15px] font-bold text-brand-dark">
               <TargetIcon size={16} />

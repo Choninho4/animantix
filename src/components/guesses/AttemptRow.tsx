@@ -31,8 +31,14 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
   const character = CHARACTER_BY_ID.get(guess.id);
 
   return (
+    // layout="position" (pas `layout` seul) : le tri par score anime le
+    // repositionnement des lignes via FLIP, mais un `layout` nu fait aussi
+    // interpoler la taille — combiné au scale d'apparition ci-dessous, ça
+    // produisait un scale X/Y non uniforme pendant la transition qui
+    // déformait les ombres dures (barre de score, badge température, cf.
+    // audit ombres neo-brutalism). "position" n'anime que le déplacement.
     <motion.li
-      layout
+      layout="position"
       initial={{ scale: 0.94, opacity: 0 }}
       animate={{ scale: 1, opacity: 1, rotate: tilt }}
       transition={{ duration: 0.3 }}

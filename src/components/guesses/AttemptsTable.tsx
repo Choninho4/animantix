@@ -30,7 +30,7 @@ export function AttemptsTable() {
 
   return (
     <>
-      <motion.ul layout className="flex flex-col gap-2">
+      <motion.ul layout="position" className="flex flex-col gap-2">
         <AnimatePresence initial={false}>
           {sorted.map((g) => (
             <AttemptRow

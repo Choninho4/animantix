@@ -12,7 +12,7 @@ interface ToastProps {
 export function Toast({ icon, eyebrow, title }: ToastProps) {
   return (
     <motion.div
-      layout
+      layout="position"
       initial={{ opacity: 0, y: -16, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -12, scale: 0.95 }}

@@ -78,13 +78,20 @@ export function SpecialHintPanel() {
             <span className="mt-1 block font-mono text-[12px] text-muted">
               Cet indice te révélera l'anime d'origine du personnage mystère.
             </span>
-            <span className="mt-2 block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
-              <motion.span
-                className="block h-full bg-brand-mid"
-                initial={{ width: 0 }}
-                animate={{ width: `${percent}%` }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-              />
+            {/* Ombre dure portée par ce span (jamais rogné par son propre
+                overflow-hidden, vérifié) mais le clip de la barre animée est
+                délégué à un enfant dédié : évite tout risque de rendu
+                divergent entre navigateurs sur la combinaison
+                overflow-hidden + box-shadow sur un seul et même élément. */}
+            <span className="mt-2 block h-1.5 border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
+              <span className="block h-full w-full overflow-hidden">
+                <motion.span
+                  className="block h-full bg-brand-mid"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${percent}%` }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                />
+              </span>
             </span>
           </motion.div>
         )}

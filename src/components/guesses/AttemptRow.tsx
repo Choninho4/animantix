@@ -64,14 +64,21 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             <span className="truncate">{guess.anime}</span>
             {analyzable && <span className="flex-none font-bold text-brand-mid">· Cliquer pour analyser</span>}
           </span>
-          <span className="block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
-            <motion.span
-              className="block h-full"
-              style={{ background: t.color }}
-              initial={{ width: 0 }}
-              animate={{ width: `${guess.score}%` }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-            />
+          {/* Ombre dure portée par ce span (jamais rogné par son propre
+              overflow-hidden, vérifié) mais le clip de la barre animée est
+              délégué à un enfant dédié : évite tout risque de rendu
+              divergent entre navigateurs sur la combinaison overflow-hidden
+              + box-shadow sur un seul et même élément. */}
+          <span className="block h-1.5 border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
+            <span className="block h-full w-full overflow-hidden">
+              <motion.span
+                className="block h-full"
+                style={{ background: t.color }}
+                initial={{ width: 0 }}
+                animate={{ width: `${guess.score}%` }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+              />
+            </span>
           </span>
         </span>
         <span className="flex min-w-[72px] flex-none flex-col items-end gap-1 sm:min-w-[92px]">

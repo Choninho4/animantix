@@ -40,11 +40,18 @@ export function TokensPanel() {
       <span className="mt-1 block font-mono text-[12px] text-muted">
         Un jeton te permet d'analyser en détail un personnage que tu as déjà proposé.
       </span>
-      <span className="mt-2 block h-1.5 overflow-hidden border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
-        <span
-          className="block h-full bg-brand-mid transition-[width] duration-[400ms] ease-out"
-          style={{ width: `${percent}%` }}
-        />
+      {/* Ombre dure portée par ce span (jamais rogné par son propre
+          overflow-hidden, vérifié) mais le clip de la barre animée est
+          délégué à un enfant dédié : évite tout risque de rendu divergent
+          entre navigateurs sur la combinaison overflow-hidden + box-shadow
+          sur un seul et même élément. */}
+      <span className="mt-2 block h-1.5 border border-ink bg-bg shadow-[2px_2px_0_#0B0B16]">
+        <span className="block h-full w-full overflow-hidden">
+          <span
+            className="block h-full bg-brand-mid transition-[width] duration-[400ms] ease-out"
+            style={{ width: `${percent}%` }}
+          />
+        </span>
       </span>
     </section>
   );

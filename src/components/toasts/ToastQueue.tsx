@@ -2,8 +2,8 @@ import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { useEffect } from 'react';
 import { useGameStore } from '../../store/useGameStore';
 import { getAchievement, ACHIEVEMENT_ICONS } from '../../lib/achievements';
-import { SearchIcon } from '../icons/Icon';
 import { Toast } from './Toast';
+import { MascotToast } from './MascotToast';
 
 const DISPLAY_MS = 3800;
 
@@ -35,11 +35,13 @@ export function ToastQueue() {
           {achievement && AchievementIcon && (
             <Toast key={`achievement-${achievement.id}`} icon={<AchievementIcon size={20} />} eyebrow="Succès débloqué" title={achievement.nom} />
           )}
-          {current?.kind === 'token' && (
-            <Toast key="token" icon={<SearchIcon size={20} />} eyebrow="Jeton d'analyse" title="Nouveau jeton débloqué !" />
-          )}
         </AnimatePresence>
       </div>
+      {/* Jeton débloqué : mascotte en bas à gauche, position et animation
+          distinctes du toast de succès ci-dessus (cf. MascotToast). Reste
+          montée en permanence — sa propre transition CSS gère l'entrée et
+          la sortie (voir le composant pour le détail). */}
+      <MascotToast visible={current?.kind === 'token'} />
     </MotionConfig>
   );
 }

@@ -10,13 +10,13 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'mina-ashiro', nom: 'Mina Ashiro', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Capitaine de la défense, amie d\'enfance qui ignore la vraie nature de son allié.',
   },
   {
     id: 'kikoru-shinomiya', nom: 'Kikoru Shinomiya', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Recrue prodige et fière, fille d\'un héros disparu au combat.',
   },
   {
@@ -28,7 +28,7 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'koro-sensei', nom: 'Koro-sensei', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Jaune',
+    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Créature tentaculaire ultra-rapide, professeur adoré qu\'il faut pourtant abattre.',
   },
   {
@@ -70,13 +70,13 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'reno-ichikawa', nom: 'Reno Ichikawa', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Jeune recrue talentueuse de la division 3, ami proche de Kafka et Haruichi.',
   },
   {
     id: 'iharu-furuhashi', nom: 'Iharu Furuhashi', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Recrue impulsive de la division 3, tempérament explosif au combat.',
   },
   {
@@ -134,15 +134,19 @@ export const PART_08_MISC: CharacterDefinition[] = [
     imageUrl: null, descriptionCourte: 'Élève bavarde de la classe 3-E, toujours au courant des derniers ragots.',
   },
   {
-    id: 'sosuke-sugino', nom: 'Sosuke Sugino', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
+    // Prénom corrigé (l'id historique garde l'ancienne graphie, il sert de clé
+    // de fichier pour le portrait) : le joueur du baseball est Tomohito Sugino.
+    id: 'sosuke-sugino', nom: 'Tomohito Sugino', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancien joueur de baseball reconverti dans l\'art de l\'assassinat scolaire.',
   },
   {
-    id: 'tomohito-sugaya', nom: 'Tomohito Sugaya', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
+    // Prénom corrigé (l'id historique garde l'ancienne graphie, il sert de clé
+    // de fichier pour le portrait) : l'artiste de la 3-E est Sosuke Sugaya.
+    id: 'tomohito-sugaya', nom: 'Sosuke Sugaya', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Artiste de la classe 3-E, dessine avec talent les plans d\'assassinat.',
   },
   {

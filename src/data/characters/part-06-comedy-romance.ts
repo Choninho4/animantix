@@ -40,13 +40,13 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'chika-fujiwara', nom: 'Chika Fujiwara', animeSource: 'Kaguya-sama: Love is War', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Secrétaire imprévisible du conseil, catalyseur chaotique de tous les quiproquos.',
   },
   {
     id: 'taiga-aisaka', nom: 'Taiga Aisaka', animeSource: 'Toradora!', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Auburn',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Petite tigresse au caractère explosif, terrifiante en apparence, fragile en vérité.',
   },
   {
@@ -100,7 +100,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'ai-hoshino', nom: 'Ai Hoshino', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Idole adulée dont le meurtre déclenche la réincarnation vengeresse de ses enfants.',
   },
   {
@@ -196,7 +196,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'nagisa-kashiwagi', nom: 'Nagisa Kashiwagi', animeSource: 'Kaguya-sama: Love is War', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Camarade mondaine et bavarde de Kaguya, adore les ragots amoureux.',
   },
   {
@@ -358,7 +358,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'memcho', nom: 'Memcho', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Streameuse populaire recrutée dans le groupe B-Komachi, énergie débordante.',
   },
   {

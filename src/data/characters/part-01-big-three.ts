@@ -118,7 +118,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'silver-rayleigh', nom: 'Silver Rayleigh', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Ancien second du Roi des Pirates, tatoueur discret d\'une île à l\'abri du monde.',
   },
   {
@@ -544,7 +544,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'tenshinhan', nom: 'Tenshinhan', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Guerrier à trois yeux issu de l\'école de la Grue, capable de se dédoubler et de voler.',
   },
   {

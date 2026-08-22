@@ -52,7 +52,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'megumin', nom: 'Megumin', animeSource: 'Konosuba', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Archimage obsédée par l\'explosion, un seul sort par jour et aucun regret.',
   },
   {
@@ -280,7 +280,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'yunyun', nom: 'Yunyun', animeSource: 'Konosuba', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Rivale autoproclamée de Megumin, magicienne sans amis désespérément normale.',
   },
   {
@@ -508,7 +508,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'denken', nom: 'Denken', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Ancien mage de guerre, membre de l\'examen de premier ordre des mages.',
   },
   {
@@ -526,7 +526,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'kraft-frieren', nom: 'Kraft', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Archimage examinateur du concours de premier ordre, rigoureux et respecté.',
   },
   {
@@ -676,7 +676,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'escanor', nom: 'Escanor', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Péché de l\'Orgueil, timide la nuit, incarnation de la puissance solaire le jour.',
   },
   {
@@ -700,7 +700,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'gilthunder', nom: 'Gilthunder', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Chevalier Sacré ami d\'enfance de Meliodas, manipulé puis rédempté.',
   },
   {

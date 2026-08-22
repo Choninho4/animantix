@@ -70,7 +70,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'king', nom: 'King', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Homme le plus fort du monde par pure réputation, terrifié dans l\'ombre.',
   },
   {
@@ -190,7 +190,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'kondo-isao', nom: 'Kondo Isao', animeSource: 'Gintama', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Commandant maladroit du Shinsengumi, surnommé "Gorille" mais profondément loyal.',
   },
   {
@@ -340,7 +340,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'mumen-rider', nom: 'Mumen Rider', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Héros de classe C à vélo, sans super-pouvoir mais au courage sans limite.',
   },
   {
@@ -466,19 +466,19 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'okuyasu-nijimura', nom: 'Okuyasu Nijimura', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Meilleur ami loyal de Josuke, Stand destructeur The Hand aux vides implacables.',
   },
   {
     id: 'koichi-hirose', nom: 'Koichi Hirose', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Lycéen timide devenu combattant assuré, Stand Echoes aux effets sonores.',
   },
   {
     id: 'rohan-kishibe', nom: 'Rohan Kishibe', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Mangaka arrogant capable de transformer les gens en livres avec Heaven\'s Door.',
   },
   {

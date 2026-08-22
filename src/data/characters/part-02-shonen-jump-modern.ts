@@ -100,7 +100,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'maki-zenin', nom: 'Maki Zenin', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Exorciste sans énergie maudite, elle compense par un travail acharné sur son corps.',
   },
   {
@@ -190,7 +190,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'genryusai-yamamoto', nom: 'Genryusai Yamamoto', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Capitaine-commandant du Gotei 13 vieux de plusieurs millénaires, sabreur redouté depuis des siècles.',
   },
   {
@@ -292,7 +292,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'yuno-grinberryall', nom: 'Yuno Grinberryall', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Jaune',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Rival d\'enfance d\'Asta, prodige du vent promis au titre de Roi Mage.',
   },
   {
@@ -418,7 +418,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'kai-chisaki', nom: 'Kai Chisaki', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Overhaul, chef yakuza obsédé par la propreté et le démantèlement des alters.',
   },
   {
@@ -472,13 +472,13 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'panda-jjk', nom: 'Panda', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
-    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir et blanc',
+    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
     imageUrl: null, descriptionCourte: 'Cadavre maudit animé en forme de panda, étudiant à part entière de Kyoto.',
   },
   {
     id: 'miwa-kasumi', nom: 'Miwa Kasumi', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Sorcière de Kyoto au sabre, complexée par son manque de talent inné.',
   },
   {
@@ -502,7 +502,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'kyojuro-rengoku', nom: 'Kyojuro Rengoku', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rouge',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Pilier des Flammes flamboyant, incarnation du devoir jusqu\'au dernier souffle.',
   },
   {
@@ -778,7 +778,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'nayuta', nom: 'Nayuta', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Fillette démoniaque liée au concept de contrôle, adoptée par Denji.',
   },
   {

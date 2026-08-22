@@ -14,11 +14,17 @@ interface AttemptRowProps {
   analyzed: boolean;
   /** Pas encore analysé, mais un jeton est disponible : invite le joueur à cliquer. */
   analyzable: boolean;
+  /** Cet essai est-il réellement le personnage du jour (et pas juste un score de 100 %) ? */
+  isTarget: boolean;
   onToggle: () => void;
 }
 
-export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analyzable, onToggle }: AttemptRowProps) {
+export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analyzable, isTarget, onToggle }: AttemptRowProps) {
   const t = temperatureForScore(guess.score);
+  // Un essai peut marquer 100 % sans être le bon personnage (sosie parfait sur
+  // les 8 critères notés) : le badge dirait alors « Trouvé ! » sur un mauvais
+  // personnage. Le score reste 100 %, seul le libellé est requalifié.
+  const bandLabel = t.label === 'Trouvé !' && !isTarget ? 'Sosie parfait' : t.label;
   const borderWidth = isBest ? 3 : 2;
   const borderColor = isBest ? t.color : '#0B0B16';
   // Ombre dure décalée façon neo-brutalism, composée ici (pas en classe Tailwind)
@@ -90,7 +96,7 @@ export function AttemptRow({ guess, isBest, justAdded, selected, analyzed, analy
             style={{ background: t.bg, color: t.fg }}
           >
             <TemperatureBandIcon icon={t.icon} size={11} />
-            {t.label}
+            {bandLabel}
           </span>
         </span>
       </button>

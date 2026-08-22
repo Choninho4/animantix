@@ -129,7 +129,10 @@ export const useGameStore = create<GameState>((set, get) => ({
     // Une base de personnages modifiée depuis la partie décale le mapping jour → personnage :
     // une partie sauvegardée contre un ancien personnage ne veut plus rien dire, on repart à zéro.
     const day = stored && stored.targetId === target.id ? stored : null;
-    const won = !!day?.won;
+    // Une victoire n'est retenue que si un essai porte bien l'id du personnage
+    // du jour : répare les parties sauvegardées comme gagnées par l'ancienne
+    // règle `score === 100`, qui pouvait déclarer gagné sur un sosie.
+    const won = !!day?.won && (day?.g ?? []).some((g) => g.id === target.id);
     const elapsed = day?.e ?? 0;
     set({
       archiveOffset: offset,
@@ -228,7 +231,15 @@ export const useGameStore = create<GameState>((set, get) => ({
       n: state.guesses.length + 1,
     };
     const guesses = [...state.guesses, entry];
-    const won = score === 100;
+    // La victoire se juge sur l'identité du personnage, jamais sur le score :
+    // deux personnages distincts peuvent être indiscernables sur les 8 critères
+    // notés (même anime, même rôle, même camp…) et marquer 100 % l'un contre
+    // l'autre. Utiliser `score === 100` déclarait alors une fausse victoire sur
+    // le mauvais personnage (cf. le test de non-régression sur les collisions).
+    const won = target.id === cible.id;
+    // Score maximal sans être le bon personnage : cas rare mais déroutant s'il
+    // n'est pas explicité — le joueur voit 100 % et ne gagne pas.
+    const perfectButWrong = !won && score === 100;
     const tokenJustGained = tokensEarned(guesses.length) > tokensEarned(state.guesses.length);
 
     set((s) => ({
@@ -244,7 +255,12 @@ export const useGameStore = create<GameState>((set, get) => ({
       flashId: target.id,
       message: won
         ? { text: `Bravo ! Le personnage du jour était ${target.nom}.`, tone: 'win' }
-        : { text: `${target.nom} — ${score} %`, tone: 'info' },
+        : perfectButWrong
+          ? {
+              text: `${target.nom} — 100 % : tous les critères correspondent, mais ce n'est pas le bon personnage.`,
+              tone: 'warn',
+            }
+          : { text: `${target.nom} — ${score} %`, tone: 'info' },
       toastQueue: tokenJustGained ? [...s.toastQueue, { kind: 'token' }] : s.toastQueue,
     }));
 
@@ -439,7 +455,9 @@ export function isArchiveDayWon(daysAgo: number): boolean {
   const day = loadDay(idx);
   if (!day?.won) return false;
   const target = characterForDayIndex(idx, CHARACTERS);
-  return day.targetId === target.id;
+  // Même garde-fou que loadDay : un jour marqué gagné doit contenir un essai
+  // portant l'id du personnage du jour (cf. l'ancienne règle `score === 100`).
+  return day.targetId === target.id && day.g.some((g) => g.id === target.id);
 }
 
 export { todayIndex };

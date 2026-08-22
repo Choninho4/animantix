@@ -46,8 +46,17 @@ describe('base de données de personnages', () => {
   });
 
   it("n'a aucun id dupliqué", () => {
-    const ids = CHARACTERS.map((c) => c.id);
-    expect(new Set(ids).size).toBe(ids.length);
+    // Message d'échec explicite : un id dupliqué fait résoudre le mauvais
+    // personnage (CHARACTER_BY_ID ne garde que le dernier), il faut pouvoir
+    // identifier les coupables sans relancer une investigation.
+    const parIds = new Map<string, string[]>();
+    for (const c of CHARACTERS) {
+      parIds.set(c.id, [...(parIds.get(c.id) ?? []), `${c.nom} (${c.animeSource})`]);
+    }
+    const conflits = [...parIds.entries()]
+      .filter(([, noms]) => noms.length > 1)
+      .map(([id, noms]) => `  ${id} → ${noms.join(' / ')}`);
+    expect(conflits, `ids dupliqués :\n${conflits.join('\n')}`).toHaveLength(0);
   });
 
   it('ne dépasse jamais le plafond de sécurité par anime', () => {
@@ -156,6 +165,26 @@ describe('base de données de personnages', () => {
     for (const [key, set] of variants) {
       expect(set.size, `couleurCheveux "${key}" a des variantes : ${[...set].join(' / ')}`).toBe(1);
     }
+  });
+
+  it("n'utilise que des couleurs de cheveux du vocabulaire validé", () => {
+    // couleurCheveux est comparé par égalité stricte dans le scoring : une
+    // valeur hors vocabulaire (« Marron » vs « Brun », « Noir et blanc » vs
+    // « Noir/Blanc »…) fait marquer 0 point à deux personnages pourtant de la
+    // même couleur. Le vocabulaire est donc fermé, et toute nouvelle valeur
+    // doit être un ajout délibéré ici.
+    const VOCABULAIRE = new Set([
+      'Noir', 'Blond', 'Blanc', 'Brun', 'Roux', 'Bleu', 'Rose', 'Vert', 'Chauve',
+      'Violet', 'Orange', 'Gris', 'Marron', 'Argent', 'Rouge', 'Châtain',
+      // Bicolores assumés (personnages dont la double couleur est l'identité
+      // visuelle) — en attente d'arbitrage produit, cf. rapport d'audit.
+      'Bicolore', 'Noir/Blanc', 'Blanc/Bleu-vert', 'Rouge/Blanc',
+      'Noir/Rouge', 'Noir/Orange', 'Noir/Bleu', 'Noir/Doré',
+    ]);
+    const horsVocabulaire = CHARACTERS.filter((c) => !VOCABULAIRE.has(c.couleurCheveux)).map(
+      (c) => `${c.id} → "${c.couleurCheveux}"`,
+    );
+    expect(horsVocabulaire, `couleurCheveux hors vocabulaire :\n${horsVocabulaire.join('\n')}`).toHaveLength(0);
   });
 
   it('imageUrl pointe vers le portrait WebP local dérivé de l’id', () => {

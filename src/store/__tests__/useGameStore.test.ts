@@ -60,6 +60,71 @@ describe('loadDay : détection d\'une partie sauvegardée contre un ancien perso
   });
 });
 
+describe('victoire : identité du personnage, jamais le score', () => {
+  // Les 8 critères notés ne suffisent pas toujours à distinguer deux
+  // personnages : ~111 personnages de la base ont au moins un sosie parfait
+  // (même anime, rôle, camp, race, pouvoir, décennie, genre, cheveux). Juger la
+  // victoire sur `score === 100` déclarait alors gagné sur le mauvais
+  // personnage — bug constaté en prod avec Ai Hoshino proposé contre Memcho.
+  function sosieDuJour() {
+    const cible = characterForDayIndex(todayIndex(), CHARACTERS);
+    const cle = (c: (typeof CHARACTERS)[number]) =>
+      [
+        c.animeSource,
+        c.roleNarratif,
+        c.campMoral,
+        c.race,
+        c.categoriePouvoir,
+        Math.floor(c.anneeSortieAnime / 10),
+        c.genre,
+        c.couleurCheveux,
+      ].join('|');
+    return { cible, sosie: CHARACTERS.find((c) => c.id !== cible.id && cle(c) === cle(cible)) };
+  }
+
+  it('ne déclare pas gagné un sosie qui marque 100 % sans être le personnage du jour', () => {
+    const { cible, sosie } = sosieDuJour();
+    if (!sosie) return; // Le personnage du jour n'a pas de sosie : rien à vérifier.
+
+    useGameStore.getState().loadDay(0);
+    useGameStore.getState().submitGuess(sosie);
+    const state = useGameStore.getState();
+
+    expect(state.guesses[0].score).toBe(100);
+    expect(state.won).toBe(false);
+    expect(state.message.text).toContain("ce n'est pas le bon personnage");
+    expect(sosie.id).not.toBe(cible.id);
+  });
+
+  it('déclare gagné le personnage du jour lui-même', () => {
+    const cible = characterForDayIndex(todayIndex(), CHARACTERS);
+
+    useGameStore.getState().loadDay(0);
+    useGameStore.getState().submitGuess(cible);
+    const state = useGameStore.getState();
+
+    expect(state.won).toBe(true);
+    expect(state.guesses[0].id).toBe(cible.id);
+  });
+
+  it('ignore une victoire sauvegardée dont aucun essai ne porte l’id du personnage du jour', () => {
+    // Répare les parties écrites par l'ancienne règle `score === 100`.
+    const idx = todayIndex();
+    const cible = characterForDayIndex(idx, CHARACTERS);
+    const autre = CHARACTERS.find((c) => c.id !== cible.id)!;
+
+    saveDay(
+      idx,
+      { g: [], won: false, a: [], sh: false, t: Date.now(), e: 0, targetId: cible.id },
+      { g: [winningGuessEntry(autre.id, autre.nom, autre.animeSource)], won: true, e: 4_242 },
+    );
+
+    useGameStore.getState().loadDay(0);
+
+    expect(useGameStore.getState().won).toBe(false);
+  });
+});
+
 describe("jetons d'analyse", () => {
   it('accorde un jeton tous les 3 essais et ne permet de dépenser que ce qui est disponible', () => {
     const idx = todayIndex();

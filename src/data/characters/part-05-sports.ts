@@ -64,7 +64,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'rin-itoshi', nom: 'Rin Itoshi', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Prodige glacial et méprisant, cherchant un rival digne de son talent.',
   },
   {
@@ -220,7 +220,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'seishiro-nagi', nom: 'Seishiro Nagi', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Génie flemmard au toucher de balle exceptionnel, partenaire clé d\'Isagi.',
   },
   {
@@ -250,13 +250,13 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'ryusei-shidou', nom: 'Ryusei Shidou', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Attaquant instinctif au style unique, rival flamboyant issu de la rue.',
   },
   {
     id: 'shoei-barou', nom: 'Shoei Barou', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Attaquant au melon signature, égocentrique convaincu d\'être le meilleur.',
   },
   {

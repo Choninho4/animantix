@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { isArchiveDayWon, useGameStore } from '../../store/useGameStore';
 import { ModalShell } from './ModalShell';
 import { CheckIcon, CloseIcon } from '../icons/Icon';
@@ -8,6 +9,18 @@ export function ArchiveCalendarModal() {
   const closeModals = useGameStore((s) => s.closeModals);
   const archiveOffset = useGameStore((s) => s.archiveOffset);
   const loadDay = useGameStore((s) => s.loadDay);
+  const navigate = useNavigate();
+
+  // loadDay() met bien à jour l'état global (et referme la modale via
+  // modals.archive: false), mais seule GamePage (route "/") l'affiche : ouvrir
+  // Archives depuis À propos/Contact/Mentions légales chargeait le jour "dans
+  // le vide" sans jamais montrer la page de jeu. Navigation de route explicite
+  // pour que ça fonctionne depuis n'importe quelle page (même motif que le
+  // logo du Header, qui combine déjà loadDay + navigation).
+  function selectDay(offset: number) {
+    loadDay(offset);
+    navigate('/');
+  }
 
   // Trié par date réelle croissante (du plus ancien au plus récent) pour un
   // affichage en ordre calendaire naturel — l'offset seul (1..28) ne suffit
@@ -46,7 +59,7 @@ export function ArchiveCalendarModal() {
             <button
               key={offset}
               type="button"
-              onClick={() => loadDay(offset)}
+              onClick={() => selectDay(offset)}
               className={`flex aspect-square min-h-touch flex-col items-center justify-center gap-px border-2 font-display font-bold text-[13px] ${stateClass}`}
             >
               <span>{date.getDate()}</span>

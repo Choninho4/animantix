@@ -4,10 +4,6 @@ import { POIDS } from '../lib/constants';
 import { TEMPERATURE_BANDS, TEMPERATURE_RANGE_LABELS } from '../lib/temperature';
 import { TemperatureBandIcon } from '../components/icons/Icon';
 
-// Date de mise en ligne réelle du site (premier commit) : sert de base au
-// compteur "jours de jeu" ci-dessous.
-const LAUNCH_DATE = new Date('2026-08-10T00:00:00Z');
-
 const STEPS = [
   {
     n: '1',
@@ -26,16 +22,11 @@ const STEPS = [
   },
 ];
 
-function daysSinceLaunch(): number {
-  return Math.max(1, Math.floor((Date.now() - LAUNCH_DATE.getTime()) / 86_400_000));
-}
-
 export default function AboutPage() {
   const animeCount = new Set(CHARACTERS.map((c) => c.animeSource)).size;
   const stats = [
     { key: 'p', valeur: CHARACTERS.length, label: 'personnages', detail: 'dans la base, et ça grandit' },
     { key: 'a', valeur: animeCount, label: 'œuvres couvertes', detail: 'du shonen au seinen' },
-    { key: 'j', valeur: daysSinceLaunch(), label: 'jours de jeu', detail: 'depuis le lancement' },
   ];
 
   return (
@@ -75,13 +66,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mb-12 grid grid-cols-2 gap-3 sm:mb-16 sm:gap-4 sm:grid-cols-3">
-        {stats.map((s, i) => (
+      <section className="mb-12 grid grid-cols-2 gap-3 sm:mb-16 sm:gap-4">
+        {stats.map((s) => (
           <div
             key={s.key}
-            className={`border-[3px] border-ink bg-surface p-5 shadow-[5px_5px_0_rgb(var(--color-shadow-accent))] transition-transform duration-200 hover:-translate-y-1 sm:p-6 ${
-              i === stats.length - 1 ? 'col-span-2 text-center sm:col-span-1 sm:text-left' : ''
-            }`}
+            className="border-[3px] border-ink bg-surface p-5 shadow-[5px_5px_0_rgb(var(--color-shadow-accent))] transition-transform duration-200 hover:-translate-y-1 sm:p-6"
           >
             <div className="mb-1.5 font-display text-[28px] font-bold leading-[1.1] text-brand sm:text-[34px]">
               {s.valeur}
@@ -134,24 +123,6 @@ export default function AboutPage() {
             modale « Comment jouer » du jeu.
           </p>
         </div>
-      </section>
-
-      <section
-        className="mb-14 border-[4px] border-ink px-8 py-12 text-center shadow-[10px_10px_0_#0B0B16]"
-        style={{ background: 'linear-gradient(120deg, #D02886 0%, #9966CC 100%)' }}
-      >
-        <h2 className="mx-auto mb-3 max-w-[480px] font-display text-[28px] font-bold leading-[1.15] text-white sm:text-[38px]">
-          Le personnage du jour t'attend
-        </h2>
-        <p className="mx-auto mb-7 max-w-[440px] text-[16px] leading-[1.55] text-white/90 sm:text-[17px]">
-          Nouveau personnage à minuit. Essais illimités, aucune inscription.
-        </p>
-        <Link
-          to="/"
-          className="inline-flex min-h-touch items-center border-[3px] border-ink bg-white px-8 font-display text-[16px] font-bold text-brand shadow-[4px_4px_0_#0B0B16] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none sm:text-[17px]"
-        >
-          Jouer maintenant
-        </Link>
       </section>
     </main>
   );

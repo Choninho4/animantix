@@ -34,7 +34,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'genkai', nom: 'Genkai', animeSource: 'Yu Yu Hakusho', anneeSortieAnime: 1992,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Maîtresse martiale centenaire, dernière détentrice d\'une technique psychique ancestrale.',
   },
   {
@@ -45,7 +45,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'faye-valentine', nom: 'Faye Valentine', animeSource: 'Cowboy Bebop', anneeSortieAnime: 1998,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Joueuse endettée et amnésique, elle ne fait confiance à personne.',
   },
@@ -87,7 +87,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'jotaro-kujo', nom: 'Jotaro Kujo', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 2012,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéen taciturne au Stand surpuissant, aussi doué en combat qu\'en réplique cinglante.',
   },
@@ -99,7 +99,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'joseph-joestar', nom: 'Joseph Joestar', animeSource: 'JoJo\'s Bizarre Adventure', anneeSortieAnime: 2012,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Combattant rusé et provocateur, aussi doué pour tricher que pour vaincre.',
   },
@@ -153,14 +153,14 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'envy', nom: 'Envy', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Autre', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Autre', trancheAge: 'Ado',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Homoncule métamorphe qui jalouse tout ce qu\'il ne sera jamais.',
   },
   {
     id: 'father-fullmetal-alchemist', nom: 'Father (Fullmetal Alchemist)', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Homoncule originel qui a façonné tout un pays pour devenir un dieu.',
   },
   {
@@ -219,7 +219,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'sadaharu', nom: 'Sadaharu', animeSource: 'Gintama', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Gigantesque chien extraterrestre adopté par Kagura, mord tout ce qui l\'approche.',
   },
@@ -243,7 +243,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'botan', nom: 'Botan', animeSource: 'Yu Yu Hakusho', anneeSortieAnime: 1992,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Guide des âmes joviale, messagère de Koenma et amie fidèle d\'Yusuke.',
   },
@@ -262,13 +262,13 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'sensui', nom: 'Sensui', animeSource: 'Yu Yu Hakusho', anneeSortieAnime: 1992,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancien détective spirituel légendaire devenu ennemi de l\'humanité aux sept personnalités.',
   },
   {
     id: 'yukina', nom: 'Yukina', animeSource: 'Yu Yu Hakusho', anneeSortieAnime: 1992,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Démone de glace douce recherchant son frère jumeau perdu, sans savoir que c\'est Hiei.',
   },
   {
@@ -286,19 +286,19 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'jet-black', nom: 'Jet Black', animeSource: 'Cowboy Bebop', anneeSortieAnime: 1998,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Ancien policier au bras mécanique, capitaine bourru du Bebop.',
   },
   {
     id: 'ein', nom: 'Ein', animeSource: 'Cowboy Bebop', anneeSortieAnime: 1998,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
-    race: 'Animal anthropomorphe', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Animal anthropomorphe', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Marron',
     imageUrl: null, descriptionCourte: 'Corgi surdoué génétiquement modifié, mascotte étrangement intelligente de l\'équipage.',
   },
   {
     id: 'vicious', nom: 'Vicious', animeSource: 'Cowboy Bebop', anneeSortieAnime: 1998,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Ancien partenaire de Spike au sein du syndicat, rival obsédé par sa mort.',
   },
   {
@@ -309,7 +309,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'gren-bebop', nom: 'Gren', animeSource: 'Cowboy Bebop', anneeSortieAnime: 1998,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Autre', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Ancien soldat musicien, croise brièvement la route de Faye dans son passé.',
   },
@@ -322,7 +322,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'bang-opm', nom: 'Bang', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Héros de rang S surnommé Silver Fang, maître de karaté et mentor de Saitama.',
   },
   {
@@ -346,7 +346,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'atomic-samurai', nom: 'Atomic Samurai', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Héros de rang S sabreur, capable de trancher plus vite que l\'œil ne peut suivre.',
   },
   {
@@ -358,7 +358,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'child-emperor', nom: 'Child Emperor', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Héros de rang S surdoué de dix ans, génie de la technologie et des gadgets.',
   },
   {
@@ -370,7 +370,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'boros', nom: 'Boros', animeSource: 'One Punch Man', anneeSortieAnime: 2015,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Conquérant extraterrestre à la recherche d\'un adversaire digne de ce nom.',
   },
   {
@@ -406,19 +406,19 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'serizawa-katsuya', nom: 'Serizawa Katsuya', animeSource: 'Mob Psycho 100', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Esper solitaire membre de Claw, se lie d\'amitié avec Mob malgré son passé de méchant.',
   },
   {
     id: 'ekubo', nom: 'Ekubo', animeSource: 'Mob Psycho 100', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Autre', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Petit esprit à fossettes cherchant à corrompre Mob avec un pouvoir illimité.',
   },
   {
     id: 'toichiro-suzuki', nom: 'Toichiro Suzuki', animeSource: 'Mob Psycho 100', anneeSortieAnime: 2016,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Leader charismatique du groupe Claw, manipulateur en quête de pouvoir absolu.',
   },
   {
@@ -430,13 +430,13 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'caesar-zeppeli', nom: 'Caesar Anthonio Zeppeli', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Maître de la Ripple italien, rival puis allié fraternel de Joseph Joestar.',
   },
   {
     id: 'lisa-lisa', nom: 'Lisa Lisa', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Maîtresse de la Ripple sévère, entraîneuse de Joseph Joestar et Caesar.',
   },
   {
@@ -501,7 +501,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'weather-report', nom: 'Weather Report', animeSource: "JoJo's Bizarre Adventure", anneeSortieAnime: 2012,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Prisonnier amnésique manipulant la météo, allié de Jolyne dans le pénitencier.',
   },
@@ -543,7 +543,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'queen-beryl', nom: 'Queen Beryl', animeSource: 'Sailor Moon', anneeSortieAnime: 1992,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Senior',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Reine du Royaume des Ténèbres, première grande ennemie des Sailor Guerrières.',
   },
@@ -568,7 +568,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'hotaru-tomoe', nom: 'Hotaru Tomoe', animeSource: 'Sailor Moon', anneeSortieAnime: 1992,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Sailor Saturn, porteuse d\'un pouvoir de destruction redouté même de ses alliées.',
   },
   {
@@ -580,7 +580,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'riza-hawkeye', nom: 'Riza Hawkeye', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Lieutenante tireuse d\'élite, bras droit loyal et conscience de Roy Mustang.',
   },
   {
@@ -622,7 +622,7 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   {
     id: 'gluttony', nom: 'Gluttony', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Homoncule vorace à la bouche sans fin, fidèle et naïf envers Lust.',
   },
   {
@@ -657,14 +657,14 @@ export const PART_07_CLASSICS_CULT: CharacterDefinition[] = [
   },
   {
     id: 'van-hohenheim', nom: 'Van Hohenheim', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Père absent d\'Edward et Alphonse, ancien homoncule porteur d\'un lourd secret séculaire.',
   },
   {
     id: 'trisha-elric', nom: 'Trisha Elric', animeSource: 'Fullmetal Alchemist: Brotherhood', anneeSortieAnime: 2009,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Mère défunte d\'Edward et Alphonse, dont la mort déclenche leur tentative de résurrection.',
   },
 ];

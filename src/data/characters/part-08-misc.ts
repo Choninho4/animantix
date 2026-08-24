@@ -10,7 +10,7 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'mina-ashiro', nom: 'Mina Ashiro', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Capitaine de la défense, amie d\'enfance qui ignore la vraie nature de son allié.',
   },
   {
@@ -21,8 +21,8 @@ export const PART_08_MISC: CharacterDefinition[] = [
   },
   {
     id: 'nagisa-shiota', nom: 'Nagisa Shiota', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Élève discret devenu le plus redoutable assassin de sa classe.',
   },
   {
@@ -64,25 +64,25 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'soshiro-hoshina', nom: 'Soshiro Hoshina', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'As de la Force de Défense n°3, tireur redoutable au sourire carnassier.',
   },
   {
     id: 'reno-ichikawa', nom: 'Reno Ichikawa', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Jeune recrue talentueuse de la division 3, ami proche de Kafka et Haruichi.',
   },
   {
     id: 'iharu-furuhashi', nom: 'Iharu Furuhashi', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Recrue impulsive de la division 3, tempérament explosif au combat.',
   },
   {
     id: 'haruichi-izumo', nom: 'Haruichi Izumo', animeSource: 'Kaiju No. 8', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Recrue calme et posée de la division 3, complémentaire de son ami Reno.',
   },
   {
@@ -106,19 +106,19 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'rinka-hayami', nom: 'Rinka Hayami', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Tireuse d\'élite froide et méthodique de la classe 3-E.',
   },
   {
     id: 'manami-okuda', nom: 'Manami Okuda', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Génie timide de la chimie, conçoit des poisons sur mesure pour tuer Koro-sensei.',
   },
   {
     id: 'ryunosuke-chiba', nom: 'Ryunosuke Chiba', animeSource: 'Assassination Classroom', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Sniper discret de la classe 3-E, binôme silencieux de Rinka Hayami.',
   },
   {
@@ -176,25 +176,25 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'itaru-hashida', nom: 'Itaru Hashida', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Hacker surnommé Daru, meilleur ami et complice technique d\'Okabe.',
   },
   {
     id: 'suzuha-amane', nom: 'Suzuha Amane', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Voyageuse temporelle venue du futur, cherche son père à travers les lignes du temps.',
   },
   {
     id: 'luka-urushibara', nom: 'Luka Urushibara', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Violet',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Membre timide du laboratoire au genre fluide, fils d\'un temple bouddhiste.',
   },
   {
     id: 'moeka-kiryu', nom: 'Moeka Kiryu', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Membre mystérieuse et taciturne du laboratoire, communique surtout par messages.',
   },
   {
@@ -206,7 +206,7 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'yuugo-tennouji', nom: 'Yuugo Tennouji', animeSource: 'Steins;Gate', anneeSortieAnime: 2011,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Propriétaire du café où réside le laboratoire, ancien policier au passé trouble.',
   },
   {
@@ -217,7 +217,7 @@ export const PART_08_MISC: CharacterDefinition[] = [
   },
   {
     id: 'sayla-mass', nom: 'Sayla Mass', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Opératrice du White Base, sœur cachée de Char Aznable sous une fausse identité.',
   },
@@ -230,7 +230,7 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'kai-shiden', nom: 'Kai Shiden', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Pilote cynique et râleur du White Base, plus courageux qu\'il ne l\'admet.',
   },
   {
@@ -242,19 +242,19 @@ export const PART_08_MISC: CharacterDefinition[] = [
   {
     id: 'frau-bow', nom: 'Frau Bow', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Amie d\'enfance d\'Amuro, civile embarquée devenue pilier du moral de l\'équipage.',
   },
   {
     id: 'kycilia-zabi', nom: 'Kycilia Zabi', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Commandante impitoyable du Principat de Zeon, fille ambitieuse de Degwin Zabi.',
   },
   {
     id: 'garma-zabi', nom: 'Garma Zabi', animeSource: 'Mobile Suit Gundam', anneeSortieAnime: 1979,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Prince de Zeon idéaliste, ami de Char avant de tomber sous ses manigances.',
   },
 ];

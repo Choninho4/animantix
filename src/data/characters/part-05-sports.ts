@@ -33,13 +33,13 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   },
   {
     id: 'toru-oikawa', nom: 'Toru Oikawa', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Passeur charismatique et travailleur acharné, hanté par un talent qu\'il n\'a pas eu.',
   },
   {
     id: 'hajime-iwaizumi', nom: 'Hajime Iwaizumi', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'As fiable et tempérament de feu, meilleur ami et voix de la raison d\'Oikawa.',
   },
@@ -58,7 +58,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'yoichi-isagi', nom: 'Yoichi Isagi', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Attaquant enfermé dans un programme extrême pour devenir le meilleur buteur du Japon.',
   },
   {
@@ -70,7 +70,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'meguru-bachira', nom: 'Meguru Bachira', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Doré',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Attaquant chaotique au style monstrueux, guidé par une créature intérieure.',
   },
   {
@@ -88,7 +88,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'axel-blaze', nom: 'Axel Blaze', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Attaquant légendaire aux cheveux de flamme, buteur implacable revenu jouer pour honorer sa sœur.',
   },
   {
@@ -106,18 +106,18 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'ashito-aoi', nom: 'Ashito Aoi', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Attaquant à la mémoire de match photographique, recruté à Tokyo pour apprendre à voir tout le terrain.',
   },
   {
     id: 'tatsuya-fukuda', nom: 'Tatsuya Fukuda', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Entraîneur calculateur d\'Esperion, ancien pro reconverti en dénicheur de talents impitoyable.',
   },
   {
     id: 'tetsuya-kuroko', nom: 'Tetsuya Kuroko', animeSource: 'Kuroko\'s Basketball', anneeSortieAnime: 2012,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Sixième homme invisible, passeur fantôme de la génération miracle.',
   },
@@ -141,7 +141,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   },
   {
     id: 'ryota-kise', nom: 'Ryota Kise', animeSource: 'Kuroko\'s Basketball', anneeSortieAnime: 2012,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Copieur parfait de n\'importe quelle technique après l\'avoir vue une seule fois.',
   },
@@ -208,7 +208,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'satori-tendou', nom: 'Satori Tendou', animeSource: 'Haikyuu!!', anneeSortieAnime: 2014,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Contreur excentrique de Shiratorizawa, "petit génie" imprévisible sur le terrain.',
   },
   {
@@ -244,7 +244,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'jinpachi-ego', nom: 'Jinpachi Ego', animeSource: 'Blue Lock', anneeSortieAnime: 2022,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Entraîneur radical du programme Blue Lock, obsédé par la création du meilleur attaquant du monde.',
   },
   {
@@ -268,25 +268,25 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'kevin-dragonfly', nom: 'Kevin Dragonfly', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Attaquant explosif au tempérament de feu, ancien rival devenu pilier de Raimon.',
   },
   {
     id: 'caleb-stonewall', nom: 'Caleb Stonewall', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Marron',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Marron',
     imageUrl: null, descriptionCourte: 'Ancien capitaine impitoyable, stratège prêt à tout pour la victoire.',
   },
   {
     id: 'david-sanford', nom: 'David Sanford', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Meneur tacticien loyal à son ancien capitaine, tir chargé redoutable.',
   },
   {
     id: 'joseph-king', nom: 'Joseph King', animeSource: 'Inazuma Eleven', anneeSortieAnime: 2008,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Gardien massif et loyal, dernier rempart de son équipe.',
   },
   {
@@ -310,7 +310,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'junpei-hyuga', nom: 'Junpei Hyuga', animeSource: "Kuroko's Basketball", anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Capitaine tireur de Seirin, tsundere reconnu pour son tir à trois points.',
   },
   {
@@ -334,7 +334,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'ryota-miyagi', nom: 'Ryota Miyagi', animeSource: 'Slam Dunk', anneeSortieAnime: 1993,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Meneur rapide de Shohoku, ancien bagarreur devenu pilier du jeu collectif.',
   },
   {
@@ -352,7 +352,7 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'youhei-mito', nom: 'Youhei Mito', animeSource: 'Slam Dunk', anneeSortieAnime: 1993,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Meilleur ami fidèle de Sakuragi depuis le collège, toujours dans les gradins.',
   },
   {
@@ -364,19 +364,19 @@ export const PART_05_SPORTS: CharacterDefinition[] = [
   {
     id: 'ryuichi-takeshima', nom: 'Ryuichi Takeshima', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Coéquipier roux de l\'équipe jeune d\'Esperion, technique et sens du jeu affûtés.',
   },
   {
     id: 'soichiro-tachibana', nom: 'Soichiro Tachibana', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Coéquipier rencontré au test de sélection d\'Esperion, rival amical d\'Ashito.',
   },
   {
     id: 'shun-aoi', nom: 'Shun Aoi', animeSource: 'Ao Ashi', anneeSortieAnime: 2022,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Grand frère aîné d\'Ashito, footballeur revenu au jeu après des années d\'asthme.',
   },
 ];

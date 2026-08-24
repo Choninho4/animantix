@@ -16,7 +16,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'nami', nom: 'Nami', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Navigatrice et voleuse de génie, armée de son Clima Tact.',
   },
   {
@@ -76,7 +76,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'jinbe', nom: 'Jinbe', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Race fantastique (Homme-poisson)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir/Blanc',
+    race: 'Race fantastique (Homme-poisson)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Chevalier de la mer au sens de l\'honneur inébranlable, timonier des Chapeaux de Paille.',
   },
   {
@@ -87,13 +87,13 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'boa-hancock', nom: 'Boa Hancock', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Impératrice pirate à la beauté pétrifiante, seule femme Grand Corsaire.',
   },
   {
     id: 'kaido', nom: 'Kaido', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Senior',
     race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'L\'être vivant le plus fort du monde, dragon indestructible et empereur des mers.',
   },
@@ -165,7 +165,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'akainu', nom: 'Akainu', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Senior',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Amiral en chef de la Marine à la justice absolue et brûlante, sans aucune pitié pour les pirates.',
   },
@@ -177,7 +177,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'aokiji', nom: 'Aokiji', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancien Amiral de glace au rythme paresseux, devenu vagabond après avoir défié la hiérarchie.',
   },
@@ -202,7 +202,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'enel', nom: 'Enel', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Dieu autoproclamé de Skypiea maniant la foudre, obsédé par la conquête de la Lune.',
   },
   {
@@ -220,7 +220,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'yamato', nom: 'Yamato', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc/Bleu-vert',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Enfant de Kozuki Oden élevé en admirant Kaido, guerrier loup décidé à devenir libre comme Luffy.',
   },
   {
@@ -249,7 +249,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'sasuke-uchiha', nom: 'Sasuke Uchiha', animeSource: 'Naruto', anneeSortieAnime: 2002,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Dernier héritier des Uchiha, obsédé par la vengeance de son clan.',
   },
@@ -261,7 +261,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'kakashi-hatake', nom: 'Kakashi Hatake', animeSource: 'Naruto', anneeSortieAnime: 2002,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Le ninja copieur, mentor nonchalant au visage éternellement masqué.',
   },
@@ -273,7 +273,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'orochimaru', nom: 'Orochimaru', animeSource: 'Naruto', anneeSortieAnime: 2002,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Senior',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Sannin serpentin en quête d\'immortalité et de tous les jutsus.',
   },
@@ -364,7 +364,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'sasori', nom: 'Sasori', animeSource: 'Naruto', anneeSortieAnime: 2002,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Marionnettiste de l\'Akatsuki qui a transformé son propre corps en poupée immortelle.',
   },
   {
@@ -382,7 +382,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'killer-bee', nom: 'Killer Bee', animeSource: 'Naruto', anneeSortieAnime: 2002,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Jinchuriki rappeur du Hachibi, hôte le plus en harmonie avec sa bête à queues.',
   },
   {
@@ -442,12 +442,12 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'piccolo', nom: 'Piccolo', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Soutien-mentor', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Alien', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
+    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Namek autrefois démon, devenu le meilleur mentor de la série.',
   },
   {
     id: 'bulma', nom: 'Bulma', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Ingénieure surdouée de la Capsule Corp, au caractère explosif.',
   },
@@ -460,7 +460,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'master-roshi', nom: 'Master Roshi', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Ermite tortue coquin, mentor du premier arc qui a façonné les plus grands guerriers.',
   },
   {
@@ -472,13 +472,13 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'c-18', nom: 'C-18', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Blond',
+    race: 'Robot-IA', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Cyborg redoutable créée par le Dr Gero, devenue épouse de Krillin après avoir semé le chaos.',
   },
   {
     id: 'c-17', nom: 'C-17', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
+    race: 'Robot-IA', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Jumeau insouciant de C-18, cyborg increvable devenu garde forestier après avoir terrorisé la Terre.',
   },
   {
@@ -507,7 +507,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'broly', nom: 'Broly', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Saiyan légendaire né avec une puissance incontrôlable, rage vivante que même Goku peine à contenir.',
   },
@@ -526,7 +526,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'chi-chi', nom: 'Chi-Chi', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Épouse martiale de Goku et mère exigeante, obsédée par les études de ses fils.',
   },
   {
@@ -579,7 +579,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'bardock', nom: 'Bardock', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Père de Goku et guerrier Saiyan doué de visions, dernier à s\'être dressé contre Freezer.',
   },
@@ -604,7 +604,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'bartholomew-kuma', nom: 'Bartholomew Kuma', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Ancien Shichibukai au fruit Nikyu Nikyu, secrètement un révolutionnaire sacrifié pour ses idéaux.',
   },
   {
@@ -615,7 +615,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   },
   {
     id: 'nefertari-cobra', nom: 'Nefertari Cobra', animeSource: 'One Piece', anneeSortieAnime: 1999,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Roi d\'Alabasta, père de Vivi, dévoué à son peuple jusqu\'au sacrifice.',
   },
@@ -640,7 +640,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'vinsmoke-reiju', nom: 'Vinsmoke Reiju', animeSource: 'One Piece', anneeSortieAnime: 1999,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Aînée de la famille Vinsmoke, immunisée aux poisons, protectrice discrète de Sanji.',
   },
   {
@@ -718,7 +718,7 @@ export const PART_01_BIG_THREE: CharacterDefinition[] = [
   {
     id: 'captain-ginyu', nom: 'Ginyu', animeSource: 'Dragon Ball', anneeSortieAnime: 1986,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
+    race: 'Alien', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Capitaine du Ginyu Force, capable d\'échanger son corps avec celui d\'un adversaire.',
   },
   {

@@ -3,7 +3,7 @@ import type { CharacterDefinition } from '../../types/character';
 export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'anya-forger', nom: 'Anya Forger', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Petite fille adoptée qui entend les pensées et adore l\'espionnage.',
   },
@@ -15,14 +15,14 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   },
   {
     id: 'yor-forger', nom: 'Yor Forger', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Employée de mairie discrète et tueuse à gages de génie.',
   },
   {
     id: 'damian-desmond', nom: 'Damian Desmond', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Camarade de classe hautain d\'Anya, fils d\'un ministre convoité malgré lui.',
   },
   {
@@ -58,7 +58,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'minori-kushieda', nom: 'Minori Kushieda', animeSource: 'Toradora!', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Meilleure amie énergique qui cache sa peine derrière un sourire constant.',
   },
   {
@@ -94,7 +94,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'nana-komatsu', nom: 'Nana Komatsu', animeSource: 'Nana', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Surnommée Hachi, rêveuse sentimentale qui emménage par hasard avec une chanteuse au même prénom.',
   },
   {
@@ -112,7 +112,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'ruby-hoshino', nom: 'Ruby Hoshino', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Sœur jumelle réincarnée, déterminée à devenir l\'idole que sa mère n\'a pas pu rester.',
   },
   {
@@ -130,7 +130,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'fiona-frost', nom: 'Fiona Frost', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Espionne surnommée Nightfall, amoureuse discrète et rivale professionnelle de Loid.',
   },
   {
@@ -148,25 +148,25 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'becky-blackbell', nom: 'Becky Blackbell', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Meilleure amie fortunée d\'Anya à Eden Academy, absolument dévouée à elle.',
   },
   {
     id: 'bond-forger', nom: 'Bond Forger', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Animal anthropomorphe', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Chien expérimental capable de voir des bribes du futur, adopté par la famille Forger.',
   },
   {
     id: 'sylvia-sherwood', nom: 'Sylvia Sherwood', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Chef des renseignements de l\'Ouest, supérieure directe et impitoyable de Loid.',
   },
   {
     id: 'camilla-sxf', nom: 'Camilla', animeSource: 'Spy x Family', anneeSortieAnime: 2022,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Voisine mondaine de Loid, rivale amoureuse sur le terrain scolaire d\'Anya.',
   },
   {
@@ -178,13 +178,13 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'ai-hayasaka', nom: 'Ai Hayasaka', animeSource: 'Kaguya-sama: Love is War', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Servante personnelle de Kaguya, espionne redoutable dans l\'ombre.',
   },
   {
     id: 'miko-iino', nom: 'Miko Iino', animeSource: 'Kaguya-sama: Love is War', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Présidente du comité de discipline stricte, secrètement fan de personnages méchants.',
   },
   {
@@ -202,19 +202,19 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'tsubame-koyasu', nom: 'Tsubame Koyasu', animeSource: 'Kaguya-sama: Love is War', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Athlète populaire de l\'équipe de natation, intérêt amoureux d\'Ishigami.',
   },
   {
     id: 'ami-kawashima', nom: 'Ami Kawashima', animeSource: 'Toradora!', anneeSortieAnime: 2008,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Châtain',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Mannequin populaire cachant un caractère acide derrière un sourire de façade.',
   },
   {
     id: 'yasuko-takasu', nom: 'Yasuko Takasu', animeSource: 'Toradora!', anneeSortieAnime: 2008,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Mère célibataire de Ryuji, hôtesse de bar énergique et immature.',
   },
   {
@@ -231,7 +231,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   },
   {
     id: 'kagura-sohma', nom: 'Kagura Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Possédée par le sanglier, amoureuse violemment affectueuse de Kyo depuis l\'enfance.',
   },
@@ -244,7 +244,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'ayame-sohma', nom: 'Ayame Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Possédé par le serpent, couturier flamboyant et frère aîné théâtral de Yuki.',
   },
   {
@@ -256,7 +256,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'hatsuharu-sohma', nom: 'Hatsuharu Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bicolore',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Possédé par le bœuf, doux la plupart du temps mais capable de basculer en "Black Haru".',
   },
   {
@@ -274,13 +274,13 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'hiro-sohma', nom: 'Hiro Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Possédé par le mouton, enfant acerbe et protecteur de Kisa malgré sa froideur.',
   },
   {
     id: 'ritsu-sohma', nom: 'Ritsu Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Autre', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Possédé par le singe, excessivement anxieux et féru de kimonos féminins.',
   },
   {
@@ -291,7 +291,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   },
   {
     id: 'akito-sohma', nom: 'Akito Sohma', animeSource: 'Fruits Basket', anneeSortieAnime: 2001,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Chef tyrannique de la famille Sohma, brisée par le poids de la malédiction.',
   },
@@ -316,19 +316,19 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'nobuo-terashima', nom: 'Nobuo Terashima', animeSource: 'Nana', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Guitariste jovial de Black Stones, amoureux fidèle d\'une des deux Nana.',
   },
   {
     id: 'shinichi-okazaki', nom: 'Shinichi Okazaki', animeSource: 'Nana', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Batteur excentrique de Black Stones, meilleur ami loyal de Nana Osaki.',
   },
   {
     id: 'yasushi-takagi', nom: 'Yasushi Takagi', animeSource: 'Nana', anneeSortieAnime: 2006,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Manager pragmatique de Black Stones, garde un œil protecteur sur le groupe.',
   },
   {
@@ -340,7 +340,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'junko-nana', nom: 'Junko', animeSource: 'Nana', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Coiffeuse extravagante et colocataire, amie proche des deux Nana à Tokyo.',
   },
   {
@@ -357,7 +357,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   },
   {
     id: 'memcho', nom: 'Memcho', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Streameuse populaire recrutée dans le groupe B-Komachi, énergie débordante.',
   },
@@ -369,19 +369,19 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   },
   {
     id: 'taiki-himekawa', nom: 'Taiki Himekawa', animeSource: 'Oshi no Ko', anneeSortieAnime: 2023,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Réalisateur manipulateur, figure toxique dénoncée par le scénario de Aqua.',
   },
   {
     id: 'blanca-banana-fish', nom: 'Blanca', animeSource: 'Banana Fish', anneeSortieAnime: 2018,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Ancien agent secret et mentor d\'Ash, revenu pour un dernier contrat trouble.',
   },
   {
     id: 'yut-lung-lee', nom: 'Yut-Lung Lee', animeSource: 'Banana Fish', anneeSortieAnime: 2018,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Benjamin d\'une fratrie de la mafia chinoise, rival calculateur d\'Ash.',
   },
@@ -406,7 +406,7 @@ export const PART_06_COMEDY_ROMANCE: CharacterDefinition[] = [
   {
     id: 'max-lobo', nom: 'Max Lobo', animeSource: 'Banana Fish', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Journaliste et ancien soldat, protecteur paternel envers Ash et Eiji.',
   },
 ];

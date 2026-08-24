@@ -180,6 +180,7 @@ describe('base de données de personnages', () => {
       // visuelle) — en attente d'arbitrage produit, cf. rapport d'audit.
       'Bicolore', 'Noir/Blanc', 'Blanc/Bleu-vert', 'Rouge/Blanc',
       'Noir/Rouge', 'Noir/Orange', 'Noir/Bleu', 'Noir/Doré',
+      'Blond/Rouge', 'Rose/Vert', 'Noir/Violet',
     ]);
     const horsVocabulaire = CHARACTERS.filter((c) => !VOCABULAIRE.has(c.couleurCheveux)).map(
       (c) => `${c.id} → "${c.couleurCheveux}"`,

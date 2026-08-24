@@ -3,31 +3,31 @@ import type { CharacterDefinition } from '../../types/character';
 export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'rem', nom: 'Rem', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Servante démone à la masse d\'armes, d\'une loyauté bouleversante.',
   },
   {
     id: 'subaru-natsuki', nom: 'Subaru Natsuki', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Otaku transporté dans un autre monde, condamné à revivre sa mort.',
   },
   {
     id: 'emilia', nom: 'Emilia', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Candidate demi-elfe au trône royal, hantée par un passé qu\'elle refuse de fuir.',
   },
   {
     id: 'ram', nom: 'Ram', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Ado',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Servante aînée acerbe, protectrice féroce de sa sœur jumelle Rem.',
   },
   {
     id: 'beatrice', nom: 'Beatrice', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Senior',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Esprit archiviste capricieux enfermé volontairement dans une bibliothèque interdite.',
   },
@@ -40,12 +40,12 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'kazuma-sato', nom: 'Kazuma Sato', animeSource: 'Konosuba', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Isekai raté par excellence, plus doué pour fuir que pour être un héros.',
   },
   {
     id: 'aqua', nom: 'Aqua', animeSource: 'Konosuba', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Déesse incompétente bannie sur Terre, aussi inutile que hilarante.',
   },
@@ -75,8 +75,8 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'shalltear-bloodfallen', nom: 'Shalltear Bloodfallen', animeSource: 'Overlord', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Vampire suprême du sous-sol de Nazarick, redoutable et enfantine.',
   },
   {
@@ -93,7 +93,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'milim-nava', nom: 'Milim Nava', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Démon Roi à l\'apparence enfantine, capable de raser un royaume par caprice.',
   },
@@ -106,7 +106,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'rudeus-greyrat', nom: 'Rudeus Greyrat', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Reclus réincarné dans un corps d\'enfant, déterminé à ne pas gâcher sa seconde vie.',
   },
   {
@@ -124,25 +124,25 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'paul-greyrat', nom: 'Paul Greyrat', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Aventurier volage et père de Rudeus, plus mûr que ne le laisse croire son passé.',
   },
   {
     id: 'frieren', nom: 'Frieren', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage elfe immortelle qui redécouvre le temps humain après la mort de ses compagnons.',
   },
   {
     id: 'fern', nom: 'Fern', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Apprentie mage adoptée par Frieren, déterminée à ne jamais la laisser seule à nouveau.',
   },
   {
     id: 'himmel', nom: 'Himmel', animeSource: 'Frieren: Beyond Journey\'s End', anneeSortieAnime: 2023,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Héros défunt dont le souvenir hante et guide tout le voyage de Frieren.',
   },
   {
@@ -160,13 +160,13 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'cha-hae-in', nom: 'Cha Hae-in', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chasseuse d\'élite au flair surnaturel, seule à supporter l\'odeur particulière de Jinwoo.',
   },
   {
     id: 'go-gunhee', nom: 'Go Gunhee', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Président de l\'association des chasseurs, vétéran cherchant à protéger la nouvelle génération.',
   },
   {
@@ -189,32 +189,32 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'meliodas', nom: 'Meliodas', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chef démoniaque des Sept Péchés Capitaux, aussi puissant que farceur invétéré.',
   },
   {
     id: 'elizabeth-liones', nom: 'Elizabeth Liones', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Princesse réincarnée depuis des siècles, amoureuse indéfectible d\'un démon damné.',
   },
   {
     id: 'ban', nom: 'Ban', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Immortel voleur au bras de la convoitise, hors-la-loi loyal à sa famille de cœur.',
   },
   {
     id: 'diane', nom: 'Diane', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Race fantastique (Géant)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
+    race: 'Race fantastique (Géant)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Marron',
     imageUrl: null, descriptionCourte: 'Géante au marteau redoutable, amoureuse discrète d\'un compagnon bien plus petit.',
   },
   {
     id: 'roswaal-mathers', nom: 'Roswaal L Mathers', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bicolore',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Margrave excentrique au maquillage clownesque, tire les ficelles depuis l\'ombre.',
   },
   {
@@ -232,7 +232,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'garfiel-tinsel', nom: 'Garfiel Tinsel', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Gardien féroce du sanctuaire, demi-démon protégeant Ram avec dévotion.',
   },
   {
@@ -250,13 +250,13 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'reinhard-van-astrea', nom: 'Reinhard van Astrea', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Chevalier le plus fort du royaume, porteur de l\'Épée du Dragon.',
   },
   {
     id: 'priscilla-barielle', nom: 'Priscilla Barielle', animeSource: 'Re:Zero', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Candidate royale arrogante et flamboyante, d\'une force insoupçonnée.',
   },
   {
@@ -274,7 +274,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'vanir', nom: 'Vanir', animeSource: 'Konosuba', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Démon masqué employé du magasin de Wiz, calculateur et théâtral.',
   },
   {
@@ -303,98 +303,98 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'sena-konosuba', nom: 'Sena', animeSource: 'Konosuba', anneeSortieAnime: 2016,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Fonctionnaire acariâtre de la guilde des aventuriers, submergée par Kazuma.',
   },
   {
     id: 'cocytus', nom: 'Cocytus', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
+    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Guerrier insectoïde d\'honneur, gardien du niveau glacial de Nazarick.',
   },
   {
     id: 'mare-bello-fiore', nom: 'Mare Bello Fiore', animeSource: 'Overlord', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Autre', trancheAge: 'Enfant',
-    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Enfant',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Elfe noir timide, gardien du jardin de Nazarick avec sa sœur jumelle.',
   },
   {
     id: 'aura-bella-fiora', nom: 'Aura Bella Fiora', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Elfe noire dresseuse de bêtes, jumelle énergique de Mare.',
   },
   {
     id: 'sebas-tian', nom: 'Sebas Tian', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Majordome d\'élite de Nazarick, seul gardien à conserver une once d\'empathie.',
   },
   {
     id: 'solution-epsilon', nom: 'Solution Epsilon', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Servante visqueuse aux formes changeantes, redoutable sous ses airs mielleux.',
   },
   {
     id: 'narberal-gamma', nom: 'Narberal Gamma', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Combattante automate froide, souvent envoyée accompagner Ainz à l\'extérieur.',
   },
   {
     id: 'pandoras-actor', nom: 'Pandora\'s Actor', animeSource: 'Overlord', anneeSortieAnime: 2015,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Autre', trancheAge: 'Adulte',
-    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Majordome métamorphe théâtral, gardien du trésor de Nazarick.',
   },
   {
     id: 'gazef-stronoff', nom: 'Gazef Stronoff', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Guerrier le plus fort du royaume, loyal jusqu\'à la mort face à Nazarick.',
   },
   {
     id: 'climb', nom: 'Climb', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Garde du corps dévoué de la princesse Renner, rêve de devenir plus fort.',
   },
   {
     id: 'enri-emmot', nom: 'Enri Emmot', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Jeune villageoise devenue cheffe malgré elle grâce à la générosité d\'Ainz.',
   },
   {
     id: 'neia-baraja', nom: 'Neia Baraja', animeSource: 'Overlord', anneeSortieAnime: 2015,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Archère du royaume, admiratrice fanatique du roi-sorcier Ainz.',
   },
   {
     id: 'shion-tensura', nom: 'Shion', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Secrétaire ogre de Rimuru, aussi dévouée que dangereusement mauvaise cuisinière.',
   },
   {
     id: 'shuna-tensura', nom: 'Shuna', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Sœur de Benimaru, gère l\'administration du village avec grâce et efficacité.',
   },
   {
     id: 'souei', nom: 'Souei', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Chef du renseignement de Rimuru, ninja discret et loyal jusqu\'à la mort.',
   },
   {
     id: 'hakurou', nom: 'Hakurou', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Vieux maître d\'armes du village, entraîneur redoutable malgré son âge.',
   },
   {
@@ -406,37 +406,37 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'gobta', nom: 'Gobta', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Race fantastique (Gobelin)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Race fantastique (Gobelin)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Gobelin cavalier maladroit mais attachant, monté sur son loup Ranga.',
   },
   {
     id: 'ranga', nom: 'Ranga', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Esprit-Divinité', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Loup-tempête monstrueux, monture loyale et fière de Gobta.',
   },
   {
     id: 'veldora-tempest', nom: 'Veldora Tempest', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Dragon Tempête scellé, premier et meilleur ami de Rimuru, bavard impénitent.',
   },
   {
     id: 'shizu-tensura', nom: 'Shizue Izawa', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancienne héroïne invoquée, transmet son pouvoir et ses souvenirs à Rimuru.',
   },
   {
     id: 'gazel-dwargo', nom: 'Gazel Dwargo', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Race fantastique (Nain)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Race fantastique (Nain)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Roi nain de Dwargon, premier dirigeant humain à nouer une alliance avec Rimuru.',
   },
   {
     id: 'hinata-sakaguchi', nom: 'Hinata Sakaguchi', animeSource: 'That Time I Got Reincarnated as a Slime', anneeSortieAnime: 2018,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Cheffe des chevaliers sacrés, ennemie puis alliée après un duel décisif.',
   },
   {
@@ -448,31 +448,31 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'ghislaine-dedoldia', nom: 'Ghislaine Dedoldia', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
+    race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Bête-humaine épéiste d\'élite, garde du corps et professeure d\'Eris.',
   },
   {
     id: 'zenith-greyrat', nom: 'Zenith Greyrat', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Mère aimante de Rudeus, disparue puis retrouvée après une longue quête.',
   },
   {
     id: 'norn-greyrat', nom: 'Norn Greyrat', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Demi-sœur de Rudeus, complexée par l\'ombre de son frère prodige.',
   },
   {
     id: 'aisha-greyrat', nom: 'Aisha Greyrat', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Marron',
     imageUrl: null, descriptionCourte: 'Petite demi-sœur pragmatique de Rudeus, d\'une maturité déconcertante.',
   },
   {
     id: 'orsted', nom: 'Orsted', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Roi-dragon maudit, ennemi juré d\'Hitogami en quête d\'un allié fiable.',
   },
   {
@@ -489,14 +489,14 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'elinalise-greyrat', nom: 'Elinalise', animeSource: 'Mushoku Tensei', anneeSortieAnime: 2021,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Elfe longévive séductrice, cousine de Roxy à la vie amoureuse tumultueuse.',
   },
   {
     id: 'sein-frieren', nom: 'Sein', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Prêtre-guerrier bourru, compagnon de route incrédule face à la magie de Frieren.',
   },
   {
@@ -514,31 +514,31 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'land-frieren', nom: 'Land', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Jeune mage candidat à l\'examen de premier ordre, rival amical de Fern.',
   },
   {
     id: 'laufen-frieren', nom: 'Laufen', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Jeune mage candidate à l\'examen, alliée de Land pendant les épreuves.',
   },
   {
     id: 'kraft-frieren', nom: 'Kraft', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Archimage examinateur du concours de premier ordre, rigoureux et respecté.',
   },
   {
     id: 'serie-frieren', nom: 'Serie', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Mage elfique légendaire, autrefois rivale de la maîtresse de Frieren.',
   },
   {
     id: 'genau-frieren', nom: 'Genau', animeSource: "Frieren: Beyond Journey's End", anneeSortieAnime: 2023,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Prêtre-mage examinateur, fasciné par les capacités hors normes de Frieren.',
   },
   {
@@ -550,7 +550,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'choi-jonginn', nom: 'Choi Jong-in', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Chasseur de rang S à la magie de glace, membre de l\'association coréenne.',
   },
   {
@@ -561,13 +561,13 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   },
   {
     id: 'liu-zhigang', nom: 'Liu Zhigang', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Chasseur de rang S chinois, l\'un des rares à rivaliser avec Jinwoo.',
   },
   {
     id: 'christopher-reed', nom: 'Christopher Reed', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Chasseur de rang S japonais, orgueilleux rival étranger de Jinwoo.',
   },
@@ -586,13 +586,13 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'woo-jinchul', nom: 'Woo Jinchul', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chasseur de rang A enquêteur, méfiant puis admiratif envers Jinwoo.',
   },
   {
     id: 'yoo-jinho', nom: 'Yoo Jinho', animeSource: 'Solo Leveling', anneeSortieAnime: 2024,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chasseur de rang D fils de riche, premier fidèle allié de Jinwoo.',
   },
   {
@@ -604,7 +604,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'silica-sao', nom: 'Silica', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Marron',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Dresseuse de dragon miniature, membre du harem cristallisé autour de Kirito.',
   },
   {
@@ -616,7 +616,7 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'sinon-sao', nom: 'Sinon', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Tireuse d\'élite de Gun Gale Online, hantée par un traumatisme d\'enfance.',
   },
   {
@@ -628,60 +628,60 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'yui-sao', nom: 'Yui', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
-    race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Robot-IA', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'IA de gestion mentale devenue fille adoptive de Kirito et Asuna.',
   },
   {
     id: 'heathcliff-sao', nom: 'Heathcliff', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Chevalier des Sangs Purs, en réalité le créateur de Sword Art Online lui-même.',
   },
   {
     id: 'alice-synthesis-thirty', nom: 'Alice Synthesis Thirty', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Robot-IA', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chevalière intégrité d\'Underworld, alliée de Kirito dans Alicization.',
   },
   {
     id: 'eugeo-sao', nom: 'Eugeo', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Robot-IA', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Ami d\'enfance d\'Alice dans Underworld, meilleur allié de Kirito.',
   },
   {
     id: 'death-gun', nom: 'Death Gun', animeSource: 'Sword Art Online', anneeSortieAnime: 2012,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Tueur de Gun Gale Online prétendant pouvoir assassiner dans le monde réel.',
   },
   {
     id: 'king-seven-deadly', nom: 'King', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
     race: 'Race fantastique (Fée)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Péché de la Paresse, roi des fées prenant l\'apparence d\'un enfant.',
   },
   {
     id: 'gowther', nom: 'Gowther', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Autre', trancheAge: 'Senior',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Autre', trancheAge: 'Jeune adulte',
     race: 'Robot-IA', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Péché de la Luxure, poupée vivante capable de manipuler les émotions.',
   },
   {
     id: 'merlin-seven-deadly', nom: 'Merlin', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Péché de la Gourmandise, mage la plus puissante aux motivations troubles.',
   },
   {
     id: 'escanor', nom: 'Escanor', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Péché de l\'Orgueil, timide la nuit, incarnation de la puissance solaire le jour.',
   },
   {
     id: 'hawk-seven-deadly', nom: 'Hawk', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Animal anthropomorphe', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Cochon parlant mascotte de la taverne, gardien vorace des restes de nourriture.',
   },
@@ -706,13 +706,13 @@ export const PART_04_ISEKAI_FANTASY: CharacterDefinition[] = [
   {
     id: 'howzer', nom: 'Howzer', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chevalier Sacré loyal et enjoué, ami fidèle de Gilthunder depuis l\'entraînement.',
   },
   {
     id: 'arthur-pendragon-sds', nom: 'Arthur Pendragon', animeSource: 'The Seven Deadly Sins', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Jeune roi légendaire en devenir, porteur d\'Excalibur et allié des Sins.',
   },
 ];

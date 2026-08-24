@@ -45,7 +45,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   },
   {
     id: 'touka-kirishima', nom: 'Touka Kirishima', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
     race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Goule serveuse au caractère de feu qui rêve d\'une vie normale.',
   },
@@ -64,7 +64,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'ayato-kirishima', nom: 'Ayato Kirishima', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Frère cadet de Touka, goule rebelle qui rejette toute pitié pour survivre.',
   },
   {
@@ -118,7 +118,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'kenzo-tenma', nom: 'Kenzo Tenma', animeSource: 'Monster', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Neurochirurgien qui a sauvé un enfant devenu le pire tueur d\'Europe.',
   },
   {
@@ -136,19 +136,19 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'thors', nom: 'Thors', animeSource: 'Vinland Saga', anneeSortieAnime: 2019,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ancien guerrier légendaire devenu pacifiste, père qui refuse de tuer même pour survivre.',
   },
   {
     id: 'askeladd', nom: 'Askeladd', animeSource: 'Vinland Saga', anneeSortieAnime: 2019,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chef viking rusé au double visage, mercenaire jouant un jeu politique séculaire.',
   },
   {
     id: 'canute', nom: 'Canute', animeSource: 'Vinland Saga', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Prince fragile devenu roi de fer, sacrifiant sa douceur pour régner sans merci.',
   },
   {
@@ -172,7 +172,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'c-c', nom: 'C.C.', animeSource: 'Code Geass', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Esprit-Divinité', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Sorcière immortelle qui a scellé un pacte fatal avec un prince exilé.',
   },
   {
@@ -195,7 +195,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   },
   {
     id: 'gendo-ikari', nom: 'Gendo Ikari', animeSource: 'Neon Genesis Evangelion', anneeSortieAnime: 1995,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Père absent et directeur de la Nerv, il ne dit jamais pourquoi.',
   },
@@ -208,7 +208,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'motoko-kusanagi', nom: 'Motoko Kusanagi', animeSource: 'Ghost in the Shell', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste principal', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Violet',
+    race: 'Hybride', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Major cyborg qui cherche la frontière entre l\'âme et la machine.',
   },
   {
@@ -274,7 +274,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'floch-forster', nom: 'Floch Forster', animeSource: "L'Attaque des Titans", anneeSortieAnime: 2013,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Ancien cadet devenu fanatique nationaliste après la chute du Mur Maria.',
   },
   {
@@ -298,7 +298,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'renji-yomo', nom: 'Renji Yomo', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Goule taciturne du café Anteiku, oncle discret de Touka.',
   },
   {
@@ -316,7 +316,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'nishiki-nishio', nom: 'Nishiki Nishio', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Goule étudiante à la réputation de tueur, plus tendre qu\'il n\'y paraît.',
   },
   {
@@ -328,19 +328,19 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'amon-koutarou', nom: 'Amon Koutarou', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Enquêteur intègre voué à venger son mentor, rival puis allié de Kaneki.',
   },
   {
     id: 'furuta-nimura', nom: 'Furuta Nimura', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Manipulateur imprévisible de la CCG, orchestrateur du chaos final.',
   },
   {
     id: 'akira-mado', nom: 'Akira Mado', animeSource: 'Tokyo Ghoul', anneeSortieAnime: 2014,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Enquêtrice rigoureuse, fille d\'un chasseur de goules assassiné.',
   },
   {
@@ -351,7 +351,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   },
   {
     id: 'mello', nom: 'Mello', animeSource: 'Death Note', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Rival de Near, préfère la mafia et le chocolat aux méthodes orthodoxes.',
   },
@@ -381,7 +381,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   },
   {
     id: 'matsuda-touta', nom: 'Matsuda Touta', animeSource: 'Death Note', anneeSortieAnime: 2006,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Enquêteur naïf et impulsif de la Task Force, le plus humain du groupe.',
   },
@@ -412,7 +412,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'serpico', nom: 'Serpico', animeSource: 'Berserk', anneeSortieAnime: 1997,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Serviteur et frère de lait de Farnese, épéiste loyal jusqu\'à la mort.',
   },
   {
@@ -430,7 +430,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'zodd', nom: 'Zodd', animeSource: 'Berserk', anneeSortieAnime: 1997,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Apôtre immortel au respect guerrier, ne s\'incline que devant la vraie force.',
   },
   {
@@ -442,13 +442,13 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'charlotte-berserk', nom: 'Charlotte', animeSource: 'Berserk', anneeSortieAnime: 1997,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Princesse de Midland, premier amour de Griffith avant sa chute.',
   },
   {
     id: 'judeau', nom: 'Judeau', animeSource: 'Berserk', anneeSortieAnime: 1997,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Ancien membre de la Bande du Faucon, survivant marqué de l\'Éclipse.',
   },
   {
@@ -466,13 +466,13 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'anna-liebert', nom: 'Anna Liebert', animeSource: 'Monster', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Sœur jumelle de Johan, traque son frère pour empêcher ses massacres.',
   },
   {
     id: 'heinrich-lunge', nom: 'Heinrich Lunge', animeSource: 'Monster', anneeSortieAnime: 2004,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
+    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Inspecteur obsessionnel convaincu de la culpabilité de Tenma.',
   },
   {
@@ -484,13 +484,13 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'roberto-monster', nom: 'Roberto', animeSource: 'Monster', anneeSortieAnime: 2004,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Ancien catcheur devenu tueur au service de Johan.',
   },
   {
     id: 'dieter-monster', nom: 'Dieter', animeSource: 'Monster', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'Orphelin recueilli par Tenma, fidèle compagnon de route.',
   },
   {
@@ -519,14 +519,14 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   },
   {
     id: 'ketil', nom: 'Ketil', animeSource: 'Vinland Saga', anneeSortieAnime: 2019,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Fermier prospère et ancien guerrier, employeur de Thorfinn réduit en esclavage.',
   },
   {
     id: 'kallen-kozuki', nom: 'Kallen Kozuki', animeSource: 'Code Geass', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Roux',
     imageUrl: null, descriptionCourte: 'As pilote des Ordres Noirs, métisse déchirée entre deux identités.',
   },
   {
@@ -538,24 +538,24 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'rolo-lamperouge', nom: 'Rolo Lamperouge', animeSource: 'Code Geass', anneeSortieAnime: 2006,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Faux frère assassin infiltré, en quête désespérée d\'une famille.',
   },
   {
     id: 'cornelia-britannia', nom: 'Cornelia li Britannia', animeSource: 'Code Geass', anneeSortieAnime: 2006,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Princesse guerrière impitoyable, vice-gouverneure implacable de la Zone 11.',
   },
   {
     id: 'schneizel-britannia', nom: 'Schneizel el Britannia', animeSource: 'Code Geass', anneeSortieAnime: 2006,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Frère aîné stratège de Lelouch, rival le plus dangereux pour le trône.',
   },
   {
     id: 'milly-ashford', nom: 'Milly Ashford', animeSource: 'Code Geass', anneeSortieAnime: 2006,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Aucun pouvoir particulier', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Présidente du conseil étudiant, protège le secret de Lelouch avec espièglerie.',
   },
@@ -568,13 +568,13 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'rakshata-chawla', nom: 'Rakshata Chawla', animeSource: 'Code Geass', anneeSortieAnime: 2006,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Ingénieure indienne excentrique, conceptrice du Guren des Ordres Noirs.',
   },
   {
     id: 'jeremiah-gottwald', nom: 'Jeremiah Gottwald', animeSource: 'Code Geass', anneeSortieAnime: 2006,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Chevalier obsédé par l\'honneur, devient cyborg pour traquer puis servir Lelouch.',
   },
   {
@@ -598,7 +598,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'toji-suzuhara', nom: 'Toji Suzuhara', animeSource: 'Neon Genesis Evangelion', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Camarade de classe de Shinji, pilote d\'Eva malgré lui au destin tragique.',
   },
   {
@@ -628,7 +628,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'batou', nom: 'Batou', animeSource: 'Ghost in the Shell', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Cyborg costaud de la Section 9, fidèle bras droit du Major.',
   },
   {
@@ -646,7 +646,7 @@ export const PART_03_SEINEN_DARK: CharacterDefinition[] = [
   {
     id: 'saito-gits', nom: 'Saito', animeSource: 'Ghost in the Shell', anneeSortieAnime: 1995,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
+    race: 'Humain', categoriePouvoir: 'Technologie-arme', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Tireur d\'élite borgne de la Section 9, à l\'œil cybernétique surpuissant.',
   },
   {

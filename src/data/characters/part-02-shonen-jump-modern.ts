@@ -58,7 +58,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'all-for-one', nom: 'All For One', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Vilain originel voleur d\'alters, ombre tapie derrière des décennies de chaos.',
   },
   {
@@ -76,7 +76,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'nobara-kugisaki', nom: 'Nobara Kugisaki', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Exorciste au marteau et aux clous, fière fille de la ville.',
   },
   {
@@ -112,7 +112,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'mahito', nom: 'Mahito', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Fléau né de la haine humaine, il façonne les âmes comme de l\'argile.',
   },
   {
@@ -123,14 +123,14 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'nezuko-kamado', nom: 'Nezuko Kamado', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Enfant',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir/Orange',
     imageUrl: null, descriptionCourte: 'Démone qui a gardé son humanité et protège les faibles.',
   },
   {
     id: 'zenitsu-agatsuma', nom: 'Zenitsu Agatsuma', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Pleurnichard terrifié qui devient foudroyant une fois endormi.',
   },
   {
@@ -147,8 +147,8 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'giyu-tomioka', nom: 'Giyu Tomioka', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Pilier de l\'eau taciturne, persuadé de n\'être aimé de personne.',
   },
   {
@@ -160,7 +160,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'ichigo-kurosaki', nom: 'Ichigo Kurosaki', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Lycéen roux devenu shinigami remplaçant malgré lui.',
   },
   {
@@ -177,7 +177,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'kisuke-urahara', nom: 'Kisuke Urahara', animeSource: 'Bleach', anneeSortieAnime: 2004,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Exilé génial qui tient une échoppe et connaît toutes les réponses.',
   },
@@ -196,7 +196,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'gon-freecss', nom: 'Gon Freecss', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Protagoniste principal', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Vert',
     imageUrl: null, descriptionCourte: 'Gamin de l\'île de la Baleine parti retrouver un père absent.',
   },
   {
@@ -225,7 +225,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'meruem', nom: 'Meruem', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Enfant',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Chauve',
     imageUrl: null, descriptionCourte: 'Roi chimère né pour dominer, dont une partie d\'échecs a changé son âme.',
   },
@@ -244,7 +244,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'illumi-zoldyck', nom: 'Illumi Zoldyck', animeSource: 'Hunter x Hunter (2011)', anneeSortieAnime: 2011,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Aîné assassin de la famille Zoldyck, aussi méthodique qu\'imprévisible sous ses aiguilles.',
   },
   {
@@ -261,7 +261,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'power', nom: 'Power', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Neutre-ambigu', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Jeune adulte',
     race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Démone du sang menteuse, égoïste et follement attachante.',
   },
@@ -274,13 +274,13 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'chainsaw-man-pochita', nom: 'Chainsaw Man (Pochita)', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Enfant',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Démon tronçonneuse minuscule devenu le cœur littéral d\'un jeune homme désespéré.',
   },
   {
     id: 'reze', nom: 'Reze', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
     imageUrl: null, descriptionCourte: 'Agente ennemie infiltrée en serveuse, démone bombe au charme redoutable.',
   },
   {
@@ -298,24 +298,24 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'noelle-silva', nom: 'Noelle Silva', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Argent',
     imageUrl: null, descriptionCourte: 'Princesse royale maladroite dont la magie d\'eau grandit avec sa confiance.',
   },
   {
     id: 'yami-sukehiro', nom: 'Yami Sukehiro', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Capitaine bourru des Black Bulls, épéiste des ténèbres au grand cœur.',
   },
   {
     id: 'elfman-strauss', nom: 'Elfman Strauss', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Mage à la transformation en démon, protecteur viril et sentimental de sa guilde.',
   },
   {
     id: 'zeref-dragneel', nom: 'Zeref Dragneel', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Mage noir immortel, maudit à tuer tout ce qu\'il touche depuis des siècles.',
   },
@@ -334,7 +334,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'erza-scarlet', nom: 'Erza Scarlet', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Roux',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Chevalière mage à l\'armure changeante, disciplinaire redoutée et protectrice.',
   },
   {
@@ -369,7 +369,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'mirko', nom: 'Rumi Usagiyama', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Héroïne lapin combattant à mains nues, farouchement indépendante.',
   },
@@ -382,7 +382,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'momo-yaoyorozu', nom: 'Momo Yaoyorozu', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Intelligence stratégique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Créatrice d\'objets à partir de son corps, stratège de la classe 1-A.',
   },
   {
@@ -412,7 +412,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'twice', nom: 'Twice', animeSource: 'My Hero Academia', anneeSortieAnime: 2016,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Villain masqué qui se dédouble à l\'infini, fidèle jusqu\'au sacrifice.',
   },
   {
@@ -435,20 +435,20 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'shoko-ieiri', nom: 'Shoko Ieiri', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Médecin de l\'école jujutsu, soigne par technique maudite ce que la médecine ne peut pas.',
   },
   {
     id: 'toji-fushiguro', nom: 'Toji Fushiguro', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
-    roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Mercenaire sans énergie maudite, tueur de sorciers redoutable au corps seul.',
   },
   {
     id: 'aoi-todo', nom: 'Aoi Todo', animeSource: 'Jujutsu Kaisen', anneeSortieAnime: 2020,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Colosse de Kyoto obsédé par les types de femmes idéales, combattant redoutable.',
   },
   {
@@ -496,25 +496,25 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'shinobu-kocho', nom: 'Shinobu Kocho', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir/Violet',
     imageUrl: null, descriptionCourte: 'Pilier Insecte au sourire figé, compense sa faiblesse physique par le poison.',
   },
   {
     id: 'kyojuro-rengoku', nom: 'Kyojuro Rengoku', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond/Rouge',
     imageUrl: null, descriptionCourte: 'Pilier des Flammes flamboyant, incarnation du devoir jusqu\'au dernier souffle.',
   },
   {
     id: 'tengen-uzui', nom: 'Tengen Uzui', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Pilier du Son flamboyant, ancien ninja marié à trois épouses shinobi.',
   },
   {
     id: 'mitsuri-kanroji', nom: 'Mitsuri Kanroji', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Rose/Vert',
     imageUrl: null, descriptionCourte: 'Pilier de l\'Amour aux muscles extensibles, cœur tendre sous l\'armure.',
   },
   {
@@ -555,7 +555,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'kokushibo', nom: 'Kokushibo', animeSource: 'Demon Slayer', anneeSortieAnime: 2019,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Démon-Yokai', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lune Supérieure Une, ancien pilier devenu le plus puissant démon de Muzan.',
   },
@@ -591,7 +591,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'uryu-ishida', nom: 'Uryu Ishida', animeSource: 'Bleach', anneeSortieAnime: 2004,
-    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Ado',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Dernier Quincy pur, archer perfectionniste rival autoproclamé d\'Ichigo.',
   },
@@ -652,7 +652,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'kaname-tosen', nom: 'Kaname Tosen', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Violet',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Capitaine aveugle passé du côté d\'Aizen au nom d\'une justice dévoyée.',
   },
   {
@@ -664,7 +664,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'mayuri-kurotsuchi', nom: 'Mayuri Kurotsuchi', animeSource: 'Bleach', anneeSortieAnime: 2004,
     roleNarratif: 'Soutien-mentor', campMoral: 'Neutre-ambigu', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Capitaine scientifique aux expériences sans scrupules, maquillage clownesque.',
   },
   {
@@ -736,7 +736,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'kishibe', nom: 'Kishibe', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Gris',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Chasseur de démons légendaire, entraîneur impitoyable de la Special Division 4.',
   },
   {
@@ -748,25 +748,25 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'kobeni-higashiyama', nom: 'Kobeni Higashiyama', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Brun',
     imageUrl: null, descriptionCourte: 'Chasseuse anxieuse en permanence, redoutablement compétente quand la panique la pousse.',
   },
   {
     id: 'angel-devil', nom: 'Angel Devil', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
+    race: 'Démon-Yokai', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Démon-ange fainéant qui vole des années de vie d\'un simple toucher.',
   },
   {
     id: 'quanxi', nom: 'Quanxi', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Antagoniste secondaire', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Noir',
+    race: 'Hybride', categoriePouvoir: 'Combat physique', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Tueuse à gages chinoise voyageant avec ses quatre chats-démons.',
   },
   {
     id: 'asa-mitaka', nom: 'Asa Mitaka', animeSource: 'Chainsaw Man', anneeSortieAnime: 2022,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Hybride', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Noir',
     imageUrl: null, descriptionCourte: 'Lycéenne hôte malgré elle du démon de la Guerre, tiraillée entre deux volontés.',
   },
   {
@@ -790,19 +790,19 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'gauche-adlai', nom: 'Gauche Adlai', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Châtain',
     imageUrl: null, descriptionCourte: 'Mage-miroir du Taureau Noir, obsédé par sa petite sœur au point d\'en être glaçant.',
   },
   {
     id: 'luck-voltia', nom: 'Luck Voltia', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blond',
     imageUrl: null, descriptionCourte: 'Mage-foudre du Taureau Noir, ne se sent vivant que dans le danger extrême.',
   },
   {
     id: 'magna-swing', nom: 'Magna Swing', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Jeune adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Gris',
     imageUrl: null, descriptionCourte: 'Mage-flamme au tempérament bourru, loyal jusqu\'au bout envers ses amis.',
   },
   {
@@ -814,7 +814,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'vanessa-enoteca', nom: 'Vanessa Enoteca', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Brun',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rose',
     imageUrl: null, descriptionCourte: 'Mage-fil buveuse invétérée, ancienne sorcière rousse et âme du groupe.',
   },
   {
@@ -826,24 +826,24 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'mimosa-vermillion', nom: 'Mimosa Vermillion', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Héros', genre: 'Femme', trancheAge: 'Ado',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Rouge',
     imageUrl: null, descriptionCourte: 'Cousine noble d\'Asta, mage-plante au grand cœur malgré sa maladresse.',
   },
   {
     id: 'william-vangeance', nom: 'William Vangeance', animeSource: 'Black Clover', anneeSortieAnime: 2017,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Vert',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Capitaine du Golden Dawn, rongé par son passé lié à l\'Œil du Soleil de Minuit.',
   },
   {
     id: 'julius-novachrono', nom: 'Julius Novachrono', animeSource: 'Black Clover', anneeSortieAnime: 2017,
-    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Senior',
+    roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Empereur-mage obsédé par la découverte de nouvelles magies, dirigeant bien-aimé du royaume.',
   },
   {
     id: 'licht', nom: 'Licht', animeSource: 'Black Clover', anneeSortieAnime: 2017,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Antagoniste principal', campMoral: 'Vilain', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Race fantastique (Elfe)', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Blanc',
     imageUrl: null, descriptionCourte: 'Elfe chef de l\'Œil du Soleil de Midnight, vengeur du massacre de son peuple.',
   },
@@ -897,7 +897,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   },
   {
     id: 'jellal-fernandes', nom: 'Jellal Fernandes', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
-    roleNarratif: 'Antagoniste principal', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
+    roleNarratif: 'Protagoniste secondaire-allié', campMoral: 'Anti-héros', genre: 'Homme', trancheAge: 'Jeune adulte',
     race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Bleu',
     imageUrl: null, descriptionCourte: 'Ami d\'enfance d\'Erza rongé par la culpabilité, manipulé puis rédempté.',
   },
@@ -910,7 +910,7 @@ export const PART_02_SHONEN_JUMP_MODERN: CharacterDefinition[] = [
   {
     id: 'gildarts-clive', nom: 'Gildarts Clive', animeSource: 'Fairy Tail', anneeSortieAnime: 2009,
     roleNarratif: 'Soutien-mentor', campMoral: 'Héros', genre: 'Homme', trancheAge: 'Adulte',
-    race: 'Humain', categoriePouvoir: 'Combat physique', couleurCheveux: 'Orange',
+    race: 'Humain', categoriePouvoir: 'Pouvoir magique-surnaturel', couleurCheveux: 'Orange',
     imageUrl: null, descriptionCourte: 'Mage le plus fort de la guilde, aventurier absent mais père aimant de Cana.',
   },
 ];

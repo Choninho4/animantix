@@ -36,7 +36,7 @@ export function EmptyState() {
         <button
           type="button"
           onClick={() => openModal('rules')}
-          className="min-h-touch rounded-full border-2 border-ink bg-brand-dark px-6 py-2.5 font-display text-[14px] font-bold text-ink shadow-[3px_3px_0_#0B0B16] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
+          className="min-h-touch rounded-full border-2 border-ink bg-brand-dark px-6 py-2.5 font-display text-[14px] font-bold text-ink shadow-[3px_3px_0_#0B0B16] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0_#0B0B16] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
         >
           Comment ça marche ? →
         </button>

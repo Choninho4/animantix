@@ -112,7 +112,7 @@ export default function AboutPage() {
                 {STEPS[0].n}
               </span>
               <div className="flex items-center justify-between gap-4 sm:gap-8">
-                <div className="min-w-0">
+                <div className="min-w-0 sm:pr-[150px]">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[28px]">
                     {STEPS[0].titre}
                   </h3>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <img
                   src="/assets/mascotte/MASCOTTE_INKU-03.png"
                   alt=""
-                  className="h-20 w-auto flex-none sm:h-32"
+                  className="h-20 w-auto flex-none sm:absolute sm:right-10 sm:top-1/2 sm:h-32 sm:-translate-y-1/2"
                 />
               </div>
             </div>
@@ -136,9 +136,9 @@ export default function AboutPage() {
                 <img
                   src="/assets/mascotte/MASCOTTE_INKU-11.png"
                   alt=""
-                  className="h-20 w-auto flex-none sm:h-32"
+                  className="h-20 w-auto flex-none sm:absolute sm:left-10 sm:top-1/2 sm:h-32 sm:-translate-y-1/2"
                 />
-                <div className="min-w-0 flex-1">
+                <div className="min-w-0 flex-1 sm:pl-[150px]">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
                     {STEPS[1].titre}
                   </h3>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 {STEPS[2].n}
               </span>
               <div className="flex items-center justify-between gap-4 sm:gap-8">
-                <div className="min-w-0">
+                <div className="min-w-0 sm:pr-[150px]">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[28px]">
                     {STEPS[2].titre}
                   </h3>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 <img
                   src="/assets/mascotte/mascotte-inku.png"
                   alt=""
-                  className="h-20 w-auto flex-none sm:h-32"
+                  className="h-20 w-auto flex-none sm:absolute sm:right-10 sm:top-1/2 sm:h-32 sm:-translate-y-1/2"
                 />
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative mt-9 flex flex-col items-start sm:mt-16 sm:flex-row sm:items-stretch">
-            <div className="flex flex-none flex-col items-center justify-center self-center border-4 border-[#9966CC] bg-ink px-4 py-3.5 text-center shadow-[7px_7px_0_#0B0B16] sm:self-auto sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-[11px_11px_0_#0B0B16]">
+            <div className="flex flex-none flex-col items-center justify-center self-center border-4 border-[#9966CC] bg-ink px-4 py-3.5 text-center shadow-[7px_7px_0_#0B0B16] sm:self-auto sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-none">
               <span className="block font-display text-[28px] font-bold leading-none text-brand sm:text-[48px]">8</span>
               <span className="font-display text-[11px] font-bold tracking-[.12em] text-[#9966CC] sm:text-[13px]">
                 Critères

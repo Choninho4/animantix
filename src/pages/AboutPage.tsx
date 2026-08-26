@@ -119,14 +119,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
+            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:text-right sm:shadow-[12px_12px_0_#0B0B16]">
               <span className="absolute right-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:right-6 sm:top-4 sm:text-[68px]">
                 {STEPS[1].n}
               </span>
               <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
                 {STEPS[1].titre}
               </h3>
-              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:mt-3 sm:text-[17px]">
+              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:ml-auto sm:mt-3 sm:text-[17px]">
                 {STEPS[1].texte}
               </p>
             </div>

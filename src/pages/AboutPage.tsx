@@ -106,34 +106,36 @@ export default function AboutPage() {
             Trois minutes pour comprendre, des semaines pour décrocher.
           </p>
 
-          <div className="relative mt-9 flex flex-col gap-7 sm:mt-16 sm:grid sm:grid-cols-3 sm:gap-0">
-            <div className="relative -rotate-1 border-4 border-brand bg-ink px-5 pb-6 pt-[58px] shadow-[9px_9px_0_#0B0B16] sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 sm:z-[1] sm:-rotate-[1.2deg] sm:border-[5px] sm:px-8 sm:pb-9 sm:pt-24 sm:shadow-[14px_14px_0_#0B0B16]">
-              <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:left-5 sm:top-3.5 sm:text-[78px]">
+          <div className="relative mt-9 flex flex-col gap-7 sm:mt-16 sm:gap-9">
+            <div className="relative -rotate-1 border-4 border-brand bg-ink px-5 pb-6 pt-[58px] shadow-[9px_9px_0_#0B0B16] sm:-rotate-[.8deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
+              <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[0].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[29px]">
+              <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[28px]">
                 {STEPS[0].titre}
               </h3>
-              <p className="mt-2.5 text-[14px] leading-[1.45] text-muted sm:mt-3.5 sm:text-[17px]">{STEPS[0].texte}</p>
+              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-muted sm:mt-3 sm:text-[17px]">
+                {STEPS[0].texte}
+              </p>
             </div>
 
-            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:col-start-2 sm:col-end-4 sm:row-start-1 sm:row-end-2 sm:z-[2] sm:mt-[62px] sm:-ml-8 sm:rotate-[.9deg] sm:border-[5px] sm:px-9 sm:pb-9 sm:pt-14 sm:shadow-[16px_16px_0_#0B0B16]">
-              <span className="absolute right-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:right-6 sm:top-4 sm:text-[104px]">
+            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
+              <span className="absolute right-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:right-6 sm:top-4 sm:text-[68px]">
                 {STEPS[1].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[31px]">
+              <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
                 {STEPS[1].titre}
               </h3>
-              <p className="mt-2.5 max-w-[440px] text-[14px] leading-[1.45] text-white sm:mt-3.5 sm:text-[17px]">
+              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:mt-3 sm:text-[17px]">
                 {STEPS[1].texte}
               </p>
             </div>
 
-            <div className="relative -rotate-1 border-4 border-ink bg-brand px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:col-start-1 sm:col-end-4 sm:row-start-2 sm:row-end-3 sm:z-[3] sm:mt-7 sm:ml-16 sm:-rotate-[.6deg] sm:border-[5px] sm:py-9 sm:pl-[150px] sm:pr-9 sm:shadow-[16px_16px_0_#0B0B16]">
-              <span className="absolute -top-1 left-4 font-display text-[60px] font-bold leading-none text-ink sm:-top-6 sm:left-6 sm:text-[140px]">
+            <div className="relative -rotate-1 border-4 border-ink bg-brand px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:-rotate-[.6deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
+              <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-ink sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[2].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[31px]">
+              <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[28px]">
                 {STEPS[2].titre}
               </h3>
               <p className="mt-2.5 max-w-[560px] text-[14px] font-semibold leading-[1.45] text-ink sm:mt-3 sm:text-[17px]">

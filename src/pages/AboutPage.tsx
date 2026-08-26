@@ -200,14 +200,14 @@ export default function AboutPage() {
             <span className="text-success">Tu chauffes →</span>
           </div>
 
-          <div className="relative mt-9 flex flex-col items-start sm:mt-16 sm:flex-row">
-            <div className="-rotate-[1.6deg] flex-none border-4 border-[#9966CC] bg-ink px-4 py-3.5 shadow-[7px_7px_0_#0B0B16] sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-[11px_11px_0_#0B0B16]">
+          <div className="relative mt-9 flex flex-col items-start sm:mt-16 sm:flex-row sm:items-stretch">
+            <div className="flex flex-none flex-col items-center justify-center border-4 border-[#9966CC] bg-ink px-4 py-3.5 text-center shadow-[7px_7px_0_#0B0B16] sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-[11px_11px_0_#0B0B16]">
               <span className="block font-display text-[28px] font-bold leading-none text-brand sm:text-[48px]">8</span>
               <span className="font-display text-[11px] font-bold tracking-[.12em] text-[#9966CC] sm:text-[13px]">
                 Critères
               </span>
             </div>
-            <p className="mt-3.5 max-w-[600px] border-y-4 border-[#54218E] bg-bg px-0 py-3.5 text-[14px] leading-[1.5] text-muted sm:mt-1.5 sm:pl-11 sm:pr-6 sm:py-5 sm:text-[16px]">
+            <p className="mt-3.5 max-w-[600px] border-y-4 border-[#54218E] bg-bg px-0 py-3.5 text-[14px] leading-[1.5] text-muted sm:mt-0 sm:pl-11 sm:pr-6 sm:py-5 sm:text-[16px]">
               Huit critères entrent dans le calcul même anime ({POIDS.anime} pts), rôle narratif, camp moral, race,
               type de pouvoir, décennie de sortie, genre et couleur de cheveux. Les catégories voisines rapportent des
               points partiels. Le détail complet est dans la modale «{' '}

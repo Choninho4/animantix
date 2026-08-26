@@ -111,7 +111,7 @@ export default function AboutPage() {
               <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[0].n}
               </span>
-              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+              <div className="flex items-center justify-between gap-4 sm:gap-8">
                 <div className="min-w-0">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[28px]">
                     {STEPS[0].titre}
@@ -123,26 +123,26 @@ export default function AboutPage() {
                 <img
                   src="/assets/mascotte/MASCOTTE_INKU-03.png"
                   alt=""
-                  className="hidden h-32 w-auto flex-none sm:block"
+                  className="h-20 w-auto flex-none sm:h-32"
                 />
               </div>
             </div>
 
-            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:text-right sm:shadow-[12px_12px_0_#0B0B16]">
+            <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] text-right shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
               <span className="absolute right-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:right-6 sm:top-4 sm:text-[68px]">
                 {STEPS[1].n}
               </span>
-              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+              <div className="flex items-center justify-between gap-4 sm:gap-8">
                 <img
                   src="/assets/mascotte/MASCOTTE_INKU-11.png"
                   alt=""
-                  className="hidden h-32 w-auto flex-none sm:block"
+                  className="h-20 w-auto flex-none sm:h-32"
                 />
-                <div className="min-w-0 sm:flex-1">
+                <div className="min-w-0 flex-1">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
                     {STEPS[1].titre}
                   </h3>
-                  <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:ml-auto sm:mt-3 sm:text-[17px]">
+                  <p className="ml-auto mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:mt-3 sm:text-[17px]">
                     {STEPS[1].texte}
                   </p>
                 </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
               <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-ink sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[2].n}
               </span>
-              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+              <div className="flex items-center justify-between gap-4 sm:gap-8">
                 <div className="min-w-0">
                   <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[28px]">
                     {STEPS[2].titre}
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 <img
                   src="/assets/mascotte/mascotte-inku.png"
                   alt=""
-                  className="hidden h-32 w-auto flex-none sm:block"
+                  className="h-20 w-auto flex-none sm:h-32"
                 />
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative mt-9 flex flex-col items-start sm:mt-16 sm:flex-row sm:items-stretch">
-            <div className="flex flex-none flex-col items-center justify-center border-4 border-[#9966CC] bg-ink px-4 py-3.5 text-center shadow-[7px_7px_0_#0B0B16] sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-[11px_11px_0_#0B0B16]">
+            <div className="flex flex-none flex-col items-center justify-center self-center border-4 border-[#9966CC] bg-ink px-4 py-3.5 text-center shadow-[7px_7px_0_#0B0B16] sm:self-auto sm:border-[5px] sm:px-5 sm:py-5 sm:shadow-[11px_11px_0_#0B0B16]">
               <span className="block font-display text-[28px] font-bold leading-none text-brand sm:text-[48px]">8</span>
               <span className="font-display text-[11px] font-bold tracking-[.12em] text-[#9966CC] sm:text-[13px]">
                 Critères

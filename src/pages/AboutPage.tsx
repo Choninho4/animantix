@@ -111,36 +111,63 @@ export default function AboutPage() {
               <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[0].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[28px]">
-                {STEPS[0].titre}
-              </h3>
-              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-muted sm:mt-3 sm:text-[17px]">
-                {STEPS[0].texte}
-              </p>
+              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+                <div className="min-w-0">
+                  <h3 className="font-display text-[20px] font-bold leading-tight text-brand sm:text-[28px]">
+                    {STEPS[0].titre}
+                  </h3>
+                  <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-muted sm:mt-3 sm:text-[17px]">
+                    {STEPS[0].texte}
+                  </p>
+                </div>
+                <img
+                  src="/assets/mascotte/MASCOTTE_INKU-03.png"
+                  alt=""
+                  className="hidden h-32 w-auto flex-none sm:block"
+                />
+              </div>
             </div>
 
             <div className="relative rotate-1 border-4 border-brand bg-[#54218E] px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:rotate-[.7deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:text-right sm:shadow-[12px_12px_0_#0B0B16]">
               <span className="absolute right-4 top-3 font-display text-[42px] font-bold leading-none text-brand sm:right-6 sm:top-4 sm:text-[68px]">
                 {STEPS[1].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
-                {STEPS[1].titre}
-              </h3>
-              <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:ml-auto sm:mt-3 sm:text-[17px]">
-                {STEPS[1].texte}
-              </p>
+              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+                <img
+                  src="/assets/mascotte/MASCOTTE_INKU-11.png"
+                  alt=""
+                  className="hidden h-32 w-auto flex-none sm:block"
+                />
+                <div className="min-w-0 sm:flex-1">
+                  <h3 className="font-display text-[20px] font-bold leading-tight text-white sm:text-[28px]">
+                    {STEPS[1].titre}
+                  </h3>
+                  <p className="mt-2.5 max-w-[560px] text-[14px] leading-[1.45] text-white sm:ml-auto sm:mt-3 sm:text-[17px]">
+                    {STEPS[1].texte}
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="relative -rotate-1 border-4 border-ink bg-brand px-5 pb-6 pt-[50px] shadow-[9px_9px_0_#0B0B16] sm:-rotate-[.6deg] sm:border-[5px] sm:px-10 sm:pb-8 sm:pt-[86px] sm:shadow-[12px_12px_0_#0B0B16]">
               <span className="absolute left-4 top-3 font-display text-[42px] font-bold leading-none text-ink sm:left-6 sm:top-4 sm:text-[68px]">
                 {STEPS[2].n}
               </span>
-              <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[28px]">
-                {STEPS[2].titre}
-              </h3>
-              <p className="mt-2.5 max-w-[560px] text-[14px] font-semibold leading-[1.45] text-ink sm:mt-3 sm:text-[17px]">
-                {STEPS[2].texte}
-              </p>
+              <div className="sm:flex sm:items-center sm:justify-between sm:gap-8">
+                <div className="min-w-0">
+                  <h3 className="font-display text-[20px] font-bold leading-tight text-ink sm:text-[28px]">
+                    {STEPS[2].titre}
+                  </h3>
+                  <p className="mt-2.5 max-w-[560px] text-[14px] font-semibold leading-[1.45] text-ink sm:mt-3 sm:text-[17px]">
+                    {STEPS[2].texte}
+                  </p>
+                </div>
+                <img
+                  src="/assets/mascotte/mascotte-inku.png"
+                  alt=""
+                  className="hidden h-32 w-auto flex-none sm:block"
+                />
+              </div>
             </div>
           </div>
 

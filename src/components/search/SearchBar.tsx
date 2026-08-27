@@ -6,6 +6,7 @@ import { useGameStore } from '../../store/useGameStore';
 import type { Character } from '../../types/character';
 import { SuggestionList } from './SuggestionList';
 import { AnimeBrowser } from './AnimeBrowser';
+import { CloseIcon } from '../icons/Icon';
 
 export function SearchBar() {
   const input = useGameStore((s) => s.input);
@@ -126,8 +127,22 @@ export function SearchBar() {
               aria-controls="amx-suggestions"
               aria-label="Nom du personnage à proposer"
               disabled={won}
-              className={`h-[52px] w-full border-[3px] bg-bg pl-10 pr-3.5 font-display text-[16px] font-bold text-text outline-none transition-colors ${fieldBorderClass}`}
+              className={`h-[52px] w-full border-[3px] bg-bg pl-10 pr-10 font-display text-[16px] font-bold text-text outline-none transition-colors ${fieldBorderClass}`}
             />
+            {input.length > 0 && (
+              <button
+                type="button"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  setInput('');
+                  inputRef.current?.focus();
+                }}
+                aria-label="Effacer le texte"
+                className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center justify-center text-muted hover:text-brand-dark"
+              >
+                <CloseIcon size={16} />
+              </button>
+            )}
           </div>
           <button
             type="button"
@@ -146,7 +161,7 @@ export function SearchBar() {
 
         <AnimatePresence>
           {showAnimeBrowser && (
-            <AnimeBrowser onSelect={handleAnimeSelect} onFilterFocus={keepFocus} onFilterBlur={scheduleBlur} />
+            <AnimeBrowser onSelect={handleAnimeSelect} />
           )}
         </AnimatePresence>
 

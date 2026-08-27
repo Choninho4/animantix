@@ -1,24 +1,17 @@
-import { useState, type FocusEvent } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ANIME_LIST, AVAILABLE_DECADES } from '../../lib/animeList';
-import { normalizeForSearch } from '../../lib/autocomplete';
 
 interface AnimeBrowserProps {
   onSelect: (animeName: string) => void;
-  onFilterFocus: () => void;
-  onFilterBlur: (e: FocusEvent) => void;
 }
 
-export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBrowserProps) {
-  const [filter, setFilter] = useState('');
+export function AnimeBrowser({ onSelect }: AnimeBrowserProps) {
   const [decade, setDecade] = useState<number | null>(null);
-  const q = normalizeForSearch(filter.trim());
-  const byText = q ? ANIME_LIST.filter((a) => normalizeForSearch(a.name).includes(q)) : ANIME_LIST;
-  const visible = decade === null ? byText : byText.filter((a) => a.decade === decade);
-  const filtersActive = decade !== null || q.length > 0;
+  const visible = decade === null ? ANIME_LIST : ANIME_LIST.filter((a) => a.decade === decade);
+  const filtersActive = decade !== null;
 
   function resetFilters() {
-    setFilter('');
     setDecade(null);
   }
 
@@ -66,17 +59,6 @@ export function AnimeBrowser({ onSelect, onFilterFocus, onFilterBlur }: AnimeBro
           </button>
         ))}
       </div>
-      <input
-        type="text"
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        onFocus={onFilterFocus}
-        onBlur={onFilterBlur}
-        placeholder="Filtrer les animes…"
-        autoComplete="off"
-        aria-label="Filtrer la liste des animes"
-        className="mb-2.5 h-9 w-full border-2 border-ink bg-bg px-3 font-display text-[13px] font-bold text-text outline-none focus:border-[#FF5FB3]"
-      />
       {visible.length === 0 ? (
         <div className="px-0.5 py-4 text-center text-[13px] text-muted">
           <p>{decade !== null ? 'Aucun anime trouvé pour cette période.' : 'Aucun anime ne correspond.'}</p>
